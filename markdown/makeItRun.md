@@ -1,6 +1,6 @@
 # Strategy for the Programming Assignments: make it work, make it right, make it fast
 
-Hello everyone. As class participants work on the *R Programming* assignments, a variety of strategies to solve problems in R will be discussed on the Discussion Forum. As of day two, people are already asking questions about the "right" way to do things in R.
+As class participants work on the *R Programming* assignments, a variety of strategies to solve problems in R will be discussed on the Discussion Forums. Usually people are already asking questions about the "right" way to do things in R within the first few days of Week 1.
 
 For those of you who don't have prior programming experience, I thought I'd share an old programming aphorism -- "Make it work, make it right, make if fast." Background on this programming truism may be found at [http://c2.com/cgi/wiki?MakeItWorkMakeItRightMakeItFast](http://c2.com/cgi/wiki?MakeItWorkMakeItRightMakeItFast).
 
