@@ -11,11 +11,11 @@ In addition to using the command line version of git to synchronize a local repo
 Once you've made it this far, you should be able to start RStudio, and run git from a command line.
 
 Configure RStudio
-Start RStudio, and from the main pulldown menu, select Preferences
+Start RStudio, and from the main pulldown menu, select **Preferences**
 
 <img src="./images/configRStudioGit1.png">
 
-From the Preferences window, (1) click on the Git/SVN icon, and make the following changes to the version control configuration -- (2) press the checkbox to enable version control, and (3) configure the path to the git executable, using Browse if needed. When finished, press the Apply button.
+From the **Preferences** window, (1) click on the Git/SVN icon, and make the following changes to the version control configuration -- (2) press the checkbox to enable version control, and (3) configure the path to the git executable, using Browse if needed. When finished, press the **Apply** button.
 
 <img src="./images/configRStudioGit2.png">
 
@@ -53,7 +53,7 @@ Save the edited code, and then **select the Git tab** in the upper right pane of
 
 <img src="./images/configRStudioGit9.png">
 
-This causes RStudio to display the Git commit window box. Enter a commit message into the message entry area, and press the **Commit** button to commit the changes to your local repository.
+This causes RStudio to display the Git commit window box. First, enter a commit message into the message entry area. Next, press the **Commit** button to commit the changes to your local repository.
 
 <img src="./images/configRStudioGit10.png">
 
