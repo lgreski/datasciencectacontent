@@ -49,7 +49,7 @@ We'll select README.md by clicking the link on README.md in the Files pane, whic
 
 <img src="./images/configRStudioGit8.png">
 
-Save the edited code, and then *select the Git tab* in the upper right pane of RStudio. From the Git window, *select the checkbox in the Staged column* to select the file for commit, and press the *Commit* button.
+Save the edited code, and then **select the Git tab** in the upper right pane of RStudio. From the Git window, **select the checkbox in the Staged column** to select the file for commit, and press the **Commit** button.
 
 <img src="./images/configRStudioGit9.png">
 
