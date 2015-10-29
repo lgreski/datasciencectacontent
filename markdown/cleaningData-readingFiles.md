@@ -43,9 +43,8 @@ Once you know the function name, you can install the required package(s) needed 
 
 Sometimes the quiz questions provide extra information that you can use, such as [https://github.com/hadley/httr/blob/master/demo/oauth2-github.r](https://github.com/hadley/httr/blob/master/demo/oauth2-github.r) that was provided with question 1\. Hadley's R script provides a shell that you can use to pull data from github. All you have to do is identify the parts that must change in order to suit your purposes, such as:
 
-\* does the API require authentication, and if so, how do I create my own credentials?
-
-\* where do I alter the example code to access the specific API resource I need?
+* does the API require authentication, and if so, how do I create my own credentials?
+* where do I alter the example code to access the specific API resource I need?
 
 
 If you're having trouble accessing the resource, and it's available via HTTP, navigate to it with a web browser and check out the file directly. Once you see its structure, it may become clear how to process the file.
