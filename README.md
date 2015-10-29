@@ -11,14 +11,19 @@ As a participant and TA in courses in the curriculum, there are patterns of simi
 
 <table>
 <tr><th>File</th><th>Description</th></tr>
-<tr><td valign="top">/markdown</td><td valign="top">Directory containing markdown files, the primary form of documentation for the content in the repository</td><tr>
+<tr><td valign="top">/markdown</td><td valign="top">Directory containing markdown files, the primary form of documentation for the content in the repository.</td><tr>
 <tr><td valign="top">/markdown/images</td><td valign="top">Directory containing portable network graphics files, which are used to illustrate the narrative content in other documentation. </td><tr>
-<tr><td valign="top">README.md</td><td valign="top">File explaining the purpose and contents of the repository, listing of links to specific content by course</td><tr>
+<tr><td valign="top">README.md</td><td valign="top">File explaining the purpose and contents of the repository, listing of links to specific content by course.</td><tr>
 </table>
+
+The remainder of this document serves as a directory of the content, aligning individual documents with the course\(s\) for which the content is relevant. 
 
 ## Data Scientist's Toolbox
 
 ## R Programming 
+
+1. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
+2. [Assignment 2: do the instructions contradict example code?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md)
 
 ## Getting and Cleaning Data
 
