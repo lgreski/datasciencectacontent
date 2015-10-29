@@ -8,7 +8,7 @@ Hello everyone. I'm noticing a number of people posting on the bulletin board ab
 The theme of Quiz 2 is reading and working with different types of data, based on the variety of approaches Professor Leek introduced during the first two lectures. As one works through the five questions in quiz, a general pattern of requirements emerges.
 
 
-**1) What type of file / API must I read, and how do I determine its type? **
+**1) What type of file / API must I read, and how do I determine its type?**
 
 
 To answer this question, you can directly access the file via a web browser, or download it to your computer and edit it with a text editor. This will help you see whether the data is separated by delimiters, or consists of fixed or hierarchical records.
@@ -26,7 +26,7 @@ In a similar manner, you can run a Google search to explain a file extension tha
 If the file has an associated code book, read the code book. This is often the case with hierarchical file formats.
 
 
-**2) What function(s) will read this type of file / API? **
+**2) What function(s) will read this type of file / API?**
 
 
 Again, Google is your friend. If it isn't obvious (e.g. XLSX files must be read with read.xlsx() or read.xlsx2() functions), run a search on "read <filetype\> into R", such as:
@@ -38,7 +38,7 @@ Again, Google is your friend. If it isn't obvious (e.g. XLSX files must be read 
 Once you know the function name, you can install the required package(s) needed to use the function.
 
 
-**3)  How do I take advantage of any hints provided by the professor in the question text? **
+**3)  How do I take advantage of any hints provided by the professor in the question text?**
 
 
 Sometimes the quiz questions provide extra information that you can use, such as [https://github.com/hadley/httr/blob/master/demo/oauth2-github.r](https://github.com/hadley/httr/blob/master/demo/oauth2-github.r) that was provided with question 1\. Hadley's R script provides a shell that you can use to pull data from github. All you have to do is identify the parts that must change in order to suit your purposes, such as:
@@ -51,7 +51,7 @@ Sometimes the quiz questions provide extra information that you can use, such as
 If you're having trouble accessing the resource, and it's available via HTTP, navigate to it with a web browser and check out the file directly. Once you see its structure, it may become clear how to process the file.
 
 
-**4) Do I need to know column numbers on the input file? **
+**4) Do I need to know column numbers on the input file?**
 
 
 If you're reading fixed length files, you'll need to identify the start & stop columns in the input file in order to read it correctly.
@@ -74,7 +74,7 @@ _Historical note:_ in antediluvian times (i.e. before the World Wide Web), it wa
 Here, you'll need to use the functions we've already learned to figure out how an R object is composed, such as head(), str(), class(), etc.
 
 
-**6) What technique(s) must I use to navigate the objects and produce the output(s) required to answer the quiz question? **
+**6) What technique(s) must I use to navigate the objects and produce the output(s) required to answer the quiz question?**
 
 
 Review your notes and slides from the lecture topics, and identify the functions you'll need to navigate the objects. Is it a list? If so, you might use techniques like myList$objectname to get at the right object in the list. If itthe object is an XML document, you might use xpathSApply(), etc.
