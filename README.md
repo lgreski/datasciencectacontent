@@ -28,7 +28,7 @@ General commentary about the course, R programming in general, and R in relation
 
 1. [Commercial Statistics Packages: An Historical Perspective](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statsPackagesHistory.md)
 2. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
-3. [Strategy for the Programming Assignments]()
+3. [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md)
 3. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
 
 ### Posts regarding specifics of project assignments
@@ -39,4 +39,5 @@ General commentary about the course, R programming in general, and R in relation
 ## Getting and Cleaning Data
 
 1. [Real World Example: Reading American Community Survey data](https://github.com/lgreski/acsexample)
+2. [Strategy for Reading Files & APIs / Quiz 2](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/cleaningData-readingFiles.md)
 
