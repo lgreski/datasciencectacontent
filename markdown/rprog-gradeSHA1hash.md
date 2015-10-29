@@ -15,6 +15,6 @@ If the cachematrix.R has a newer commit date than the original from the forked r
 
 4) Finally, the next page will display the DIFF between the last two versions. If the DIFF output shows that the student changed the file in an observable way, it qualifies as a valid commit.
 
-<img src="./images/sha1hash-4of4.png" alt="Drawing" style="width: 500px;">g
+<img src="./images/sha1hash-4of4.png" alt="Drawing" style="width: 500px;">
 
 You can also check whether there is a different commit that contains the commit for cachematrix.R beyond the original fork and diff the files, using the same procedure outlined above.
