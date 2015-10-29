@@ -24,10 +24,12 @@ The remainder of this document serves as a directory of the content, aligning in
 
 ## R Programming 
 
-1. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
-1. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
-2. [Assignment 2: do the instructions contradict example code?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md)
-3. [Assignment 2: Grading the SHA-1 Hash Code](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-gradeSHA1hash.md)
+1. [Commercial Statistics Packages: An Historical Perspective](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statsPackagesHistory.md)
+2. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
+3. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
+4. [Assignment 2: do the instructions contradict example code?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md)
+4. [Assignment 2: Grading the SHA-1 Hash Code](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-gradeSHA1hash.md)
+
 
 ## Getting and Cleaning Data
 
