@@ -1,4 +1,4 @@
-# SAS Experience as Impediment to Learning R? 
+# SAS Experience: Impediment to Learning R? 
 
 One's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS. For example, once you've had experience in SAS, you tend to think about sorting like this:
 
