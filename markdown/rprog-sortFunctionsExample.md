@@ -14,7 +14,7 @@ Some students have trouble with the third programming assignment in *R Programmi
     > # use plyr::arrange() to sort the data frame by cyl and mpg
     > #
     > 
-    > sortedData <- arrange(mtcars,mtcars[,2],mtcars[1])
+    > sortedData <- arrange(mtcars,mtcars[,2],mtcars[,1])
     > head(sortedData)
        mpg cyl  disp  hp drat    wt  qsec vs am gear carb
     1 21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
