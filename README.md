@@ -40,9 +40,9 @@ General commentary about the course, R programming in general, and R in relation
 2. [Assignment 2: Grading the SHA-1 Hash Code](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-gradeSHA1hash.md)
 3. [Assignment 2: Functions to Sort Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-sortFunctionsExample.md)
 
-### Code Examples
+### Miscellaneous Code Examples
 
-1. [Aggregating data: comparison of ]
+1. TBD
 
 ## Getting and Cleaning Data
 
