@@ -28,7 +28,7 @@ To add code in a code block to a forum post, place your cursor where you want to
 
 ### Figure 2: Adding a Rich Text Code Block
 
-<img src="./images/forumPostFeatures2.png">
+<img src="./images/forumPostFeatures3.png">
 
 Once the code block is visible, you can manually type the code, or paste the code into the formatted area if it was previously written in R or RStudio.
 
@@ -36,4 +36,4 @@ Once the code block is visible, you can manually type the code, or paste the cod
 
 <img src="./images/forumPostFeatures4.png">
 
-By using these features, you can make it easier for readers to read the code within your forum posts.
+By using these features, you can make it easier for readers to read the code within your forum posts. Additional documentation on Markdown Language is available on the [Daring Fireball](https://daringfireball.net/projects/markdown/) website that is maintained by the developer of Markdown Language, [John Gruber](https://en.wikipedia.org/wiki/John_Gruber).
