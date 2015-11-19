@@ -49,3 +49,6 @@ General commentary about the course, R programming in general, and R in relation
 
 1. [Real World Example: Reading American Community Survey data](https://github.com/lgreski/acsexample)
 2. [Strategy for Reading Files & APIs / Quiz 2](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/cleaningData-readingFiles.md)
+
+## Reproducible Research
+1. [Assignment 2 Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/repDataAssignment2Checklist.md)
