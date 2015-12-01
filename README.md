@@ -52,3 +52,7 @@ General commentary about the course, R programming in general, and R in relation
 
 ## Reproducible Research
 1. [Assignment 2 Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/repDataAssignment2Checklist.md)
+
+
+## Practical Machine Learning
+1. [Course Project - gh-pages Setup with RStudio](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-ghPagesSetup.md) 

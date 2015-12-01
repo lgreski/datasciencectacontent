@@ -54,5 +54,79 @@ Github will display a confirmation dialog box to confirm your understanding that
 
 If you have previously configured RStudio to work with Github, you can use RStudio to clone the repository by creating a new project. For instructions on how to configure RStudio to work with Github, see the following:
 
-* [Configure RStudio with Github - OSX]()
-* [Configure RStudio with Github - Windoes]()
+* [Configure RStudio with Github - OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
+* [Configure RStudio with Github - Windows](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioWindowsVersion.md)
+
+Start RStudio, and then select `New Project...` from the RStudio pulldown menu bar.
+
+<img src="./images/gh-pages09.png">
+
+Next, from the *New Project* Dialog Window, select `Version Control`.
+
+<img src="./images/gh-pages10.png">
+
+Next, select `Git` from the *Create Project from Version Control* Dialog.
+
+<img src="./images/gh-pages11.png">
+
+In the *Clone Git Repository* Dialog, enter the repository URL, the local directory name where the repository will be stored on the local machine, and the parent directory where the project directory will be created. Then press the `Create Project` button.
+
+<img src="./images/gh-pages12.png">
+
+After pressing the `Create Project` button, RStudio and Git will clone the remote repository from the `gh-pages` branch into the directory specified in the *Clone Git Repository* Dialog, create a `projectName.Rproj` file, and return you to the main RStudio window.
+
+### Step 4: Create an R Markdown File & Save as index.Rmd
+
+Select `File > R Markdown...` from the main pulldown menu bar in RStudio to create a new R Markdown file.
+
+<img src="./images/gh-pages13.png">
+
+On the *New R Markdown* Dialog Window, enter a title and author name, then select the `HTML` radio button to set the default output format for the docuent. Then press the `OK` button to generate the Rmd file.
+
+<img src="./images/gh-pages14.png">
+
+At this point the R Markdown file is named "untitled". To make this file the default file for the Github Pages website, we will need to save it as `index.Rmd`. First, select `File > Save As...` from the main pulldown menu bar.
+
+<img src="./images/gh-pages15.png">
+
+Enter Index.Rmd as the file name, and press the `Save` button.
+
+<img src="./images/gh-pages16.png">
+
+### Step 5: Knit to HTML, Commit, and Push to Github
+
+We've made some edits to the default Rmd file that RStudio creates. To move the required content back to Github, we'll need to Knit to HTML, commit the resulting HTML file to the local Git branch, then push the committed changes up to the remote branch.
+
+First, press the `Knit HTML` button in the icon bar within the Source window.
+
+<img src="./images/gh-pages17.png">
+
+RStudio will render an HTML file from the R Markdown file, and display it in a window. Close the window after reviewing the output.
+
+To save the changes to git, we'll commit both the `index.Rmd` and `index.html` files. Select the `Git` tab in the upper right window pane in RStudio. Notice that the branch that is active in RStudio is `gh-pages`, which is listed on the right side of the icon bar near the top of the *Environment / History / Git* pane.
+
+Check the `Staged` checkboxes for the `index.Rmd` and `index.html` files, and press the `Commit` button.
+
+<img src="./images/gh-pages18.png">
+
+From the *Review Changes* window, confirm that `index.Rmd` and `index.html` are checked to be staged, enter a commit message in the text entry window in the upper right portion of the window, and press the `Commit` button.
+
+<img src="./images/gh-pages19.png">
+
+RStudio will display the **Git Commit** dialog, which will confirm that both files have been added to the local repository. Press the `Close` button to close the dialog box.
+
+<img src="./images/gh-pages20.png">
+
+To push the changes to Github, press the `Push` button in the **Review Changes Window**.
+
+<img src="./images/gh-pages21.png">
+
+RStudio will display the **Git Push** dialog to confirm that the files have been pushed to the remote repository. Review the message and press the `Close` button, and RStudio returns to the **Main Window**.
+
+<img src="./images/gh-pages22.png">
+
+### Step 5: Confirm that index.html is visible on github.io
+
+Open a web browser and navigate to http://username.github.io/repositoryname to view the HTML version of your R Markdown file.
+
+<img src="./images/gh-pages23.png">
