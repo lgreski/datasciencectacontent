@@ -16,7 +16,7 @@ Use a web browser to navigate to your github home page, `https://github.com/user
 
 <img src="./images/gh-pages01.png">
 
-From the *Create a new repository* page, enter `practicalmachinelearning` as the repository name, and a description. Since all of the Github Pages content is public, there is no need to make this repository private if your account has private repositories enabled.
+From the **Create a new repository** page, enter `practicalmachinelearning` as the repository name, and a description. Since all of the Github Pages content is public, there is no need to make this repository private if your account has private repositories enabled.
 
 Optionally, select R for `.gitignore`, initialize the repository with a README, and add a license, as illustrated below. Then press the `Create repository` button.
 
@@ -61,19 +61,19 @@ Start RStudio, and then select `New Project...` from the RStudio pulldown menu b
 
 <img src="./images/gh-pages09.png">
 
-Next, from the *New Project* Dialog Window, select `Version Control`.
+Next, from the **New Project** Dialog Window, select `Version Control`.
 
 <img src="./images/gh-pages10.png">
 
-Next, select `Git` from the *Create Project from Version Control* Dialog.
+Next, select `Git` from the **Create Project from Version Control** Dialog.
 
 <img src="./images/gh-pages11.png">
 
-In the *Clone Git Repository* Dialog, enter the repository URL, the local directory name where the repository will be stored on the local machine, and the parent directory where the project directory will be created. Then press the `Create Project` button.
+In the **Clone Git Repository** Dialog, enter the repository URL, the local directory name where the repository will be stored on the local machine, and the parent directory where the project directory will be created. Then press the `Create Project` button.
 
 <img src="./images/gh-pages12.png">
 
-After pressing the `Create Project` button, RStudio and Git will clone the remote repository from the `gh-pages` branch into the directory specified in the *Clone Git Repository* Dialog, create a `projectName.Rproj` file, and return you to the main RStudio window.
+After pressing the `Create Project` button, RStudio and Git will clone the remote repository from the `gh-pages` branch into the directory specified in the **Clone Git Repository** Dialog, create a `projectName.Rproj` file, and return you to the main RStudio window.
 
 ### Step 4: Create an R Markdown File & Save as index.Rmd
 
@@ -81,7 +81,7 @@ Select `File > R Markdown...` from the main pulldown menu bar in RStudio to crea
 
 <img src="./images/gh-pages13.png">
 
-On the *New R Markdown* Dialog Window, enter a title and author name, then select the `HTML` radio button to set the default output format for the docuent. Then press the `OK` button to generate the Rmd file.
+On the **New R Markdown** Dialog Window, enter a title and author name, then select the `HTML` radio button to set the default output format for the docuent. Then press the `OK` button to generate the Rmd file.
 
 <img src="./images/gh-pages14.png">
 
@@ -89,7 +89,7 @@ At this point the R Markdown file is named "untitled". To make this file the def
 
 <img src="./images/gh-pages15.png">
 
-Enter Index.Rmd as the file name, and press the `Save` button.
+Enter `Index.Rmd` as the file name, and press the `Save` button.
 
 <img src="./images/gh-pages16.png">
 
@@ -97,19 +97,19 @@ Enter Index.Rmd as the file name, and press the `Save` button.
 
 We've made some edits to the default Rmd file that RStudio creates. To move the required content back to Github, we'll need to Knit to HTML, commit the resulting HTML file to the local Git branch, then push the committed changes up to the remote branch.
 
-First, press the `Knit HTML` button in the icon bar within the Source window.
+First, press the `Knit HTML` button in the icon bar within the *Source* pane of the main RStudio window.
 
 <img src="./images/gh-pages17.png">
 
 RStudio will render an HTML file from the R Markdown file, and display it in a window. Close the window after reviewing the output.
 
-To save the changes to git, we'll commit both the `index.Rmd` and `index.html` files. Select the `Git` tab in the upper right window pane in RStudio. Notice that the branch that is active in RStudio is `gh-pages`, which is listed on the right side of the icon bar near the top of the *Environment / History / Git* pane.
+To save the changes to git, we'll commit both the `index.Rmd` and `index.html` files. Select the `Git` tab in the upper right window pane in RStudio. Notice that the branch that is active in RStudio is `gh-pages`, which is listed on the right side of the icon bar near the top of the **Environment / History / Git** pane.
 
 Check the `Staged` checkboxes for the `index.Rmd` and `index.html` files, and press the `Commit` button.
 
 <img src="./images/gh-pages18.png">
 
-From the *Review Changes* window, confirm that `index.Rmd` and `index.html` are checked to be staged, enter a commit message in the text entry window in the upper right portion of the window, and press the `Commit` button.
+From the **Review Changes** window, confirm that `index.Rmd` and `index.html` are checked to be staged, enter a commit message in the text entry window in the upper right portion of the window, and press the `Commit` button.
 
 <img src="./images/gh-pages19.png">
 
@@ -130,3 +130,9 @@ RStudio will display the **Git Push** dialog to confirm that the files have been
 Open a web browser and navigate to http://username.github.io/repositoryname to view the HTML version of your R Markdown file.
 
 <img src="./images/gh-pages23.png">
+
+### Closing Considerations
+
+Note that if you want to also push the markdown file (index.md) and its associated resources, you'll need to configure knitr to keep the markdown file. To do this, select the gear icon from the menu bar in the Source pane of RStudio (it's just to the right of the `Knit HTML` button), press the `Advanced` button, and click the checkbox for *Keep Markdown source file*.  
+
+Also, please be aware that all content published to Github Pages is public. Do not post content you wish to remain private on Github Pages, such as content from a private repository.
