@@ -1,4 +1,4 @@
-# An Historical Perspective on Statistics packages
+# An Historical Perspective on Statistics Packages
 
 In the discussion thread **Very frustrated and disappointed about this course** during the August 2015 run of *Getting and Cleaning Data*, a number of thread participants have drawn comparisons between R and SAS, where R usually is perceived as inferior.   
 
