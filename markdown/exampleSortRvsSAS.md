@@ -1,6 +1,8 @@
-# SAS Experience: Impediment to Learning R? 
+# Thinking in R vs. Thinking in SAS
 
-One's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS. For example, once you've had experience in SAS, you tend to think about sorting like this:
+Coming into the Data Science Specialization with years of experience in SAS and SPSS, it took a considerable effort to understand some of the key concepts in R (i.e. everything's a vector, nothing takes place outside a function) (1) before I began to take advantage of features of the language. As I progressed through the Specialization and began work as a Community TA, I noticed other students struggling with the same issue, especially students who prior experience with SAS. Arguably, one's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS. 
+
+For example, once you've had experience in SAS, you tend to think about sorting like this:
 
     /*
      * read the mtcars data set from the R datasets library,
@@ -47,4 +49,6 @@ The R version of sorting requires either loading a package specifically designed
     Porsche 914-2 26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
     >
 
-**Bottom line:** if you're used to working with SAS and expect R to behave in a similar manner (e.g. `sort()` works on data frames, not vectors), you're in for a steep learning curve while you "unlearn" how one does things in SAS.
+This type of solution to the sort problem would not seem intuitive to a SAS programmer. 
+
+**Bottom line:** if you're used to working with SAS and expect R to behave in a similar manner (e.g. R must have a `sort()` function that works on data frames, not vectors), you're in for a steep learning curve while you "unlearn" how one does things in SAS.
