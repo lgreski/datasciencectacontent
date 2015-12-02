@@ -1,6 +1,6 @@
 ## Background
 
-In the summer 2015 classes for *R Programming* and *Getting and Cleaning Data* a number of students with SAS experience raised concerns about R being more difficult to learn than SAS. This article explains some of the features of SAS that make it easier for a begging student to learn than R. 
+In the summer 2015 classes for *R Programming* and *Getting and Cleaning Data* a number of students with SAS experience raised concerns about R being more difficult to learn than SAS. This article explains some of the features of SAS that make it easier for a beginning student to learn than R. 
 
 ## Learning Curve: R vs. SAS
 
@@ -11,7 +11,9 @@ R is more difficult to learn than SAS for beginning tasks for four reasons:
 3. The SAS Institute has been improving documentation of the product since 1985 and all of it is available online, and
 4. There are years of SAS Users Group papers explaining how to use different aspects of the software. Note that it's easier to give away a large volume of documentation if the single user first year license is $9,000, plus annual maintenance of 20% every year thereafter.  
 
-There are two major components in SAS: the DATA step and the PROC step. The DATA step is used to read data into SAS and manipulate it. The DATA step is very powerful, but is relatively easy to learn for two reasons. First, it is based on a traditional programming language (PL/1) that has a straightforward syntax. Second, the SAS Institute produced an easy to follow guide to its use for simple tasks, [Step by Step Programming with Base SAS Software](http://support.sas.com/documentation/onlinedoc/91pdf/sasdoc_913/base_step_10071.pdf).   
+There are two major components in SAS: the DATA step and the PROC step. 
+
+The DATA step is used to read data into SAS and manipulate it. The DATA step is very powerful, but is relatively easy to learn for two reasons. First, it is based on a traditional programming language (PL/1) that has a straightforward syntax. Second, the SAS Institute produced an easy to follow guide to its use for simple tasks, [Step by Step Programming with Base SAS Software](http://support.sas.com/documentation/onlinedoc/91pdf/sasdoc_913/base_step_10071.pdf).   
 
 Also, there are many other external references to help you learn about the concepts behind the DATA Step, such as this [SAS Users Group paper](http://www2.sas.com/proceedings/sugi31/246-31.pdf).
 
