@@ -1,13 +1,13 @@
 # Thinking in R vs. Thinking in SAS
 
-Coming into the Data Science Specialization with years of experience in SAS and SPSS, it took a considerable effort to understand some of the key concepts in R, such as:
+Coming into the Data Science Specialization with years of experience in SAS and SPSS, it took a concerted effort to understand some of the key concepts in R well enough for to use them effectively, such as:
 
 > Everything that exists is an object.<br>
 > Everything that happens is a function call.
 >
 >    -- John Chambers, quoted in *Advanced R* (1)
 
- before I began to take advantage of features of the language. As I progressed through the Specialization and began work as a Community TA, I noticed other students struggling with the same issue, especially students who prior experience with SAS. Arguably, one's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS.
+As I progressed through the Specialization and began work as a Community TA, I noticed other students struggling with the same issue, especially students who had prior experience with SAS. Arguably, one's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS.
 
 For example, once you've had experience in SAS, you tend to think about sorting like this:
 
