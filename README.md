@@ -18,13 +18,13 @@ As a participant and TA in courses in the curriculum, there are patterns of simi
 
 The remainder of this document serves as a directory of the content, aligning individual documents with the course\(s\) for which the content is relevant.
 
-## Data Scientist's Toolbox
+## Course 1: Data Scientist's Toolbox
 
 1. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
 2.  [Configuring RStudio to work with git / github - Windows 7, 8, and 10](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitWindowsVersion.md)
 3. [Using Editor Modes in Discussion Forum Posts](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/usingMarkdownInForumPosts.md)
 
-## R Programming
+## Course 2: R Programming
 
 General commentary about the course, R programming in general, and R in relationship to other statistics packages.
 
@@ -35,7 +35,7 @@ General commentary about the course, R programming in general, and R in relation
 3. [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md)
 3. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
 
-### Posts regarding specifics of project assignments
+### Posts regarding specifics of programming assignments
 
 1. [Assignment 2: do the instructions contradict example code?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md)
 2. [Assignment 2: Grading the SHA-1 Hash Code](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-gradeSHA1hash.md)
@@ -45,14 +45,19 @@ General commentary about the course, R programming in general, and R in relation
 
 1. TBD
 
-## Getting and Cleaning Data
+## Course 3: Getting and Cleaning Data
 
 1. [Real World Example: Reading American Community Survey data](https://github.com/lgreski/acsexample)
 2. [Strategy for Reading Files & APIs / Quiz 2](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/cleaningData-readingFiles.md)
 
-## Reproducible Research
+## Course 5: Reproducible Research
 1. [Assignment 2 Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/repDataAssignment2Checklist.md)
 
+## Course 6: Statistical Inference
 
-## Practical Machine Learning
+1. [Exponential Distribution / Central Limit Theorem - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/expDistChecklist.md)
+2. [ToothGrowth Analysis - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/ToothGrowthChecklist.md)
+
+
+## Course 8: Practical Machine Learning
 1. [Course Project - gh-pages Setup with RStudio](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-ghPagesSetup.md) 
