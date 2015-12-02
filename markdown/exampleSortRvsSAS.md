@@ -1,6 +1,13 @@
 # Thinking in R vs. Thinking in SAS
 
-Coming into the Data Science Specialization with years of experience in SAS and SPSS, it took a considerable effort to understand some of the key concepts in R (i.e. everything's a vector, nothing takes place outside a function) (1) before I began to take advantage of features of the language. As I progressed through the Specialization and began work as a Community TA, I noticed other students struggling with the same issue, especially students who prior experience with SAS. Arguably, one's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS. 
+Coming into the Data Science Specialization with years of experience in SAS and SPSS, it took a considerable effort to understand some of the key concepts in R, such as:
+
+    Everything that exists is an object.
+    Everything that happens is a function call.
+
+        -- John Chambers, quoted in *Advanced R* (1)
+
+ before I began to take advantage of features of the language. As I progressed through the Specialization and began work as a Community TA, I noticed other students struggling with the same issue, especially students who prior experience with SAS. Arguably, one's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS.
 
 For example, once you've had experience in SAS, you tend to think about sorting like this:
 
@@ -49,6 +56,12 @@ The R version of sorting requires either loading a package specifically designed
     Porsche 914-2 26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
     >
 
-This type of solution to the sort problem would not seem intuitive to a SAS programmer. 
+The "out of box" R solution to the sort problem would not seem intuitive to a SAS programmer.  As we gain experience with R and learns about the existence of packages such as Hadley Wickham's `dplyr`, we learn that third party package developers have built a variety of capabilities to shield people from some of the complexities of the base language for common data manipulation tasks. 
+
+While these features are helpful to reduce the amount of R code required for common data manipulation tasks, it's still important to understand how R works under the covers in order to use these packages correctly.
 
 **Bottom line:** if you're used to working with SAS and expect R to behave in a similar manner (e.g. R must have a `sort()` function that works on data frames, not vectors), you're in for a steep learning curve while you "unlearn" how one does things in SAS.
+
+### References
+
+(1) Wickham, Hadley (2015) -- *Advanced R*, CRC Press, Boca Raton, FL
