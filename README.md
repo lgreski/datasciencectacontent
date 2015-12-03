@@ -57,6 +57,12 @@ General commentary about the course, R programming in general, and R in relation
 
 1. [Exponential Distribution / Central Limit Theorem - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-expDistChecklist.md)
 2. [ToothGrowth Analysis - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/ToothGrowthChecklist.md)
+3. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
+
+## Course 7: Regression Models
+
+1. [Why does sum of errors * X equal 0?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/regmodels-sumOfErrorTimesX.md) 
+2. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
 
 
 ## Course 8: Practical Machine Learning
