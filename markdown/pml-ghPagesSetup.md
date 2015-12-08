@@ -55,7 +55,7 @@ Github will display a confirmation dialog box to confirm your understanding that
 If you have previously configured RStudio to work with Github, you can use RStudio to clone the repository by creating a new project. For instructions on how to configure RStudio to work with Github, see the following:
 
 * [Configure RStudio with Github - OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
-* [Configure RStudio with Github - Windows](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioWindowsVersion.md)
+* [Configure RStudio with Github - Windows](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitWindowsVersion.md)
 
 Start RStudio, and then select `New Project...` from the RStudio pulldown menu bar.
 
@@ -75,7 +75,7 @@ In the **Clone Git Repository** Dialog, enter the repository URL, the local dire
 
 After pressing the `Create Project` button, RStudio and Git will clone the remote repository from the `gh-pages` branch into the directory specified in the **Clone Git Repository** Dialog, create a `projectName.Rproj` file, and return you to the main RStudio window.
 
-### Step 4: Create an R Markdown File & Save as index.Rmd
+### Step 5: Create an R Markdown File & Save as index.Rmd
 
 Select `File > R Markdown...` from the main pulldown menu bar in RStudio to create a new R Markdown file.
 
@@ -93,7 +93,7 @@ Enter `Index.Rmd` as the file name, and press the `Save` button.
 
 <img src="./images/gh-pages16.png">
 
-### Step 5: Knit to HTML, Commit, and Push to Github
+### Step 6: Knit to HTML, Commit, and Push to Github
 
 We've made some edits to the default Rmd file that RStudio creates. To move the required content back to Github, we'll need to Knit to HTML, commit the resulting HTML file to the local Git branch, then push the committed changes up to the remote branch.
 
@@ -125,7 +125,7 @@ RStudio will display the **Git Push** dialog to confirm that the files have been
 
 <img src="./images/gh-pages22.png">
 
-### Step 5: Confirm that index.html is visible on github.io
+### Step 7: Confirm that index.html is visible on github.io
 
 Open a web browser and navigate to http://username.github.io/repositoryname to view the HTML version of your R Markdown file.
 
