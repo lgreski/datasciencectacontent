@@ -127,7 +127,7 @@ RStudio will display the **Git Push** dialog to confirm that the files have been
 
 ### Step 7: Confirm that index.html is visible on github.io
 
-Open a web browser and navigate to http://username.github.io/repositoryname to view the HTML version of your R Markdown file.
+<strong>Note that it may take up to 15 minutes for the content you publish into your github repository to become visible on the public internet via the github.io domain.</strong> Open a web browser and navigate to http://username.github.io/repositoryname to view the HTML version of your R Markdown file.
 
 <img src="./images/gh-pages23.png">
 
