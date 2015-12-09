@@ -57,7 +57,8 @@ General commentary about the course, R programming in general, and R in relation
 
 1. [Exponential Distribution / Central Limit Theorem - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-expDistChecklist.md)
 2. [ToothGrowth Analysis - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/ToothGrowthChecklist.md)
-3. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
+3. [Exploratory Data Analysis in ToothGrowth Assignment](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/edaInToothGrowthAnalysis.md), explaining the exploratory data analysis requirement for students who have not taken the *Exploratory Data Analysis* course prior to taking *Statistical Inference*. 
+4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
 4. [Kable Tables with Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/kableDataFrameTable.md) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`. 
 
 ## Course 7: Regression Models
