@@ -56,11 +56,11 @@ The R version of sorting requires either loading a package specifically designed
     Porsche 914-2 26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
     >
 
-The "out of box" R solution to the sort problem would not seem intuitive to a SAS programmer.  As we gain experience with R and learns about the existence of packages such as Hadley Wickham's `dplyr`, we learn that third party package developers have built a variety of capabilities to shield people from some of the complexities of the base language for common data manipulation tasks.
+The "out of box" R solution to the sort problem would not seem intuitive to a SAS programmer.  As we gain experience with R and learn about the existence of packages such as Hadley Wickham's `dplyr`, we discover that third party package developers have built a variety of capabilities to shield people from some of the complexities of the base language for common data manipulation tasks. For example, dplyr's `arrange()` function arranges rows in a data frame based on the values of one or more variables. 
 
 While these features are helpful to reduce the amount of R code required for common data manipulation tasks, it's still important to understand how R works under the covers in order to use these packages correctly.
 
-**Bottom line:** if you're used to working with SAS and expect R to behave in a similar manner (e.g. R must have a `sort()` function that works on data frames, not vectors), you're in for a steep learning curve while you "unlearn" how one does things in SAS.
+**Bottom line:** if you're used to working with SAS and expect R to behave in a similar manner (e.g. R must have a `sort()` function that works on data frames, not vectors), you're in for a steep learning curve while you "unlearn" how one does things in SAS, or find the third party packages that support features whose behavior is more similar to SAS.
 
 ### References
 
