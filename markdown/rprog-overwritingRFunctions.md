@@ -2,13 +2,13 @@
 
 Beginning R students often run into a problem where a particular R function appears to be no longer working in R or RStudio. The cause of this problem is usually due to the fact that the student has saved the result of an R function to an object that has the same name as an R function.
 
-I'll remind you of the following quote:
+The following quote from John Chambers is appropriate here:
 
 > Everything that exists is an object. Everything that happens is a function call.
 >
 > John Chambers, quoted in _Advanced R_, p. 79.
 
-In the context of this particular discussion thread, if one executes the following statements:
+In the context of this particular topic, if one executes the following statements:
 
     > x <- c(1,2,3,4,5)
     > mean <- mean(x)
