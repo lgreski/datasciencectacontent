@@ -1,4 +1,4 @@
-# Programming Assignment2: Does the function prototype contradict the instructions?
+# Programming Assignment 2: Does the function prototype contradict the instructions?
 
 In R, the `list` data type is the basis for the S3 object system, one of two "object" systems in R. The second system is the R4 object system. Programming Assignment 2 is based on the S3 object system.
 
