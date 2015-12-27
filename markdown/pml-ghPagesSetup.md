@@ -9,15 +9,6 @@ This guide has been created as a reference to help students quickly set up Githu
 4. Clone the Github Pages branch to a local machine and configure it for use with RStudio, and
 5. Create an R Markdown file for the project content that is accessed as the default webpage on the project Github Pages site.
 
-### Prerequisites: A Working RStudio / Github Connection
-
-To use the technique covered in this tutorial, RStudio must already be configured to work with Git / Github. If you do not already have this connection working, please review whichever of the following tutorials is appropriate for your operating system.
-
-1. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
-2.  [Configuring RStudio to work with git / github - Windows 7, 8, and 10](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitWindowsVersion.md)
-
-Once you are confident that you can move files back and forth to Gitub directly from RStudio, you may proceed with the next step. 
-
 ### Step 1: Create a Github Repository for Practical Machine Learning
 
 Use a web browser to navigate to your github home page, `https://github.com/username`, and select the `Repositories` tab to display the list of your repositories. If you are not already logged into Github, press the `Sign in` button in the upper right corner of your github home page, and enter your credentials on the login page. Next, press the `New` button to create a new repository.
