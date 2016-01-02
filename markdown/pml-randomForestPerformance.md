@@ -14,16 +14,15 @@ Fortunately, the `parallel` package works on R across all major operating system
 
 Once a person works through the varied sources of documentation on the machine learning models and supporting R packages, the process for executing a random forest model (or any other model) in `caret::train()` is relatively straightforward, and includes the following steps.
 
-<table>
-<tr><th>Step</th><th>Description</th></tr>
-<tr><td>1. Configure parallel processing</td><td> Description here</td></tr>
-<tr><td>2. Register parallel processing cluster</td><td>Description here</td></tr>
-<tr><td>3. Configure trainControl object</td><td>Description here</td></tr>
-<tr><td>4. Develop training model</td><td>Description here</td></tr>
-<tr><td>5. De-register parallel processing cluster</td><td>Description here</td></tr>
-</table>
+1. Configure parallel processing
+2. Register parallel processing cluster
+3. Configure trainControl object
+4. Develop training model
+5. De-register trainControl object
 
 ### Step 1: Configure parallel processing
+
+To execute this step, one must
 
 ### Step 2: Register parallel processing cluster
 
@@ -34,3 +33,32 @@ Once a person works through the varied sources of documentation on the machine l
 ### Step 5: De-register parallel processing cluster
 
 ## Results: Illustrating the impact of Parallel processing
+
+This section of the analysis uses four different laptop computers to assess the performance of `caret::train()`. The specific machines used during the tests include:
+
+
+### Test Scenario 1: parallel vs. single-threaded processing
+
+Introductory text goes here...
+
+<table>
+<tr><th>Machine</th><th>Test</th><th>Result</th></tr>
+<tr><td> HP Omen laptop</td><td>Single-threaded</td><td>7.59 minutes</td></tr>
+<tr><td> HP Omen laptop</td><td>Multi-threaded</td><td>5.59 minutes</td></tr>
+</table>
+
+### Test Scenario 2: Multi-threading performance by machine
+
+Introductory text goes here...
+
+<table>
+<tr><td> HP Spectre x360 laptop</td><td>Random Forest</td><td>04.65 minutes</td></tr>
+<tr><th>Machine</th><th>Model</th><th>Result</th></tr>
+<tr><td> HP Omen laptop</td><td>Random Forest</td><td>05.59 minutes</td></tr>
+<tr><td> Macbook Pro laptop</td><td>Random Forest</td><td>06.56 minutes</td></tr>
+<tr><td> HP Envy X2 laptop</td><td>Random Forest</td><td>74.97 minutes</td></tr>
+</table>
+
+### Machine Configurations
+
+Text and table describing machine configurations goes here.
