@@ -70,3 +70,4 @@ General commentary about the course, R programming in general, and R in relation
 
 ## Course 8: Practical Machine Learning
 1. [Course Project - gh-pages Setup with RStudio](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-ghPagesSetup.md) 
+2. [Course Project - Improving Runtime Performance of Random Forest Models with Parallel Processing](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-randomForestPerformance.md) 
