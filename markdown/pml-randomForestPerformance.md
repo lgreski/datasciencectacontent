@@ -19,7 +19,7 @@ Once a person works through the varied sources of documentation on the machine l
 1. Configure parallel processing
 2. Configure trainControl object
 3. Develop training model
-4. De-register trainControl object
+4. De-register parallel processing cluster
 
 ### Prerequisite: Selecting a Machine Learning Problem
 
@@ -81,7 +81,7 @@ Returning our attention to the *Practical Machine Learning* course project data 
 
 ### Test Scenario 1: parallel vs. single-threaded processing
 
-As illustrated in the following table, multi-threading has a significant, positive impact on the performance of the `caret::train()` function. As expected, the difference in processing times for the linear discriminant model was negligible. However, for the random forest, the multi-threaded version finished 58% faster than the single-threaded version.
+As illustrated in the following table, multi-threading has a significant, positive impact on the performance of the `caret::train()` function. As expected, the difference in processing times for the linear discriminant model was negligible. However, for the random forest, the multi-threaded version finished 58% faster than the single-threaded version (as measured on the HP Omen laptop with Intel® Core™ i7-4720HQ processor).
 
 #### Figure 1: Run time by Machine Learning Algorithm and Threading Model
 <table>
