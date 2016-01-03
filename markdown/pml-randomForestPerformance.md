@@ -1,4 +1,4 @@
-## Improving Performance of Random Forest in <em>Practical Machine Learning</em>
+## Improving Performance of Random Forest in <em>caret::train()</em>
 
 During the December 2015 run of the *Practical Machine Learning* course within the Johns Hopkins University Data Science Specialization offered via coursera.org, many students struggled with the slow performance of some of the machine learning models, especially *Random Forest*.
 
