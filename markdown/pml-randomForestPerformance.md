@@ -35,6 +35,10 @@ For the purpose of illustrating the syntax required for parallel processing, we'
     inTraining <- createDataPartition(Sonar$Class, p = .75, list=FALSE)
     training <- Sonar[inTraining,]
     testing <- Sonar[-inTraining,]
+    
+    # set up training run for x / y syntax because model format performs poorly
+    x <- training[,-61]
+    y <- training[,61]
 
 
 ### Step 1: Configure parallel processing
@@ -59,7 +63,7 @@ The most critical arguments for the trainControl function are the resampling met
 
 Next, we use `caret::train()` to train the model, using the `trainControl()` object that we just created.
 
-    fit <- train(Class ~ ., method="rf",data=Sonar,trControl = fitControl)
+    fit <- train(x,y, method="rf",data=Sonar,trControl = fitControl)
 
 ### Step 4: De-register parallel processing cluster
 
