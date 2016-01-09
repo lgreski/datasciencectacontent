@@ -20,13 +20,13 @@ In the context of this particular topic, if one executes the following statement
 
 the base package `mean()` function is now hidden by an object called mean in the current environment, as evidenced by the change in output from the `str()` function. There are two ways to access a function that has been hidden by overriding it.
 
-1. Eliminate the local environment's mean object with `rm()`, or
-2. Use the package name to specify the exact function to be called: `base::mean()`
+1. Eliminate the local environment's version of the object with `rm()`, or
+2. Use the package name to specify the exact function to be called, such as `base::mean()`
 
-
-    base::mean(x)
-    [1] 3
-
+<pre><code>
+base::mean(x)
+[1] 3
+</code></pre>
 
 After using the `rm()` function, one can see that the `base::mean()` function is accessible again without having to include its package name.
 
@@ -38,4 +38,4 @@ After using the `rm()` function, one can see that the `base::mean()` function is
     <environment: namespace:base>
     >
 
-**Bottom Line: **These types of problems can be very difficult to debug in large R programs, so make sure you never use an R function name as a variable in your code.
+**Bottom Line:** These types of problems can be very difficult to debug in large R programs, so avoid using an R function name as a an object in your code unless you have a specific reason for overwriting the function.
