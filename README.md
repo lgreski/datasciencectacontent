@@ -44,7 +44,7 @@ General commentary about the course, R programming in general, and R in relation
 
 ### Miscellaneous Code Examples
 
-1. [COmmon R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)
+1. [Common R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)
 
 ## Course 3: Getting and Cleaning Data
 
