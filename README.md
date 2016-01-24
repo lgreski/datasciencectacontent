@@ -71,6 +71,7 @@ General commentary about the course, R programming in general, and R in relation
 ## Course 8: Practical Machine Learning
 1. [Course Project - gh-pages Setup with RStudio](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-ghPagesSetup.md) 
 2. [Course Project - Improving Runtime Performance of Random Forest Models with caret::train()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-randomForestPerformance.md) 
+2. [Course Project - Predicting Test Scores based on Training Model Accuracy](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-requiredModelAccuracy.md) 
 
 ## Course 9: Developing Data Products
 1. [Configuring shinyapps.io Application Timeout](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataProd-shinyTimeoutConfig.md)
