@@ -16,7 +16,7 @@ Once you complete all the steps in the outline for a particular function, test t
 
 **Make it Right**
 
-With working code, now you can test the function with a larger set of test cases, confirming that it produces "right" results against known results. For example, if you're trying to test pollutant `mean()` on 1 file, you can independently load 1 file in the console, calculate the mean, and compare the result to a run of your `pollutantmean()` function on the same file. If your tests pass, you have "made it right."
+With working code, now you can test the function with a larger set of test cases, confirming that it produces "right" results against known results. For example, if you're trying to test `pollutantmean()` on 1 file, you can independently load 1 file in the console, calculate the mean, and compare the result to a run of your `pollutantmean()` function on the same file. If your tests pass, you have "made it right."
 
 **Make it Fast**
 
