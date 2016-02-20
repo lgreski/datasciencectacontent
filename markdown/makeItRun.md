@@ -25,3 +25,7 @@ Once the code produces the right results, you can profile its performance using 
 **Summary**
 
 The aphorism "make it run, make it right, make it fast" is a good process for people to use when they are learning to write programs in R. Since we're being graded on "make it right," don't worry about making it fast until you've made it right. This means that you should submit your work for grading as soon as you believe the functions produce the correct results, step by step, rather than waiting to complete everything before your first grading run. Remember, you don't get penalized for failed tests, the object is to fail quickly, and improve the solution incrementally.
+
+** Update for New Coursera Courseware: February 2016 ** 
+
+With the implementation of the Data Science Specialization curriculum on the new Coursera platform, the process of submitting *R Programming* assignments has changed from the use of a submit script to manually running the tests listed in a quiz. Since a student may make up to three attempts in 8 hours and there are no penalties for "failing" a quiz, it's still advisable to submit your work for grading as soon as you complete each component of the assignment rather than waiting until all components are complete.  
