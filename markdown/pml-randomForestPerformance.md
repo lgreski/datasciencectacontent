@@ -163,7 +163,7 @@ Hardware specifications for the computers used in the performance timings in thi
        </ul>
    </td>
 </tr>
-<td valign=top>HP Spectre X2 laptop</td>
+<td valign=top>HP Spectre X360 laptop</td>
 <td>
     <ul>
         <li>Operating system: Microsoft Windows 10, 64bit</li>
