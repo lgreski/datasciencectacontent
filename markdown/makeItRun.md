@@ -8,7 +8,15 @@ For those of you who don't have prior programming experience, I thought I'd shar
 
 First, take the instructions for the programming assignment and summarize them into an outline. If the assignment requires use of multiple data files, determine whether the instructions say to combine them before processing, or to process them separately.  Then, for each step in the outline, identify R functions that could be used to help you solve the task at hand.
 
-Using RStudio, you can then assemble parts of your program in the source window. To execute specific statements in the source window, simply highlight the rows you want to execute and press the <Run\> button at the upper right of the source window. will execute the code and you can see the results in the console.
+If necessary, put your hacker skills to work by making Google your friend. For example, if you're trying to solve the *R Programming* class Assignment 1, some of the following Google queries might be helpful:
+
+* [list files in r](http://www.google.com/search?q=list+files+in+r)
+* [subset data frame by list of values](http://www.google.com/search?subset+data+frame+by+list+of+values)
+* [missing values in R](http://www.google.com/search?missing+values+in+r)
+
+And yes, I did have to do some hacking around myself to figure out how to embed Google searches in this article.
+
+Next, using RStudio you can then assemble parts of your program in the source window. To execute specific statements in the source window, simply highlight the rows you want to execute and press the <Run\> button at the upper right of the source window. will execute the code and you can see the results in the console.
 
 Inspect the results of your statements to see whether they are working as you expect them to do (e.g. if you expect a dataframe as output, and the result is a logical, you need to change the code).
 
@@ -26,6 +34,6 @@ Once the code produces the right results, you can profile its performance using 
 
 The aphorism "make it run, make it right, make it fast" is a good process for people to use when they are learning to write programs in R. Since we're being graded on "make it right," don't worry about making it fast until you've made it right. This means that you should submit your work for grading as soon as you believe the functions produce the correct results, step by step, rather than waiting to complete everything before your first grading run. Remember, you don't get penalized for failed tests, the object is to fail quickly, and improve the solution incrementally.
 
-** Update for New Coursera Courseware: February 2016 ** 
+** Update for New Coursera Courseware: February 2016 **
 
 With the implementation of the Data Science Specialization curriculum on the new Coursera platform, the process of submitting *R Programming* assignments has changed from the use of a submit script to manually running the tests listed in a quiz. Since a student may make up to three attempts in 8 hours and there are no penalties for "failing" a quiz, it's still advisable to submit your work for grading as soon as you complete each component of the assignment rather than waiting until all components are complete.  
