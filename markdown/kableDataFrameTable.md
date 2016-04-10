@@ -11,7 +11,3 @@ The code to produce this table looks like:
     rownames(theTable) <- NULL
     kable(theTable)
 
-
-regards,
-
-Len
