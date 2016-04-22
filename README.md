@@ -1,8 +1,8 @@
-# Data Science Specialization Community TA Content Repository
+# Data Science Specialization Community Mentor Content Repository
 
 Author: Len Greski
 
-This repository contains content developed during my time as either a student or Community TA in the Data Science Specialization from Johns Hopkins University that is offered over [Coursera](http://coursera.org).
+This repository contains content developed during my time as either a student or Community Mentor in the Data Science Specialization from Johns Hopkins University that is offered over [Coursera](http://coursera.org). A number of people have developed content to help students work through the nine courses in the specialization. The main index for this content is [datasciencespecialization.github.io](http://datasciencespecialization.github.io/).
 
 
 # Repository Contents
@@ -58,20 +58,20 @@ General commentary about the course, R programming in general, and R in relation
 
 1. [Exponential Distribution / Central Limit Theorem - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-expDistChecklist.md)
 2. [ToothGrowth Analysis - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/ToothGrowthChecklist.md)
-3. [Exploratory Data Analysis in ToothGrowth Assignment](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/edaInToothGrowthAnalysis.md), explaining the exploratory data analysis requirement for students who have not taken the *Exploratory Data Analysis* course prior to taking *Statistical Inference*. 
+3. [Exploratory Data Analysis in ToothGrowth Assignment](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/edaInToothGrowthAnalysis.md), explaining the exploratory data analysis requirement for students who have not taken the *Exploratory Data Analysis* course prior to taking *Statistical Inference*.
 4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
-4. [Kable Tables with Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/kableDataFrameTable.md) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`. 
+4. [Kable Tables with Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/kableDataFrameTable.md) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`.
 
 ## Course 7: Regression Models
 
-1. [Why does sum of errors * X equal 0?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/regmodels-sumOfErrorTimesX.md) 
+1. [Why does sum of errors * X equal 0?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/regmodels-sumOfErrorTimesX.md)
 2. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
 
 
 ## Course 8: Practical Machine Learning
-1. [Course Project - gh-pages Setup with RStudio](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-ghPagesSetup.md) 
-2. [Course Project - Improving Runtime Performance of Random Forest Models with caret::train()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-randomForestPerformance.md) 
-2. [Course Project - Predicting Test Scores based on Training Model Accuracy](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-requiredModelAccuracy.md) 
+1. [Course Project - gh-pages Setup with RStudio](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-ghPagesSetup.md)
+2. [Course Project - Improving Runtime Performance of Random Forest Models with caret::train()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-randomForestPerformance.md)
+2. [Course Project - Predicting Test Scores based on Training Model Accuracy](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-requiredModelAccuracy.md)
 
 ## Course 9: Developing Data Products
 1. [Configuring shinyapps.io Application Timeout](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataProd-shinyTimeoutConfig.md)
