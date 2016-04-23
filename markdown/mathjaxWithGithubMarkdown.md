@@ -1,4 +1,4 @@
-# Using Mathjax / LaTeX Forumlas in the Data Science Specialization
+# Using Mathjax / LaTeX Formulas in the Data Science Specialization
 
 Students in the *Statistical Inference* and subsequent classes often need to use formulas as part of their communication in three different areas:
 
