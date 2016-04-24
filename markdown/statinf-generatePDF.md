@@ -60,3 +60,5 @@ At this point, the installer begins downloading the application from the source 
 <img src="./images/installMiKTeX11.png" >
 
 When the download completes, the download dialog enables the `Next` button.
+
+*stopped here while download completes...* 
