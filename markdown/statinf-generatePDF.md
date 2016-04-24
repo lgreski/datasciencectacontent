@@ -37,7 +37,7 @@ Read the Copying Conditions agreement, click the checkbox in the lower left corn
 
 The installer program will ask you to select a radio button to either download or install MiKTeX. Select the `download` radio button and then press the `Next` button.
 
-<img src="./images/installMikTeX02.png" >
+<img src="./images/installMikTeX06.png" >
 
 On the next dialog box, select the `Complete` radio button, and then the `Next` button.
 
@@ -45,19 +45,19 @@ On the next dialog box, select the `Complete` radio button, and then the `Next` 
 
 The next dialog box allows you to select a mirror site from which the software will be downloaded. Select an FTP or HTTP download site near you, and press the `Next` button.
 
-<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMiKTeX08.png" >
+<img src="./images/installMikTeX08.png" >
 
 The next dialog box asks you to select a folder into which the MiKTeX software will be downloaded. Use the `Browse` button to open a File Manager window to navigate to the desired directory, and then press the `Next` button.
 
-<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMiKTeX09.png" >
+<img src="/images/installMikTeX09.png" >
 
 Finally, the installer displays a review dialog box. Check to see that the file destination is accurate, then press the `Next` button.
 
-<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMiKTeX10.png" >
+<img src="./images/installMikTeX10.png" >
 
 At this point, the installer begins downloading the application from the source mirror, and the next step is to wait, quite a while, because the download is about 200Mb.
 
-<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMiKTeX11.png" >
+<img src="./images/installMikTeX11.png" >
 
 When the download completes, the download dialog enables the `Next` button.
 
