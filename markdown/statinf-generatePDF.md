@@ -59,6 +59,10 @@ At this point, the installer begins downloading the application from the source 
 
 <img src="./images/installMikTeX11.png" >
 
+...and here we are, 30 minutes into the download process. As noted above, the download takes a long time!
+
+<img src="./images/installMikTeX12.png" > 
+
 When the download completes, the download dialog enables the `Next` button.
 
 *stopped here while download completes...*
