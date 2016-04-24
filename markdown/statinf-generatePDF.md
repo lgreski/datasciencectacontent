@@ -14,7 +14,7 @@ For the purposes of this article, we will focus on alternative 3, specifically f
 
 If a person tries to knit an R markdown document to PDF without a version of TeX installed on the machine, knitr generates the following error:
 
-<img src="./images/installMiKTeX01.png">
+<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMikTeX01.png">
 
 Step 1: Download the Complete MiKTeX
 
