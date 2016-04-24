@@ -33,11 +33,11 @@ Once the file is downloaded, run the setup program, and it will display a Copyin
 
 Read the Copying Conditions agreement, click the checkbox in the lower left corner of the dialog box, and press the `<Next>` button.
 
-<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMiKTeX05.png" >
+<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMikTeX05.png" >
 
 The installer program will ask you to select a radio button to either download or install MiKTeX. Select the `download` radio button and then press the `Next` button.
 
-<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMiKTeX06.png" >
+<img src="./images/installMikTeX02.png" >
 
 On the next dialog box, select the `Complete` radio button, and then the `Next` button.
 
