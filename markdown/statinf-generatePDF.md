@@ -24,11 +24,11 @@ Navigate to the [MiKTeX download page](http://www.miktex.org/download). The page
 
 The browser will prompt for a directory in which to save the file. Navigate to the desired directory in the Save As dialog box, and save the file.
 
-<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMiKTeX03.png">
+<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMikTeX03.png">
 
 Once the file is downloaded, run the setup program, and it will display a Copying Conditions Agreement dialog box.
 
-<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMiKTeX04.png">
+<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/installMikTeX04.png">
 
 
 Read the Copying Conditions agreement, click the checkbox in the lower left corner of the dialog box, and press the `<Next>` button.
