@@ -10,25 +10,25 @@ One can create a PDF suitable for submission for the course project in three dif
 
 For the purposes of this article, we will focus on alternative 3, specifically for the Windows 10 operating system.
 
-## What Happens when MiKTeX Isn't Insalled?
+## What Happens when MiKTeX Isn't Installed?
 
 If a person tries to knit an R markdown document to PDF without a version of TeX installed on the machine, knitr generates the following error:
 
-<img src="./images/installMiKTeX01.png" >
+<img src="./images/installMiKTeX01.png">
 
 Step 1: Download the Complete MiKTeX
 
 Navigate to the [MiKTeX download page](http://www.miktex.org/download). The page shows the *Recommended Download* for the basic version. Do not download this version. Instead, expand the *Other Downloads* section, and choose the net install.  Choose the 32-bit version if your computer runs the 32-bit version of Windows, and the 64-bit version if it runs the 64-bit version of Windows.
 
-<img src="./images/installMiKTeX02.png" >
+<img src="./images/installMiKTeX02.png">
 
 The browser will prompt for a directory in which to save the file. Navigate to the desired directory in the Save As dialog box, and save the file.
 
-<img src="./images/installMiKTeX03.png" >
+<img src="./images/installMiKTeX03.png">
 
 Once the file is downloaded, run the setup program, and it will display a Copying Conditions Agreement dialog box.
 
-<img src="./images/installMiKTeX04.png" >
+<img src="./images/installMiKTeX04.png">
 
 
 Read the Copying Conditions agreement, click the checkbox in the lower left corner of the dialog box, and press the `<Next>` button.
@@ -61,4 +61,4 @@ At this point, the installer begins downloading the application from the source 
 
 When the download completes, the download dialog enables the `Next` button.
 
-*stopped here while download completes...* 
+*stopped here while download completes...*
