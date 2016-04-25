@@ -108,6 +108,20 @@ Once the install process completes, press the `Next` button to continue.
 
 <img src="./images/installMikTeX23.png" >
 
-The installer displays
+The installer displays the final dialog box indicating that the installation has completed. On my machine \(Intel i7 processor, solid state disk\), the install process took about 30 minutes.
+
+Press the `Close` button to end the installation process.
 
 <img src="./images/installMikTeX24.png" >
+
+Restart RStudio, and knit an R markdown document to confirm that MiKTeX allows knitr to generate a PDF.
+
+<img src="./images/installMikTeX25.png" >
+
+...and the output from knitr.
+
+<img src="./images/installMikTeX26.png" >
+
+After a lot of time downloading code and watching the disk spin through the installation of MiKTeX on the local disk, we're now able to knit to PDF.
+
+Have fun with your analyses!
