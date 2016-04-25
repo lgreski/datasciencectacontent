@@ -61,8 +61,47 @@ At this point, the installer begins downloading the application from the source 
 
 ...and here we are, 30 minutes into the download process. As noted above, the download takes a long time!
 
-<img src="./images/installMikTeX12.png" > 
+<img src="./images/installMikTeX12.png" >
 
-When the download completes, the download dialog enables the `Next` button.
+When the download completes, the download dialog enables the `Next` button. In my case, it took 1 hour 42 minutes, on an internet connection with 90mbps download speed.
 
-*stopped here while download completes...*
+<img src="./images/installMikTeX15.png" >
+
+Press the `Next` button to complete the installation.
+
+<img src="./images/installMikTeX13.png" >
+
+At this point in the process, the final dialog appears.
+
+<img src="./images/installMikTeX14.png" >
+
+## Step 2: Install MiKTeX
+
+Restart the installation software from the location where you downloaded it. As it did on for the download process, the installer displays the Copying Conditions Agreement. Select the checkbox and then press the `Next` button to continue.
+
+<img src="./images/installMikTeX16.png" >
+
+Select the radio button for the complete install, and then press the next button.
+
+<img src="./images/installMikTeX17.png" >
+
+Next, the installer asks whether MiKTeX should be accessible by all users or the current user on the machine where the installation is taking place. Select the `all users` radio button, and then press the `Next` button.
+
+<img src="./images/installMikTeX18.png" >
+
+Next, the installer allows you to specify a directory to which the MiKTeX software will be installed. If you want to install in a directory other than the default, either type the directory name in the text window, or select the `Browse` button to use File Manager to select a directory. Then press the `Next` button to continue.
+
+<img src="./images/installMikTeX19.png" >
+
+The next dialog allows you to set a preferred paper size, and to install missing packages. Select `Letter` and `Yes`and then press `Next`.
+
+<img src="./images/installMikTeX20.png" >
+
+The installer displays a summary dialog so you can review your selections. If you're satisfied with the entries you've made, press `Next` to start the installation. Otherwise press the `Back` button to return to the dialog whose values you want to change.
+<img src="./images/installMikTeX21.png" >
+
+The install process begins, and note that it will install over 113,000 files.
+
+<img src="./images/installMikTeX22.png" >
+
+Once the install process completes, press the `Next` button to continue. 
