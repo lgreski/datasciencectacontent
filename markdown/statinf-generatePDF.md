@@ -104,4 +104,10 @@ The install process begins, and note that it will install over 113,000 files.
 
 <img src="./images/installMikTeX22.png" >
 
-Once the install process completes, press the `Next` button to continue. 
+Once the install process completes, press the `Next` button to continue.
+
+<img src="./images/installMikTeX23.png" >
+
+The installer displays
+
+<img src="./images/installMikTeX24.png" >
