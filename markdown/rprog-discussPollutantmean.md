@@ -32,11 +32,19 @@ In *Getting and Cleaning Data* you will learn how to develop a code book for a d
 
 ## Output
 
-The
+The output required for the assignment is a single number, the average calculated across all of the sensor files that were in the list of ID numbers passed into the function as an argument.
 
 # Designing a Solution for `pollutantmean()`
 
-One way to solve the problem is as follows:
+Now that we understand the inputs and output required, we can discuss the process of converting the inputs to the output. The instructors in *R Programming* repeatedly discuss that there is more than one way to do things in R. To make it easier on the beginner, we'll take the conceptually simplest approach possible.
+
+We know from the above discussion that we must read one or more files from disk to solve the problem. Because we need to return a single mean calculated across all of the files to be read, that means we must combine the individual files into a single file (or data frame) so we can calculate the mean correctly.  Conceptually we need to complete three steps within the function:
+
+1. Read the files that are referenced in the `id` argument,
+2. Combine the files into a single file / data frame, and
+3. Calculate the mean of the requested pollutant and return it to the parent environment. 
+
+Breaking this down to the next level of detail makes the design a bit more complicated, as we must account for the assumptions we discussed earlier in the article. One way to solve the problem is as follows:
 
 1. Obtain a list of sensor files from the `specdata` folder, given the assumption that the `specdata` folder is a subfolder of the R Working Directory.<br><br>
 2. Create an empty data frame into which you will collect all of the sensor files to be read<br><br>
