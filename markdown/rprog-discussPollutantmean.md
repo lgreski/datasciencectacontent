@@ -33,11 +33,13 @@ To get a better picture of the data files, it's always a good idea to take a loo
 
 If you need a text editor with which to read the raw data files, I suggest [Atom](https://atom.io), since it is free.
 
-In *Getting and Cleaning Data* you will learn how to develop a code book for a data set.  For now, we'll refer you to the [Assignment Instructions](http://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/rprog-Assignment1Instructions.PDF) that explain the data that is in each comma separated value file. *Getting and Cleaning Data* also covers the fact that it's always a good idea to run some descriptive statistics on the data to understand what it looks like:
+In *Getting and Cleaning Data* you will learn how to develop a code book for a data set.  For now, we'll refer you to the [Assignment Instructions](http://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/rprog-Assignment1Instructions.PDF) that explain the data that is in each comma separated value file. *Getting and Cleaning Data* also covers the fact that it's always a good idea to run some descriptive statistics on the data to understand what it looks like.
+
+I like to use the `stat.desc()` function from the <em>pastecs</em> package because it provides a lot more information than the information provided by the `base::summary()` function.
 
 <img src="./images/rprog-pollutantmean02.png">
 
-WOW! That's a lot of missing values for both `sulfate` and `nitrate` across all 332 sensor files.
+Interesting... There are MANY missing values for both `sulfate` and `nitrate` across all 332 sensor files. In fact, only about 15% of the observations for `nitrate` and `sulfate` are non-missing.
 
 ## Key Assumptions
 
@@ -64,7 +66,7 @@ It's also important to note what is NOT assumed to be constant, because these co
 
 ## Output
 
-The output required for the assignment is a single number, the average calculated across all of the sensor files that were in the list of ID numbers passed into the function as an argument.
+The output required for the assignment is a single number, the average calculated across all of the sensor files that were in the list of ID numbers passed into the function as an argument. Note that the average must be calculated across the non-missing values of the selected pollutant, because if one includes the missing values in the mean calculation, the result will be `NA`.
 
 # Designing a Solution
 
