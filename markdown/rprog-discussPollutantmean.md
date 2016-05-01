@@ -2,7 +2,15 @@
 
 As someone new to R or new to programming in general, it's important to have a plan of attack for writing the R functions required for the first programming assignment. One way to do this is to use the process I described in the article [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md).  Starting with an outline helps break what at first appears to be an overwhelming task into manageable chunks.
 
-In this article, we'll apply the general concepts from [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md) to describe one of many potential solutions to `pollutantmean()`.
+In this article, we'll apply the general concepts from [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md) to flesh out one of many potential solutions to `pollutantmean()`. We'll walk through the following steps:
+
+1. Summarize the Objective,
+2. Describe the inputs and outputs,
+3. Generate a list of working assumptions to guide subsequent design decisions,
+4. Use information from the preceding steps to develop a design, and
+5. Develop the function prototype, coding the design steps as comments into the function prototype.
+
+Finally, we'll end with a set of next steps for the student.
 
 ## Overall Objective: Calculate a Mean
 
@@ -29,12 +37,36 @@ In *Getting and Cleaning Data* you will learn how to develop a code book for a d
 
 <img src="./images/rprog-pollutantmean02.png">
 
+WOW! That's a lot of missing values for both `sulfate` and `nitrate` across all 332 sensor files.
+
+## Key Assumptions
+
+Every computer program includes a list of design assumptions, that is, conditions we expect to be constant across the users' consumption of the program. Reading through the assignment instructions and our inspection of the file names and contents of `001.csv` gives rise to the following set of assumptions.
+
+* Data will be stored in a directory called `specdata`, which is a subdirectory of the R working directory.
+* Column (variable) names in the data files are case-sensitive.
+* There are 332 sensor files, and therefore, the values of `id` will vary between 1 and 332.
+* The only files in the `specdata` directory will be the 332 sensor files.
+* There are two types of pollutants stored in the sensor files, `sulfate` and `nitrate`.
+* Some of the values of `sulfate` and `nitrate` are missing, and we will need to handle this within our function.
+* The sensor files have data that is separated by commas, and therefore there must be an R function that reads these types of files.
+* The files are organized by sensor number, and therefore there must be a way in R to use the `id` argument to decide which files to read.
+
+One of the benefits of listing the assumptions is that they allow us to begin to flesh out the design, or to limit the code we need to write.
+
+For example, if we know that the `id` argument will be a list of integers that vary between 1 and 332, we don't need to write code to deal with values less than zero, greater than zero, or are non-integer values.  
+
+It's also important to note what is NOT assumed to be constant, because these conditions must be accounted for within the design of our function. We can observe "non-assumptions" by looking at the test cases and output that are provided along with the assignment instructions that we referenced above.  
+
+* `id` can be passed as a list of non-sequential integers
+* `id` does not have to start at 1
+* `id` does not have to include all 332 files
 
 ## Output
 
 The output required for the assignment is a single number, the average calculated across all of the sensor files that were in the list of ID numbers passed into the function as an argument.
 
-# Designing a Solution for `pollutantmean()`
+# Designing a Solution
 
 Now that we understand the inputs and output required, we can discuss the process of converting the inputs to the output. The instructors in *R Programming* repeatedly discuss that there is more than one way to do things in R. To make it easier on the beginner, we'll take the conceptually simplest approach possible.
 
@@ -42,23 +74,23 @@ We know from the above discussion that we must read one or more files from disk 
 
 1. Read the files that are referenced in the `id` argument,
 2. Combine the files into a single file / data frame, and
-3. Calculate the mean of the requested pollutant and return it to the parent environment. 
+3. Calculate the mean of the requested pollutant and return it to the parent environment.
 
-Breaking this down to the next level of detail makes the design a bit more complicated, as we must account for the assumptions we discussed earlier in the article. One way to solve the problem is as follows:
+Breaking this down to the next level of detail makes the design a bit more complicated, as we account for the assumptions we discussed earlier in the article. One way to solve the problem is as follows:
 
 1. Obtain a list of sensor files from the `specdata` folder, given the assumption that the `specdata` folder is a subfolder of the R Working Directory.<br><br>
 2. Create an empty data frame into which you will collect all of the sensor files to be read<br><br>
 3. Subset the list of sensor files down to only those to be used in the calculation of the mean. HINT: this can be done with vector subscripting.<br><br>
-4. Loop through each file in the subsetted list and do the following: read the raw data file with an appropriate `read.???()` function, bind the file to the data frame you created in step 2.<br><br>
+4. Loop through each file in the subsetted list and do the following: read the raw data file with an appropriate file reading function, bind the file to the data frame you created in step 2.<br><br>
 5. Calculate the mean and return it to the parent environment
 
-While some of these steps can be combined by using `apply()` functions and other R functions such as `do.call()`, I've written this approach using a loop in step 4 so we can highlight where to subset the file list: do this BEFORE reading the data files from disk into memory.
+While some of these steps can be combined by using `apply()` functions in combination with other R functions such as `do.call()`, I've written this approach using a loop in step 4 so we can highlight where to subset the file list: do this BEFORE reading the data files from disk into memory.
 
 Once you have your outline, you can organize your coding around the outline, like this:
 
     pollutantmean(...) {
 
-       # obtain list of sensor files
+       # obtain list of sensor files in specdata directory
 
        # create empty data frame
 
@@ -71,4 +103,14 @@ Once you have your outline, you can organize your coding around the outline, lik
        # calculate mean and return to parent environment
     }
 
+# Your Next step
+
+Having provided a relatively detailed walkthrough of the design process, all that's left is for you to determine the R functions that are required for each step in the process.  Remember what the instructors said during *The Data Scientist's Toolbox,* "Google is your friend." Use it frequently, as I explained in [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md).
+
 One last hint: if your program is more than 8 - 12 programming statements, it's too complicated. There are ways to solve this problem with as few as 1 - 3 programming statements if you combine the required R functions.
+
+# Appendix: Variations on a Theme
+
+Having given an outline for one potential solution, it can be modified in a number of ways. For example, to prevent a problem with files beyond `001.csv` to `332.csv` being in the `specdata` subdirectory, one could use R functions to build the filenames directly from the `id` vector instead of retrieving them by using a function that lists files in a directory. This technique could be employed in a `for()` loop or with an `apply()` function. 
+
+Another modification as stated above would be to use `apply()` functions rather than a loop to read and combine the files.
