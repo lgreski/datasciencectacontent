@@ -1,10 +1,10 @@
-# Breaking down pollutantmean()
+# Breaking Down pollutantmean()
 
 As someone new to R or new to programming in general, it's important to have a plan of attack for writing the R functions required for the first programming assignment. One way to do this is to use the process I described in the article [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md).  Starting with an outline helps break what at first appears to be an overwhelming task into manageable chunks.
 
 In this article, we'll apply the general concepts from [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md) to flesh out one of many potential solutions to `pollutantmean()`. We'll walk through the following steps:
 
-1. Summarize the Objective,
+1. Summarize the objective,
 2. Describe the inputs and outputs,
 3. Generate a list of working assumptions to guide subsequent design decisions,
 4. Use information from the preceding steps to develop a design, and
@@ -18,13 +18,13 @@ The first part of the assignment requires students to calculate a single average
 
 ## Inputs
 
-Every computer program starts with one or more "inputs," and ends with some type of output. `pollutantmean()` starts with three inputs, or *arguments,* each of which must be named within the `function()` function used to define `pollutantmean()`, also known as a function declaration:
+Every computer program starts with one or more "inputs," and ends with some type of "output." `pollutantmean()` starts with three inputs, or *arguments,* each of which must be named within the `function()` function used to define `pollutantmean()`, also known as a function declaration:
 
 <table>
 <tr><th>Argument</th><th>Description</th></tr>
-<tr><td>directory</td><td>The name of a subdirectory from which the 332 pollution sensors will be read. A key assumption for this assignment is that the name of the directory is `specdata`, and that it is a child directory from the <em>current R working directory</em>.  </td></tr>
+<tr><td>directory</td><td>The name of a subdirectory from which the 332 pollution sensors will be read. A key assumption for this assignment is that the name of the directory is <code>specdata</code>, and that it is a child directory from the <em>current R working directory</em>.  </td></tr>
 <tr><td>pollutant</td><td>Each sensor file contains measurements for two pollutants, <em>sulfate,</em> and <em>nitrate.</em></td></tr>
-<tr><td>id</td><td>a list of numbers that can vary from 1 to 332, indicating the sensor number(s) that are to be included in calculation of the mean. Each file is in a special format, comma separated values or `.csv,` such that the names of the files look like `001.csv, 002.csv, ..., 332.csv.` </td></tr>
+<tr><td>id</td><td>a list of numbers that can vary from 1 to 332, indicating the sensor number(s) that are to be included in calculation of the mean. Each file is in a special format, comma separated values or <code>.csv,</code> such that the names of the files look like <code>001.csv, 002.csv,</code> ... <code>332.csv.</code> </td></tr>
 </table>
 
 To get a better picture of the data files, it's always a good idea to take a look at the raw data. As we can see from the following screenshot for `001.csv`, the file includes one row with header information, that is, the names of the variables in subsequent rows. The variables in each row include `Date`, `sulfate`, `nitrate`, and `ID`.
@@ -103,14 +103,14 @@ Once you have your outline, you can organize your coding around the outline, lik
        # calculate mean and return to parent environment
     }
 
-# Your Next step
+# Next Steps
 
-Having provided a relatively detailed walkthrough of the design process, all that's left is for you to determine the R functions that are required for each step in the process.  Remember what the instructors said during *The Data Scientist's Toolbox,* "Google is your friend." Use it frequently, as I explained in [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md).
+Having provided a relatively detailed walkthrough of the design process, all that's left is for the student to determine the R functions that are required for each step in the process.  Remember what the instructors said during *The Data Scientist's Toolbox,* "Google is your friend." Use it frequently, as I explained in [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md).
 
 One last hint: if your program is more than 8 - 12 programming statements, it's too complicated. There are ways to solve this problem with as few as 1 - 3 programming statements if you combine the required R functions.
 
 # Appendix: Variations on a Theme
 
-Having given an outline for one potential solution, it can be modified in a number of ways. For example, to prevent a problem with files beyond `001.csv` to `332.csv` being in the `specdata` subdirectory, one could use R functions to build the filenames directly from the `id` vector instead of retrieving them by using a function that lists files in a directory. This technique could be employed in a `for()` loop or with an `apply()` function. 
+Having given an outline for one potential solution, it can be modified in a number of ways. For example, to prevent a problem with files beyond `001.csv` to `332.csv` being in the `specdata` subdirectory, one could use R functions to build the filenames directly from the `id` vector instead of retrieving them by using a function that lists files in a directory. This technique could be employed in a `for()` loop or with an `apply()` function.
 
 Another modification as stated above would be to use `apply()` functions rather than a loop to read and combine the files.
