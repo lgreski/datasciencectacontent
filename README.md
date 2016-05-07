@@ -64,6 +64,7 @@ General commentary about the course, R programming in general, and R in relation
 4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
 4. [Kable Tables with Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/kableDataFrameTable.md) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`.
 5. [Installing MiKTeX on Windows 10 / Generating a PDF with knitr](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-generatePDF.md)
+5. [Power Calculations: Optimal Sample size](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-optimalSampleSize.md)
 
 ## Course 7: Regression Models
 
