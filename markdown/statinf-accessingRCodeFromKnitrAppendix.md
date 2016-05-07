@@ -29,7 +29,7 @@ Third, here is what the output in the beginning of the report looks like:
 
 Notice that 1) there is no echoing of the code between the Executive Summary and the Exploratory Data Analysis headings, even though I executed code to generate descriptive statistics ahead of the EDA section, where at 2) I've retrieved a mean calculated from an R procedure and displayed it in the report.
 
-Finally, here is what the appendix looks like, where the code is displayed but not evaluated.
+Finally, here is what the appendix looks like, where the code is displayed `echo=TRUE` but not evaluated `eval=FALSE`.
 
 <img src="./images/statinf-usingKnitrInReports04.png">
 
