@@ -1,6 +1,6 @@
 # Power Calculations: what is an "optimal" sample size?
 
-Generally speaking, "optimal" sample size is the minimum sample size needed to distinguish an effect of a specific size between a test and control groups at a specific alpha level. That is, if a researcher designs an experiment with a test and control group and can distinguish a  substantively meaningful effect with a sample size of 60, why should s/he spend money on a sample size of 100?
+Generally speaking, "optimal" sample size is the minimum sample size needed to distinguish an effect of a specific size between test and control groups at a specific alpha level. That is, if a researcher designs an experiment with a test and control group and can distinguish a  substantively meaningful effect with a sample size of 60, why should s/he spend money on a sample size of 100?
 
 Remember, effect size for a difference of means test is calculated as \(mu_a - mu_0\) / \(sigma\), where mu_a represents the mean from the test group, and mu_0 represents the control group, assuming a pooled variance.
 
