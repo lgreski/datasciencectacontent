@@ -17,7 +17,7 @@ Use a web browser to navigate to your github home page, `https://github.com/user
 
 From the **Create a new repository** page, enter `practicalmachinelearning` as the repository name, and a description. Since all of the Github Pages content is public, there is no need to make this repository private if your account has private repositories enabled.
 
-Optionally, select R for `.gitignore`, initialize the repository with a README, and add a license, as illustrated below. Then press the `Create repository` button.
+Initialize the repository with a README. A README is required for Github to allow a branch to be created from the repository immediately upon initialization. Optionally, select R for `.gitignore.` and add a license, as illustrated below. Then press the `Create repository` button.
 
 <img src="./images/gh-pages02.png">
 
