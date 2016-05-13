@@ -10,7 +10,9 @@ To improve processing time of the multiple executions of the `train()` function,
 
 Fortunately, the `parallel` package works on R across all major operating system platforms: Linux, Mac OSX, and Windows. One's ability to run these models in parallel is often the difference between using a highly effective algorithm like *random forest* versus a less effective but more computationally efficient algorithm (such as *linear discriminant analysis*).
 
-One other tradeoff that we made in this analysis was changing the resampling method from the default of bootstrapping to k-fold cross-validation. The change in resampling technique may trade processing performance for reduced model accuracy. However, our analysis shows that the 5 fold cross-validation resampling technique delivered the same accuracy as the more computationally expensive bootstrapping technique. 
+One other tradeoff that we made in this analysis was changing the resampling method from the default of bootstrapping to k-fold cross-validation. The change in resampling technique may trade processing performance for reduced model accuracy. However, our analysis shows that the 5 fold cross-validation resampling technique delivered the same accuracy as the more computationally expensive bootstrapping technique.
+
+Finally, we note that `caret::train()` supports a wide variety of tuning parameters that vary by model type. For the purposes of this analysis, we chose only to vary the resampling method for `train(x,y,method="rf",...)`, leaving other parameters such as `mtry` constant.  
 
 ## The Process: A Parallel Implementation of Random Forest
 
@@ -35,7 +37,7 @@ For the purpose of illustrating the syntax required for parallel processing, we'
     inTraining <- createDataPartition(Sonar$Class, p = .75, list=FALSE)
     training <- Sonar[inTraining,]
     testing <- Sonar[-inTraining,]
-    
+
     # set up training run for x / y syntax because model format performs poorly
     x <- training[,-61]
     y <- training[,61]
