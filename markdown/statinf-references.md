@@ -16,4 +16,4 @@ Students in the Statistical Inference Course within the Johns Hopkins University
 
 We will continue to periodically update this list with new reference material.
 
-*Last updated: 14 May 2016*
+*Last updated: 16 May 2016*
