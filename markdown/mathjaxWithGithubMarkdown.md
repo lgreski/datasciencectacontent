@@ -53,5 +53,5 @@ Note that this syntax added to a markdown file will not cause the LaTeX to be co
 
 ## References
 
-1. Poole, Christopher (2012) -- [Using Mathjax on Github  Pages](http://christopherpoole.github.io/using-mathjax-on-github-pages/), retrieved December 3, 2015.
+1. Poole, Christopher (2012) -- [Using Mathjax on Github  Pages](http://www.christopherpoole.net/using-mathjax-on-githubpages.html), retrieved December 3, 2015.
 2. Wikipedia (2015) -- [LaTeX Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics), retrieved December 3, 2015.
