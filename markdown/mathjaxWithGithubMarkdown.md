@@ -49,7 +49,7 @@ The remainder of the document should be coded with HTML commands, and then the f
 
 <img src="./images/misc-Mathjax05.png">
 
-Note that this syntax added to a markdown file will not cause the LaTeX to be correctly interpreted into equations in a Markdown file on Github. For more information on this topic, see [Using Mathjax on Github  Pages](http://christopherpoole.github.io/using-mathjax-on-github-pages/).
+Note that this syntax added to a markdown file will not cause the LaTeX to be correctly interpreted into equations in a Markdown file on Github. For more information on this topic, see [Using Mathjax on Github  Pages](http://www.christopherpoole.net/using-mathjax-on-githubpages.html).
 
 ## References
 
