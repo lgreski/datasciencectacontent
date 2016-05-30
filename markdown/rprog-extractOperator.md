@@ -65,7 +65,7 @@ Having illustrated different ways to extract content with the extract operator, 
     head(mtcars[20:28,])
 
     # approach 2: use logic in the row dimension of reference
-    head(mtcars[mtcars$cyl == 4,])
+    head(mtcars[mtcars$cyl == 4 & mtcars$am == 1,])
     head(mtcars[mtcars[,"cyl"] == 4,])
 
     # approach 3: use which() function
