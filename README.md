@@ -7,7 +7,7 @@ This repository contains content developed during my time as either a student or
 
 # Repository Contents
 
-As a participant and TA in courses in the curriculum, there are patterns of similar issues experienced by students. Migrating the content to github will facilitate reposting it to new runs of courses within the curriculum. This will make it easier for students to have access to the experiences from prior students without me having to cut and paste the content into Discussion Forums, which are the primary mechanism for communication between students and with TAs.
+As a participant and Community Mentor in courses in the curriculum, there are patterns of similar issues experienced by students. Migrating the content to github will facilitate reposting it to new runs of courses within the curriculum. This will make it easier for students to have access to the experiences from prior students without me having to cut and paste the content into Discussion Forums, which are the primary mechanism for communication between students and with TAs.
 
 <table>
 <tr><th>File</th><th>Description</th></tr>
@@ -31,6 +31,7 @@ General commentary about the course, R programming in general, and R in relation
 1. [Commercial Statistics Packages: An Historical Perspective](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statsPackagesHistory.md)
 2. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
 2. [A Data Frame is Also a List](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataFrameAsList.md)
+2. [Forms of the Extract Operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-extractOperator.md)
 3. [S Objects, R Objects, and Lexical Scoping](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-lexicalScoping.md)
 3. [Thinking in R versus Thinking in SAS](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/exampleSortRvsSAS.md)
 3. [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md)
