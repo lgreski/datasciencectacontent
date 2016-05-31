@@ -35,7 +35,7 @@ SAS Macro language is a code generator -- it allows you to create segments of co
             %let i = 1;
             /* grab tokens from suffix list */
              %let word=%scan(&suf,1,%str( ));
-            %do %while (&word != );
+            %do %while (&word ^= );
                     %if &type = MACRO %then %do;
                          %&&pre(&word)
                     %end;
