@@ -44,7 +44,7 @@ The following code examples use the `mtcars` data set from the `datasets` packag
     # work with variable substitution (i.e. a computed index)
     mtcars$theCol
 
-Having illustrated different ways to extract content with the extract operator, we will now illustrate its power as a way to subset rows or columns in a data frame, which is required for a number of questions in *R Programming* quiz 1.
+Having illustrated different ways to extract content with the extract operator, we will now illustrate its power as a way to subset rows or columns in a data frame, which is required for a number of questions in *R Programming* quiz 1. Note that we'll use the `head()` function to limit the number of rows returned when we print the data frame in various forms. For more information on `head()`, enter `?head` in the R console.
 
     #
     # subsetting columns
@@ -62,7 +62,7 @@ Having illustrated different ways to extract content with the extract operator, 
     #
 
     # approach 1: use exact row references
-    head(mtcars[20:28,])
+    mtcars[20:22,]
 
     # approach 2: use logic in the row dimension of reference
     head(mtcars[mtcars$cyl == 4 & mtcars$am == 1,])
