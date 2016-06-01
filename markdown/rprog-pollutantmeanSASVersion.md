@@ -65,11 +65,11 @@ Code for the first step looks like:
 This turns out to be the most challenging part of the solution. We must read a variable number of input files and combine them into a single SAS data set. Since the `DATA step` is a very flexible tool, we can use the following approach to read the data from each raw data file.
 
 1. Read one input file name from the SAS data set created in the previous step, and use the file name as the argument to an `INFILE` statement.<br><br>
-2. Using a `do loop`, read each line of the raw data file, and write it to the output SAS data set.
+2. Using a `do loop`, read each line of the raw data file, and write it to the output SAS data set.<br><br>
 
 
 
-    * step 2: read the raw data files ;
+    /* step 2: read the raw data files */;
     data sensors;
       length theFileName $100.;
       set specdata;
@@ -87,11 +87,11 @@ This turns out to be the most challenging part of the solution. We must read a v
 This step is trivially easy, given that SAS has a large library of canned procedures. Using the output data set from Step 2, the `means` procedure can be used to generate the required mean. This is the one area where the SAS solution is easier than the R solution, because SAS automatically eliminates missing values when calculating the mean, whereas R forces the programmer to tell R not to use missing values via the `na.rm=TRUE` argument.
 
 
-    * step 3: generate mean for selected variable ;
-    proc means data = sensors mean;
-      var &pollutant;
-      title "Mean for sensors &firstword thru &lastword";
-      run;
+      * step 3: generate mean for selected variable ;
+      proc means data = sensors mean;
+        var &pollutant;
+        title "Mean for sensors &firstword thru &lastword";
+        run;
 
 
 ## Simplifying Assumptions  
