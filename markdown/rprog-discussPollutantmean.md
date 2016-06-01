@@ -31,7 +31,7 @@ To get a better picture of the data files, it's always a good idea to take a loo
 
 <img src="./images/rprog-pollutantmean01.png">
 
-If you need a text editor with which to read the raw data files, I suggest [Atom](https://atom.io), since it is free.
+If you need a text editor with which to read the raw data files, I suggest [Atom](https://atom.io) since it is free.
 
 In *Getting and Cleaning Data* you will learn how to develop a code book for a data set.  For now, we'll refer you to the [Assignment Instructions](http://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/rprog-Assignment1Instructions.PDF) that explain the data that is in each comma separated value file. *Getting and Cleaning Data* also covers the fact that it's always a good idea to run some descriptive statistics on the data to understand what it looks like.
 
@@ -66,7 +66,7 @@ It's also important to note what is NOT assumed to be constant, because these co
 
 ## Output
 
-The output required for the assignment is a single number, the average calculated across all of the sensor files that were in the list of ID numbers passed into the function as an argument. Note that the average must be calculated across the non-missing values of the selected pollutant, because if one includes the missing values in the mean calculation, the result will be `NA`.
+The output required for the assignment is a single number, the average calculated across all of the sensor files that were in the list of ID numbers passed into the function as an argument. Note that the average must be calculated across the non-missing values of the selected pollutant, because if one includes the missing values in the mean calculation, the result will be `NA`. Example output is provided in the [assignment instructions](https://d396qusza40orc.cloudfront.net/rprog%2Fdoc%2Fpollutantmean-demo.html) so students can validate the accuracy of their code before taking the quiz for a grade.
 
 # Designing a Solution
 
