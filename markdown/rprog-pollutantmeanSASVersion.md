@@ -67,7 +67,7 @@ This turns out to be the most challenging part of the solution. We must read a v
 1. Read one input file name from the SAS data set created in the previous step, and use the file name as the argument to an `INFILE` statement.<br><br>
 2. Using a `do loop`, read each line of the raw data file, and write it to the output SAS data set.<br><br>
 
-
+This technique is beyond what is typically taught in a statistics class that introduces SAS.
 
     /* step 2: read the raw data files */;
     data sensors;
