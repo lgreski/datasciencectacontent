@@ -48,6 +48,8 @@ Code for the first step looks like:
 
        %let i = 1;
        %let word = %scan(&id,&i,%str( ));
+       /* calculate first word for title statement in proc means */ 
+       %let firstword = &word;
        data specdata;
          length aFile $100.;
        %do %while(&word ^= );
@@ -57,6 +59,9 @@ Code for the first step looks like:
          %let i = %eval(&i + 1);
          %let word = %scan(&id,&i,%str( ));
        %end;
+       /* obtain last sensor id for title statement in proc means */
+       %let lastword = %scan(&id,%eval(&i - 1),%str( ));
+
        run;
 
 
