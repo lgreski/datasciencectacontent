@@ -63,7 +63,7 @@ Code for the first step looks like:
        %let i = 1;
        %let word = %scan(&id,&i,%str( ));
        /* calculate first word for title statement in proc means */
-       %let firstword = &word;
+       %let firstsensor = &word;
        data specdata;
          length aFile $100.;
        %do %while(&word ^= );
@@ -74,7 +74,7 @@ Code for the first step looks like:
          %let word = %scan(&id,&i,%str( ));
        %end;
        /* obtain last sensor id for title statement in proc means */
-       %let lastword = %scan(&id,%eval(&i - 1),%str( ));
+       %let lastsensor = %scan(&id,%eval(&i - 1),%str( ));
 
        run;
 
@@ -109,7 +109,7 @@ This step is trivially easy, given that SAS has a large library of canned proced
       /* step 3: generate mean for selected variable */
       proc means data = sensors mean;
         var &pollutant;
-        title "Mean for sensors &firstword thru &lastword";
+        title "Mean for sensors &firstsensor thru &lastsensor";
         run;
 
 
@@ -161,7 +161,7 @@ For comparison, here is the output from the examples listed in the assignment in
           * assume id is a space-separated list of sensor ids
           * in three character format: 001, 002, ... 011, 012, ... 332
           */
-          %local i word firstword lastword;
+          %local i word firstsensor lastsensor;
 
           /*
            * step 1: generate list of files
@@ -172,7 +172,7 @@ For comparison, here is the output from the examples listed in the assignment in
            */
           %let i = 1;
           %let word = %scan(&id,&i,%str( ));
-          %let firstword = &word;
+          %let firstsensor = &word;
           data specdata;
           	length aFile $100.;
           %do %while(&word ^= );
@@ -182,7 +182,7 @@ For comparison, here is the output from the examples listed in the assignment in
           	%let i = %eval(&i + 1);
           	%let word = %scan(&id,&i,%str( ));
           %end;
-          %let lastword = %scan(&id,%eval(&i - 1),%str( ));
+          %let lastsensor = %scan(&id,%eval(&i - 1),%str( ));
           run;
           /* step 2: read the raw data files */
           data sensors;
@@ -198,6 +198,6 @@ For comparison, here is the output from the examples listed in the assignment in
           /* step 3: generate mean for selected variable */
           proc means data = sensors mean;
           	var &pollutant;
-          	title "Mean for sensors &firstword thru &lastword";
+          	title "Mean for sensors &firstsensor thru &lastsensor";
           	run;
       %mend pollutantmean;
