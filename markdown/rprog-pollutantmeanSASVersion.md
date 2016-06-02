@@ -18,7 +18,7 @@ The general requirements for `pollutantmean()` are covered in [Breaking down pol
 
 Reading and calculating a mean of one sensor file in SAS is very easy. We will illustrate this with one of the examples from the assignment 1 instructions from the *R Programming* course.
 
-      /*
+     /*
       * read a sensor file
       */
 
@@ -52,13 +52,13 @@ Instead, we'll use the macro language within a `DATA step` to generate the requi
 Code for the first step looks like:
 
 
-        * ;
-        * step 1: generate list of files ;
-        * ;
-        * Note that we need a "hack" to generate the list of filenames ;
-        * because SAS University restricts access to the FILENAME PIPE ;
-        * that is required to query the filenames in a directory ;
-        * ;
+       /* 
+        * step 1: generate list of files 
+        * 
+        * Note that we need a "hack" to generate the list of filenames 
+        * because SAS University restricts access to the FILENAME PIPE 
+        * that is required to query the filenames in a directory 
+        */
 
        %let i = 1;
        %let word = %scan(&id,&i,%str( ));
@@ -106,7 +106,7 @@ This technique is beyond what is typically taught in a statistics class that int
 This step is trivially easy, given that SAS has a large library of canned procedures. Using the output data set from Step 2, the `means` procedure can be used to generate the required mean. This is the one area where the SAS solution is easier than the R solution, because SAS automatically eliminates missing values when calculating the mean, whereas R forces the programmer to tell R not to use missing values via the `na.rm=TRUE` argument.
 
 
-      * step 3: generate mean for selected variable ;
+      /* step 3: generate mean for selected variable */
       proc means data = sensors mean;
         var &pollutant;
         title "Mean for sensors &firstword thru &lastword";
@@ -123,9 +123,9 @@ With additional programming, we could parse the lengths of the sensor numbers an
 The last piece of the puzzle is the syntax for a SAS macro. We needed three parameters: a directory where the sensor data is stored, a variable on which to calculate a mean, and the list of sensors to include in the mean.
 
     %macro pollutantmean(directory,pollutant,id=);
-    * ;
-    * programming statements go here ;
-    * ;
+    /* 
+     * programming statements go here 
+     */
     %mend pollutantmean;
 
 ## ...And Finally, the Output
