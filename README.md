@@ -61,14 +61,19 @@ General commentary about the course, R programming in general, and R in relation
 ## Course 6: Statistical Inference
 
 1. [Reference Materials for Statistical Inference](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-references.md)  Start here if you're looking for help on the statistical techniques taught in this course. 
+4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
+5. [Power Calculations: Optimal Sample size](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-optimalSampleSize.md)
+
+
+### Articles Related to the Course Project
+
 1. [Exponential Distribution / Central Limit Theorem - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-expDistChecklist.md)
 2. [ToothGrowth Analysis - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/ToothGrowthChecklist.md)
 3. [Exploratory Data Analysis in ToothGrowth Assignment](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/edaInToothGrowthAnalysis.md), explaining the exploratory data analysis requirement for students who have not taken the *Exploratory Data Analysis* course prior to taking *Statistical Inference*.
-4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
-4. [Kable Tables with Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/kableDataFrameTable.md) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`.
-5. [Installing MiKTeX on Windows 10 / Generating a PDF with knitr](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-generatePDF.md)
-5. [Power Calculations: Optimal Sample size](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-optimalSampleSize.md)
-5. [Accessing R Code from an Appendix in Knitr](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-accessingRCodeFromKnitrAppendix.md)
+4. [Accessing R Code from an Appendix in Knitr](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-accessingRCodeFromKnitrAppendix.md)
+5. [Theoretical Variance of Sampling Distribution of the Mean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-varianceOfExpDist.md)
+6. [Kable Tables with Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/kableDataFrameTable.md) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`.
+7. [Installing MiKTeX on Windows 10 / Generating a PDF with knitr](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-generatePDF.md)
 
 ## Course 7: Regression Models
 
