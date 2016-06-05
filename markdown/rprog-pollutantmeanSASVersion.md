@@ -35,7 +35,7 @@ Reading and calculating a mean of one sensor file in SAS is very easy. We will i
 <img src="./images/rprog-pollutantmeanWithSAS00.png">
 
 
-The tricky part in replicating `pollutantmean()` in SAS is that it does not have an out-of-the-box ability for end users to develop a SAS procedure and access it from the base software. Instead, SAS provides a macro language that allows SAS users to parameterize and generate SAS code. Therefore, we will implement `pollutantmean()` as a SAS macro.
+The tricky part in replicating `pollutantmean()` in SAS is that it does not have an out-of-the-box capability for end users to easily develop a SAS procedure and access it from the base software. While [PROC FCMP and PROC PROTO](http://support.sas.com/resources/papers/proceedings10/024-2010.pdf) have been available since SAS 9.2, they are relatively new features in SAS that require a significant programming background to use them effectively. Instead, SAS provides a macro language that allows SAS users to parameterize and generate SAS code. Therefore, we will implement `pollutantmean()` as a SAS macro.
 
 ### Step 1: Identifying the Files to Read
 
@@ -155,9 +155,48 @@ For comparison, here is the output from the examples listed in the assignment in
 
 At this point we've made the function run, and we've made it right, using the lexicon from [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md). The requirements for the course assignment show that the `id` argument can be setup as a starting sensor and an ending sensor by using the `:` operator, as in `id=1:10`. This makes running the `pollutantmean()` function on all 332 files easy to specify: `pollutantmean("specdata","sulfate",1:332)`.
 
-In contrast, our initial cut at the SAS version requires us to type all 332 sensor numbers in a space separated list. This operation is likely to be error prone and slow for a user to modify the analysis.  Fortunately we can automate this process with another SAS macro to generate the list of `ids` to be processed by the `%pollutantmean()` macro, as follows:
+In contrast, our initial cut at the SAS version requires us to type all 332 sensor numbers in a space separated list. This operation is likely to be error prone and slow for a user to modify the analysis.  Fortunately we can automate this process with another SAS macro to generate the list of `ids` to be processed by the `%pollutantmean()` macro.
 
+The `%ids()` macro takes two forms of input. It can generate a list of sensor ids by looping from a starting sensor to an ending sensor, or it can take a list of sensor numbers separated by spaces. The advantage of this approach is that the list of sensors does not need to include leading zeroes. The macro checks to see whether a list of sensors is present, and if not, it generates sensor numbers including leading zeros from the start argument to the end argument. Otherwise, it parses the list of sensors and adds leading zeroes as necessary.
 
+, as follows:
+
+    %macro ids(start=1,end=332,list=);
+    	%local i word;
+    	%let i = 1;
+    	%let word=%scan(&list,1,%str( ));
+    	&word
+    	%if (&list = ) %then %do i = &start %to &end;
+    		%if %length(&i) = 1 %then %do ;
+    			00&i
+    		%end;
+    		%else %if %length(&i) = 2 %then %do;
+    			0&i
+    		%end;
+    		%else %do;
+    			&i
+    		%end;
+    	%end;
+    	%else %do %while(&word ^= );
+    		%if %length(&word) = 1 %then %do;
+    			00&word
+    		%end;
+    		%else %if %length(&word) = 2 %then %do;
+    			0&word
+    		%end;
+    		%else %do;
+    			&word
+    		%end;
+    		%let i = %eval(&i + 1);
+            %let word = %scan(&list,&i,%str( ));
+    	%end;
+    %mend ids;
+
+Now we can use the `%ids()` macro as the argument to `%pollutantmean()`.
+
+      %pollutantmean(specdata,sulfate,%ids(start=1,end=332))
+
+I'll leave implementation of the `%ids()` operator so it supports the equivalent of the colon operato rin R as an exercise for the reader.
 
 ## Appendix: the complete %pollutantmean() macro
 
