@@ -19,6 +19,8 @@ To see how the formulas will render once the item is posted to the forum, press 
 
 <img src="./images/misc-Mathjax02.png">
 
+Note that hte `Preview` button is only available in the older Coursera software that was used for the *Data Science Specialization* prior to January 2016. In the new version of the Coursera discussion forums, the student must post his/her content to see how it is evaluated by MathJax, and then edit the post to make adjustments.
+
 ## Mathjax & LaTeX in Project Assignments / R Markdown
 
 In R Markdown the syntax to begin and end a formula are the single dollar sign `$` and the double dollar sign: `$$`. The single dollar sign is used to include a formula as part of a sentence. The double dollar sign is used to break to a new line, center, and display a formula. The alternate Mathjax syntax of `\(` and `\)` for inline equations, and `\[` `\]` to display the equations centered on separate lines of text.
