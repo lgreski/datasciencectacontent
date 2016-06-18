@@ -45,9 +45,9 @@ In an R-based solution, the student has a choice of design approaches: s/he can 
 
 SAS provides a similar design choice, albeit with a more complex implementation. The SAS macro language can be used to generate file names based on the macro arguments, but in order to use them in a subsequent step we must add them to a SAS data set.
 
-SAS provides a `pipe` option on the `FILENAME` statement that enables a SAS program to access operating system commands, such as `ls` in unix-based systems or `dir` for Windows. Unfortunately, SAS University is configured in `LOCKDOWN` mode, so we are not able to demonstrate this approach.
+SAS provides a `pipe` option on the `FILENAME` statement that enables a SAS program to access operating system commands, such as `ls` in unix-based systems or `dir` for Windows. I'm using SAS University in conjunction with my activity as a student in the Johns Hopkins University Data Science Specialization on Coursera, and I don't have access to a commercial version of SAS.  Unfortunately SAS University is configured in `LOCKDOWN` mode, so we are not able to access the operating system commands necessary to demonstrate use of the `pipe` approach.
 
-Instead, we'll use the macro language within a `DATA step` to generate the required filenames.
+Of course, since students are trained in *The Data Scientist's Toolbox* to have a hacker mentality, we know there is more than one way to generate the file list we need. Therefore, we'll use the macro language within a `DATA step` to generate the required filenames.
 
 Code for the first step looks like:
 
@@ -86,7 +86,7 @@ This turns out to be the most challenging part of the solution. We must read a v
 1. Read one input file name from the SAS data set created in the previous step, and use the file name as the argument to an `INFILE` statement.<br><br>
 2. Using a `do loop`, read each line of the raw data file, and write it to the output SAS data set.<br><br>
 
-This technique is beyond what is typically taught in a statistics class that introduces SAS.
+This technique is more advanced than what is typically taught in a university level statistics class that introduces SAS.
 
     /* step 2: read the raw data files */;
     data sensors;
@@ -100,6 +100,7 @@ This technique is beyond what is typically taught in a statistics class that int
     end;
     run;
 
+Note that we could make this data step more efficient by using the macro parameters to read only the required pollutant, but we'll leave that as a trivial exercise for the reader.
 
 ## Step 3: Calculate the Mean
 
@@ -153,7 +154,7 @@ For comparison, here is the output from the examples listed in the assignment in
 
 ## Relaxing the Simplifying Assumptions
 
-At this point we've made the function run, and we've made it right, using the lexicon from [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md). The requirements for the course assignment show that the `id` argument can be setup as a starting sensor and an ending sensor by using the `:` operator, as in `id=1:10`. This makes running the `pollutantmean()` function on all 332 files easy to specify: `pollutantmean("specdata","sulfate",1:332)`.
+At this point we've made the function run and we've made it right, using the lexicon from [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md). The requirements for the course assignment show that the `id` argument can be setup as a starting sensor and an ending sensor by using the `:` operator, as in `id=1:10`. This makes running the `pollutantmean()` function on all 332 files easy to specify: `pollutantmean("specdata","sulfate",1:332)`.
 
 In contrast, our initial cut at the SAS version requires us to type all 332 sensor numbers in a space separated list. This operation is likely to be error prone and slow for a user to modify the analysis.  Fortunately we can automate this process with another SAS macro to generate the list of `ids` to be processed by the `%pollutantmean()` macro.
 
@@ -196,9 +197,11 @@ Now we can use the `%ids()` macro as the argument to `%pollutantmean()`.
 
       %pollutantmean(specdata,sulfate,%ids(start=1,end=332))
 
-I'll leave implementation of the `%ids()` operator so it supports the equivalent of the colon operato rin R as an exercise for the reader.
+I'll leave implementation of the `%ids()` operator so it supports the equivalent of the colon operator in R as an exercise for the reader, noting that the solution includes use of the `%scan()` macro function.
 
 ## Appendix: the complete %pollutantmean() macro
+
+Here we put the three steps together in a single macro that produces the required output for the examples that are provided by the course instructors. 
 
       %macro pollutantmean(directory,pollutant,id=);
          /*
