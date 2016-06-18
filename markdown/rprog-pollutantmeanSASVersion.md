@@ -84,7 +84,7 @@ Code for the first step looks like:
 This turns out to be the most challenging part of the solution. We must read a variable number of input files and combine them into a single SAS data set. Since the `DATA step` is a very flexible tool, we can use the following approach to read the data from each raw data file.
 
 1. Read one input file name from the SAS data set created in the previous step, and use the file name as the argument to an `INFILE` statement.<br><br>
-2. Using a `do loop`, read each line of the raw data file, and write it to the output SAS data set.<br><br>
+2. Using a `do while()` loop, read each line of the raw data file, and write it to the output SAS data set.<br><br>
 
 This technique is more advanced than what is typically taught in a university level statistics class that introduces SAS.
 
@@ -201,7 +201,7 @@ I'll leave implementation of the `%ids()` operator so it supports the equivalent
 
 ## Appendix: the complete %pollutantmean() macro
 
-Here we put the three steps together in a single macro that produces the required output for the examples that are provided by the course instructors. 
+Here we put the three steps together in a single macro that produces the required output for the examples that are provided by the course instructors.
 
       %macro pollutantmean(directory,pollutant,id=);
          /*
