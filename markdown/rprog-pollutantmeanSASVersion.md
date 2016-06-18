@@ -154,7 +154,7 @@ For comparison, here is the output from the examples listed in the assignment in
 
 ## Relaxing the Simplifying Assumptions
 
-At this point we've made the function run and we've made it right, using the lexicon from [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md). The requirements for the course assignment show that the `id` argument can be setup as a starting sensor and an ending sensor by using the `:` operator, as in `id=1:10`. This makes running the `pollutantmean()` function on all 332 files easy to specify: `pollutantmean("specdata","sulfate",1:332)`.
+At this point we've made the function work and we've made it right, using the lexicon from [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md). The requirements for the course assignment show that the `id` argument can be setup as a starting sensor and an ending sensor by using the `:` operator, as in `id=1:10`. This makes running the `pollutantmean()` function on all 332 files easy to specify: `pollutantmean("specdata","sulfate",1:332)`.
 
 In contrast, our initial cut at the SAS version requires us to type all 332 sensor numbers in a space separated list. This operation is likely to be error prone and slow for a user to modify the analysis.  Fortunately we can automate this process with another SAS macro to generate the list of `ids` to be processed by the `%pollutantmean()` macro.
 
