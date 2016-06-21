@@ -47,9 +47,10 @@ General commentary about the course, R programming in general, and R in relation
 2. [Assignment 2: Grading the SHA-1 Hash Code](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-gradeSHA1hash.md)
 3. [Assignment 3: Functions to Sort Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-sortFunctionsExample.md)
 
-### Miscellaneous Code Examples
+### Miscellaneous Code Examples and Instructions
 
 1. [Common R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)
+2. [Permanently Setting R Working Directory](http://www.r-bloggers.com/setting-your-working-directory-permanently-in-r/) Link to R-bloggers.com article that explains how to set your working directory permanently in R (instead of RStudio)
 
 ## Course 3: Getting and Cleaning Data
 
