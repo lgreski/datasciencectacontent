@@ -15,4 +15,4 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 <tr><td><a href="http://www.r-tutor.com/r-introduction"> R Tutor Website </a></td><td>This website provides three sets of tutorials, basic R, elementary statistics with R, and graphics processor unit computing with R. The site is maintained by Chi Yau, who has a Ph.D. in Mathematics. </td></tr>
 </table>
 
-*last updated: 29 May 2016*
+*last updated: 25 June 2016*
