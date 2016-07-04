@@ -9,7 +9,7 @@ In the *R Programming* assignment on lexical scoping, students are introduced to
     #
     setmean <- function(mean) m <<- mean
 
-The double left arrow `<<` indicates that the assignment should be made to the parent environment, as opposed to the current scope within the `makeVector()` function.
+The double left arrow `<<` indicates that the assignment should be made to the parent environment, as opposed to the current scope within the `setmean()` function.
 
 To make the scoping more obvious, one could rewrite the code this way.
 
