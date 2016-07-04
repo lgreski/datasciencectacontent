@@ -65,6 +65,7 @@ General commentary about the course, R programming in general, and R in relation
 1. [Reference Materials for Statistical Inference](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-references.md)  Start here if you're looking for help on the statistical techniques taught in this course. 
 4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
 5. [Power Calculations: Optimal Sample size](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-optimalSampleSize.md)
+6. [Permutation Tests Explained](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-permutationTests.md)
 
 
 ### Articles Related to the Course Project
