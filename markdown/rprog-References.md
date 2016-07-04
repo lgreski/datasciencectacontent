@@ -18,4 +18,4 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 <tr><td><a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"> R Inferno </a></td><td>A humorous look at the various problems people have when learning R, based on Dante's <em>Inferno</em>. Written by <a href="http://www.burns-stat.com/about-burns-statistics/"> Patrick Burns, Ph.D.</a>, a statistics consultant and one of the lead developers of S-PLUS early in its development. </td></tr>
 </table>
 
-*last updated: 25 June 2016*
+*last updated: 4 July 2016*
