@@ -1,5 +1,7 @@
 ## Forms of the Assignment Operator in R
 
+In the *R Programming* assignment on lexical scoping, students are introduced to the `<<-` syntax for assigning values to R objects. The sample code for this assignment often confuses people, because it is not clear how this syntax works.
+
 `<<-` is one of three forms of the assignment operator. The following syntax from the `makeVector()` function for the lexical scoping assignment in *R Programming* assigns the object m the value of mean:
 
     #
@@ -21,7 +23,7 @@ For example:
 
 <img src="./images/rprog-assignmentOperators.png">
 
-As one can see from the user of the `assignParent()` function, the value assigned to within the function is accessible after the function ends because we used the <<- version of the assignment operator.
+As one can see from the user of the `assignParent()` function, the value assigned to within the function is accessible after the function ends because we used the `<<-` version of the assignment operator.
 
 One subtlety of the assignment operator is that it can be used bidirectionally.
 
