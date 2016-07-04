@@ -13,6 +13,7 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 
 <tr><td><a href="http://adv-r.had.co.nz"> Advanced R </a></td><td>Don't let the title intimidate you from getting this book. Written by Hadley Wickham, <em>Advanced R</em> contains a lot of valuable content for any R developer, including beginners. <em>Advanced R</em> is available in e-book format on Amazon.com for $47.36 USD.<br><br> Wickham also maintains a website that includes content related to the book, it's called <a href="http://www.statmethods.net">Advanced R</a>, and is maintained as a companion to the book. </td></tr>
 <tr><td><a href="http://www.r-tutor.com/r-introduction"> R Tutor Website </a></td><td>This website provides three sets of tutorials, basic R, elementary statistics with R, and graphics processor unit computing with R. The site is maintained by Chi Yau, who has a Ph.D. in Mathematics. </td></tr>
+<tr><td><a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"> R Inferno </a></td><td>A humorous look at the various problems people have when learning R, based on Dante's <em>Inferno</em>. Written by <a href="http://www.burns-stat.com/about-burns-statistics/" Patrick Burns, Ph.D.>, a statistics consultant and one of the lead developers of S-PLUS early in its development. </td></tr>
 </table>
 
 *last updated: 25 June 2016*
