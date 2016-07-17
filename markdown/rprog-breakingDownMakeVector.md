@@ -1,8 +1,8 @@
-## Breaking down makeVector()
+## Demystifying makeVector()
 
 The second programming assignment in the Johns Hopkins University *R Programming* course on Coursera.org makes use of a prototype set of functions that illustrate caching of a mean from a vector. The overall objective of the assignment is to demonstrate the concept of lexical scoping. This assignment often confuses students because it is difficult for them to understand the concepts simply by looking at their implementation in code.
 
-This article explains the code in the cachemean.R file, highlighting key R concepts and features that make the program work as expected. In addition to the concept of scoping, the assignment also introduces use of S3 objects without explicitly explaining how object orientation is implemented in R, causing large amounts of frustration in students when they are unable to get their implementations of `makeCacheMatrix()` and `cacheSolve()` to work correctly.
+This article explains the code in the cachemean.R file, highlighting key R concepts and features that make the program work as expected. In addition to the concept of scoping, the assignment also introduces use of S3 objects without explicitly explaining how object orientation is implemented in R, causing large amounts of frustration in students when they are unable to get their implementations of `makeVector()` and `cacheSolve()` to work correctly.
 
 ## What is lexical scoping?
 
@@ -29,6 +29,91 @@ results in an object, myVector, that contains four functions: `set()`, `get()`, 
 Due to lexical scoping, `myVector` contains a complete copy of the environment for `makeVector()`, including any objects that are defined within `makeVector()` at design time (i.e., when it was coded). A diagram of the environment makes it clear what is accessible within `myVector`.
 
 <img src="./images/rprog-breakingDownMakeVector01.png">
+
+Once the function is run, the environment containing myVector looks like:
+
+<img src="./images/rprog-breakingDownMakeVector02.png">
+
+Notice that the object `x` contains the vector `1:15`, even though `myVector$set()` has not been executed. This is the case because the value `1:15` was passed as an argument into the `makeVector()` function.  What explains this behavior?
+
+When an R function returns an object that contains functions to its parent environment (as is the case with a call like `myVector <- makeVector(1:15)`), not only does `myVector` have access to the specific functions in its list, but it also retains access to the entire environment defined by `makeVector()`, including the original argument used to start the function.
+
+Why is this the case? `myVector` contains pointers to functions that are within the `makeVector()` environment after the function ends, so these pointers prevent the memory consumed by `makeVector()` from being released by the garbage collector. Therefore, the entire `makeVector()` environment stays in memory, and `myVector` can access its functions as well as any data in that environment that is referenced in its functions.
+
+This is why `x` (the argument initialized on the original function call) is accessible by subsequent calls to functions on `myVector` such as `myVector$get`, and it also explains why the code works without having to explicitly issue `myVector$set()` to set the value of `x`.
+
+## makeVector() step by step
+
+Now, let's break the behavior of the function down, step by step.
+
+### Step 1: Initialize objects
+
+The first thing that occurs in the function is the initialization of two objects, `x` and `m`.
+
+    makeVector(x) {
+      m <- NULL
+      ...
+    }
+
+Notice that `x` is initialized as a function argument, so no further initialization is required within the function. `m` is set to NULL, initializing it as an object within the makeVector() environment to be used by later code in the function.
+
+### Step 2: Define the "behaviors" or functions for objects of type makeVector()
+
+After initializing key objects that store key information within `makeVector()`, the code provides four basic behaviors that are typical for data elements within an object-oriented program. They're known as "getters and settters."  As one might expect, "getters" are program modules that retrieve data within an object, and "setters" are program modules that set the data values within an object.
+
+First `makeVector()` defines the `set()` function. Most of the "magic" in `makeVector()` takes place in the `set()` function.  
+
+    set <- function(y) {
+        x <<- y
+        m <<- NULL
+    }
+
+Here we use the `<<-` [form of the assignment operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-assignmentOperators.md), which assigns the value on the right side of the operator to an object in the parent environment named by the object on the left side of the operator.
+
+When `set()` is executed, it does two things:
+
+1. Assign the input argument to the `x` object in the parent environment, and
+2. Assign the value of NULL to the `m` object in the parent environment.
+
+Therefore, if there is already a valid mean cached in `m`, whenever `x` is reset, the value of `m` cached in the memory of the object is cleared, forcing subsequent calls to `cachemean()` to recalculate the mean rather than retrieving the wrong value from cache.
+
+Second, `makeVector()` defines the getter for the vector `x`.
+
+    get <- function() x
+
+Again, this function takes advantage of the lexical scoping features in R. Since the symbol `x` is not defined within `get()`, R retrieves it from the parent environment of `makeVector()`.
+
+Third, `makeVector()` defines the setter for the mean `m`.
+
+    setmean <- function(mean) m <<- mean
+
+Since we need to access `m` after `setmean()` completes, and is defined within the parent environment, the code uses the `<<-` form of the assignment operator to assign the input argument to the value of `m` in the parent environment.
+
+Finally, `makeVector()` defines the getter for the mean `m`. Just like the getter for `x`, R takes advantage of lexical scoping to find the correct symbol `m` to retrieve its value.
+
+    getmean <- function() m
+
+At this point we have getters and setters defined for both of the data objects within our `makeVector()` object.
+
+### Step 3: Create a new object by returning a list()
+
+Here is the other part of the "magic" in the operations of the `makeVector()` function. The last section of code assigns each of these functions as an element within a `list()`, and returns it to the parent environment.
+
+    list(set = set, get = get,
+         setmean = setmean,
+         getmean = getmean)
+
+When the function ends, it returns a fully formed object of type `makeVector()` to be used by downstream R code.
+
+Here it's important to note that the `cachemean()` function REQUIRES an input argument of type `makeVector()`. If one passes a regular vector to the function, as in
+
+     aResult <- cachemean(1:15)
+
+the function call will fail with an error explaining that `cachemean()` was unable to access `$set()` on the input argument. This is accurate, because a primitive vector does not contain a `$set()` function.
+
+## Conclusion: what makes cachemean() work?
+
+To summarize, the lexical scoping assignment in *R Programming* takes advantage of lexical scoping and the fact that functions that return objects of type `list()` also allow access to any other objects defined in the environment of the original function. In the specific instance of `makeVector()` this means that subsequent code can access the values of `x` or `m` through the use of getters and setters. This is how `cachemean()` is able to calculate and store the mean for the input argument if it is of type `makeVector()`.
 
 ## Appendix: cachemean.R
 
