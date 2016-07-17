@@ -28,11 +28,11 @@ results in an object, myVector, that contains four functions: `set()`, `get()`, 
 
 Due to lexical scoping, `myVector` contains a complete copy of the environment for `makeVector()`, including any objects that are defined within `makeVector()` at design time (i.e., when it was coded). A diagram of the environment makes it clear what is accessible within `myVector`.
 
-<img src="./images/rprog-breakingDownMakeVector01.png">
+<img src="./images/rprog-breakingDownMakeVector01.png" height="467" width="691">
 
 Once the function is run, the environment containing myVector looks like:
 
-<img src="./images/rprog-breakingDownMakeVector02.png">
+<img src="./images/rprog-breakingDownMakeVector02.png" height="467" width="691">
 
 Notice that the object `x` contains the vector `1:15`, even though `myVector$set()` has not been executed. This is the case because the value `1:15` was passed as an argument into the `makeVector()` function.  What explains this behavior?
 
