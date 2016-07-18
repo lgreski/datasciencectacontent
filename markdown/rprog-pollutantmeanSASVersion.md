@@ -8,7 +8,7 @@ That said, once a person knows R, things that are very easy in R can be much mor
 
 ## Requirements for a SAS-based Solution
 
-The general requirements for `pollutantmean()` are covered in [Breaking down pollutantmean()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-discussPollutantmean.md), so we won't go into the details here. Generally speaking, we need to accomplish the following:
+The specific requirements for `pollutantmean()` are covered in [Breaking down pollutantmean()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-discussPollutantmean.md), so we won't go into the details here. Generally speaking, we need to accomplish the following:
 
 1. Read one or more of the pollution sensor files
 2. Calculate a mean for one of the pollutants, either `nitrate` or `sulfate`
