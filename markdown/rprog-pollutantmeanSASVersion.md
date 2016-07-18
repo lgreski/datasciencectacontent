@@ -100,11 +100,11 @@ This technique is more advanced than what is typically taught in a university le
     end;
     run;
 
-Note that we could make this data step more efficient by using the macro parameters to read only the required pollutant, but we'll leave that as a trivial exercise for the reader.
+Note that we could make this data step more efficient by using the macro parameters to read only the required pollutant, but we'll leave that as an interesting exercise for the reader.
 
 ## Step 3: Calculate the Mean
 
-This step is trivially easy, given that SAS has a large library of canned procedures. Using the output data set from Step 2, the `means` procedure can be used to generate the required mean. This is the one area where the SAS solution is easier than the R solution, because SAS automatically eliminates missing values when calculating the mean, whereas R forces the programmer to tell R not to use missing values via the `na.rm=TRUE` argument.
+This step is trivially easy given that SAS has a large library of canned procedures. Using the output data set from Step 2, the `means` procedure can be used to generate the required mean. This is the one area where the SAS solution is easier than the R solution, because SAS automatically eliminates missing values when calculating the mean, whereas R forces the programmer to tell R not to use missing values via the `na.rm=TRUE` argument.
 
 
       /* step 3: generate mean for selected variable */
@@ -117,7 +117,9 @@ This step is trivially easy, given that SAS has a large library of canned proced
 ## Simplifying Assumptions  
 
 For the purposes of this exercise, we pass the list of sensors as numbers separated by spaces, a format that is easy to process by the SAS macro language. Since the macro language is primarily a string \(text\) processor, we include the leading zeroes needed to generate the correct input files.
-With additional programming, we could parse the lengths of the sensor numbers and add the required number of leading zeroes to simulate the output of the R `sprintf()` function.
+With additional programming, we could parse the lengths of the sensor numbers and add the required number of leading zeroes to simulate the output of the R `sprintf()` function. 
+
+Note that if we were able to use the `PIPE` feature on the `FILENAME` statement to generate the list of file names to be read in a `DATA` step, we'd need to develop mechanism to subset the filenames in the file list. 
 
 ## Putting It All Together
 
