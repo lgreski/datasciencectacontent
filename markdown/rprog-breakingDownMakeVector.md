@@ -8,7 +8,7 @@ This article explains the code in the cachemean.R file, highlighting key R conce
 
 Scoping is the mechanism within R that determines how R finds symbols \(i.e. programming language elements\) to retrieve their values during the execution of an R script.
 
-R supports two types of scoping: lexical scoping and dynamic scoping. As noted by Hadley Wickham, "Dynamic scoping is primarily used within functions to save typing during interactive analysis," and will not be covered here. Hadley Wickham's [Advanced-R](http://adv-r.had.co.nz/Computing-on-the-language.html#scoping-issues) website's section on scoping issues covers dynamic scoping.
+R supports two types of scoping: lexical scoping and dynamic scoping. As noted by Hadley Wickham, "Dynamic scoping is primarily used within functions to save typing during interactive analysis," and will not be covered here. Hadley Wickham's [Advanced-R website's section on scoping issues](http://adv-r.had.co.nz/Computing-on-the-language.html#scoping-issues) covers dynamic scoping.
 
 Lexical scoping is used to retrieve values from objects based on the way functions are nested when they were written. Since *Programming Assignment 2* contains nested functions, to fully comprehend the assignment students must be able to visualize how the symbols are stored and accessed within the nested function. A more detailed explanation of lexical scoping is available on the [Advanced-R website's Function page](http://adv-r.had.co.nz/Functions.html), so I'll refer the reader there for the details.
 
@@ -20,11 +20,11 @@ The cachemean.R file contains two functions, `makeVector()` and `cachemean()`. T
 
 ## What's going on in makeVector()?
 
-The key concept to understand in makeVector() is that it builds a set of functions and returns the functions within a list to the parent environment. That is,
+The key concept to understand in `makeVector()` is that it builds a set of functions and returns the functions within a list to the parent environment. That is,
 
         myVector <- makeVector(1:15)
 
-results in an object, myVector, that contains four functions: `set()`, `get()`, `setmean()`, and `getmean()`.
+results in an object, `myVector`, that contains four functions: `set()`, `get()`, `setmean()`, and `getmean()`.  It also includes the two data objects, `x` and `m`.
 
 Due to lexical scoping, `myVector` contains a complete copy of the environment for `makeVector()`, including any objects that are defined within `makeVector()` at design time (i.e., when it was coded). A diagram of the environment makes it clear what is accessible within `myVector`.
 
@@ -40,7 +40,7 @@ When an R function returns an object that contains functions to its parent envir
 
 Why is this the case? `myVector` contains pointers to functions that are within the `makeVector()` environment after the function ends, so these pointers prevent the memory consumed by `makeVector()` from being released by the garbage collector. Therefore, the entire `makeVector()` environment stays in memory, and `myVector` can access its functions as well as any data in that environment that is referenced in its functions.
 
-This is why `x` (the argument initialized on the original function call) is accessible by subsequent calls to functions on `myVector` such as `myVector$get`, and it also explains why the code works without having to explicitly issue `myVector$set()` to set the value of `x`.
+This feature explains why `x` (the argument initialized on the original function call) is accessible by subsequent calls to functions on `myVector` such as `myVector$get()`, and it also explains why the code works without having to explicitly issue `myVector$set()` to set the value of `x`.
 
 ## makeVector() step by step
 
@@ -87,7 +87,7 @@ Third, `makeVector()` defines the setter for the mean `m`.
 
     setmean <- function(mean) m <<- mean
 
-Since we need to access `m` after `setmean()` completes, and is defined within the parent environment, the code uses the `<<-` form of the assignment operator to assign the input argument to the value of `m` in the parent environment.
+Since `m` is defined in the parent environment and we need to access it after `setmean()` completes, the code uses the `<<-` form of the assignment operator to assign the input argument to the value of `m` in the parent environment.
 
 Finally, `makeVector()` defines the getter for the mean `m`. Just like the getter for `x`, R takes advantage of lexical scoping to find the correct symbol `m` to retrieve its value.
 
@@ -103,17 +103,24 @@ Here is the other part of the "magic" in the operations of the `makeVector()` fu
          setmean = setmean,
          getmean = getmean)
 
-When the function ends, it returns a fully formed object of type `makeVector()` to be used by downstream R code.
+When the function ends, it returns a fully formed object of type `makeVector()` to be used by downstream R code. One other important subtlety about this code is that each element in the list is [named](http://www.r-tutor.com/r-introduction/list/named-list-members). That is, each element in the list is created with a `elementName = value` syntax, as follows:
+
+        list(set = set,          # gives the name 'set' to the set() function defined above
+             get = get,          # gives the name 'get' to the get() function defined above
+             setmean = setmean,  # gives the name 'setmean' to the setmean() function defined above
+             getmean = getmean)  # gives the name 'getmean' to the getmean() function defined above
+
+Naming the list elements is what allows us to use the `$` [form of the extract operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-extractOperator.md) to access the functions by name rather than using the `[[` form of the extract operator, as in `myVector[[2]]()`, to get the contents of the vector.
 
 Here it's important to note that the `cachemean()` function REQUIRES an input argument of type `makeVector()`. If one passes a regular vector to the function, as in
 
      aResult <- cachemean(1:15)
 
-the function call will fail with an error explaining that `cachemean()` was unable to access `$set()` on the input argument. This is accurate, because a primitive vector does not contain a `$set()` function.
+the function call will fail with an error explaining that `cachemean()` was unable to access `$set()` on the input argument because `$` does not work with atomic vectors. This is accurate, because a primitive vector is not a list, nor does it contain a `$set()` function.
 
 ## Conclusion: what makes cachemean() work?
 
-To summarize, the lexical scoping assignment in *R Programming* takes advantage of lexical scoping and the fact that functions that return objects of type `list()` also allow access to any other objects defined in the environment of the original function. In the specific instance of `makeVector()` this means that subsequent code can access the values of `x` or `m` through the use of getters and setters. This is how `cachemean()` is able to calculate and store the mean for the input argument if it is of type `makeVector()`.
+To summarize, the lexical scoping assignment in *R Programming* takes advantage of lexical scoping and the fact that functions that return objects of type `list()` also allow access to any other objects defined in the environment of the original function. In the specific instance of `makeVector()` this means that subsequent code can access the values of `x` or `m` through the use of getters and setters. This is how `cachemean()` is able to calculate and store the mean for the input argument if it is of type `makeVector()`. Because list elements in `makeVector()` are defined with names, we can access these functions with the `$` [form of the extract operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-extractOperator.md).
 
 ## Appendix: cachemean.R
 
@@ -146,5 +153,6 @@ Here is the entire listing for cachemean.R.
 
 ## References
 
-1. Wickham, Hadley -- [Advanced-R Functions](http://adv-r.had.co.nz/Functions.html), retrieved July 17, 2016.
+1. Chi, Yau -- [R-Tutor Named List Members](http://www.r-tutor.com/r-introduction/list/named-list-members), retrieved July 20, 2016.
+2. Wickham, Hadley -- [Advanced-R Functions](http://adv-r.had.co.nz/Functions.html), retrieved July 17, 2016.
 2. Wickham, Hadley -- [Advanced-R Scoping Issues](http://adv-r.had.co.nz/Computing-on-the-language.html#scoping-issues), retrieved July 17, 2016.
