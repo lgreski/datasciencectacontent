@@ -44,6 +44,7 @@ General commentary about the course, R programming in general, and R in relation
 
 1. [Assignment 1: Breaking Down Pollutantmean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-discussPollutantmean.md)
 1. [Assignment 1: A SAS Version of  Pollutantmean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-pollutantmeanSASVersion.md)
+1. [Assignment 2: Demystifying makeVector](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-breakingDownMakeVector.md)
 1. [Assignment 2: makeCacheMatrix as an Object](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md)
 2. [Assignment 2: Grading the SHA-1 Hash Code](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-gradeSHA1hash.md)
 3. [Assignment 3: Functions to Sort Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-sortFunctionsExample.md)
