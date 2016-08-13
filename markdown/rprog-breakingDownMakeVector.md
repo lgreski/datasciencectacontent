@@ -77,6 +77,8 @@ When `set()` is executed, it does two things:
 
 Therefore, if there is already a valid mean cached in `m`, whenever `x` is reset, the value of `m` cached in the memory of the object is cleared, forcing subsequent calls to `cachemean()` to recalculate the mean rather than retrieving the wrong value from cache.
 
+Notice that the two lines of code in `set()` do exactly the same thing as the first two lines in the main function: set the value of `x`, and NULL the value of `m`. 
+
 Second, `makeVector()` defines the getter for the vector `x`.
 
     get <- function() x
@@ -116,11 +118,18 @@ Here it's important to note that the `cachemean()` function REQUIRES an input ar
 
      aResult <- cachemean(1:15)
 
-the function call will fail with an error explaining that `cachemean()` was unable to access `$set()` on the input argument because `$` does not work with atomic vectors. This is accurate, because a primitive vector is not a list, nor does it contain a `$set()` function.
+the function call will fail with an error explaining that `cachemean()` was unable to access `$getmean()` on the input argument because `$` does not work with atomic vectors. This is accurate, because a primitive vector is not a list, nor does it contain a `$getmean()` function, as illustrated below. 
+
+    > aVector <- 1:10
+    > cachemean(aVector)
+    Error in x$getmean : $ operator is invalid for atomic vectors
+
 
 ## Conclusion: what makes cachemean() work?
 
 To summarize, the lexical scoping assignment in *R Programming* takes advantage of lexical scoping and the fact that functions that return objects of type `list()` also allow access to any other objects defined in the environment of the original function. In the specific instance of `makeVector()` this means that subsequent code can access the values of `x` or `m` through the use of getters and setters. This is how `cachemean()` is able to calculate and store the mean for the input argument if it is of type `makeVector()`. Because list elements in `makeVector()` are defined with names, we can access these functions with the `$` [form of the extract operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-extractOperator.md).
+
+For additional commentary that explains how the assignment uses features of the S3 object system, please review [makeCacheMatrix() as an Object](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md). 
 
 ## Appendix: cachemean.R
 
