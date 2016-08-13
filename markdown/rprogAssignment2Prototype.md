@@ -10,9 +10,21 @@ A subtlety about the S3 model that isn't explained in the _R Programming_ lectur
 
 Why is this the case? `myMatrix` contains pointers to functions that are within the `makeCacheMatrix()` environment after the function ends, so these pointers prevent the memory consumed by `makeCacheMatrix()` from being released by the garbage collector. Therefore, the entire `makeCacheMatrix()` environment stays in memory, and `myMatrix` can access its functions as well as any data in that environment that is referenced in its functions.
 
-This is why `x` (the argument initialized on the original function call) is accessible by subsequent calls to functions on `myMatrix` such as `myMatrix$get`, and it also explains why the code works without having to explicitly issue `myMatrix$set()` to set the value of `x`.
+This is why `x` (the argument initialized on the original function call) is accessible by subsequent calls to functions on `myMatrix` such as `myMatrix$get()`, and it also explains why the code works without having to explicitly issue `myMatrix$set()` to set the value of `x`. 
 
 Reference: _Software for Data Analysis,_ Kindle Edition, location 1683\.
+
+To illustrate this point with the `makeVector()` function that is used as the reference example for *Assignment 2*, notice that the function declaration along with the first line of code provide the same functionality as the `set()` function. 
+
+    makeVector <- function(x) {
+       m <- NULL
+       set <- function(y) {
+           x <<- y
+           m <<- NULL 
+       }
+       ...
+    }
+
 
 if R was a more strongly typed language, the function stub in Professor Peng's repository might look like:
 
@@ -21,4 +33,6 @@ if R was a more strongly typed language, the function stub in Professor Peng's r
        # return the inverse of x, or calculate & return if cache is empty
     }
 
-This type of specification would clarify the confusion experienced by some of the students in the September 2015 *R Programming* class. 
+This type of specification would make it obvious that `cacheSolve()` requires as its input the type of object that is output by `makeCacheMatrix()`. 
+
+For additional discussion of the R features used in the programming assignment, please review the article [Demystifying MakeVector](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-breakingDownMakeVector.md).
