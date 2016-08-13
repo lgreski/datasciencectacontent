@@ -9,6 +9,12 @@ This guide has been created as a reference to help students quickly set up Githu
 4. Clone the Github Pages branch to a local machine and configure it for use with RStudio, and
 5. Create an R Markdown file for the project content that is accessed as the default webpage on the project Github Pages site.
 
+### Prerequisites: Data Scientist's Toolbox
+
+Since *The Data Scientist's Toolbox* is a prerequesite for this course, this article expects students to already have git installed on their local machine, and that they have completed the peer reviewed assignment that requires students to work with git and github. 
+
+For information on how to install and configure git and github, please review the relevenat content int the *Git and Github* section of the *Data Scientist's Toolbox* page on the [Data Science Specialization Website](http://datasciencespecialization.github.io/toolbox/). 
+
 ### Step 1: Create a Github Repository for Practical Machine Learning
 
 Use a web browser to navigate to your github home page, `https://github.com/username`, and select the `Repositories` tab to display the list of your repositories. If you are not already logged into Github, press the `Sign in` button in the upper right corner of your github home page, and enter your credentials on the login page. Next, press the `New` button to create a new repository.
