@@ -26,11 +26,17 @@ The key concept to understand in `makeVector()` is that it builds a set of funct
 
 results in an object, `myVector`, that contains four functions: `set()`, `get()`, `setmean()`, and `getmean()`.  It also includes the two data objects, `x` and `m`.
 
-Due to lexical scoping, `myVector` contains a complete copy of the environment for `makeVector()`, including any objects that are defined within `makeVector()` at design time (i.e., when it was coded). A diagram of the environment makes it clear what is accessible within `myVector`.
+Due to lexical scoping, `myVector` contains a complete copy of the environment for `makeVector()`, including any objects that are defined within `makeVector()` at design time (i.e., when it was coded). A diagram of the environment hierarchy makes it clear what is accessible within `myVector`.
 
 <img src="./images/rprog-breakingDownMakeVector01.png" height="467" width="691">
 
-Once the function is run, the environment containing myVector looks like:
+Illustrated as a hierarchy, the global environment contains the `makeVector()` environment. All other content is present in the `makeVector()` environment, as illustrated below.
+
+<img src="./images/rprog-breakingDownMakeVector01a.png" height="467" width="691">
+
+Since each function has its own environment in R, the hierarchy illustrates that the objects x and m are siblings of the four functions, `get()`, `set()`, `getmean()`, and `setmean()`.
+
+Once the function is run and an object of type `makeVector()` is instantiated (that is, created), the environment containing myVector looks like:
 
 <img src="./images/rprog-breakingDownMakeVector02.png" height="467" width="691">
 
