@@ -1,0 +1,13 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1471209651287" ID="ID_916004616" MODIFIED="1471209662957" TEXT="Global Environment">
+<node CREATED="1471209704401" ID="ID_1290027224" MODIFIED="1471209714547" POSITION="right" TEXT="makeVector() environment">
+<node CREATED="1471209716909" ID="ID_707686976" MODIFIED="1471209723428" TEXT="set() environment"/>
+<node CREATED="1471209724115" ID="ID_1149252167" MODIFIED="1471209728940" TEXT="get() environment"/>
+<node CREATED="1471209729526" ID="ID_1329506939" MODIFIED="1471209734076" TEXT="setmean() environment"/>
+<node CREATED="1471209734922" ID="ID_78225373" MODIFIED="1471209740445" TEXT="getmean() environment"/>
+<node CREATED="1471209753407" ID="ID_1822434072" MODIFIED="1471209756086" TEXT="x"/>
+<node CREATED="1471209757006" ID="ID_1497869301" MODIFIED="1471209759977" TEXT="m"/>
+</node>
+</node>
+</map>
