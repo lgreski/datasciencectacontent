@@ -18,7 +18,9 @@ Before you begin working on the first programming assignment, read the following
 
 [Breaking Down Pollutantmean()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-discussPollutantmean.md), which provides a detailed walkthrough illustrating how to organize this function.
 
-You might also enjoy [Commercial Statistics Packages: An Historical Perspective](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statsPackagesHistory.md), but it's not required to get through the assignment.
+You might also enjoy [Commercial Statistics Packages: An Historical Perspective](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statsPackagesHistory.md), but it's not required to get through the assignment. 
+
+Another interesting but not required read is [Linda Burtch's](http://www.kdnuggets.com/author/linda-burtch) article [SAS vs. R vs. Python: Which Tool do Analytics Pros Prefer?](http://www.kdnuggets.com/2016/07/burtchworks-sas-r-python-analytics-pros-prefer.html) on the kdnuggets.com website. 
 
 After completing the first programming assignment, you'll discover that the R-based solution to `pollutantmean()` is significantly less complicated than a SAS-based solution. How can I say this? [A SAS Version of pollutantmean()?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-pollutantmeanSASVersion.md) illustrates the code needed to replicate `pollutantmean()` in SAS. Believe it or not, one can complete the `pollutantmean()` assignment in a single R statement. It's a complex statement of nested functions, but it evaluates as a single R statement.
 
