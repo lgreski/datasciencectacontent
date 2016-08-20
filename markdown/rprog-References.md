@@ -18,4 +18,6 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 <tr><td><a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"> R Inferno </a></td><td>A humorous look at the various problems people have when learning R, based on Dante's <em>Inferno</em>. Written by <a href="http://www.burns-stat.com/about-burns-statistics/"> Patrick Burns, Ph.D.</a>, a statistics consultant and one of the lead developers of S-PLUS early in its development. </td></tr>
 </table>
 
+In addition to the references above, the Frank's World website has a list of [60 free data science books](http://bit.ly/2bFDN6s). Hat tip to one of the students from the August *R Programming* course on coursera.org for making me aware of this resource. 
+
 *last updated: 4 July 2016*
