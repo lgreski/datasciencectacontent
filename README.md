@@ -54,6 +54,11 @@ General commentary about the course, R programming in general, and R in relation
 1. [Common R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)
 2. [Permanently Setting R Working Directory](http://www.r-bloggers.com/setting-your-working-directory-permanently-in-r/) Link to R-bloggers.com article that explains how to set your working directory permanently in R (instead of RStudio)
 
+### Interesting R News and Blog Articles
+
+1. [R vs. Python: 2016 Survey of Software used for Data Science](http://bit.ly/2b827ey) Overview of results from a 2016 KDNuggets Software Poll, written by Gregory Piatetsky. The follow up article with expanded analysis is [What Big Data, Data Science, Deep Learning software goes together](http://bit.ly/2bFBPmW), also on [kdnuggets.com](http://bit.ly/2b83GcK). 
+2. [Scaling R for Data Science](http://oreil.ly/2b8pQyR) August 2016 article by Federico Castanedo explaining three ways to scale R.  
+
 ## Course 3: Getting and Cleaning Data
 
 1. [Real World Example: Reading American Community Survey data](https://github.com/lgreski/acsexample)
