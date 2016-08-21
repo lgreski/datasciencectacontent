@@ -38,7 +38,7 @@ General commentary about the course, R programming in general, and R in relation
 3. [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md)
 3. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
 4. [R Onboarding for SAS Users](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-onboardingForSASUsers.md)
-5. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics. 
+5. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
 
 ### Posts regarding specifics of programming assignments
 
@@ -53,10 +53,11 @@ General commentary about the course, R programming in general, and R in relation
 
 1. [Common R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)
 2. [Permanently Setting R Working Directory](http://www.r-bloggers.com/setting-your-working-directory-permanently-in-r/) Link to R-bloggers.com article that explains how to set your working directory permanently in R (instead of RStudio)
+3. [Creative Use of R: Downloading Course Lectures](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-downloadingLectures.md) Article illustrating how to use R to automate the download of lectures from *Data Science Specialization* courses, such as *R Programming*. Techniques used in this article are helpful to make research reproducible, as required for courses like *Getting and Cleaning Data* and *Reproducible Research*. 
 
 ### Interesting R News and Blog Articles
 
-1. [R vs. Python: 2016 Survey of Software used for Data Science](http://bit.ly/2b827ey) Overview of results from a 2016 KDNuggets Software Poll, written by Gregory Piatetsky. The follow up article with expanded analysis is [What Big Data, Data Science, Deep Learning software goes together](http://bit.ly/2bFBPmW), also on [kdnuggets.com](http://bit.ly/2b83GcK). 
+1. [R vs. Python: 2016 Survey of Software used for Data Science](http://bit.ly/2b827ey) Overview of results from a 2016 KDNuggets Software Poll, written by Gregory Piatetsky. The follow up article with expanded analysis is [What Big Data, Data Science, Deep Learning software goes together](http://bit.ly/2bFBPmW), also on [kdnuggets.com](http://bit.ly/2b83GcK).
 2. [Scaling R for Data Science](http://oreil.ly/2b8pQyR) August 2016 article by Federico Castanedo explaining three ways to scale R.  
 
 ## Course 3: Getting and Cleaning Data
@@ -69,7 +70,7 @@ General commentary about the course, R programming in general, and R in relation
 
 ## Course 6: Statistical Inference
 
-1. [Reference Materials for Statistical Inference](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-references.md)  Start here if you're looking for help on the statistical techniques taught in this course. 
+1. [Reference Materials for Statistical Inference](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-references.md)  Start here if you're looking for help on the statistical techniques taught in this course.
 4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
 5. [Power Calculations: Optimal Sample size](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-optimalSampleSize.md)
 6. [Permutation Tests Explained](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-permutationTests.md)
