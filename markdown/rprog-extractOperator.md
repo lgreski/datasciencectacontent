@@ -76,6 +76,16 @@ Having illustrated different ways to extract content with the extract operator, 
     #             array instead of row numbers as in the prior example
     head(mtcars[!is.na(mtcars[,"cyl"]),])
 
+## Getting Help with Operators
+
+Students quickly learn that the help operator, `?`, is used to access R documentation. However, requesting help for an operator is a bit more complicated than it first appears:
+
+<img src="./images/rprog-extractOperator01.png">
+
+Instead, one has to place the operator in double quotes, as in `?"["` to access help for the extract operator.
+
+<img src="./images/rprog-extractOperator02.png">
+
 ## References
 
 1. [Extract {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Extract.html), retrieved 22 May 2016.
