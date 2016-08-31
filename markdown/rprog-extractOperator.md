@@ -86,6 +86,8 @@ Instead, one has to place the operator in double quotes, as in `?"["` to access 
 
 <img src="./images/rprog-extractOperator02.png">
 
+A more detailed explanation of the help function `help(...)` and help operator `?` may be found on the [Getting Help with R](https://www.r-project.org/help.html) page on the [R Project](https://www.r-project.org/) website. 
+
 ## References
 
 1. [Extract {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Extract.html), retrieved 22 May 2016.
