@@ -166,6 +166,18 @@ Here is the entire listing for cachemean.R.
          m
     }
 
+
+## Appendix B: Frequently Asked Questions
+
+Q: Why doesn't `cachemean()` return the cached value? My code loosk like:
+
+     cachemean(makeVector(1:100))
+     cachemean(makeVector(1:100))
+     
+A: Code written this way creates two different objects of type `makeVector()`, so the two calls to `cachemean()` initialize the means of each instance, rather than caching and retrieving from a single instance. Another way of illustrating how the above code operates is as follows. 
+
+<img src="./images/rprog-breakingDownMakeVector03.png"> 
+
 ## References
 
 1. Chi, Yau -- [R-Tutor Named List Members](http://www.r-tutor.com/r-introduction/list/named-list-members), retrieved July 20, 2016.
