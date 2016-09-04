@@ -137,7 +137,7 @@ To summarize, the lexical scoping assignment in *R Programming* takes advantage 
 
 For additional commentary that explains how the assignment uses features of the S3 object system, please review [makeCacheMatrix() as an Object](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md). 
 
-## Appendix: cachemean.R
+## Appendix A: cachemean.R
 
 Here is the entire listing for cachemean.R.
 
@@ -169,7 +169,7 @@ Here is the entire listing for cachemean.R.
 
 ## Appendix B: Frequently Asked Questions
 
-Q: Why doesn't `cachemean()` return the cached value? My code loosk like:
+### Q: Why doesn't `cachemean()` return the cached value? My code looks like:
 
      cachemean(makeVector(1:100))
      cachemean(makeVector(1:100))
@@ -177,6 +177,18 @@ Q: Why doesn't `cachemean()` return the cached value? My code loosk like:
 A: Code written this way creates two different objects of type `makeVector()`, so the two calls to `cachemean()` initialize the means of each instance, rather than caching and retrieving from a single instance. Another way of illustrating how the above code operates is as follows. 
 
 <img src="./images/rprog-breakingDownMakeVector03.png"> 
+
+Notice how the first call to `cachemean()` sets the cache, and the second call retrieves data from it. 
+
+### Q: Why is `set()` never used in the code? 
+
+A: `set()` is included so that once an object of type `makeVector()` is created, its value can be changed without initializaing another instance of the object. It is unnecessary the first time an object of type `makeVector()` is instantiated. Why? First, the value of `x` is set as a function argument, as in `makeVector(1:30)`. Then, the first line of code in the function sets `m <- NULL`, simultaneously allocating memory for `m` and setting it to `NULL`. When a reference to this object is passed to the parent environment when the function ends, both `x` and `m` are available to be accessed by their respective get and set functions. 
+
+The following code illustrates the use of `set()`. 
+
+
+<img src="./images/rprog-breakingDownMakeVector04.png">
+
 
 ## References
 
