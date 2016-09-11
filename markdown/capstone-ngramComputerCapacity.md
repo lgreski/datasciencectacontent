@@ -29,7 +29,7 @@ All text processing was completed with the <strong>quanteda</strong> packae.
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
-<tr><td>Load data from the three raw data files into a corpus</td><tdalign="right">1.0Gb</td><td align="right">37 seconds</td></tr>
+<tr><td>Load data from the three raw data files into a corpus</td><td align="right">1.0Gb</td><td align="right">37 seconds</td></tr>
 <tr><td>Tokenize corpus into sentences, using <code>quanteda::tokenize()</code></td><td align="right">1.3Gb</td><td align="right"></td>509 seconds</tr>
 <tr><td>Convert sentences into a character vector to be reprocessed by `quanteda::corpus()` and `quanteda::tokenize()`</td><td align="right"></td><td align="right"></td></tr>
 <tr><td></td><td align="right"></td><td align="right"></td></tr>
