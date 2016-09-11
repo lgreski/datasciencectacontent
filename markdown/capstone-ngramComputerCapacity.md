@@ -23,11 +23,17 @@ For the purposes of this analysis, all code was run on an HP Omen laptop with th
 </tr>
 </table>
 
-Note that due to the size of the objects, a machine with a minimum of 16Gb of RAM is required to process the entire data set, and one must be judicious about deleting objects not needed before progressing to subsequent steps in order to avoid running out of memory on the machine. 
+Note that due to the size of the objects, a machine with a minimum of 16Gb of RAM is required to process the entire data set, and one must be judicious about deleting objects not needed before progressing to subsequent steps in order to avoid running out of memory on the machine.
+
+All text processing was completed with the <strong>quanteda</strong> packae. 
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
-<tr><td>Load data from the three raw data files into a corpus</td><td>1.0Gb</td><td>TBD</td></tr>
-<tr><td></td><td></td><td></td></tr>
+<tr><td>Load data from the three raw data files into a corpus</td><tdalign="right">1.0Gb</td><td align="right">37 seconds</td></tr>
+<tr><td>Tokenize corpus into sentences, using <code>quanteda::tokenize()</code></td><td align="right">1.3Gb</td><td align="right"></td>509 seconds</tr>
+<tr><td>Convert sentences into a character vector to be reprocessed by `quanteda::corpus()` and `quanteda::tokenize()`</td><td align="right"></td><td align="right"></td></tr>
+<tr><td></td><td align="right"></td><td align="right"></td></tr>
+<tr><td></td><td align="right"></td><td align="right"></td></tr>
+<tr><td></td><td align="right"></td><td align="right"></td></tr>
 
 </table>
