@@ -25,15 +25,17 @@ For the purposes of this analysis, all code was run on an HP Omen laptop with th
 
 Note that due to the size of the objects, a machine with a minimum of 16Gb of RAM is required to process the entire data set, and one must be judicious about deleting objects not needed before progressing to subsequent steps in order to avoid running out of memory on the machine.
 
-All text processing was completed with the <strong>quanteda</strong> packae. 
+All text processing was completed with the <strong>quanteda</strong> package. 
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
 <tr><td>Load data from the three raw data files into a corpus</td><td align="right">1.0Gb</td><td align="right">37 seconds</td></tr>
 <tr><td>Tokenize corpus into sentences, using <code>quanteda::tokenize()</code></td><td align="right">1.3Gb</td><td align="right"></td>509 seconds</tr>
-<tr><td>Convert sentences into a character vector to be reprocessed by `quanteda::corpus()` and `quanteda::tokenize()`</td><td align="right"></td><td align="right"></td></tr>
-<tr><td></td><td align="right"></td><td align="right"></td></tr>
-<tr><td></td><td align="right"></td><td align="right"></td></tr>
-<tr><td></td><td align="right"></td><td align="right"></td></tr>
-
+<tr><td>Convert sentences into a character vector to be reprocessed by <code>quanteda::corpus()</code> and <code>quanteda::tokenize()</code</td><td align="right">6 seconds</td><td align="right">N/A</td></tr>
+<tr><td>Build corpus with text data organized into single sentences</td><td align="right">5.9Gb</td><td align="right">180 seconds</td></tr>
+<tr><td>Build 2-grams</td><td align="right">6.3Gbs</td><td align="right">619 seconds</td></tr>
+<tr><td>Build 3-grams</td><td align="right">6.5Gbs</td><td align="right">894 seconds</td></tr>
+<tr><td>Build 4-grams</td><td align="right">6.5Gbs</td><td align="right">925 seconds</td></tr>
+<tr><td>Build 5-grams</td><td align="right">6.3Gbs</td><td align="right">930 seconds</td></tr>
+<tr><td>Build 6-grams</td><td align="right">6.1Gbs</td><td align="right">1,007 seconds</td></tr>
 </table>
