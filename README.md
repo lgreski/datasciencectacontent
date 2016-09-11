@@ -103,5 +103,8 @@ General commentary about the course, R programming in general, and R in relation
 ## Course 9: Developing Data Products
 1. [Configuring shinyapps.io Application Timeout](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataProd-shinyTimeoutConfig.md)
 
+## Course 10: Capstone
+1. [Speech and Language Processing, 3rd Edition](https://web.stanford.edu/~jurafsky/slp3/) Working version of Jurafsky, et. al. book on natural language processing whose content on n-grams is helpful for the capstone. 
+
 ## Content for Community Mentors
 1. [Tips for New Community Mentors](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dss-mentorTips.md) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the Coursera Learner Help Center, to how to optimize the value of content that is posted by mentors. 
