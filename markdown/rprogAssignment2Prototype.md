@@ -1,6 +1,6 @@
 # Programming Assignment 2: makeCacheMatrix() as an Object
 
-In R, the `list` data type is the basis for the S3 object system, one of two "object" systems in R. The second system is the R4 object system. Programming Assignment 2 is based on the S3 object system.
+In R, the `list` data type is the basis for the S3 object system, one of two "object" systems in R. The second system is the S4 object system, as referenced in [Forms of the Extract Operator](http://bit.ly/2bzLYTL). Programming Assignment 2 is based on the S3 object system.
 
 When an object is defined as an S3 object, it includes not only the functions in its list, but also any variables in memory of the function where the list was created. This is what makes it an "object," it contains both behavior (the functions), and state (the variables in the environment).
 
