@@ -27,7 +27,14 @@ The remainder of this document serves as a directory of the content, aligning in
 
 ## Course 2: R Programming
 
-General commentary about the course, R programming in general, and R in relationship to other statistics packages.
+### START HERE
+
+If you're new to the course and trying to figure out what to do in what order, start with these articles. 
+
+1. [Resources for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-rprogrammingResources.md)
+2. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
+
+The next set of articles includes general commentary about the course, R programming in general, and R in relationship to other statistics packages.
 
 1. [Commercial Statistics Packages: An Historical Perspective](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statsPackagesHistory.md)
 2. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
