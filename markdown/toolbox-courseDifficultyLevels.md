@@ -45,8 +45,8 @@ Finally, students must complete nine courses prior to enrolling in the *Capstone
 <table>
 <tr><th>Course</th><th>Comments</th></tr>
 <tr><td>1. Capstone </td><td>This course is the most challenging one in the specialization for two reasons. First, it requires knowledge from all prior courses. Second, it provides a challenging final project that requires many hours of independent work. Each week's lecture is between 1 and 3 minutes long, leaving the student to figure out many concepts in the domain of natural language processing on his / her own. </td></tr>
-<tr><td>2. Statistical Inference </td><td></td></tr>
-<tr><td>3. R Programming </td><td></td></tr>
+<tr><td>2. Statistical Inference </td><td>For students that don't already have a background in inferential statistics, this is by far the most difficult course in the curriculum. Students often report on the discussion forums having to repeat it multiple times to understand the concepts well enough to pass the quizzes and complete the final project.</td></tr>
+<tr><td>3. R Programming </td><td>This course is close in difficulty to <em>Statistical Inference</em> because most students in the Specialization don't have a programming background. Additionally, students who learned another statistics language by taking university-level statistics courses often are [frustrated by the abstract nature of R.](http://bit.ly/2erxk3A) </td></tr>
 <tr><td>4. Regression Models</td><td></td></tr>
 <tr><td>5. Practical Machine Learning</td><td></td></tr>
 <tr><td>6. Getting and Cleaning Data</td><td></td></tr>
