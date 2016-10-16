@@ -29,9 +29,9 @@ The remainder of this document serves as a directory of the content, aligning in
 
 ### START HERE
 
-If you're new to the course and trying to figure out what to do in what order, start with these articles. 
+If you're new to the course and trying to figure out what to do in what order, start with these articles.
 
-1. [Resources for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-rprogrammingResources.md) Provides a summary of student-generated content to support the course, some of which is indexed on the Data Science Specialization's github.io site 
+1. [Resources for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-rprogrammingResources.md) Provides a summary of student-generated content to support the course, some of which is indexed on the Data Science Specialization's github.io site
 2. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
 
 The next set of articles includes general commentary about the course, R programming in general, and R in relationship to other statistics packages.
@@ -61,13 +61,14 @@ The next set of articles includes general commentary about the course, R program
 
 1. [Common R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)
 2. [Permanently Setting R Working Directory](http://www.r-bloggers.com/setting-your-working-directory-permanently-in-r/) Link to R-bloggers.com article that explains how to set your working directory permanently in R (instead of RStudio)
-3. [Creative Use of R: Downloading Course Lectures](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-downloadingLectures.md) Article illustrating how to use R to automate the download of lectures from *Data Science Specialization* courses, such as *R Programming*. Techniques used in this article are helpful to make research reproducible, as required for courses like *Getting and Cleaning Data* and *Reproducible Research*. 
+3. [Creative Use of R: Downloading Course Lectures](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-downloadingLectures.md) Article illustrating how to use R to automate the download of lectures from *Data Science Specialization* courses, such as *R Programming*. Techniques used in this article are helpful to make research reproducible, as required for courses like *Getting and Cleaning Data* and *Reproducible Research*.
+4. [How to Upgrade R without Losing Your Packages](http://bit.ly/2ejS8ox) article by Kris Eberwein on datascienceriot.com that includes code to save your list of packages to an rds file, and reinstall any packages that don't make it through the upgrade process.  
 
 ### Interesting R News and Blog Articles
 
 1. [R vs. Python: 2016 Survey of Software used for Data Science](http://bit.ly/2b827ey) Overview of results from a 2016 KDNuggets Software Poll, written by Gregory Piatetsky. The follow up article with expanded analysis is [What Big Data, Data Science, Deep Learning software goes together](http://bit.ly/2bFBPmW), also on [kdnuggets.com](http://bit.ly/2b83GcK).
 2. [Scaling R for Data Science](http://oreil.ly/2b8pQyR) August 2016 article by Federico Castanedo explaining three ways to scale R.  
-3. [Lexical Scoping and Statistical Computing](http://bit.ly/2cmqAPy) Article by Robert Gentleman and Ross Ihaka at the University of Auckland describing how lexical scoping works, and why it is valuable in statistical computing. 
+3. [Lexical Scoping and Statistical Computing](http://bit.ly/2cmqAPy) Article by Robert Gentleman and Ross Ihaka at the University of Auckland describing how lexical scoping works, and why it is valuable in statistical computing.
 
 ## Course 3: Getting and Cleaning Data
 
@@ -111,7 +112,7 @@ The next set of articles includes general commentary about the course, R program
 1. [Configuring shinyapps.io Application Timeout](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataProd-shinyTimeoutConfig.md)
 
 ## Course 10: Capstone
-1. [Speech and Language Processing, 3rd Edition](https://web.stanford.edu/~jurafsky/slp3/) Working version of Jurafsky, et. al. book on natural language processing whose content on n-grams is helpful for the capstone. 
+1. [Speech and Language Processing, 3rd Edition](https://web.stanford.edu/~jurafsky/slp3/) Working version of Jurafsky, et. al. book on natural language processing whose content on n-grams is helpful for the capstone.
 
 ## Content for Community Mentors
-1. [Tips for New Community Mentors](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dss-mentorTips.md) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the Coursera Learner Help Center, to how to optimize the value of content that is posted by mentors. 
+1. [Tips for New Community Mentors](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dss-mentorTips.md) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the Coursera Learner Help Center, to how to optimize the value of content that is posted by mentors.
