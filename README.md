@@ -25,6 +25,10 @@ The remainder of this document serves as a directory of the content, aligning in
 3. [Using Editor Modes in Discussion Forum Posts](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/usingMarkdownInForumPosts.md)
 4. [Buying a Computer for Data Science](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/toolbox-computerStandards.md)
 
+### Key Issue: Students Struggle to find URLs in Lecture Slides
+
+If you're interested in the URLs for the lecture slides, they are available in the [Data Science Specialization Courses](http://bit.ly/2bJcXNW) github repository. Each course is stored in a subdirectory within the repository, and the slides are built in R Markdown language, a technique you'll learn in *Developing Data Products*. 
+
 ## Course 2: R Programming
 
 ### START HERE
