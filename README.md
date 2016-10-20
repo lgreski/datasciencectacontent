@@ -27,7 +27,7 @@ The remainder of this document serves as a directory of the content, aligning in
 
 ### Key Issue: Students Struggle to find URLs in Lecture Slides
 
-If you're interested in the URLs for the lecture slides, they are available in the [Data Science Specialization Courses](http://bit.ly/2bJcXNW) github repository. Each course is stored in a subdirectory within the repository, and the slides are built in R Markdown language, a technique you'll learn in *Developing Data Products*. 
+If you're interested in the URLs for the lecture slides, they are available in the [Data Science Specialization Courses](http://bit.ly/2bJcXNW) github repository. Each course is stored in a subdirectory within the repository, and the slides are built in R Markdown language, a technique you'll learn in *Developing Data Products*.
 
 ## Course 2: R Programming
 
@@ -55,8 +55,9 @@ The next set of articles includes general commentary about the course, R program
 ### Posts regarding specifics of programming assignments
 
 1. [Assignment 1: Breaking Down Pollutantmean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-discussPollutantmean.md)
-1. [Assignment 1: A SAS Version of  Pollutantmean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-pollutantmeanSASVersion.md)
-1. [Assignment 2: Demystifying makeVector](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-breakingDownMakeVector.md)
+2. [Assignment 1: A SAS Version of  Pollutantmean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-pollutantmeanSASVersion.md)
+3. [Assignment 1: Common Mistakes - Weighted vs. Unweighted Means](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-weightedMeans.md)
+4. [Assignment 2: Demystifying makeVector](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-breakingDownMakeVector.md)
 1. [Assignment 2: makeCacheMatrix as an Object](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md)
 2. [Assignment 2: Grading the SHA-1 Hash Code](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-gradeSHA1hash.md)
 3. [Assignment 3: Functions to Sort Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-sortFunctionsExample.md)
