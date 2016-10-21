@@ -54,3 +54,40 @@ Here is all of the code that I screen captured above:
     # generates output matching sample output from assignment 1
 
     pollutantmean("specdata","sulfate",1:3)
+
+# Appendix: The "R way" of calculating the weighted mean
+
+The code above is deliberately repetitive to illustrate step-by-step how the unweighted and weighted means are calculated. Here is another way to do the same calculations, using techniques that take advantage of key R features.
+
+First, we'll calculate the unweighted mean.
+
+<img src="./images/rprog-weightedMean05.png">
+
+Next, to generate the weighted mean, we'll generate 2 arrays, multiply, and divide by the sum of the weights.
+
+<img src="./images/rprog-weightedMean06.png">
+
+Here is the code from the screen captures that illustrate the second approach
+
+    #
+    # use apply to calculate mean on multiple sensor files and aggregate to
+    # unweighted mean, using the pollutantmean function
+    #
+    mean(unlist(lapply(1:3,function(x) {pollutantmean("specdata","sulfate",id=x)})))
+
+    #
+    # next, calculate the means and weights
+    #
+    theFileNames <- c("./specdata/001.csv","./specdata/002.csv","./specdata/003.csv")
+
+    theFiles <- lapply(theFileNames, function(x) read.csv(x)[["sulfate"]])
+
+    theMeans <- unlist(lapply(theFiles,FUN=mean,na.rm=TRUE))
+    theMeans
+
+    theSums <- unlist(lapply(theFiles,function(x) sum(!is.na(x))))
+    theSums
+
+    # Finally, calculate the weighted mean
+
+    sum((theMeans * theSums)) / sum(theSums)
