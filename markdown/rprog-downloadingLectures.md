@@ -11,14 +11,13 @@ The function `downloadLectures()` can be used to download files in a binary form
     #
 
     downloadLectures<- function(fileList,courseName="rProgramming prework") {
+         # configure set download method for windows vs. Mac / Linux
+         dlMethod <- "curl"
+         if(substr(Sys.getenv("OS"),1,7) == "Windows") dlMethod <- "wininet"
          for (i in 1:length(fileList)) {
-             # note: paste() combines content into a single string
-             #       sprintf() formats text to a specific format, such as
-             #       inclusion of leading zeros
               outFile <- paste(courseName,"_lecture_",sprintf("%03d.mp4",i),sep="")
-              # if the file already exists, don't overwrite it
               if(!file.exists(outFile)){
-                   download.file(fileList[i],destfile=outFile,method="curl",mode="wb")
+                   download.file(fileList[i],destfile=outFile,method=dlMethod,mode="wb")
               }
 
          }
@@ -30,7 +29,7 @@ To execute the function, simply build a list of URLs at which the videos are sto
     # run downloadLectures() for video to install R on a Mac
     #
     theFiles <- c(
-         "https://d18ky98rnyall9.cloudfront.net/Install%20R%20for%20Mac%20%283.2.1%29-HD%20720p.848ed3901c1211e58410c7250e698784/full/540p/index.mp4?Expires=1471910400&Signature=h613WfTzTRV0wQQJH1KiiR0QeMXtqCq9JSCuvvf1lp0ekIi-RCvvVXcU~kLbSUceFgNMW0tNj1TFmaBe0Efc9FY9ksCibAjVTyf1ZyiHSXVvjACNz9nsuAAnr3f~9cKGTDX-SRGD10auw-eZXcAx3-x7gV1ZIYzhaZqa4M3z5dU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A"
+         "https://www.coursera.org/learn/r-programming/lecture/9Aepc/installing-r-on-a-mac"
     )
     downloadLectures(theFiles,courseName="rProgramming_prework")
 
@@ -50,4 +49,4 @@ Here is what the selected video looks like in Quick Time.
 Ideas for enhancing this code on your own:
 
 1. Add code to downloadLectures() to zip / tar the files once they've all been downloaded.
-2. Add code to distinguish one week's lectures from another, enabling the function to download all the lectures for a course in a single function call. 
+2. Add code to distinguish one week's lectures from another, enabling the function to download all the lectures for a course in a single function call.
