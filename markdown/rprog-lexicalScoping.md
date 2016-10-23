@@ -8,6 +8,9 @@ Two key R design principles related to objects and lexical scoping are summarize
 
             John Chambers, quoted in Advanced R, p. 79.
 
+
+After some additional research, we were able to locate the source of this quote, a 2014 presentation by John Chambers that was given at the useR! conference, as referenced at the end of this article. 
+
 ## What is an "object?"
 
 First, we'll tackle Chambers' first slogan with a short overview of objects. 
