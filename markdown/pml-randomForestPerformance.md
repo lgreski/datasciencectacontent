@@ -8,7 +8,9 @@ This approach takes away one of the key advantages of the `caret` package: its a
 
 To improve processing time of the multiple executions of the `train()` function, `caret` supports the parallel processing capabilities of the `parallel` package. Unfortunately, the documentation of [parallel processing with `caret`](http://topepo.github.io/caret/parallel.html) uses a technique, the `doMC` package, which is not available for Microsoft Windows versions of R.
 
-Fortunately, the `parallel` package works on R across all major operating system platforms: Linux, Mac OSX, and Windows. One's ability to run these models in parallel is often the difference between using a highly effective algorithm like *random forest* versus a less effective but more computationally efficient algorithm (such as *linear discriminant analysis*).
+Fortunately, the `parallel` package works on R across all major operating system platforms: Linux, Mac OSX, and Windows. One's ability to run these models in parallel to obtain a manageable response time is often the difference between using a highly effective algorithm like *random forest* versus a less effective but more computationally efficient algorithm (such as *linear discriminant analysis*).
+
+In practical terms for the *Practical Machine Learning* final project, the probability of correctly predicting all 20 test cases using an algorithm with 80% accuracy is very low, as described in [Required Model Accuracy](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-requiredModelAccuracy.md). The probability of correctly predicting all 20 test cases even with a model at 95% accuracy is only 0.36. Therefore, a student must use an algorithm that has at least 99% accuracy to have a reasonable probability of obtaining a perfect score on the quiz associated with the final project.
 
 One other tradeoff that we made in this analysis was changing the resampling method from the default of bootstrapping to k-fold cross-validation. The change in resampling technique may trade processing performance for reduced model accuracy. However, our analysis shows that the 5 fold cross-validation resampling technique delivered the same accuracy as the more computationally expensive bootstrapping technique.
 
@@ -177,3 +179,5 @@ Hardware specifications for the computers used in the performance timings in thi
 </td>
 </tr>
 </table>
+
+*last updated: 23 October 2016*

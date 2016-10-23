@@ -34,9 +34,11 @@ Now we'll address Chambers' second slogan: *Everything that happens is a functio
 
 This is a statement about behavior in R. All behavior in R is implemented through functions. This means that even things like the extract operator `[` are coded in R as functions. By virtue of Chambers' first slogan, we know that operators are also objects. 
 
-## Objects and Lexical Scoping
+## R Objects and Lexical Scoping
 
-In R every object is tied to an environment. Specifically for functions, each function includes a pointer to its parent environment. This allows the function to have access to the objects that are defined in the parent environment, in addition to any objects that are created within the function. This feature allows a developer to write functions within a function that can access objects defined in all of the parent environment(s) in the hierarchy between the child function and the R Global Environment. 
+In R every object is tied to an environment. Specifically for functions, each function includes a pointer to its parent environment. This allows the function to have access to the objects that are defined in the parent environment, in addition to any objects that are created within the function. The combination of a function and the variables referenced in its environment is also known in computer science as a closure (see Appendix for additional discussion of closures). 
+
+This feature allows a developer to write functions within a function that can access objects defined in all of the parent environment(s) in the hierarchy between the child function and the R Global Environment. 
 
 The requirement that all R functions have pointers to their parent environments has desirable properties for statistical computing, such as the optimization example in an expanded version of the lexical scoping lecture documented in a 2003 [JHU Biostatistics class](http://www.biostat.jhsph.edu/~rpeng/docs/R-classes-scope.pdf).
 
@@ -57,3 +59,11 @@ We can confirm the accuracy of the diagram by inspecting the Global Environment 
 Clicking on one of the functions will display its code in the code editor pane of RStudio, allowing us to see the objects defined within the function.
 
 <img src="./images/rprog-lexicalScoping03.png">
+
+# Appendix: what is a closure?
+
+*Closure* is a functional programming concept that is central to lexical scoping. A closure represents the association between a function and its environment, including the local variables that are defined within its scope and the name or reference to which the name was bound at design time. Since anonymous functions are unnamed, they are associated with environments by reference.  
+
+A closure enables the function to access these varaibles through copies or references even when the function is accessed outside their scope, unlike a regular function that is defined without an environment. 
+
+Reference: [Closure (computer programming), Wikipedia]().  Accessed 22 October 2016. 
