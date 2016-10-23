@@ -119,7 +119,7 @@ The next set of articles includes general commentary about the course, R program
 
 ## Course 10: Capstone
 1. [Speech and Language Processing, 3rd Edition](https://web.stanford.edu/~jurafsky/slp3/) Working version of Jurafsky, et. al. book on natural language processing whose content on n-grams is helpful for the capstone.
-2. [n-gram Computations and Computer Capacity](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/capstone-ngramComputerCapacity.md) Explains the amount of memory required to convert the text files for the course project into n-grams, using the <strong>quanteda</strong> package. 
+2. [n-gram Computations and Computer Capacity](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/capstone-ngramComputerCapacity.md) Explains the amount of memory required to convert the text files for the course project into n-grams, using the <strong>quanteda</strong> package.
 
 ## Content for Community Mentors
 1. [Tips for New Community Mentors](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dss-mentorTips.md) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the Coursera Learner Help Center, to how to optimize the value of content that is posted by mentors.
