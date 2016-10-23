@@ -6,7 +6,7 @@ Two key R design principles related to objects and lexical scoping are summarize
     -- Everything that exists is an object, and
     -- Everything that happens is a function call. 
 
-            John Chambers, quoted in Advanced R, p. 79.
+John Chambers, quoted in *Advanced R*, p. 79.
 
 
 After some additional research ("Google is your friend...") I located the original source of this quote, a [presentation by John Chambers that was given at the useR!2014 conference](http://user2014.stat.ucla.edu/files/chambers.pdf). 
