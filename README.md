@@ -20,7 +20,7 @@ The remainder of this document serves as a directory of the content, aligning in
 
 ## Course 1: Data Scientist's Toolbox
 
-1. [Course Prerequisites and Difficulty Levels](http://bit.ly/2e6y3nn) Provides an overview of the Data Science Specialization courses, explaining from a practical perspective the courses a student needs as prerequisites to other courses. While students may take more than one class at a time, it's important to know how information from earlier courses is used in subsequent ones. <br><br> The article also ranks the difficulty levels from most to least difficult, based on the author's experience in the curriculum as well as Discussion Forum content posted by other students. 
+1. [Course Prerequisites and Difficulty Levels](http://bit.ly/2e6y3nn) Provides an overview of the Data Science Specialization courses, explaining from a practical perspective the courses a student needs as prerequisites to other courses. While students may take more than one class at a time, it's important to know how information from earlier courses is used in subsequent ones. <br><br> The article also ranks the difficulty levels from most to least difficult, based on the author's experience in the curriculum as well as Discussion Forum content posted by other students.
 1. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
 2.  [Configuring RStudio to work with git / github - Windows 7, 8, and 10](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitWindowsVersion.md)
 3. [Using Editor Modes in Discussion Forum Posts](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/usingMarkdownInForumPosts.md)
@@ -119,6 +119,7 @@ The next set of articles includes general commentary about the course, R program
 
 ## Course 10: Capstone
 1. [Speech and Language Processing, 3rd Edition](https://web.stanford.edu/~jurafsky/slp3/) Working version of Jurafsky, et. al. book on natural language processing whose content on n-grams is helpful for the capstone.
+2. [n-gram Computations and Computer Capacity](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/capstone-ngramComputerCapacity.md) Explains the amount of memory required to convert the text files for the course project into n-grams, using the <strong>quanteda</strong> package. 
 
 ## Content for Community Mentors
 1. [Tips for New Community Mentors](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dss-mentorTips.md) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the Coursera Learner Help Center, to how to optimize the value of content that is posted by mentors.
