@@ -20,7 +20,7 @@ The remainder of this document serves as a directory of the content, aligning in
 
 ## Course 1: Data Scientist's Toolbox
 
-1. [Course Prerequisites and Difficulty Levels](http://bit.ly/2e6y3nn) Provides an overview of the Data Science Specialization courses, explaining from a practical perspective the courses a student needs as prerequisites to other courses. While students may take more than one class at a time, it's important to know how information from earlier courses is used in subsequent ones. <br><br> The article also ranks the difficulty levels from most to least difficult, based on the author's experience in the curriculum as well as Discussion Forum content posted by other students.
+1. [Course Prerequisites and Difficulty Levels](http://bit.ly/2e6y3nn) Provides an overview of the Data Science Specialization courses, explaining from a practical perspective the courses a student needs as prerequisites to other courses. While students may take more than one class at a time, it's important to know how information from earlier courses is used in subsequent ones. <br><br> The article also ranks the difficulty levels from most to least difficult, based on the author's experience in the curriculum as well as Discussion Forum feedback contributed by other students.
 1. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
 2.  [Configuring RStudio to work with git / github - Windows 7, 8, and 10](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitWindowsVersion.md)
 3. [Using Editor Modes in Discussion Forum Posts](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/usingMarkdownInForumPosts.md)
@@ -36,7 +36,7 @@ If you're interested in the URLs for the lecture slides, they are available in t
 
 If you're new to the course and trying to figure out what to do in what order, start with these articles.
 
-1. [Resources for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-rprogrammingResources.md) Provides a summary of student-generated content to support the course, some of which is indexed on the Data Science Specialization's github.io site
+1. [Resources for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-rprogrammingResources.md) Provides a summary of student-generated content to support the course, some of which is indexed on the [Data Science Specialization's github.io](http://datasciencespecialization.github.io/) site
 2. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
 
 The next set of articles includes general commentary about the course, R programming in general, and R in relationship to other statistics packages.
@@ -79,7 +79,7 @@ The next set of articles includes general commentary about the course, R program
 
 ## Course 3: Getting and Cleaning Data
 
-1. [Real World Example: Reading American Community Survey data](https://github.com/lgreski/acsexample)
+1. [Real World Example: Reading American Community Survey data](https://github.com/lgreski/acsexample) Illustrates concepts covered in *Getting and Cleaning Data* with U.S. Census data, including how to process a hierarchical file format in R, as well as using an electronic codebook to generate the parameters required to read the data file into a data frame.
 2. [Strategy for Reading Files & APIs / Quiz 2](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/cleaningData-readingFiles.md)
 
 ## Course 5: Reproducible Research
@@ -116,11 +116,11 @@ The next set of articles includes general commentary about the course, R program
 2. [Course Project - Predicting Test Scores based on Training Model Accuracy](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-requiredModelAccuracy.md)
 
 ## Course 9: Developing Data Products
-1. [Configuring shinyapps.io Application Timeout](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataProd-shinyTimeoutConfig.md)
+1. [Configuring shinyapps.io Application Timeout](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataProd-shinyTimeoutConfig.md) A walkthrough on how to configure a Shiny application so it doesn't waste the free monthly server processing time.
 
 ## Course 10: Capstone
 1. [Speech and Language Processing, 3rd Edition](https://web.stanford.edu/~jurafsky/slp3/) Working version of Jurafsky, et. al. book on natural language processing whose content on n-grams is helpful for the capstone.
 2. [n-gram Computations and Computer Capacity](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/capstone-ngramComputerCapacity.md) Explains the amount of memory required to convert the text files for the course project into n-grams, using the <strong>quanteda</strong> package.
 
 ## Content for Community Mentors
-1. [Tips for New Community Mentors](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dss-mentorTips.md) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the Coursera Learner Help Center, to how to optimize the value of content that is posted by mentors.
+1. [Tips for New Community Mentors](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dss-mentorTips.md) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the *Coursera Learner Help Center*, to how to optimize the value of content that is posted by mentors.
