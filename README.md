@@ -65,10 +65,11 @@ The next set of articles includes general commentary about the course, R program
 
 ### Miscellaneous Code Examples and Instructions
 
-1. [Common R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)
-2. [Permanently Setting R Working Directory](http://www.r-bloggers.com/setting-your-working-directory-permanently-in-r/) Link to R-bloggers.com article that explains how to set your working directory permanently in R (instead of RStudio)
+1. [Permanently Setting R Working Directory](http://www.r-bloggers.com/setting-your-working-directory-permanently-in-r/) Link to R-bloggers.com article that explains how to set your working directory permanently in R (instead of RStudio)
+2. [Tutorial: Downloading Files](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-downloadingFiles.md)
 3. [Creative Use of R: Downloading Course Lectures](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-downloadingLectures.md) Article illustrating how to use R to automate the download of lectures from *Data Science Specialization* courses, such as *R Programming*. Techniques used in this article are helpful to make research reproducible, as required for courses like *Getting and Cleaning Data* and *Reproducible Research*.
-4. [How to Upgrade R without Losing Your Packages](http://bit.ly/2ejS8ox) article by Kris Eberwein on datascienceriot.com that includes code to save your list of packages to an rds file, and reinstall any packages that don't make it through the upgrade process.  
+4. [How to Upgrade R without Losing Your Packages](http://bit.ly/2ejS8ox) article by Kris Eberwein on datascienceriot.com that includes code to save your list of packages to an rds file, and reinstall any packages that don't make it through the upgrade process.
+5. [Common R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)  
 
 ### Interesting R News and Blog Articles
 
