@@ -52,6 +52,7 @@ The next set of articles includes general commentary about the course, R program
 3. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
 4. [R Onboarding for SAS Users](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-onboardingForSASUsers.md)
 5. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
+6. [Object Oriented Programming and R](http://bit.ly/2f5lzyh) Explains how object oriented programming concepts are implemented in R, in response to a student question about accessing content output by the R linear models function, `lm()`. 
 
 ### Posts regarding specifics of programming assignments
 
