@@ -41,7 +41,7 @@ If you're having trouble accessing the resource, and it's available via HTTP, na
 
 If you're reading fixed length files, you'll need to identify the start & stop columns in the input file in order to read it correctly.
 
-**_PRO TIP:_** use a file editor that can display you the column number at which the cursor is located as you navigate the file (e.g. Notepad++ for Windows), or use a file editor that displays a column ruler, such as UltraEdit, as illustrated here.
+**_PRO TIP:_** use a file editor that can display the column number at which the cursor is located as you navigate the file (e.g. Notepad++ for Windows), or use a file editor that displays a column ruler, such as UltraEdit, as illustrated here.
 
 ![2015-08-05_19-36-41.png](https://coursera-forum-screenshots.s3.amazonaws.com/1b/1f5a503be411e58d54556e371b25e8/2015-08-05_19-36-41.png)
 
