@@ -7,12 +7,12 @@ Students in the Statistical Inference Course within the Johns Hopkins University
 
 <tr><td><a href="https://leanpub.com/LittleInferenceBook"> Statistical Inference for Data Science </a></td><td>Start here! Written by Brian Caffo, the instructor for <em>Statistical Inference</em>, this is the book that is designed to accompany the Johns Hopkins University <em>Statistical Inference</em> course, and it's available for low (or no) cost on leanpub.org. </td></tr>
 
-<tr><td><a href="https://openintro.org/stat"> OpenIntro Statistics </a></td><td>Openintro.org provides a set of three statistics courses that include books and videos. The courses are targeted at different categories of students, ranging from high school to college. </td></tr>
+<tr><td><a href="https://openintro.org/stat"> OpenIntro Statistics </a></td><td>Openintro.org provides a set of three statistics courses that include books and videos. The courses are targeted at different categories of students, ranging from high school to college. <br><br> All of these resources are available for free. </td></tr>
 
 <tr><td><a href="http://people.math.umass.edu/~lavine/Book/book.pdf"> Introduction to Statistical Thought</a></td><td> Written by <a href"http://people.math.umass.edu/~lavine/"> Michael Lavine</a> at the University of Massachusetts, this book provides an introduction to statistics for people who are knowledgeable in calculus. The book is available for free on the University of Massachusetts website and may be accessed by clicking on the book title hyperlink to the left of this description. </td></tr>
 
 <tr><td> <a href="https://www.manning.com/books/r-in-action-second-edition"> R in Action</a></td><td>Written by Robert Kabacoff, <em>R in Action</em> is an excellent overall reference for R, written by a statistician. It includes code and detailed explanations of a variety of techniques used in the <em>Statistical Inference</em> course, such as basic statistics, t-tests, comparing multiple groups, and power analysis.</td></tr>
-<tr><td><a href="http://statmethods.net/stats/index.html"> Statmethods.net Basic Statistics Page</a> </td><td>Also developed by Robert Kabacoff, statmethods.net is the online companion to <em>R in Action.</em> It contains content about a variety of statistical methods, as well as a list of <a href="http://statmethods.net/about/books.html"> additional books and tutorials</a>.</td></tr>
+<tr><td><a href="http://statmethods.net/stats/index.html"> Statmethods.net Basic Statistics Page</a> </td><td>Also developed by Robert Kabacoff, statmethods.net is the <em>free</em> online companion to <em>R in Action.</em> It contains content about a variety of statistical methods, as well as a list of <a href="http://statmethods.net/about/books.html"> additional books and tutorials</a>.</td></tr>
 <tr><td><a href="http://wikipedia.org"> Wikipedia</a></td><td>Wikipedia is always a great place to start when one needs to answer some questions about a statistical method. For example, the link on the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem"> Central Limit Theorem</a> is useful for one of the two components of the <em>Statistical Inference</em> course project.</td></tr>
 
 <tr><td><a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf">An Introduction to Statistical Learning with Applications in R</a></td><td> Written by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani, ISLR is the book to read before taking on <em>Elements of Statistical Learning</em>. The first printing of the book is available for free on the University of Southern California website and may be accessed by clicking on the book title hyperlink to the left of this description. </td></tr>
@@ -24,4 +24,4 @@ Students in the Statistical Inference Course within the Johns Hopkins University
 
 We will continue to periodically update this list with new reference material.
 
-*Last updated: 21 May 2016*
+*Last updated: 11 November 2016*
