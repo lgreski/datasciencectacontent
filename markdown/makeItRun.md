@@ -8,7 +8,7 @@ For those of you who don't have prior programming experience, I thought I'd shar
 
 First, take the instructions for the programming assignment and summarize them into an outline. If the assignment requires use of multiple data files, determine whether the instructions say to combine them before processing, or to process them separately.  Then, for each step in the outline, identify R functions that could be used to help you solve the task at hand.
 
-For an example of how to break down an assignment into an outline, take a look at the Designing a Solution section of my article, [Breaking down pollutantmean()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-discussPollutantmean.md). 
+For an example of how to break down an assignment into an outline, take a look at the Designing a Solution section of my article, [Breaking down pollutantmean()](http://bit.ly/2cHyiCl). 
 
 If necessary, put your hacker skills to work by making Google your friend. For example, if you're trying to solve the *R Programming* class Assignment 1, some of the following Google queries might be helpful:
 
