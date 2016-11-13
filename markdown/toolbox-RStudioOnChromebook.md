@@ -9,7 +9,8 @@ In the *Data Science Specialization*, students sometimes ask whether the coursew
 <tr><td valign="top">Reproducible Research</td><td>A large volume of messy data from our friends at the <a href="http://www.noaa.gov">National Oceanic and Atmospheric Administration</a> leads to a significant data cleaning task. Since R processes everything in memory, more compute power makes this course easier to complete.</td></tr>
 </table>
 
-With these caveats, here are some resources that will enable students to run R / RStudio from a Chromebook.
+With these caveats, here are some resources that can enable students to run R / RStudio from a Chromebook.
 
 1. [Rollapp](https://www.rollapp.com/app/rstudio): Provides access to R / RStudio, including read only file access to a variety of cloud-based disk storage
 2. [Linux on Chromebook / Crouton](https://gigaom.com/2014/12/30/chromebooks-can-now-run-linux-in-a-chrome-os-window/): Gigaom article including a video that explains how to install Linux on a Chromebook. Once you've installed Linux, students can then install a Linux version of R and RStudio.  
+3. [Aurio on Amazon Cloud](https://aws.amazon.com/marketplace/pp/B00VETUL8M?qid=1479050009114&sr=0-3&ref_=srh_res_product_title): The Aurio application in the Amazon Web Services Marketplace is another potential way to access R / RStudio through a Chromebook.
