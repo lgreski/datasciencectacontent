@@ -25,6 +25,7 @@ The remainder of this document serves as a directory of the content, aligning in
 2.  [Configuring RStudio to work with git / github - Windows 7, 8, and 10](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitWindowsVersion.md)
 3. [Using Editor Modes in Discussion Forum Posts](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/usingMarkdownInForumPosts.md)
 4. [Buying a Computer for Data Science](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/toolbox-computerStandards.md)
+5. [R and RStudio on Chromebook](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/toolbox-RStudioOnChromebook.md)
 
 ### Issue: Students Struggle to find URLs in Lecture Slides
 
