@@ -71,9 +71,10 @@ Next, we use `caret::train()` to train the model, using the `trainControl()` obj
 
 ### Step 4: De-register parallel processing cluster
 
-After processing the data, we explicitly shut down the cluster by calling the `stopCluster()` function.
+After processing the data, we explicitly shut down the cluster by calling the `stopCluster()` and `registerDoSEQ()` functions. `registerDoSEQ()` function is required to force R to return to single threaded processing.
 
     stopCluster(cluster)
+    registerDoSEQ()
 
 At this point we have a trained model in the `fit` object, and can take a number of steps to evaluate the suitability of this model, including accuracy and a confusion matrix that is based on comparing the modeled data to the held out folds.
 
@@ -180,4 +181,4 @@ Hardware specifications for the computers used in the performance timings in thi
 </tr>
 </table>
 
-*last updated: 23 October 2016*
+*last updated: 10 December 2016*
