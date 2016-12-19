@@ -1,0 +1,10 @@
+---
+title: "Equations"
+author: "Len Greski"
+date: "December 17, 2016"
+output: word_document
+---
+
+## Sample equations here
+
+$\frac {\bar X - \mu}{\frac{\sigma}{\sqrt n}}$
