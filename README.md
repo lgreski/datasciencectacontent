@@ -2,12 +2,12 @@
 
 Author: Len Greski
 
-This repository contains content developed during my time as either a student or Community Mentor in the Data Science Specialization from Johns Hopkins University that is offered over [Coursera](http://coursera.org). A number of people have developed content to help students work through the nine courses in the specialization. The main index for this content is [datasciencespecialization.github.io](http://datasciencespecialization.github.io/).
+This repository contains content developed during my time as either a student or Community Mentor in the Data Science Specialization from Johns Hopkins University that is offered over [Coursera](http://coursera.org). A number of people have developed content to help students work through the ten courses in the specialization. The main index for this content is [datasciencespecialization.github.io](http://datasciencespecialization.github.io/).
 
 
 # Repository Contents
 
-As a participant and Community Mentor in courses in the curriculum, there are patterns of similar issues experienced by students. Migrating the content to github will facilitate reposting it to new runs of courses within the curriculum. This will make it easier for students to have access to the experiences from prior students without me having to cut and paste the content into Discussion Forums, which are the primary mechanism for communication between students and with TAs.
+As a participant and Community Mentor in courses in the curriculum, there are patterns of similar issues experienced by students. Migrating the content to github will facilitate reposting it to new runs of courses within the curriculum. This will make it easier for students to have access to the experiences from prior students without me having to regularly cut and paste content from past sessions into Discussion Forums, which are the primary mechanism for communication between students and Community Mentors.
 
 <table>
 <tr><th>File</th><th>Description</th></tr>
@@ -53,7 +53,7 @@ The next set of articles includes general commentary about the course, R program
 3. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
 4. [R Onboarding for SAS Users](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-onboardingForSASUsers.md)
 5. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
-6. [Object Oriented Programming and R](http://bit.ly/2f5lzyh) Explains how object oriented programming concepts are implemented in R, in response to a student question about accessing content output by the R linear models function, `lm()`. 
+6. [Object Oriented Programming and R](http://bit.ly/2f5lzyh) Explains how object oriented programming concepts are implemented in R, in response to a student question about accessing content output by the R linear models function, `lm()`.
 
 ### Posts regarding specifics of programming assignments
 
