@@ -186,7 +186,7 @@ Notice how the first call to `cachemean()` sets the cache, and the second call r
 
 ### Q: Why is `set()` never used in the code?
 
-A: `set()` is included so that once an object of type `makeVector()` is created, its value can be changed without initializaing another instance of the object. It is unnecessary the first time an object of type `makeVector()` is instantiated. Why? First, the value of `x` is set as a function argument, as in `makeVector(1:30)`. Then, the first line of code in the function sets `m <- NULL`, simultaneously allocating memory for `m` and setting it to `NULL`. When a reference to this object is passed to the parent environment when the function ends, both `x` and `m` are available to be accessed by their respective get and set functions.
+A: `set()` is included so that once an object of type `makeVector()` is created, its value can be changed without initializing another instance of the object. It is unnecessary the first time an object of type `makeVector()` is instantiated. Why? First, the value of `x` is set as a function argument, as in `makeVector(1:30)`. Then, the first line of code in the function sets `m <- NULL`, simultaneously allocating memory for `m` and setting it to `NULL`. When a reference to this object is passed to the parent environment when the function ends, both `x` and `m` are available to be accessed by their respective get and set functions.
 
 The following code illustrates the use of `set()`.
 
