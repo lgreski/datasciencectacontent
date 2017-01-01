@@ -194,13 +194,15 @@ The following code illustrates the use of `set()`.
 <img src="./images/rprog-breakingDownMakeVector04.png">
 
 
-### Q: Why is x set with a default value in `makeVector()`?
+### Q: Why is `x` set with a default value in `makeVector()`?
 
-A: Since `x` is an argument, the only place where one can set a default for it is in the formals. The type of error returned by `cachemean()`  when a default is not set,
+A: Since `x` is an argument, the only place where one can set a default for it is in the formals. The type of error returned by `cachemean()` when a default value is not set,
 
-      Error in x$get() : argument "x" is missing, with no default, is undesirable.
+      Error in x$get() : argument "x" is missing, with no default
 
-It's perfectly valid to create an object of type `makeVector()` without populating its value during initialization. However, the object must have valid data prior to executing `cachemean()`.
+is undesirable. Our code should directly handle error conditions rather than relying on the underlying error handling in R.  
+
+It's perfectly valid to create an object of type `makeVector()` without populating its value during initialization. `makeVector()` includes a setter function so one can set its value after the object is created. However, the object must have valid data, a numeric vector, prior to executing `cachemean()`.
 
 Ideally, `cachemean()` would include logic to validate that `x` is not empty prior to calculating a mean. The default setting of `x` enables `cachemean()` to return `NaN`, which is a reasonable result.
 
