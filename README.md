@@ -39,6 +39,7 @@ If you're new to the course and trying to figure out what to do in what order, s
 
 1. [Resources for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-rprogrammingResources.md) Provides a summary of student-generated content to support the course, some of which is indexed on the [Data Science Specialization's github.io](http://datasciencespecialization.github.io/) site
 2. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
+3. [Data Science Specialization: what is the value?](http://bit.ly/2j3EcCn) Addresses a common question raised by students in *R Programming* who are frustrated by the amount of work they have to do on their own to complete quizzes and assignments. 
 
 The next set of articles includes general commentary about the course, R programming in general, and R in relationship to other statistics packages.
 
