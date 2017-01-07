@@ -1,4 +1,4 @@
-# Why Write this Article?
+# Data Science Specialization: What's the Value? 
 
 By the first or second week into *R Programming*, students in the Johns Hopkins Data Science Specialization often express frustration about the degree to which they have to figure things out on their own in order to complete quizzes and course assignments. This frustration usually comes in the form of forum posts, many of which generate large volumes of "me too" replies.
 
