@@ -44,4 +44,4 @@ After all, that's what Data Science in real life is all about: ambiguous problem
 
 # Appendix: JHU Data Science Team Ask Me Anything Session
 
-To provide additional background on how the professors think about the curriculum, here is a link to the [Ask Me Anything session](http://bit.ly/2irzBcn) that the JHU Data Science team conducted on Reddit in early 2016. 
+To provide additional background on how the professors think about the curriculum, here is a link to the [Ask Me Anything session](http://bit.ly/2irzBcn) that the JHU Data Science team conducted on Reddit in early 2016. Hat tip to a Community Mentor in from the *Exploratory Data Analysis* course...
