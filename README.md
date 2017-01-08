@@ -37,42 +37,42 @@ If you're interested in the URLs for the lecture slides, they are available in t
 
 If you're new to the course and trying to figure out what to do in what order, start with these articles.
 
-1. [Resources for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-rprogrammingResources.md) Provides a summary of student-generated content to support the course, some of which is indexed on the [Data Science Specialization's github.io](http://datasciencespecialization.github.io/) site
-2. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
+1. [Resources for R Programming](http://bit.ly/2dhZ8Dy) Provides a summary of student-generated content to support the course, some of which is indexed on the [Data Science Specialization's github.io](http://datasciencespecialization.github.io/) site
+2. [References for R Programming](http://bit.ly/2b8AxhF) Provides a list of references for R programming, ranging from beginning to advanced topics.
 3. [Data Science Specialization: what is the value?](http://bit.ly/2j3EcCn) Addresses a common question raised by students in *R Programming* who are frustrated by the amount of work they have to do on their own to complete quizzes and assignments. 
 
 The next set of articles includes general commentary about the course, R programming in general, and R in relationship to other statistics packages.
 
-1. [Commercial Statistics Packages: An Historical Perspective](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statsPackagesHistory.md)
-2. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
-2. [A Data Frame is Also a List](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataFrameAsList.md)
+1. [Commercial Statistics Packages: An Historical Perspective](http://bit.ly/2fPj2qN)
+2. [Configuring RStudio to work with git / github - Mac OSX](http://bit.ly/2c9Q2bf)
+2. [A Data Frame is Also a List](http://bit.ly/2fmMRAp)
 2. [Forms of the Assignment  Operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-assignmentOperators.md)
-2. [Forms of the Extract Operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-extractOperator.md)
-3. [S Objects, R Objects, and Lexical Scoping](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-lexicalScoping.md)
-3. [Thinking in R versus Thinking in SAS](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/exampleSortRvsSAS.md)
-3. [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md)
-3. [Why is R More Difficult than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
-4. [R Onboarding for SAS Users](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-onboardingForSASUsers.md)
-5. [References for R Programming](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-References.md) Provides a list of references for R programming, ranging from beginning to advanced topics.
+2. [Forms of the Extract Operator](http://bit.ly/2bzLYTL)
+3. [S Objects, R Objects, and Lexical Scoping](http://bit.ly/2dtOSXi)
+3. [Thinking in R versus Thinking in SAS](http://bit.ly/2cH3u8x)
+3. [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A)
+3. [Why is R More Difficult than SAS?](http://bit.ly/2erxk3A)
+4. [R Onboarding for SAS Users](http://bit.ly/2dr7yum)
+5. [References for R Programming](http://bit.ly/2b8AxhF) Provides a list of references for R programming, ranging from beginning to advanced topics.
 6. [Object Oriented Programming and R](http://bit.ly/2f5lzyh) Explains how object oriented programming concepts are implemented in R, in response to a student question about accessing content output by the R linear models function, `lm()`.
 
 ### Posts regarding specifics of programming assignments
 
-1. [Assignment 1: Breaking Down Pollutantmean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-discussPollutantmean.md)
-2. [Assignment 1: A SAS Version of  Pollutantmean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-pollutantmeanSASVersion.md)
-3. [Assignment 1: Common Mistakes - Weighted vs. Unweighted Means](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-weightedMeans.md)
-4. [Assignment 2: Demystifying makeVector](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-breakingDownMakeVector.md)
-1. [Assignment 2: makeCacheMatrix as an Object](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md)
-2. [Assignment 2: Grading the SHA-1 Hash Code](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-gradeSHA1hash.md)
-3. [Assignment 3: Functions to Sort Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-sortFunctionsExample.md)
+1. [Assignment 1: Breaking Down Pollutantmean](http://bit.ly/2cHyiCl)
+2. [Assignment 1: A SAS Version of  Pollutantmean](http://bit.ly/2d3DR4e)
+3. [Assignment 1: Common Mistakes - Weighted vs. Unweighted Means](http://bit.ly/2cA0fSh)
+4. [Assignment 2: Demystifying makeVector](http://bit.ly/2bTXXfq)
+1. [Assignment 2: makeCacheMatrix as an Object](http://bit.ly/2byUe4e)
+2. [Assignment 2: Grading the SHA-1 Hash Code](http://bit.ly/2iUWoB6)
+3. [Assignment 3: Functions to Sort Data Frames](http://bit.ly/2dxItzw)
 
 ### Miscellaneous Code Examples and Instructions
 
 1. [Permanently Setting R Working Directory](http://www.r-bloggers.com/setting-your-working-directory-permanently-in-r/) Link to R-bloggers.com article that explains how to set your working directory permanently in R (instead of RStudio)
-2. [Tutorial: Downloading Files](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-downloadingFiles.md)
-3. [Creative Use of R: Downloading Course Lectures](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-downloadingLectures.md) Article illustrating how to use R to automate the download of lectures from *Data Science Specialization* courses, such as *R Programming*. Techniques used in this article are helpful to make research reproducible, as required for courses like *Getting and Cleaning Data* and *Reproducible Research*.
+2. [Tutorial: Downloading Files](http://bit.ly/2iP2suj)
+3. [Creative Use of R: Downloading Course Lectures](http://bit.ly/2bGlI7R) Article illustrating how to use R to automate the download of lectures from *Data Science Specialization* courses, such as *R Programming*. Techniques used in this article are helpful to make research reproducible, as required for courses like *Getting and Cleaning Data* and *Reproducible Research*.
 4. [How to Upgrade R without Losing Your Packages](http://bit.ly/2ejS8ox) article by Kris Eberwein on datascienceriot.com that includes code to save your list of packages to an rds file, and reinstall any packages that don't make it through the upgrade process.
-5. [Common R Mistakes: Overwriting R Functions with Output Variables](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-overwritingRFunctions.md)  
+5. [Common R Mistakes: Overwriting R Functions with Output Variables](http://bit.ly/2i3gmoA)  
 
 ### Interesting R News and Blog Articles
 
@@ -82,48 +82,48 @@ The next set of articles includes general commentary about the course, R program
 
 ## Course 3: Getting and Cleaning Data
 
-1. [Real World Example: Reading American Community Survey data](https://github.com/lgreski/acsexample) Illustrates concepts covered in *Getting and Cleaning Data* with U.S. Census data, including how to process a hierarchical file format in R, as well as using an electronic codebook to generate the parameters required to read the data file into a data frame.
-2. [Strategy for Reading Files & APIs / Quiz 2](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/cleaningData-readingFiles.md)
+1. [Real World Example: Reading American Community Survey data](http://bit.ly/2bAdLE9) Illustrates concepts covered in *Getting and Cleaning Data* with U.S. Census data, including how to process a hierarchical file format in R, as well as using an electronic codebook to generate the parameters required to read the data file into a data frame.
+2. [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF)
 
 ## Course 5: Reproducible Research
-1. [Assignment 2 Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/repDataAssignment2Checklist.md)
+1. [Assignment 2 Checklist](http://bit.ly/2c6XFhQ)
 
 ## Course 6: Statistical Inference
 
-1. [Reference Materials for Statistical Inference](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-references.md)  Start here if you're looking for help on the statistical techniques taught in this course.
-4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
-5. [Power Calculations: Optimal Sample size](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-optimalSampleSize.md)
-6. [Permutation Tests Explained](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-permutationTests.md)
+1. [Reference Materials for Statistical Inference](http://bit.ly/2c50sKo)  Start here if you're looking for help on the statistical techniques taught in this course.
+4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](http://bit.ly/2doF4OT)
+5. [Power Calculations: Optimal Sample size](http://bit.ly/2i1RDGa)
+6. [Permutation Tests Explained](http://bit.ly/2iV2HEx)
 
 
 ### Articles Related to the Course Project
 
-1. [Exponential Distribution / Central Limit Theorem - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-expDistChecklist.md)
-2. [ToothGrowth Analysis - Assignment Checklist](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/ToothGrowthChecklist.md)
-3. [Exploratory Data Analysis in ToothGrowth Assignment](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/edaInToothGrowthAnalysis.md), explaining the exploratory data analysis requirement for students who have not taken the *Exploratory Data Analysis* course prior to taking *Statistical Inference*.
-4. [Accessing R Code from an Appendix in Knitr](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-accessingRCodeFromKnitrAppendix.md)
-5. [Theoretical Variance of Sampling Distribution of the Mean](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-varianceOfExpDist.md)
-6. [Kable Tables with Data Frames](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/kableDataFrameTable.md) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`.
-7. [Installing MiKTeX on Windows 10 / Generating a PDF with knitr](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statinf-generatePDF.md)
+1. [Exponential Distribution / Central Limit Theorem - Assignment Checklist](http://bit.ly/2i5v81c)
+2. [ToothGrowth Analysis - Assignment Checklist](http://bit.ly/2iP39Ur)
+3. [Exploratory Data Analysis in ToothGrowth Assignment](http://bit.ly/2iQEfBV), explaining the exploratory data analysis requirement for students who have not taken the *Exploratory Data Analysis* course prior to taking *Statistical Inference*.
+4. [Accessing R Code from an Appendix in Knitr](http://bit.ly/2i1I0XW)
+5. [Theoretical Variance of Sampling Distribution of the Mean](http://bit.ly/2iPa2oz)
+6. [Kable Tables with Data Frames](http://bit.ly/2j40Wlw) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`.
+7. [Installing MiKTeX on Windows 10 / Generating a PDF with knitr](http://bit.ly/2iiGNbu)
 
 ## Course 7: Regression Models
 
-1. [Why does sum of errors * X equal 0?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/regmodels-sumOfErrorTimesX.md)
-2. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/mathjaxWithGithubMarkdown.md)
+1. [Why does sum of errors * X equal 0?](http://bit.ly/2ipyoSN)
+2. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](http://bit.ly/2doF4OT)
 
 
 ## Course 8: Practical Machine Learning
-1. [Week 4: Combining Predictors Math Explained](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-combiningPredictorsBinomial.md)
-2. [Course Project - gh-pages Setup with RStudio](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-ghPagesSetup.md)
-2. [Course Project - Improving Runtime Performance of Random Forest Models with caret::train()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-randomForestPerformance.md)
-2. [Course Project - Predicting Test Scores based on Training Model Accuracy](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-requiredModelAccuracy.md)
+1. [Week 4: Combining Predictors Math Explained](http://bit.ly/2i5z0Q4)
+2. [Course Project - gh-pages Setup with RStudio](http://bit.ly/2bTvGqr)
+2. [Course Project - Improving Runtime Performance of Random Forest Models with caret::train()](http://bit.ly/2bYtutG)
+2. [Course Project - Predicting Test Scores based on Training Model Accuracy](http://bit.ly/2i5A3zx)
 
 ## Course 9: Developing Data Products
-1. [Configuring shinyapps.io Application Timeout](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dataProd-shinyTimeoutConfig.md) A walkthrough on how to configure a Shiny application so it doesn't waste the free monthly server processing time.
+1. [Configuring shinyapps.io Application Timeout](http://bit.ly/2dEq8O8) A walkthrough on how to configure a Shiny application so it doesn't waste the free monthly server processing time.
 
 ## Course 10: Capstone
 1. [Speech and Language Processing, 3rd Edition](https://web.stanford.edu/~jurafsky/slp3/) Working version of Jurafsky, et. al. book on natural language processing whose content on n-grams is helpful for the capstone.
-2. [n-gram Computations and Computer Capacity](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/capstone-ngramComputerCapacity.md) Explains the amount of memory required to convert the text files for the course project into n-grams, using the <strong>quanteda</strong> package.
+2. [n-gram Computations and Computer Capacity](http://bit.ly/2couvxh) Explains the amount of memory required to convert the text files for the course project into n-grams, using the <strong>quanteda</strong> package.
 
 ## Content for Community Mentors
-1. [Tips for New Community Mentors](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/dss-mentorTips.md) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the *Coursera Learner Help Center*, to how to optimize the value of content that is posted by mentors.
+1. [Tips for New Community Mentors](http://bit.ly/2bZJniM) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the *Coursera Learner Help Center*, to how to optimize the value of content that is posted by mentors.
