@@ -4,9 +4,9 @@ By the first or second week into *R Programming*, students in the Johns Hopkins 
 
 # Value of the Specialization
 
-One of the major components of the Data Science Specialization is the hacker mentality described in the *Data Scientist's Toolbox*. The Specialization classes are highly condensed versions of Johns Hopkins classes that cost $3,310 each \(as of fall 2016\).
+One of the major components of the Data Science Specialization is the hacker mentality described in the *Data Scientist's Toolbox*. The Specialization classes are highly condensed versions of Johns Hopkins classes that cost $3,310 USD each \(as of fall 2016\).
 
-In my view, here's what a student gets for the $49 \(as of January 2017\) for one course:
+In my view, here's what a student gets for the $49 USD \(as of January 2017\) for one course:
 
 * A set of lectures that describe the topic, about 45 - 60 minutes per week \(except for the Capstone, where the lectures are 1 - 3 minutes per week due to the fact that it is the ultimate embodiment of the *hacker mentality*\), <br><br>
 * A set of slides accompanying the lectures that students can use for reference,<br><br>
