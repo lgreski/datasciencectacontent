@@ -105,6 +105,7 @@ The next set of articles includes general commentary about the course, R program
 5. [Theoretical Variance of Sampling Distribution of the Mean](http://bit.ly/2iPa2oz)
 6. [Kable Tables with Data Frames](http://bit.ly/2j40Wlw) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`.
 7. [Installing MiKTeX on Windows 10 / Generating a PDF with knitr](http://bit.ly/2iiGNbu)
+8. [Commentary on Factorial Design in Toothgrowth Analysis](http://bit.ly/2eEVRhw) Illustrates how to conduct a full factorial analysis of variance with the toothgrowth data, comparing it to the techniques used in the course project for *Statistical Inference*. 
 
 ## Course 7: Regression Models
 
