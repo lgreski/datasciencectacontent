@@ -22,7 +22,7 @@ Furthermore, since the Specialization uses the open source language R, students 
 
 # "Difficulty" is Relative to One's Experience
 
-Often, students new to data science lack perspective of the challenges in learning one statistics language versus another. The Specialization attracts many students who may have had one or more undergraduate or graduate statistics courses, including exposure to statistics software such as SPSS or SAS. Usually the programming problems in these courses are very easy, leading students to three problems when they start the Data Science Specialization:
+Students new to data science sometimes lack perspective of the challenges in learning one statistics language versus another. The Specialization attracts many students who may have had one or more undergraduate or graduate statistics courses, including exposure to statistics software such as SPSS or SAS. Usually the programming problems in these courses are very easy, leading students to three problems when they start the Data Science Specialization:
 
 1. An over-optimistic sense of one's skill level in a statistics language, <br><br>
 2. An unrealistic [expectation that R should work like the statistics language the student previously learned](http://bit.ly/2cH3u8x), and <br><br>
