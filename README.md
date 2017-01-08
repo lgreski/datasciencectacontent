@@ -21,11 +21,11 @@ The remainder of this document serves as a directory of the content, aligning in
 ## Course 1: Data Scientist's Toolbox
 
 1. [Course Prerequisites and Difficulty Levels](http://bit.ly/2e6y3nn) Provides an overview of the Data Science Specialization courses, explaining from a practical perspective the courses a student needs as prerequisites to other courses. While students may take more than one class at a time, it's important to know how information from earlier courses is used in subsequent ones. <br><br> The article also ranks the difficulty levels from most to least difficult, based on the author's experience in the curriculum as well as Discussion Forum feedback contributed by other students.
-1. [Configuring RStudio to work with git / github - Mac OSX](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitOSXVersion.md)
-2.  [Configuring RStudio to work with git / github - Windows 7, 8, and 10](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/configureRStudioGitWindowsVersion.md)
-3. [Using Editor Modes in Discussion Forum Posts](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/usingMarkdownInForumPosts.md)
-4. [Buying a Computer for Data Science](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/toolbox-computerStandards.md)
-5. [R and RStudio on Chromebook](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/toolbox-RStudioOnChromebook.md)
+1. [Configuring RStudio to work with git / github - Mac OSX](http://bit.ly/2c9Q2bf)
+2.  [Configuring RStudio to work with git / github - Windows 7, 8, and 10](http://bit.ly/2bPxOL5)
+3. [Using Editor Modes in Discussion Forum Posts](http://bit.ly/2j4f1iX)
+4. [Buying a Computer for Data Science](http://bit.ly/2bHgwAY)
+5. [R and RStudio on Chromebook](http://bit.ly/2eQ8ipJ)
 
 ### Issue: Students Struggle to find URLs in Lecture Slides
 
