@@ -42,8 +42,15 @@ On the other hand, the Specialization presents an opportunity for students to pr
 
 After all, that's what Data Science in real life is all about: ambiguous problems, messy data, scores of algorithms to consider, and limited computer resources that challenge the Data Scientist to produce actionable results within an acceptable cost structure. By the end of the Specialization a student has figured out how to learn about a tough topic, developed a level of self-sufficiency to tackle ambiguous problems, and produced deliverables that are worthy of sharing with potential employers for entry level data science jobs.
 
-# Appendix: JHU Data Science Team Ask Me Anything Session
+# Appendix 
+
+## JHU Data Science Team Ask Me Anything Session
 
 To provide additional background on how the professors think about the curriculum, here is a link to the [Ask Me Anything session](http://bit.ly/2irzBcn) that the JHU Data Science team conducted on Reddit in early 2016. 
 
 Hat tip to a Community Mentor, Stephanie Clark, from the *Exploratory Data Analysis* course.
+
+## About the Author
+
+More information about the author is available on [Len's LinkedIn profile page](http://bit.ly/2jjJABL). 
+
