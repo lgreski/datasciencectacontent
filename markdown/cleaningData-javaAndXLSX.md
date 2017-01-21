@@ -12,12 +12,17 @@ If a student attempts to load the xlsx package without a Java runtime envrionmen
 
 After this error message is displayed at the operating system level, RStudio will terminate.
 
+<b>PRO TIP: </b> The easiest way to work around this problem is to use an R package that does not depend on Java, such as [openxlsx](https://cran.r-project.org/web/packages/openxlsx/openxlsx.pdf) or [readxl](https://cran.r-project.org/web/packages/readxl/readxl.pdf). 
+
+That said, for students who want to use the `xlsx` package to answer the question, there are workable solutions for both Windows and Mac OSX.
+
 <b>SOLUTION (Windows): </b> Downlaod and install the latest version of the [Java Runtime Environment](https://java.com/en/download/) from Oracle.
 
 <b>SOLUTION (Mac OSX):</b> As of newer releases of Mac OSX, this has become more complicated. A specific set of commands needs to be followed after installing the [Java Development Kit]() on the computer. These are documented on the [rJava Issue 86 github page](https://github.com/s-u/rJava/issues/86). I have included a screenshot of this solution for students to reference directly.
 
 <img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/cleaningData-javaError02.png">
 
+<b>PRO TIP: </b> The easiest way to work around this problem is to use an R package that does not depend on Java, such as [openxlsx](https://cran.r-project.org/web/packages/openxlsx/openxlsx.pdf) or [readxl](https://cran.r-project.org/web/packages/readxl/readxl.pdf). 
 
 ## 2. 32-bit vs. 64-bit Java in Windows
 
