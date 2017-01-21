@@ -15,6 +15,7 @@ After this error message is displayed at the operating system level, RStudio wil
 <b>SOLUTION (Windows): </b> Downlaod and install the latest version of the [Java Runtime Environment](https://java.com/en/download/) from Oracle.
 
 <b>SOLUTION (Mac OSX):</b> As of newer releases of Mac OSX, this has become more complicated. A specific set of commands needs to be followed after installing the [Java Development Kit]() on the computer. These are documented on the [rJava Issue 86 github page](https://github.com/s-u/rJava/issues/86). I have included a screenshot of this solution for students to reference directly.
+
 <img src="./images/cleaningData-JavaError02.png">
 
 
