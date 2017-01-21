@@ -12,7 +12,7 @@ In my view, here's what a student gets for the $49 USD \(as of January 2017\) fo
 * A set of slides accompanying the lectures that students can use for reference,<br><br>
 * Guidance on how to leverage outside resources to learn things that aren't directly taught in the course, <br><br>
 * A set of exercises that push students  to figure out how to do things of practical value to a data scientist, beyond "trivial" examples,<br><br>
-* A set of quizzes that require students to use what has been covered in the lectures to confirm understanding of the material,<br><br>
+* A set of quizzes that require students to use what has been covered in the lectures to confirm understanding of the material, and function as a sandbox where they can solve problems and determine that the answers are correct without being corrected by observers on the internet or supervisors, <br><br>
 * A set of course projects that challenge students to produce legitimate work products that can be showcased in a portfolio, and <br><br>
 * Access to a community of students, mentors, and high quality [community-generated content](http://bit.ly/2ePZxfk) that provides context beyond what is covered in the lectures, built by people who have already taken the Specialization courses, some of whom are practicing data scientists or who manage teams of data scientists. <br><br>
 
@@ -49,6 +49,10 @@ After all, that's what Data Science in real life is all about: ambiguous problem
 To provide additional background on how the professors think about the curriculum, here is a link to the [Ask Me Anything session](http://bit.ly/2irzBcn) that the JHU Data Science team conducted on Reddit in early 2016. 
 
 Hat tip to a Community Mentor, Stephanie Clark, from the *Exploratory Data Analysis* course.
+
+## Acknowledgements 
+
+Thanks to [David Hood](http://bit.ly/2jCe3eo) and Alan Berger for feedback about the value of quizzes as a sandbox that I've incorporated into the article. 
 
 ## About the Author
 
