@@ -16,7 +16,7 @@ After this error message is displayed at the operating system level, RStudio wil
 
 <b>SOLUTION (Mac OSX):</b> As of newer releases of Mac OSX, this has become more complicated. A specific set of commands needs to be followed after installing the [Java Development Kit]() on the computer. These are documented on the [rJava Issue 86 github page](https://github.com/s-u/rJava/issues/86). I have included a screenshot of this solution for students to reference directly.
 
-<img src="./images/cleaningData-JavaError02.png">
+<img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/cleaningData-javaError02.png">
 
 
 ## 2. 32-bit vs. 64-bit Java in Windows
