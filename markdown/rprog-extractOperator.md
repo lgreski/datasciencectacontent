@@ -12,7 +12,7 @@ The first form, `[`, can be used to extract content from vector, lists, or data 
     x[13:15] # extract last 3 elements
     x[(length(x)-2):length(x)] # extract last 3 elements
 
-Noting John Chambers' statement that <em>In R, everything is an object</em>, the `[` form of the extract operator can be used to extract data from the result of a function call.
+Noting John Chambers' statement that <em>In R, everything is an object</em>, the `[` form of the extract operator can be used to extract data from the result of a function call. The following code executes `list.files()` on a subdirectory of the current R working directory that contains comma separated values files of Pokemon statistics, one file for each of the first 6 generations of Pokemon.
 
     # return first two generations of pokemon stored in
     # pokemon data files retrieved from kaggle.com and
