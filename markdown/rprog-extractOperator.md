@@ -12,6 +12,15 @@ The first form, `[`, can be used to extract content from vector, lists, or data 
     x[13:15] # extract last 3 elements
     x[(length(x)-2):length(x)] # extract last 3 elements
 
+Noting John Chambers' statement that <em>In R, everything is an object</em>, the `[` form of the extract operator can be used to extract data from the result of a function call.
+
+    # return first two generations of pokemon stored in
+    # pokemon data files retrieved from kaggle.com and
+    # broken out into 6 csv files, one per generation
+    
+    thePokemonFiles <- list.files("./pokemonData",
+                                  full.names=TRUE)[1:2]
+
 When used with a list, `[` extracts one or more elements from the list.
 
 The second and third forms of the extract operator, `[[` and `$` extract a single item from an object. Note that `$` does not support a computed index, as illustrated in an example below.  
@@ -91,4 +100,5 @@ A more detailed explanation of the help function `help(...)` and help operator `
 ## References
 
 1. [Extract {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Extract.html), retrieved 22 May 2016.
-2. [SlotOp {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/slotOp.html), retrieved 22 May 2016.  
+2. [SlotOp {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/slotOp.html), retrieved 22 May 2016.
+3. [Pokemon Data by Alberto Barradas](https://www.kaggle.com/abcsds/pokemon)
