@@ -11,7 +11,7 @@ The theme of Quiz 2 is reading and working with different types of data, based o
 
 To answer this question, you can directly access the file via a web browser, or download it to your computer and edit it with a text editor. This will help you see whether the data is separated by delimiters, or consists of fixed or hierarchical records.
 
-Sometimes the file type can be determined from the file extension. By now, we all know what a .XLSX file is because it was reviewed in the Week 1 lecture, *Reading Excel Files*.  However, if you didn't know what an XLSX file is, remember, Google is your friend:
+Sometimes the file type can be determined from the file extension. By now we all know what a .XLSX file is because it was reviewed in the Week 1 lecture, *Reading Excel Files*.  However, if you didn't know what an XLSX file is, remember, Google is your friend:
 
 ![2015-08-05_18-06-11.png](https://coursera-forum-screenshots.s3.amazonaws.com/c0/1697803bdf11e5a76587d37b252aaf/2015-08-05_18-06-11.png)
 
@@ -28,7 +28,13 @@ Again, Google is your friend. If it isn't obvious (e.g. XLSX files must be read 
 
 Once you know the function name, you can install the required package(s) needed to use the function.
 
-**3)  How do I take advantage of any hints provided by the professor in the question text?**
+**3) How do I use the arguments for the function that will read the file?**
+
+Before using the function to process a data file, review the help content to understand the options that are used with the function. For example, before using `download.files()` to download a file, it is important to know that the correct value of the `method=` parameter varies by operating system, so code that works on Mac OSX will not work on Windows without modifying this argument.  
+
+Also, since multiple packages can be used do to the same thing in R, arguments that work with one package \(e.g. `utils::read.fwf()`\) might not be supported or work exactly the same way in another package, such as `readr::read_fwf()`.
+
+**4)  How do I take advantage of any hints provided by the professor in the question text?**
 
 Sometimes the quiz questions provide extra information that you can use, such as [oauth2 demo script](https://github.com/hadley/httr/blob/master/demo/oauth2-github.r) that was provided with question 1. Hadley Wickham's R script provides a shell that you can use to pull data from github. All you have to do is identify the parts that must change in order to suit your purposes, such as:
 
@@ -37,7 +43,7 @@ Sometimes the quiz questions provide extra information that you can use, such as
 
 If you're having trouble accessing the resource, and it's available via HTTP, navigate to it with a web browser and check out the file directly. Once you see its structure, it may become clear how to process the file.
 
-**4) Do I need to know column numbers on the input file?**
+**5) Do I need to know column numbers on the input file?**
 
 If you're reading fixed length files, you'll need to identify the start & stop columns in the input file in order to read it correctly.
 
@@ -49,16 +55,25 @@ If you really want to "go geek" with fixed files, you might give [RecordEditor](
 
 _Historical note:_ in antediluvian times (i.e. before the World Wide Web), it was considered "normal" for text editors on mainframe computers to display column information, because the file editors were trying to mirror 80 column punch cards. The ability to read data in a wide variety of formats was considered an essential skill for any mainframe programmer.  If you're frustrated with the learning curve of R, you can be thankful you don't have to learn [Job Control Language](https://en.wikipedia.org/wiki/Job_Control_Language) to complete the programming assignments for this course.
 
-**5)  How do I navigate the R object(s) that are created by reading the file?**
+**6)  How do I navigate the R object(s) that are created by reading the file?**
 
 Here, you'll need to use the functions we've already learned to figure out how an R object is composed, such as `head()`, `str()`, `class()`, etc.
 
-**6) What technique(s) must I use to navigate the objects and produce the output(s) required to answer the quiz question?**
+**7) What technique(s) must I use to navigate the objects and produce the output(s) required to answer the quiz question?**
 
 Review your notes and slides from the lecture topics, and identify the functions you'll need to navigate the objects. Is it a list? If so, you might use techniques like `myList$objectname` to get at the right object in the list. If the object is an XML document, you might use `xpathSApply()`, etc.
 
-**7) Occam's razor applies -- use the simplest approach possible**
+**8) Occam's razor applies -- use the simplest approach possible**
 
 Sometimes, the "obvious" approach isn't the best one. If you only need to read a line of text from a file, it doesn't matter whether it's a fixed length file, an HDF5 file, an XML document, or any other non-binary file, the easiest way to pull the text you need from the file is with `readLines()`.  Don't waste your time with a more complex approach.  Reference: [Occam's Razor](https://en.wikipedia.org/wiki/Occam%27s_razor).
 
+
+## Git \'er done!
+
 In closing, we've outlined a relatively straightforward plan of attack to figure out how to read almost any type of data into R and be productive with the resulting R objects.  In the spirit of "eating my own dog food," (reference: [Eating your own dog food](https://en.wikipedia.org/wiki/Eating_your_own_dog_food)) I used this approach to complete Quiz 2 when I took the *Getting and Cleaning Data* class.
+
+One last note: yes, it can be frustrating to put together correctly working code for this quiz because the processes for reading external content often require stringing together multiple R functions in a sequence to accomplish a goal, such as the oauth2 question to access repository data in Github. Figuring out how to put all the pieces together to solve a real world problem, including overcoming roadblocks, is a normal part of the life of a data scientist.
+
+For a more detailed example of how the discovery process for reading data files works in practice, review [Real World Example: Reading American Community Survey Data](http://bit.ly/2bAdLE9).
+
+*last updated: 3 February 2017*
