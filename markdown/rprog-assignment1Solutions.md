@@ -1,19 +1,24 @@
 # Programming Assignment 1, "a more elegant solution"
 
-Students in *R Programming* frequently ask to see other students' work once they have completed their versions of the three functions in the assignment, including `pollutantmean()`, `complete()`, and `corr()`. Often the students want to see what a "good" or "elegant" solution looks like, which is a reasonable request.
+Students in *R Programming* frequently ask to see other students' work once they have completed their versions of the three functions in the assignment, including `pollutantmean()`, `complete()`, and `corr()`. Often, after completing the assignment students want to see what a "good" or "elegant" solution looks like, which is a reasonable request.
 
 Unfortunately the Community Mentors are not allowed to post solutions to these assignments due to the Coursera Honor Code, which stipulates that students are not allowed to post solutions to assignments or quizzes unless directed to do so by course instructors. In the Johns Hopkins University Data Science Specialization, a number of assignments are public, such as the *R Programming* lexical scoping assignment.
 
 Community Mentors have published a variety of content that is applicable to well-written solutions for the first programming assignment, such as techniques for subsetting objects illustrated in the article [Forms of the Extract Operator](http://bit.ly/2bzLYTL). That said, beginning students in *R Programming* need to see how concepts are tied together into an elegant solution. Therefore, it's helpful to paint a more holistic picture of a well-formed solution to these assignments, without giving the assignment answers away.
 
+**WARNING:** This article discusses approaches that are more advanced than the functions taught during the first two weeks of *R Programming*, and is intended for students who have already completed the programming assignment. It is to provide visibility into what "elegant" looks like. It is *not* a critique of any individual student's work.
+
+Please note that the `pollutantmean()` function outline I discuss in [Breaking Down pollutantmean()](http://bit.ly/2cHyiCl) does not use any of the techniques covered in this article. Finally, for students who have read [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), the examples provided here represent the "make it fast" part of the programming aphorism I describe in the article.
+**END WARNING**
+
 # What does an "elegant" R program look like?
 
-I see two key characteristics of an elegant R program, including:
+I suggest that there are at least two key characteristics of an elegant R program, including:
 
 1. Code that implements core R concepts (i.e. functional programming) in a minimum number of programming statements, and<br><br>
 2. Code that runs efficiently.
 
-On the first point, each of the functions required for *Programming Assignment 1* can be completed in a single statement consisting of nested R functions, once one understands how to use the `apply()` family of functions and comprehends the subtleties of the extract operator. For example, without giving the complete solution, here is what my one line version of `pollutantmean()` uses `lapply()` to drive the bulk of the processing while subsetting both the list of files to be read as well as the specific pollutant, so the result of `unlist()` is a vector of numbers that is used as input to `mean()`.
+On the first point, each of the functions required for *Programming Assignment 1* can be completed in a single statement consisting of nested R functions, once one understands how to use the `apply()` family of functions and comprehends the subtleties of the extract operator. For example, without giving the complete solution, my one line version of `pollutantmean()` uses `lapply()` to drive the bulk of the processing, simultaneously subsetting both the list of files to be read as well as the specific pollutant to be extracted from the raw data files, so the result of `unlist()` is a vector of numbers that becomes the input to `mean()`.
 
 <img src="./images/rprog-assignment1Solutions01.png">
 
