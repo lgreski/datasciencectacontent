@@ -8,7 +8,7 @@ Community Mentors have published a variety of content that is applicable to well
 
 **WARNING:** This article discusses approaches that are more advanced than the functions taught during the first two weeks of *R Programming*, and is intended for students who have already completed the programming assignment. It is to provide visibility into what "elegant" looks like. It is *not* a critique of any individual student's work.
 
-Please note that the `pollutantmean()` function outline I discuss in [Breaking Down pollutantmean()](http://bit.ly/2cHyiCl) does not use any of the techniques covered in this article. Finally, for students who have read [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), the examples provided here represent the "make it fast" part of the programming aphorism I describe in the article.
+Please note that the `pollutantmean()` function outline I discuss in [Breaking Down pollutantmean()](http://bit.ly/2cHyiCl) does not use any of the techniques covered in this article. Finally, for students who have read [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), the examples provided here represent the "make it fast" part of the programming aphorism I describe in the article.<br><br>
 **END WARNING**
 
 # What does an "elegant" R program look like?
