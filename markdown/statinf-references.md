@@ -9,6 +9,8 @@ Students in the Statistical Inference Course within the Johns Hopkins University
 
 <tr><td><a href="https://openintro.org/stat"> OpenIntro Statistics </a></td><td>Openintro.org provides a set of three statistics courses that include books and videos. The courses are targeted at different categories of students, ranging from high school to college. <br><br> All of these resources are available for free. </td></tr>
 
+<tr><td><a href="http://bit.ly/2jQ3uYx"> Free Statistics eBooks </a></td><td>R-Statistics blog article by Tal Galili that contains links to a number of free eBooks on statistics from a variety of sources. Make sure you review the comments, because they include additional sources of content provided by readers of the original blog post.</td></tr>
+
 <tr><td><a href="http://people.math.umass.edu/~lavine/Book/book.pdf"> Introduction to Statistical Thought</a></td><td> Written by <a href"http://people.math.umass.edu/~lavine/"> Michael Lavine</a> at the University of Massachusetts, this book provides an introduction to statistics for people who are knowledgeable in calculus. The book is available for free on the University of Massachusetts website and may be accessed by clicking on the book title hyperlink to the left of this description. </td></tr>
 
 <tr><td> <a href="https://www.manning.com/books/r-in-action-second-edition"> R in Action</a></td><td>Written by Robert Kabacoff, <em>R in Action</em> is an excellent overall reference for R, written by a statistician. It includes code and detailed explanations of a variety of techniques used in the <em>Statistical Inference</em> course, such as basic statistics, t-tests, comparing multiple groups, and power analysis.</td></tr>
