@@ -13,7 +13,7 @@ I see two key characteristics of an elegant R program, including:
 1. Code that implements core R concepts (i.e. functional programming) in a minimum number of programming statements, and<br><br>
 2. Code that runs efficiently.
 
-On the first point, each of the functions required for *Programming Assignment 1* can be completed in a single statement consisting of nested R functions, once one understands how to use the `apply()` family of functions and comprehends the subtleties of the extract operator. For example, without giving the complete solution, here is what my one line version of `pollutantmean()` looks like.
+On the first point, each of the functions required for *Programming Assignment 1* can be completed in a single statement consisting of nested R functions, once one understands how to use the `apply()` family of functions and comprehends the subtleties of the extract operator. For example, without giving the complete solution, here is what my one line version of `pollutantmean()` uses `lapply()` to drive the bulk of the processing while subsetting both the list of files to be read as well as the specific pollutant, so the result of `unlist()` is a vector of numbers that is used as input to `mean()`.
 
 <img src="./images/rprog-assignment1Solutions01.png">
 
