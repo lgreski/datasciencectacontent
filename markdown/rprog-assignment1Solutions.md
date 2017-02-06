@@ -10,7 +10,7 @@ Community Mentors have published a variety of content that is applicable to well
 
 I see two key characteristics of an elegant R program, including:
 
-1. Code that implements core R concepts in a minimum number of programming statements, and<br><br>
+1. Code that implements core R concepts (i.e. functional programming) in a minimum number of programming statements, and<br><br>
 2. Code that runs efficiently.
 
 On the first point, each of the functions required for *Programming Assignment 1* can be completed in a single statement consisting of nested R functions, once one understands how to use the `apply()` family of functions and comprehends the subtleties of the extract operator. For example, without giving the complete solution, here is what my one line version of `pollutantmean()` looks like.
