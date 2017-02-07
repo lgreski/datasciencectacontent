@@ -4,7 +4,7 @@ A number of students in *Getting and Cleaning Data* have reported problems with 
 
       options(sqldf.driver="SQLite")
 
-She also noted that she had installed MySQL on her computer, in addition to the R libraries required for `sqldf()`, which makes it likely that the error was caused by `sqldf()` attempting to use the `RMySQL` driver, which requires a MySQL database to exist in order to function correctly.
+She also noted that she had installed MySQL on her computer, in addition to the R libraries required for `sqldf()`.  This means that the error was most likely caused by `sqldf()` attempting to use the `RMySQL` driver, which requires a MySQL database to exist in order to function correctly.
 
 # Conclusion
 
