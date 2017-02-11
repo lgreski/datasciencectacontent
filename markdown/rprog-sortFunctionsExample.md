@@ -27,6 +27,8 @@ Some students have trouble with the third programming assignment in *R Programmi
 
 As you can see from the output, the data is sorted by `cyl` and then `mpg`. One of the productivity aids from `plyr` is the ability to reference columns in the data frame directly, without the need for the extract operator `$`, as in `mtcars$mpg`. Also note that because the car names were included as row names instead of a regular column, they were not copied to the `arrangedData` data frame.
 
+Note that the `dplyr` package also provides an `arrange()` function. 
+
 Here is sample code that does the same thing using the  `base::order()` function.
 
     > #
