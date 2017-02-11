@@ -36,9 +36,10 @@ Helping students overcome these frustrations requires exposure to additional inf
 
 # Why Emphasize the <em>Hacker Mentality?</em>
 
-The early courses in the Data Science Specialization repeatedly encourage students to take on *the hacker mentality.* That is, students are **expected** to learn things that are not directy taught in the lectures, readings, and `swirl()` exercises. Many students express frustration about this requirement when they struggle to complete the first few courses in the Specialization. 
+The early courses in the Data Science Specialization repeatedly encourage students to take on *the hacker mentality.* That is, students are **expected** to learn things that are not directly taught in the lectures, readings, and `swirl()` exercises. They are also expected to figure a number of things out on their own. 
+For example, the *R Programming* lexical scoping assignment can be completed by simply changing 6 elements in the example program. Done this way, a student can get a perfect score on the assignment without actually learning how lexical scoping works. Extra work is required to fully comprehend what's going on in the smaple code, as I describe in [Demystifying makeVector().](http://bit.ly/2bTXXfq)
 
-This is ultimately a test of students' tenacity. To succeed in this field, one has to have a high level of ingenuity and creativity. Forcing students to develop these characteristics at the start of the Specialization by forcing them to find and use relevent resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistial Inference,* *Regression Models,* and *Practical Machine Learning.* 
+Many students express frustration about this requirement when they struggle to complete the first few courses in the Specialization without understanding that it is actually a test of students' tenacity. To succeed in this field, one has to have a high level of ingenuity and creativity. Challenging students to develop these characteristics at the start of the Specialization by forcing them to find and use relevent resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistial Inference,* *Regression Models,* and *Practical Machine Learning.* 
 
 # You: The Final Ingredient
 
