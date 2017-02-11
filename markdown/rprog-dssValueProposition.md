@@ -34,6 +34,12 @@ Helping students overcome these frustrations requires exposure to additional inf
 * [Why is R Harder than SAS](http://bit.ly/2erxk3A) explains why students with a SAS backround perceive R to be significantly more difficult than SAS. <br><br>
 * [A SAS Version of pollutantmean()](http://bit.ly/2d3DR4e)  addresses the relative complexity of SAS versus R on an equal task -- implementation of the *R Programming* `pollutantmean()` function. <br><br>
 
+# Why Emphasize the <em>Hacker Mentality?</em>
+
+The early courses in the Data Science Specialization repeatedly encourage students to take on *the hacker mentality.* That is, students are **expected** to learn things that are not directy taught in the lectures, readings, and `swirl()` exercises. Many students express frustration about this requirement when they struggle to complete the first few courses in the Specialization. 
+
+This is ultimately a test of students' tenacity. To succeed in this field, one has to have a high level of ingenuity and creativity. Forcing students to develop these characteristics at the start of the Specialization by forcing them to find and use relevent resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistial Inference,* *Regression Models,* and *Practical Machine Learning.* 
+
 # You: The Final Ingredient
 
 The Specialization courses provide everything one needs to direct one's learning in data science at an affordable price. The final ingredient is the student's motivation and determination to solve problems. Yes, the introductory assignments in *R Programming* are a big jump in difficulty from the lectures. Yes, the course projects for *Getting and Cleaning Data*, *Reproducible Research*, and *Practical Machine Learning* are very challenging. Yes, the mathematics in *Statistical Inference* and *Regression Models* are tough for students who haven't previously studied statistics.
