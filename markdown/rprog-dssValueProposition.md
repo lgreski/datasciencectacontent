@@ -41,7 +41,7 @@ The early courses in the Data Science Specialization repeatedly encourage studen
 For example, the *R Programming* lexical scoping assignment can be completed with 3 changes in the example `cachemean.R` program, one of which is a global find / replace on the string *mean*, plus a couple of comment lines. Done this way, a student can get a perfect score on the assignment without actually learning how lexical scoping works. Extra work is required to fully comprehend what's going on in the smaple code, as I describe in [Demystifying makeVector().](http://bit.ly/2bTXXfq)
 
 Many students express frustration about this requirement when they struggle to complete the first few courses in the Specialization without understanding that it is actually a test of students' tenacity. To succeed in this field, one has to have a high level of ingenuity and creativity. One must also have an unwillingness to give up in the face of ambiguous problems. 
-Challenging students to develop these characteristics at the start of the Specialization by forcing them to find and use relevent resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistial Inference,* *Regression Models,* and *Practical Machine Learning.* 
+Challenging students to develop these characteristics at the start of the Specialization by forcing them to find and use relevent resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistical Inference,* *Regression Models,* and *Practical Machine Learning.* 
 
 # You: The Final Ingredient
 
