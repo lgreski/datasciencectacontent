@@ -45,7 +45,7 @@ Challenging students to develop these characteristics at the start of the Specia
 
 # You: The Final Ingredient
 
-The Specialization courses provide everything one needs to direct one's learning in data science at an affordable price. The final ingredient is the student's motivation and determination to solve problems. Yes, the introductory assignments in *R Programming* are a big jump in difficulty from the lectures. Yes, the course projects for *Getting and Cleaning Data*, *Reproducible Research*, and *Practical Machine Learning* are very challenging. Yes, the mathematics in *Statistical Inference* and *Regression Models* are tough for students who haven't previously studied statistics.
+The Specialization courses provide everything one needs to direct one's learning in data science at an affordable price. The final ingredient is the student's motivation and determination to solve problems. Yes, the introductory assignments in *R Programming* are a big jump in difficulty from the lectures. Yes, the course projects for *Getting and Cleaning Data*, *Reproducible Research*, and *Practical Machine Learning* are very challenging. Yes, the mathematics in *Statistical Inference* and *Regression Models* are tough for students who haven't previously studied statistics. Yes, the course projects for *Reproducible Research*, *Practical Machine Learning*, and the *Capstone* stress the limits of old, low memory computer equipment. 
 
 On the other hand, the Specialization presents an opportunity for students to produce some outstanding quality deliverables for their portfolios, solving challenging problems that relate well to real world work in data science.
 
