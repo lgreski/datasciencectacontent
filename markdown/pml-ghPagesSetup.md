@@ -134,10 +134,12 @@ RStudio will display the **Git Push** dialog to confirm that the files have been
 
 <strong>Note that it may take up to 15 minutes for the content you publish into your github repository to become visible on the public internet via the github.io domain.</strong> Open a web browser and navigate to http://username.github.io/repositoryname to view the HTML version of your R Markdown file.
 
+Note that a few students have reported difficulties accessing the index.html file without including the file name in the URL, as http://username.github.io/repositoryname/index.html. If accessing the file by repository name alone does not work, try accessing it with the fully specified file name. 
+
 <img src="./images/gh-pages23.png">
 
 ### Closing Considerations
 
-Note that if you want to also push the markdown file (index.md) and its associated resources, you'll need to configure knitr to keep the markdown file. To do this, select the gear icon from the menu bar in the Source pane of RStudio (it's just to the right of the `Knit HTML` button), press the `Advanced` button, and click the checkbox for *Keep Markdown source file*.  
+Note that if you want to also push the markdown file (index.md) and its associated resources, you'll need to configure knitr to keep the markdown file. To do this, select the gear icon from the menu bar in the Source pane of RStudio (it's just to the right of the `Knit HTML` button), press the `Advanced` button, and click the checkbox for *Keep Markdown source file*.  You'll need to add the .md file and any subdirectories / support files that were created during the knit process in order for the .md file to render complete with graphics on github. 
 
-Also, please be aware that all content published to Github Pages is public. Do not post content you wish to remain private on Github Pages, such as content from a private repository.
+Finally, please be aware that all content published to Github Pages is public. Do not post content you wish to remain private on Github Pages, such as content from a private repository.
