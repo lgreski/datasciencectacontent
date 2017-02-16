@@ -13,7 +13,7 @@ This guide has been created as a reference to help students quickly set up Githu
 
 Since *The Data Scientist's Toolbox* is a prerequesite for this course, this article expects students to already have git installed on their local machine, and that they have completed the peer reviewed assignment that requires students to work with git and github. 
 
-For information on how to install and configure git and github, please review the relevenat content int the *Git and Github* section of the *Data Scientist's Toolbox* page on the [Data Science Specialization Website](http://datasciencespecialization.github.io/toolbox/). 
+For information on how to install and configure git and github, please review the relevant content int the *Git and Github* section of the *Data Scientist's Toolbox* page on the [Data Science Specialization Website](http://datasciencespecialization.github.io/toolbox/). 
 
 ### Step 1: Create a Github Repository for Practical Machine Learning
 
@@ -32,6 +32,8 @@ Initialize the repository with a README. A README is required for Github to allo
 From the `practicalmachinelearning` repository home page, select the `Branch: ` button, type `gh-pages` in the search box, and then press the `Create branch: gh-pages` button to create the new branch.
 
 <img src="./images/gh-pages03.png">
+
+**NOTE:** It is very important to make sure this branch is named **gh-pages** versus another name like *ghpages*, which will not work correctly. 
 
 ### Step 3: Make gh-pages the Default Branch
 
