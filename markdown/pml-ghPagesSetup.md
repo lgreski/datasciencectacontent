@@ -13,7 +13,7 @@ This guide has been created as a reference to help students quickly set up Githu
 
 Since *The Data Scientist's Toolbox* is a prerequesite for this course, this article expects students to already have git installed on their local machine, and that they have completed the peer reviewed assignment that requires students to work with git and github. 
 
-For information on how to install and configure git and github, please review the relevenat content int the *Git and Github* section of the *Data Scientist's Toolbox* page on the [Data Science Specialization Website](http://datasciencespecialization.github.io/toolbox/). 
+For information on how to install and configure git and github, please review the relevant content int the *Git and Github* section of the *Data Scientist's Toolbox* page on the [Data Science Specialization Website](http://datasciencespecialization.github.io/toolbox/). 
 
 ### Step 1: Create a Github Repository for Practical Machine Learning
 
@@ -32,6 +32,8 @@ Initialize the repository with a README. A README is required for Github to allo
 From the `practicalmachinelearning` repository home page, select the `Branch: ` button, type `gh-pages` in the search box, and then press the `Create branch: gh-pages` button to create the new branch.
 
 <img src="./images/gh-pages03.png">
+
+**NOTE:** It is very important to make sure this branch is named **gh-pages** versus another name like *ghpages*, which will not work correctly. 
 
 ### Step 3: Make gh-pages the Default Branch
 
@@ -134,10 +136,12 @@ RStudio will display the **Git Push** dialog to confirm that the files have been
 
 <strong>Note that it may take up to 15 minutes for the content you publish into your github repository to become visible on the public internet via the github.io domain.</strong> Open a web browser and navigate to http://username.github.io/repositoryname to view the HTML version of your R Markdown file.
 
+Note that a few students have reported difficulties accessing the index.html file without including the file name in the URL, as http://username.github.io/repositoryname/index.html. If accessing the file by repository name alone does not work, try accessing it with the fully specified file name. 
+
 <img src="./images/gh-pages23.png">
 
 ### Closing Considerations
 
-Note that if you want to also push the markdown file (index.md) and its associated resources, you'll need to configure knitr to keep the markdown file. To do this, select the gear icon from the menu bar in the Source pane of RStudio (it's just to the right of the `Knit HTML` button), press the `Advanced` button, and click the checkbox for *Keep Markdown source file*.  
+Note that if you want to also push the markdown file (index.md) and its associated resources, you'll need to configure knitr to keep the markdown file. To do this, select the gear icon from the menu bar in the Source pane of RStudio (it's just to the right of the `Knit HTML` button), press the `Advanced` button, and click the checkbox for *Keep Markdown source file*.  You'll need to add the .md file and any subdirectories / support files that were created during the knit process in order for the .md file to render complete with graphics on github. 
 
-Also, please be aware that all content published to Github Pages is public. Do not post content you wish to remain private on Github Pages, such as content from a private repository.
+Finally, please be aware that all content published to Github Pages is public. Do not post content you wish to remain private on Github Pages, such as content from a private repository.
