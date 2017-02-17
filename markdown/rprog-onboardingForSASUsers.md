@@ -22,6 +22,8 @@ You might also enjoy [Commercial Statistics Packages: An Historical Perspective]
 
 Another interesting but not required read is [Linda Burtch's](http://www.kdnuggets.com/author/linda-burtch) article [SAS vs. R vs. Python: Which Tool do Analytics Pros Prefer?](http://www.kdnuggets.com/2016/07/burtchworks-sas-r-python-analytics-pros-prefer.html) on the kdnuggets.com website. 
 
+Finally, if you're interested in understanding how R compares to other statistics packages for a variety of statistical analyses, take a look at the [Data Analysis Examples](http://bit.ly/2kQGe9D) page on UCLA's Institute for Digital Research and Education website. 
+
 After completing the first programming assignment, you'll discover that the R-based solution to `pollutantmean()` is significantly less complicated than a SAS-based solution. How can I say this? [A SAS Version of pollutantmean()?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-pollutantmeanSASVersion.md) illustrates the code needed to replicate `pollutantmean()` in SAS. Believe it or not, one can complete the `pollutantmean()` assignment in a single R statement. It's a complex statement of nested functions, but it evaluates as a single R statement.
 
 The SAS version of `pollutantmean()` is a lot more complicated than the most elegant R solution, in part because the design of SAS forces one into using SAS macros because SAS does not make it easy for end users to write their own SAS procedures. While it is technically possible for an end user to write a SAS procedure \(see [Betancourt 1985](http://www.sascommunity.org/sugi/SUGI85/Sugi-10-127%20Betancourt.pdf)\), it requires a significant effort.
