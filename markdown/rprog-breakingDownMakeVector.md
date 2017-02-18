@@ -78,12 +78,14 @@ First `makeVector()` defines the `set()` function. Most of the "magic" in `makeV
         m <<- NULL
     }
 
-Here we use the `<<-` [form of the assignment operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-assignmentOperators.md), which assigns the value on the right side of the operator to an object in the parent environment named by the object on the left side of the operator.
+`set()` takes an argument that is named as `y`. It is assumed that this value is a numeric vector, but is not stated directly in the function formals. For the purposes of the `set()` function, it doesn't matter whether this argument is called `y`, `aVector` or any object name other than `x`. Why? Since there is an `x` object already defined in the `makeVector()` environment, using the same object name would make the code more difficult to understand.  
+
+Within `set()` we use the `<<-` [form of the assignment operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-assignmentOperators.md), which assigns the value on the right side of the operator to an object in the parent environment named by the object on the left side of the operator.
 
 When `set()` is executed, it does two things:
 
 1. Assign the input argument to the `x` object in the parent environment, and
-2. Assign the value of NULL to the `m` object in the parent environment.
+2. Assign the value of NULL to the `m` object in the parent environment. This line of code clears any value of `m` that had been cached by a prior execution of `cachemean()`. 
 
 Therefore, if there is already a valid mean cached in `m`, whenever `x` is reset, the value of `m` cached in the memory of the object is cleared, forcing subsequent calls to `cachemean()` to recalculate the mean rather than retrieving the wrong value from cache.
 
