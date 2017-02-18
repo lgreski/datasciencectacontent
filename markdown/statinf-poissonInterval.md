@@ -1,8 +1,12 @@
-# Calculating Poisson Confidence Interval Explained
+# Poisson Confidence Interval Explained
 
 In February 2017 a student in the Johns Hopkins University *Statistical Inference* course requested a more verbose explanation of the content on calculating a confidence interval for the mean of a Poisson random variable. Specifically he wanted more detail regarding the content on slides 26 - 27 of the *Asymptopia* lecture.
 
+## Explaining the Formulas
+
 <img src="./images/statinf-poissonInterval01.png">
+
+## Key difference: how wide is the interval?
 
 Here is the R code from slide 27 of the lecture.
 
