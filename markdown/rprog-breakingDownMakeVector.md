@@ -138,7 +138,7 @@ the function call will fail with an error explaining that `cachemean()` was unab
 
 ## Explaining cachemean()
 
-Without `cachemean()`, the `makeVector()` function is incomplete. Why? As designed, `cachemean()` is required to populate or retrieve data from an object of type `makeVector()`. 
+Without `cachemean()`, the `makeVector()` function is incomplete. Why? As designed, `cachemean()` is required to populate or retrieve the mean from an object of type `makeVector()`. 
 
     cachemean <- function(x, ...) {
          ...
@@ -164,6 +164,7 @@ If the result of `!is.null(m)` is `FALSE`, `cachemean()` gets the vector from th
          x$setmean(m)
          m
 
+Note that `cachemean()` is the only place where the `mean()` function is executed, which is why `makeVector()` is incomplete without `cachemean()`. 
 
 ## Putting the Pieces Together: How the functions work at runtime
 
