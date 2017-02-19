@@ -136,6 +136,47 @@ the function call will fail with an error explaining that `cachemean()` was unab
     > cachemean(aVector)
     Error in x$getmean : $ operator is invalid for atomic vectors
 
+## Explaining cachemean()
+
+Without `cachemean()`, the `makeVector()` function is incomplete. Why? As designed, `cachemean()` is required to populate or retrieve data from an object of type `makeVector()`. 
+
+    cachemean <- function(x, ...) {
+         ...
+         
+Like `makeVector()`, `cachemean()` starts with a single argument, `x`, and an ellipsis that allows the caller to pass additional arguments into the function. 
+
+Next, the function attempts to retrieve a mean from the object passed in as the argument. First, it calls the `getmean()` function on the input object. 
+
+         m <- x$getmean()
+         
+Then it checks to see whether the result is `NULL`. Since `makeVector()` sets the cached mean to `NULL` whenever a new vector is set into the object, if the value here is not equal to `NULL`, we have a valid, cached mean and can return it to the parent environment  
+
+
+         if(!is.null(m)) {
+              message("getting cached data")
+              return(m)
+         }
+
+If the result of `!is.null(m)` is `FALSE`, `cachemean()` gets the vector from the input object, calculates a `mean()`, uses the `setmean()` function on the input object to set the mean in the input object, and then returns the value of the mean to the parent environment by printing the mean object. 
+
+         data <- x$get()
+         m <- mean(data, ...)
+         x$setmean(m)
+         m
+
+
+## Putting the Pieces Together: How the functions work at runtime
+
+Now that we've explained the design of each of these functions, here is an illustration of how they work when used in an R script.
+
+      aVector <- makeVector(1:10)
+      aVector$get()               # retrieve the value of x
+      aVector$getmean()           # retrieve the value of m, which should be NULL
+      aVector$set(30:50)          # reset value with a new vector
+      cachemean(aVector)          # notice mean calculated is mean of 30:50, not 1:10
+      aVector$getmean()           # retrieve it directly, now that it has been cached
+
+<img src="./images/rprog-breakingDownMakeVector05.png">
 
 ## Conclusion: what makes cachemean() work?
 
