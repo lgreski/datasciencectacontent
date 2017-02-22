@@ -22,7 +22,6 @@ That said, for students who want to use the `xlsx` package to answer the questio
 
 <img src="https://github.com/lgreski/datasciencectacontent/blob/master/markdown/images/cleaningData-javaError02.png">
 
-<b>PRO TIP: </b> The easiest way to work around this problem is to use an R package that does not depend on Java, such as [openxlsx](https://cran.r-project.org/web/packages/openxlsx/openxlsx.pdf) or [readxl](https://cran.r-project.org/web/packages/readxl/readxl.pdf). 
 
 ## 2. 32-bit vs. 64-bit Java in Windows
 
