@@ -2,7 +2,7 @@
 
 Students in the Johns Hopkins University Data Science Specialization Capstone course typically struggle with the course project because of the amount of memory consumed by the objects needed to analyze text. To help reduce the guesswork in the memory utilization, here is a table that illustrates the amount of RAM consumed by objects required to analyze the files for the Swift Key sponsored capstone: predicting text.
 
-For the purposes of this analysis, all code was run on an HP Omen laptop with the following specifications. 
+For the purposes of this analysis, all code was run on an HP Omen laptop with the following specifications.
 
 <table>
     <tr>
@@ -23,9 +23,10 @@ For the purposes of this analysis, all code was run on an HP Omen laptop with th
 </tr>
 </table>
 
-Note that due to the size of the objects, a machine with a minimum of 16Gb of RAM is required to process the entire data set, and one must be judicious about deleting objects not needed before progressing to subsequent steps in order to avoid running out of memory on the machine.
 
-All text processing was completed with the <strong>quanteda</strong> package. 
+All text processing was completed with the <strong>quanteda</strong> package. The three input files for blogs, news, and twitter data were read as character strings and combined into a single object that was used as input to the `corpus()` function. The total number of texts processed across the combined file is 4,269,678.
+
+Note that due to the size of the objects, a machine with a minimum of 16Gb of RAM is required to process the entire data set. The tokenized texts consume about 5.1 Gb of RAM, and must remain in memory in order to use them as input to the `quanteda::ngrams()` function. Therefore, the minimum number of objects in memory at any time is 2 -- the tokenized texts, and the output `ngrams` object. Since the object output by `ngrams()` is also over 5Gb, one must be judicious about deleting objects not needed before progressing to subsequent steps in order to avoid running out of memory on the machine, even if it has 16Gb of RAM.
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
@@ -39,3 +40,6 @@ All text processing was completed with the <strong>quanteda</strong> package.
 <tr><td>Build 5-grams</td><td align="right">6.3Gbs</td><td align="right">930 seconds</td></tr>
 <tr><td>Build 6-grams</td><td align="right">6.1Gbs</td><td align="right">1,007 seconds</td></tr>
 </table>
+
+
+*last updated: 20 February 2017*
