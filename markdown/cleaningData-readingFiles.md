@@ -68,7 +68,7 @@ Review your notes and slides from the lecture topics, and identify the functions
 Sometimes, the "obvious" approach isn't the best one. If you only need to read a line of text from a file, it doesn't matter whether it's a fixed length file, an HDF5 file, an XML document, or any other non-binary file, the easiest way to pull the text you need from the file is with `readLines()`.  Don't waste your time with a more complex approach.  Reference: [Occam's Razor](https://en.wikipedia.org/wiki/Occam%27s_razor).
 
 
-## Git \'er done!
+## Git 'er done!
 
 In closing, we've outlined a relatively straightforward plan of attack to figure out how to read almost any type of data into R and be productive with the resulting R objects.  In the spirit of "eating my own dog food," (reference: [Eating your own dog food](https://en.wikipedia.org/wiki/Eating_your_own_dog_food)) I used this approach to complete Quiz 2 when I took the *Getting and Cleaning Data* class.
 
