@@ -13,7 +13,7 @@ To answer this question, you can directly access the file via a web browser, or 
 
 Sometimes the file type can be determined from the file extension. By now we all know what a .XLSX file is because it was reviewed in the Week 1 lecture, *Reading Excel Files*.  However, if you didn't know what an XLSX file is, remember, Google is your friend:
 
-![2015-08-05_18-06-11.png](https://coursera-forum-screenshots.s3.amazonaws.com/c0/1697803bdf11e5a76587d37b252aaf/2015-08-05_18-06-11.png)
+![readingFiles01.png](./images/cleaningData-readingFiles01.png)
 
 In a similar manner, you can run a Google search to explain a file extension that you've never seen before.
 
@@ -24,7 +24,7 @@ If the file has an associated code book, read the code book. This is often the c
 Again, Google is your friend. If it isn't obvious (e.g. XLSX files must be read with read.xlsx() or read.xlsx2() functions), run a search on "read <filetype\> into R", such as:
 
 
-![2015-08-05_18-12-54.png](https://coursera-forum-screenshots.s3.amazonaws.com/d1/f7ec603bdf11e5b3962b9f1f5b882b/2015-08-05_18-12-54.png)
+![readingFiles02.png](./images/cleaningData-readingFiles01.png)
 
 Once you know the function name, you can install the required package(s) needed to use the function.
 
@@ -47,7 +47,7 @@ If you're having trouble accessing the resource, and it's available via HTTP, na
 
 If you're reading fixed length files, you'll need to identify the start & stop columns in the input file in order to read it correctly.
 
-**_PRO TIP:_** use a file editor that can display the column number at which the cursor is located as you navigate the file (e.g. Notepad++ for Windows), or use a file editor that displays a column ruler, such as UltraEdit, as illustrated here.
+**_PRO TIP:_** use a file editor that can display the column number at which the cursor is located as you navigate the file (e.g. Notepad++ for Windows, or [Atom](http://atom.io) which is open source), or use a file editor such as [UltraEdit](http://www.ultraedit.com/?gclid=CJzq_veIrNICFdWEswodO7cAwg) that displays a column, as illustrated here.
 
 ![2015-08-05_19-36-41.png](https://coursera-forum-screenshots.s3.amazonaws.com/1b/1f5a503be411e58d54556e371b25e8/2015-08-05_19-36-41.png)
 
