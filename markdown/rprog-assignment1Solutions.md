@@ -80,3 +80,26 @@ As expected, the response time for `pollutantmean()` is much closer to that of `
 Note that the one line versions of `pollutantmean()`, `complete()` and `corr()` were definitely not my original versions of these programs. My first attempts used `for()` loops because I had background in other programming languages where `for()` loops weren't as inefficient as they are in R, and I was following the advice I give in [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), where I share the old programming aphorism "make it work, make it right, make it fast".
 
 My original solution of `pollutantmean()` covered "make it work" and "make it right," because it produced the correct results, a weighted mean of non-missing cases for all sensor files that are specified by the `id` argument passed to the function. As I developed more skill with R, I was able to refactor the code into functions that perform well, use R more as it is intended, and with fewer overall programming statements.
+
+## Appendix: Machine Configuration
+
+All performance timings were run on an Apple Macbook Pro 13 with the following specifications.
+
+<table>
+    <tr>
+        <th>Computer</th>
+        <th>Configuration</th>
+    </tr>
+    <tr>
+        <td valign=top>Apple Macbook Pro</td>
+        <td>
+            <ul>
+                <li>Operating system: OS X Sierra 10.12.3 (16D32)</li>
+                <li>Processor: Intel i5 at 2.6Ghz, turbo up to 3.3Ghz, two cores</li>
+                <li>Memory: 8 gigabytes</li>
+                <li>Disk: 512 gigabytes, solid state drive</li>
+                <li>Date built: April 2013</li>
+            </ul>
+        </td>
+     </tr>
+</table>
