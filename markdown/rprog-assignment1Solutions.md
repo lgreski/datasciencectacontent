@@ -6,7 +6,7 @@ Unfortunately the Community Mentors are not allowed to post solutions to these a
 
 Community Mentors have published a variety of content that is applicable to well-written solutions for the first programming assignment, such as techniques for subsetting objects illustrated in the article [Forms of the Extract Operator](http://bit.ly/2bzLYTL). That said, beginning students in *R Programming* need to see how concepts are tied together into an elegant solution. Therefore, it's helpful to paint a more holistic picture of a well-formed solution to these assignments, without giving the assignment answers away.
 
-**WARNING** 
+**WARNING**
 
 This article discusses approaches that are more advanced than the functions taught during the first two weeks of *R Programming*, and is intended for students who have already completed the programming assignment. It is to provide visibility into what "elegant" looks like. It is *not* a critique of any individual student's work.
 
@@ -47,7 +47,35 @@ I used more efficient techniques in the original versions of other two functions
 
 <img src="./images/rprog-assignment1Solutions03.png">
 
-Regarding `complete()`, as I designed the program I realized that I could allocate all the memory required for the output file up front, rather than using `rbind()`. Even though I initially used a `for()` loop for this function, instead of building the output data frame with `rbind()` I directly wrote the `ID` and `nobs` values to the data frame by using vector subscripting. Therefore, the one line version of this function was not significantly faster than the original. 
+Regarding `complete()`, as I designed the program I realized that I could allocate all the memory required for the output file up front, rather than using `rbind()`. Even though I initially used a `for()` loop for this function, instead of building the output data frame with `rbind()` I directly wrote the `ID` and `nobs` values to the data frame by using vector subscripting. Therefore, the one line version of this function was not significantly faster than the original.
+
+Here are the performance timings run against the minimum amount of data -- one sensor file for `pollutantmean()` and `complete()`, and setting the `threshold` argument high enough that a single correlation is calculated.
+
+<img src="./images/rprog-assignment1Solutions04.png">
+
+As expected, the response time for `pollutantmean()` is much closer to that of `oneline_pollutantmean()`. However, the response for `corr()` is slower with a higher threshold value than it is with a lower threshold. If I needed to run this function in a production process, I would investigate the "counterintuitive" response time performance.
+
+<table>
+<th>Function</th><th>Original</th><th>Optimized</th>
+<tr>
+<td halign="left">pollutantmean(): 1 file</td><td halign="right">0.007</td><td halign="right">.012</td>
+</tr>
+<tr>
+<td halign="left">pollutantmean(): 332 files</td><td halign="right">42.305</td><td halign="right">2.282</td>
+</tr>
+<tr>
+<td halign="left">complete(): 1 file</td><td halign="right">0.007</td><td halign="right">.006</td>
+</tr>
+<tr>
+<td halign="left">complete(): 332 files</td><td halign="right">2.555</td><td halign="right">2.507</td>
+</tr>
+<tr>
+<td halign="left">corr(): 1 file</td><td halign="right">3.055</td><td halign="right">2.615</td>
+</tr>
+<tr>
+<td halign="left">corr(): 332 files</td><td halign="right">2.632/td><td halign="right">2.618</td>
+</tr>
+</table>
 
 Note that the one line versions of `pollutantmean()`, `complete()` and `corr()` were definitely not my original versions of these programs. My first attempts used `for()` loops because I had background in other programming languages where `for()` loops weren't as inefficient as they are in R, and I was following the advice I give in [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), where I share the old programming aphorism "make it work, make it right, make it fast".
 
