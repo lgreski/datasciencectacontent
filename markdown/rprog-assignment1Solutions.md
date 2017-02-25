@@ -73,7 +73,7 @@ As expected, the response time for `pollutantmean()` is much closer to that of `
 <td halign="left">corr(): 1 file</td><td halign="right">3.055</td><td halign="right">2.615</td>
 </tr>
 <tr>
-<td halign="left">corr(): 332 files</td><td halign="right">2.632/td><td halign="right">2.618</td>
+<td halign="left">corr(): 332 files</td><td halign="right">2.632</td><td halign="right">2.618</td>
 </tr>
 </table>
 
