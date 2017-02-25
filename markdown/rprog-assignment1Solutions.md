@@ -49,7 +49,9 @@ I used more efficient techniques in the original versions of other two functions
 
 Regarding `complete()`, as I designed the program I realized that I could allocate all the memory required for the output file up front, rather than using `rbind()`. Even though I initially used a `for()` loop for this function, instead of building the output data frame with `rbind()` I directly wrote the `ID` and `nobs` values to the data frame by using vector subscripting. Therefore, the one line version of this function was not significantly faster than the original.
 
-Here are the performance timings run against the minimum amount of data -- one sensor file for `pollutantmean()` and `complete()`, and setting the `threshold` argument high enough that a single correlation is calculated.
+Interestingly, `corr()` processes a maximum of 323 correlations when the `threshold` argument is set to 1 because there are 9 sensor files that contain zero complete cases. The maximum number of complete cases for any sensor file is 1,095. 
+
+To assess the scalability of the code I generated performance timings with arguments that would process the minimum amount of data -- one sensor file for `pollutantmean()` and `complete()`, and setting the `threshold` argument high enough that a single correlation is calculated.
 
 <img src="./images/rprog-assignment1Solutions04.png">
 
@@ -73,7 +75,7 @@ As expected, the response time for `pollutantmean()` is much closer to that of `
 <td align="left">corr(): 1 file</td><td align="right">3.055</td><td align="right">2.615</td>
 </tr>
 <tr>
-<td align="left">corr(): 332 files</td><td align="right">2.632</td><td align="right">2.618</td>
+<td align="left">corr(): 323 files</td><td align="right">2.632</td><td align="right">2.618</td>
 </tr>
 </table>
 
