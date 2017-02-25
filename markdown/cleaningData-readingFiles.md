@@ -76,4 +76,4 @@ One last note: yes, it can be frustrating to put together correctly working code
 
 For a more detailed example of how the discovery process for reading data files works in practice, review [Real World Example: Reading American Community Survey Data](http://bit.ly/2bAdLE9).
 
-*last updated: 3 February 2017*
+*last updated: 25 February 2017*
