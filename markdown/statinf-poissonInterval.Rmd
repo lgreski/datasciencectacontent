@@ -1,0 +1,14 @@
+---
+title: "poissonInterval"
+author: "Len Greski"
+date: "2/25/2017"
+output: html_document
+---
+
+$X \sim Poisson(\lambda t)$ means that X is distributed as Poisson with an arrival rate of $\lambda$ over a time period of $t$.
+
+Estimate $\hat \lambda = X/t$ means that we estimate $\lambda$ with our sample $X$ and $t$, because $\lambda$ is the mean of a variable that conforms to a Poisson distribution. That is, if $X$ events occur over over $t$ time period, the average arrival per unit of time is $\lambda$.
+
+$Var(\hat \lambda) = \lambda / t$ means that the variance of $\hat \lambda$, or variance of the sampling distribution of the mean is $\lambda / t$.
+
+Therefore, variance estimate $= \hat \lambda / t$, there the time period is the equivalent of $n$ in a variance of a sampling distribution of means of a continuous variable.
