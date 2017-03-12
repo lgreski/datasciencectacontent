@@ -16,7 +16,7 @@ The first form, `[`, can be used to extract content from vector, lists, or data 
 
 Noting John Chambers' statement that <em>In R, everything is an object</em>, the `[` form of the extract operator can be used to extract data from the result of a function call. The following code executes `list.files()` on a subdirectory of the current R working directory that contains comma separated values files of Pokemon statistics, one file for each of the first 6 generations of Pokemon.
 
-Notice that there are 6 files in the subdirectory.
+Notice that there are 7 files in the subdirectory.
 
 <img src="./images/rprog-extractOperator03.png">
 
@@ -48,7 +48,7 @@ The key feature of this code is use of an anonymous function within `lapply()` s
 
 To combine the elements from the list into a single vector for subsequent processing, we can use the `unlist()` function.
 
-## Comparing Forms of the Extract operator
+## Comparing Forms of the Extract Operator
 
 Since the easiest way to see how the various features of the extract operator work is to see code examples, we provide a number of code snippets to illustrate various ways to use the different forms of the operator.
 
