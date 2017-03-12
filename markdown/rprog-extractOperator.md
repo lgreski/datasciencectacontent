@@ -28,7 +28,7 @@ Notice that there are 7 files in the subdirectory.
                                   full.names=TRUE)[1:2]
     thePokemonFiles
 
-Notice that `thePokemonFiles` object contains only two elements, the first two files returned from the `list.files()` function.
+The above code executes `list.files()`, and then the extract operator `[1:2]` is applied to the output object, resulting in a `thePokemonFiles` object containing the first two files returned from the `list.files()` function.
 
 <img src="./images/rprog-extractOperator04.png">
 
