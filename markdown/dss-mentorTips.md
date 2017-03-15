@@ -1,3 +1,5 @@
+# Tips for Community Mentors 
+
 In summer of 2016, a number of Community Mentors were added to the [Johns Hopkins University Data Science Specialization on Coursera](http://bit.ly/2czgkI7). Since there are 10 courses in the Specialization, new mentors have been asking the same question, "What tips can experienced mentors share with us?"
 
 I have served a mentor for The *Data Scientist's Toolbox* periodically and *R Programming* consistently since September 2015, and for *Statistical Inference* and *Practical Machine Learning* since February 2016. More recently I've also occasionally supported *Getting and Cleaning Data*.  For those of you who have asked about tips on mentoring, here goes...
