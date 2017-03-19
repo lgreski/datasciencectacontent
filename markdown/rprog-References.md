@@ -26,4 +26,4 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 
 In addition to the references above, the Frank's World website has a list of [60 free data science books](http://bit.ly/2bFDN6s). Hat tip to Geoff Snowman from the August *R Programming* course on coursera.org for making me aware of this resource.
 
-*last updated: 22 October 2016*
+*last updated: 18 March 2017*
