@@ -19,6 +19,9 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 <tr><td><a href="http://www.r-tutor.com/r-introduction"> R Tutor Website </a></td><td>This website provides three sets of tutorials, basic R, elementary statistics with R, and graphics processor unit computing with R. The site is maintained by Chi Yau, who has a Ph.D. in Mathematics. </td></tr>
 <tr><td><a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"> R Inferno </a></td><td>A humorous look at the various problems people have when learning R, based on Dante's <em>Inferno</em>. Written by <a href="http://www.burns-stat.com/about-burns-statistics/"> Patrick Burns, Ph.D.</a>, a statistics consultant and one of the lead developers of S-PLUS early in its development. </td></tr>
 <tr><td><a href="https://www.stat.auckland.ac.nz/~ihaka/downloads/lexical.pdf"> Lexical Scoping and Statistical Computing </a></td><td>Article by Robert Gentleman and Ross Ihaka that explains the use of lexical scoping within statistical computing, the topic of programming assignment 2. </td></tr>
+
+<tr><td><a href="https://www.amazon.com/Testing-Code-Chapman-Hall-CRC-ebook/dp/B01N6Y5GAJ/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1489888218&sr=1-1&keywords=testing+r+code"> Testing R Code</a></td><td>Written by Richard Cotton, this book helps people write R code that is testable, so one can have confidence that it works when used to conduct analyses, or is included in a production software application.
+</td></tr> 
 </table>
 
 In addition to the references above, the Frank's World website has a list of [60 free data science books](http://bit.ly/2bFDN6s). Hat tip to Geoff Snowman from the August *R Programming* course on coursera.org for making me aware of this resource.
