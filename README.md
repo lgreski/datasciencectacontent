@@ -91,9 +91,11 @@ The next set of articles includes general commentary about the course, R program
 3. [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF)
 4. [Common Problems: Quiz 2 - sqldf() driver fails to connect](http://bit.ly/2kD2KTY)
 
-### Articles Related to Getting and Cleaning Data
+### Articles and Content Related to Getting and Cleaning Data
 
 1. [Tidy Data](http://bit.ly/2nyw5Ci) Hadley Wickham's paper on Tidy Data, required reading for the course project. 
+2. [data.table Github Wiki](http://bit.ly/2og7rDK) Repository for `data.table` package, including video. 
+
 
 ## Course 5: Reproducible Research
 1. [Assignment 2 Checklist](http://bit.ly/2c6XFhQ)
