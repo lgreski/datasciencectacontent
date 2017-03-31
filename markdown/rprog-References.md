@@ -21,7 +21,8 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 <tr><td><a href="https://www.stat.auckland.ac.nz/~ihaka/downloads/lexical.pdf"> Lexical Scoping and Statistical Computing </a></td><td>Article by Robert Gentleman and Ross Ihaka that explains the use of lexical scoping within statistical computing, the topic of programming assignment 2. </td></tr>
 
 <tr><td><a href="https://www.amazon.com/Testing-Code-Chapman-Hall-CRC-ebook/dp/B01N6Y5GAJ/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1489888218&sr=1-1&keywords=testing+r+code"> Testing R Code</a></td><td>Written by Richard Cotton, this book helps people write R code that is testable, so one can have confidence that it works when used to conduct analyses, or is included in a production software application.
-</td></tr> 
+</td></tr>
+<tr><td><a href-"https://leanpub.com/msdr">Mastering Software Development in R</a> </td><td>Written by Roger Peng, Sean Kross, and Brooke Anderson, this book covers programming techniques used to build data science tools in R. It is also the companion book to the [Mastering Software Development in R](https://www.coursera.org/specializations/r) Specialization on Coursera. </td></tr>  
 </table>
 
 In addition to the references above, the Frank's World website has a list of [60 free data science books](http://bit.ly/2bFDN6s). Hat tip to Geoff Snowman from the August *R Programming* course on coursera.org for making me aware of this resource.
