@@ -8,7 +8,7 @@ This process requires three major activities, including:
 2. Generate the document
 3. Push all required files to Github
 
-# Configure Knitr Output
+# 1. Configure Knitr Output
 
 
 From the RStudio code editor, select the options icon and click the `Output Options...` menu selection.
@@ -25,7 +25,7 @@ From the Advanced options dialog, check the box labeled `Keep markdown source fi
 
 <img src="./images/repData-configKnitrWithMD03.png">
 
-# Generate the HTML Document
+# 2. Generate the HTML Document
 
 Having configured knitr to retain the .md file and associated content, press the `<knit>` button to generate an HTML version of the document.
 
@@ -33,7 +33,7 @@ Once `knitr` completes, minimize the resulting HTML document window and take a l
 
 <img src="./images/repData-configKnitrWithMD04.png">
 
-# Upload Files to Github
+# 3. Upload Files to Github
 
 The next few steps require that you've already configured RStudio to work with Git and Gitub, as I describe in my articles [Configuring RStudio with Git / Github: Windows Version](http://bit.ly/2bPxOL5) and [Configuring RStudio with Git / Github: Mac OSX Version](http://bit.ly/2c9Q2bf).
 
@@ -47,33 +47,36 @@ Click on the `Staged` checkboxes for all the files except the `.Rproj` file, bec
 
 <img src="./images/repData-configKnitrWithMD06.png">
 
-Next, press the `commit` button to display the `Review Changes` dialog box. Add a comment for your commit, and then press the `commit` button to commit the changes to the local git repository.
+Next, press the `commit` button to display the `Review Changes` dialog window. Add a comment for your commit, and then press the `commit` button to commit the changes to the local git repository.
 
 <img src="./images/repData-configKnitrWithMD07.png">
 
-RStudio will display another dialog box to confirm that the files have been committed to the local repository. Presss the `close` button to continue.
+RStudio will display another dialog box to confirm that the files have been committed to the local repository. Press the `close` button to continue.
 
 <img src="./images/repData-configKnitrWithMD08.png">
 
-To push the committed files to Github from the local repository, press the `Push` button in the `Review Changes` dialog box.
+To push the committed files to Github from the local repository, press the `Push` button in the `Review Changes` dialog window.
 
 <img src="./images/repData-configKnitrWithMD09.png">
 
 Once Git pushes the files to Github, you'll receive another dialog box confirming the push has completed. Press the `close` button to continue.
 
+<img src="./images/repData-configKnitrWithMD10.png">
+
 At this point, all the files have been transferred to Github and you can close the `Review Changes` dialog window to return to the RStudio main window.
 
 # Validating the Results
 
-<img src="./images/repData-configKnitrWithMD10.png">
+Use a web browser to navigate to the repository where you pushed the knitr ouptut. For this article, we're using [lgreski/test](http://bit.ly/2onO2ou).
 
-## Step 11:
+From the repository file list, select the .md file we generated with knitr. In this case, it's called `testAnalysis.md`.
 
 <img src="./images/repData-configKnitrWithMD11.png">
 
-## Step 12:
+This will bring up a browser window that displays the markdown file. As you can see from the screen capture, the entire analysis is visible, including the x / y plot.
 
 <img src="./images/repData-configKnitrWithMD12.png">
 
+Finally, we can also see that the supporting graphics files have been uploaded to github, and stored in a subdirectory where they can be accessed by the markdown file when viewed on Github via a web browser.
 
 <img src="./images/repData-configKnitrWithMD13.png">
