@@ -15,6 +15,31 @@ A number of articles to help students complete the assignment have been posted b
 
 In *StormData Analysis: A Comprehensive Guide*, we will provide a "big picture" review of the four problems articulated above so students can spend more of their time working with the data, and less of their time running into the same roadblocks that have faced past students.
 
+# The Assignment: It Looks So Simple...
+
+The course project assignment instructions make the task seem simple, asking students to answer two basic questions about the storm data.
+
+> Your data analysis must address the following questions:
+>
+> 1. Across the United States, which types of events (as indicated in the  variable) are most harmful with respect to population health?<br><br>
+>
+> 2. Across the United States, which types of events have the greatest economic consequences?
+
+For students who have completed *Exploratory Data Analysis*, they are well equipped to conduct a basic descriptive analysis of the data.
+
+Also, for students who have completed *Getting and Cleaning Data* as well, the students have an understanding of a basic process to conduct a descriptive analysis, including the following steps.
+<table>
+<tr><td>
+<img src="./images/repdata-stormDataGuide01.png"></td><td>1. Extract data from the compressed file, and load it into an R data frame.<br><br>
+2. Run basic R functions against the data to understand its features, and determine the types of cleaning and data transformations needed to restructure data in order to answer the research questions.<br><br>
+3. Write R code to clean and transform the data.<br><br>
+4. Analyze the data, answering the questions required for the assignment, and support the analysis with relevant graphics and statistics.  </td></tr>
+</table>
+
+The instructions include access to the [data file](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2), a [codebook](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf), and a [frequently asked questions web page](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf) from the NOAA.
+
+
+
 # Problem 1: Changing Data & Collection methods
 
 *
