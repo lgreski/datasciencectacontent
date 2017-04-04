@@ -29,13 +29,11 @@ For students who have completed *Exploratory Data Analysis*, they are well equip
 
 Also, for students who have completed *Getting and Cleaning Data* as well, the students have an understanding of a basic process to conduct a descriptive analysis, including the following steps.
 
-<img src="./images/repdata-stormDataGuide01.png">
-
 <table>
 <col width="300">
 <col width="500">
 <tr><td>
-<img src="./images/repdata-stormDataGuide01.png"></td><td>1. Extract data from the compressed file, and load it into an R data frame.<br><br>
+<img src="./images/repData-stormDataGuide01.png"></td><td>1. Extract data from the compressed file, and load it into an R data frame.<br><br>
 2. Run basic R functions against the data to understand its features, and determine the types of cleaning and data transformations needed to restructure data in order to answer the research questions.<br><br>
 3. Write R code to clean and transform the data.<br><br>
 4. Analyze the data, answering the questions required for the assignment, and support the analysis with relevant graphics and statistics.  </td></tr>
