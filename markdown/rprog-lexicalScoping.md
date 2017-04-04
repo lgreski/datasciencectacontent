@@ -69,7 +69,7 @@ Clicking on one of the functions will display its code in the code editor pane o
 
 A closure enables the function to access these variables through copies or references even when the function is accessed outside their scope, unlike a regular function that is defined without an environment.
 
-Reference: <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)" Closure (computer programming), Wikipedia</a>.  Accessed 22 October 2016.
+Reference: <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"> Closure (computer programming), Wikipedia</a>.  Accessed 22 October 2016.
 
 ## References
 
