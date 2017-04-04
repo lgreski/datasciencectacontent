@@ -75,4 +75,4 @@ Reference: <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)
 
 Chambers, John (2014) [Interfaces, Efficiency, and Big Data](http://user2014.stat.ucla.edu/files/chambers.pdf) useR!2014. Retrieved from internet 23 October 2016.
 
-Wikipedia.org <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)" Closure (computer programming)</a>. Retrieved from internet 23 October 2016. 
+Wikipedia.org <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"> Closure (computer programming)</a>. Retrieved from internet 23 October 2016. 
