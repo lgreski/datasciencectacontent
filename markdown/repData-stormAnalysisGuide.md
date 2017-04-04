@@ -7,7 +7,7 @@ This is the first course project in the Data Science Specialization that require
 There are four major categories of problems with the NOAA data that give students fits as they work to complete the assignment. In descending order of severity, they are:
 
 1. Changing data and collection methods over time, <br><br>
-2. Poor quality of data, including what Hadley Wickham would call ["untidy" data](http://bit.ly/2nyw5Ci), <br><br>
+2. Poor quality of data, including what Hadley Wickham would describe as ["untidy" data](http://bit.ly/2nyw5Ci), <br><br>
 3. Low quality, disorganized documentation, and <br><br>
 4. Large data size.
 
