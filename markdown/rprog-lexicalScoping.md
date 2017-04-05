@@ -50,7 +50,7 @@ R is based on the S language. Development of the S language began in 1976 and ha
 
 *Software for Data Analysis: Programming with R (Statistics and Computing) (Kindle Locations 1819-1822). Kindle Edition.*  
 
-### S3 classes
+### The next level of detail...
 
 Again, quoting John Chambers:
 
