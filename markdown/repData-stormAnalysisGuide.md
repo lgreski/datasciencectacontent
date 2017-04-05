@@ -27,10 +27,10 @@ The course project assignment instructions make the task seem simple, asking stu
 
 For students who have completed *Exploratory Data Analysis*, they are well equipped to conduct a basic descriptive analysis of the data.
 
-Also, for students who have completed *Getting and Cleaning Data* as well, the students have an understanding of a basic process to conduct a descriptive analysis, including the following steps.
+Also, for students who have completed *Getting and Cleaning Data* as well, the students have an understanding of a basic process to conduct a descriptive analysis, including how to clean and transform the data to prepare it for analysis.
 
 <table>
-<col width="300">
+<col width="275">
 <col width="500">
 <tr><td>
 <img src="./images/repData-stormDataGuide01.png"></td><td>1. Extract data from the compressed file, and load it into an R data frame.<br><br>
@@ -39,9 +39,11 @@ Also, for students who have completed *Getting and Cleaning Data* as well, the s
 4. Analyze the data, answering the questions required for the assignment, and support the analysis with relevant graphics and statistics.  </td></tr>
 </table>
 
-The instructions include access to the [data file](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2), a [codebook](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf), and a [frequently asked questions web page](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf) from the NOAA.
+The course project  instructions include references to the [data file](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2), a [codebook](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf) provided by the NOAA, as well as the URL for the [frequently asked questions web page](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf) from the NOAA.
 
+Step 1, downloading and extracting data from the compressed file, is a straightforward process.
 
+Loading the data in R is also relatively easy because the raw data file can be read with the `read.csv()`. Once the data has been loaded, the challenges begin.  
 
 # Problem 1: Changing Data & Collection methods
 
