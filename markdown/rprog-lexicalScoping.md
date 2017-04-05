@@ -2,9 +2,9 @@
 
 Two key R design principles related to objects and lexical scoping are summarized in the following quote from John Chambers:
 
-    To understand computations in R, two slogans are helpful:
-    -- Everything that exists is an object, and
-    -- Everything that happens is a function call.
+> To understand computations in R, two slogans are helpful:<br>
+> &nbsp;&nbsp;&nbsp;-- Everything that exists is an object, and <br>
+> &nbsp;&nbsp;&nbsp;-- Everything that happens is a function call.
 
 John Chambers, quoted in *Advanced R*, p. 79.
 
@@ -36,6 +36,28 @@ If you print the code for the `library()` function, you'll observe that it uses 
 Now we'll address Chambers' second slogan: *Everything that happens is a function call.*
 
 This is a statement about behavior in R. All behavior in R is implemented through functions. This means that even things like the extract operator `[` are coded in R as functions. By virtue of Chambers' first slogan, we know that operators are also objects.
+
+## S3 vs. S4?
+
+In R there are two "systems" for implementing object oriented programming concepts, the S3 system and the S4 system.
+
+R is based on the S language. Development of the S language began in 1976 and has gone through four major phases, or "epochs," as John Chambers describes in Chapter 6 of [Software for Data Analysis](http://www.springer.com/us/book/9780387759357). These epochs represent major changes in the ways that data and computations are structured within the language. All four are represented in R, as Chambers writes:
+
+> 1. Object types, a set of internal types defined in the C implementation, and originally called modes in S; <br><br>
+> 2. Vector structures, defined by the concept of vectors (indexable objects) with added structure defined by attributes;<br><br>
+> 3. S3 classes, that is, objects with class attributes and corresponding one-argument method dispatch, but without class definitions;<br><br>
+> 4. Formal classes with class definitions, and corresponding generic functions tions and general methods, usually called S4 classes and methods in R.
+
+*Software for Data Analysis: Programming with R (Statistics and Computing) (Kindle Locations 1819-1822). Kindle Edition.*  
+
+### S3 classes
+
+Again, quoting John Chambers:
+
+> **S3 classes:** As part of the software for statistical models, developed around 1990 and after, a class attribute was used to dispatch single-argument methods. The attribute contained one or more character strings, providing a form of inheritance. Otherwise, the change to data organization was minimal; in particular, the content of objects with a particular class attribute was not formally defined. S3 classes are needed today to deal with software ware written for them (for example, the statistical model software (Section 6.9, page 218) and also for incorporating such data into modern classes and methods (see Section 9.6, page 362 for programming with S3 classes).<br><br>
+> **Formal (S4) classes:** The S3 classes and methods gave a useful return on a small investment in changes to the language, but were limited in flexibility  (single-argument dispatch) and especially in supporting trustworthy software. Classes with explicit definitions and methods formally incorporated rated into generic functions have been developed since the late 1990s to provide better support. That is the programming style recommended here for new software chapters 9 and 10, for classes and methods respectively.
+
+*Software for Data Analysis: Programming with R (Statistics and Computing) (Kindle Locations 1830-1835). Kindle Edition.*    
 
 ## R Objects and Lexical Scoping
 
@@ -75,4 +97,4 @@ Reference: <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)
 
 Chambers, John (2014) [Interfaces, Efficiency, and Big Data](http://user2014.stat.ucla.edu/files/chambers.pdf) useR!2014. Retrieved from internet 23 October 2016.
 
-Wikipedia.org <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"> Closure (computer programming)</a>. Retrieved from internet 23 October 2016. 
+Wikipedia.org <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)"> Closure (computer programming)</a>. Retrieved from internet 23 October 2016.
