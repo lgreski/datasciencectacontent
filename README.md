@@ -47,7 +47,7 @@ The next set of articles includes general commentary about the course, R program
 1. [Commercial Statistics Packages: An Historical Perspective](http://bit.ly/2fPj2qN)
 2. [Configuring RStudio to work with git / github - Mac OSX](http://bit.ly/2c9Q2bf)
 2. [A Data Frame is Also a List](http://bit.ly/2fmMRAp)
-2. [Forms of the Assignment  Operator](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-assignmentOperators.md)
+2. [Forms of the Assignment  Operator](http://bit.ly/2dtPhM9)
 2. [Forms of the Extract Operator](http://bit.ly/2bzLYTL)
 3. [S Objects, R Objects, and Lexical Scoping](http://bit.ly/2dtOSXi)
 3. [Thinking in R versus Thinking in SAS](http://bit.ly/2cH3u8x)
@@ -83,6 +83,7 @@ The next set of articles includes general commentary about the course, R program
 2. [R and Python vs. SAS and SPSS](http://bit.ly/2mJ3l6X) Jeroen Kromme's take on strengths and weaknesses of these languages, posted on [r-bloggers.com](http://r-bloggers.com). 
 2. [Scaling R for Data Science](http://oreil.ly/2b8pQyR) August 2016 article by Federico Castanedo explaining three ways to scale R.  
 3. [Lexical Scoping and Statistical Computing](http://bit.ly/2cmqAPy) Article by Robert Gentleman and Ross Ihaka at the University of Auckland describing how lexical scoping works, and why it is valuable in statistical computing.
+4. [Data Science Job Report 2017: R Passes SAS, But Python Leaves Them Both Behind](http://bit.ly/2oCHulX) Bob Muenchen's take on the job market for various data science langauges. 
 
 ## Course 3: Getting and Cleaning Data
 
