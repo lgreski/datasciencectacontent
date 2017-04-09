@@ -13,7 +13,7 @@ The syntax for `download.file()` has a subtle complexity. The obvious parameters
       #
       # download quiz 1 file
       #
-      download.file("http://hw1_data.csv",
+      download.file("https://d396qusza40orc.cloudfront.net/rprog/data/quiz1_data.zip",
          "hw1_data.csv", # stores file in R working directory
          method="curl", # method for OSX / Linux operating systems
          mode="w")  # "w" is used for text files
@@ -48,7 +48,7 @@ Professor Peng talks about this in *R Programming*.  A lazy programmer doesn't d
       dlMethod <- "curl" # sets default for OSX / Linux
       if(substr(Sys.getenv("OS"),1,7) == "Windows") dlMethod <- "wininet"
       if(!file.exists("hw1_data.csv")) {
-          download.file("http://hw1_data.csv",
+          download.file("https://d396qusza40orc.cloudfront.net/rprog/data/quiz1_data.zip",
              "hw1_data.csv",  # stores file in R working directory
              method=dlMethod, # use OS-appropriate method
              mode="w")        # "w" is used for text files
@@ -68,7 +68,7 @@ The course project data for *Getting and Cleaning Data* includes multiple files 
 
 ## Putting it all together: a function for downloading files
 
-Having covered the basics and a set of enhancements to handle various situations, the next step would be to write a reusable function for downloading one or more files, as we did in [Creative Use of R: Downloading Course Lectures](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-downloadingLectures.md).
+Having covered the basics and a set of enhancements to handle various situations, the next step would be to write a reusable function for downloading one or more files, as we did in [Creative Use of R: Downloading Course Lectures](http://bit.ly/2bGlI7R).
 
     #
     # download lectures, requires curl package
