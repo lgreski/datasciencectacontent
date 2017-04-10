@@ -55,6 +55,8 @@ After all, that's what Data Science in real life is all about: ambiguous problem
 
 The Data Science Specialization can prepare a student for an entry level data science job. If you're coming from a lower paid profession (e.g. a middle-schoool or high school teacher in the United States), the curriculum can help you immediately get a better paying job, especially if you invest the effort in developing a github repository with high quality projects. On the other hand, if you're already in a higher paid profession (e.g. software developer), you may have to take a pay cut to gain the experience necessary to qualify for a data science job that pays more than your current job. 
 
+That said, beyond just completing the specialization, one needs to be able to discuss the projects completed, the techniques used, and most importantly, how one developed the "hacker mentality" necessary to figure things out on one's own. I see this as the most valuable aspect of the specialization for a beginning data scientist, because it changes the interview from "what do you already know?" to "how I can learn enough to solve any ambiguous problem quickly."
+
 # Appendix 
 
 ## JHU Data Science Team Ask Me Anything Session
