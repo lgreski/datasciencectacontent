@@ -51,6 +51,10 @@ On the other hand, the Specialization presents an opportunity for students to pr
 
 After all, that's what Data Science in real life is all about: ambiguous problems, messy data, scores of algorithms to consider, and limited computer resources that challenge the Data Scientist to produce actionable results within an acceptable cost structure. By the end of the Specialization a student has figured out how to learn about a tough topic, developed a level of self-sufficiency to tackle ambiguous problems, and produced deliverables that are worthy of sharing with potential employers for entry level data science jobs.
 
+# What Type of Job Can I Expect After Completing the Specialization?
+
+The Data Science Specialization can prepare a student for an entry level data science job. If you're coming from a lower paid profession (e.g. a middle-schoool or high school teacher in the United States), the curriculum can help you immediately get a better paying job, especially if you invest the effort in developing a github repository with high quality projects. On the other hand, if you're already in a higher paid profession (e.g. software developer), you may have to take a pay cut to gain the experience necessary to qualify for a data science job that pays more than your current job. 
+
 # Appendix 
 
 ## JHU Data Science Team Ask Me Anything Session
