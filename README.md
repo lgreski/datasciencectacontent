@@ -72,7 +72,7 @@ The next set of articles includes general commentary about the course, R program
 ### Miscellaneous Code Examples and Instructions
 
 1. [Permanently Setting R Working Directory](http://www.r-bloggers.com/setting-your-working-directory-permanently-in-r/) Link to R-bloggers.com article that explains how to set your working directory permanently in R (instead of RStudio)
-2. [Tutorial: Downloading Files](http://bit.ly/2iP2suj)
+2. [Tutorial: Downloading Files](http://bit.ly/2iP2suj) Illustrates various ways of downloading files, including binary and text files. 
 3. [Creative Use of R: Downloading Course Lectures](http://bit.ly/2bGlI7R) Article illustrating how to use R to automate the download of lectures from *Data Science Specialization* courses, such as *R Programming*. Techniques used in this article are helpful to make research reproducible, as required for courses like *Getting and Cleaning Data* and *Reproducible Research*.
 4. [How to Upgrade R without Losing Your Packages](http://bit.ly/2ejS8ox) article by Kris Eberwein on datascienceriot.com that includes code to save your list of packages to an rds file, and reinstall any packages that don't make it through the upgrade process.
 5. [Common R Mistakes: Overwriting R Functions with Output Variables](http://bit.ly/2i3gmoA)  
@@ -96,6 +96,7 @@ The next set of articles includes general commentary about the course, R program
 
 1. [Tidy Data](http://bit.ly/2nyw5Ci) Hadley Wickham's paper on Tidy Data, required reading for the course project. 
 2. [data.table Github Wiki](http://bit.ly/2og7rDK) Repository for `data.table` package, including video. 
+3. [Tutorial: Downloading Files](http://bit.ly/2iP2suj) Illustrates various ways of downloading files, including binary and text files. 
 
 
 ## Course 5: Reproducible Research
