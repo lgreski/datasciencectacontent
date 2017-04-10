@@ -13,11 +13,10 @@ The syntax for `download.file()` has a subtle complexity. The obvious parameters
 For the first few examples, we'll use a comma separated values file from the city of Baltimore. 
 
       #
-      # download Baltimore City Cameras file
+      # download Baltimore City Cameras file, using default download method
       #
       download.file("https://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD",
          "cameras.csv",  # stores file in R working directory
-         method=dlMethod, # use OS-appropriate method
          mode="w")  # "w" means "write," and is used for text files
          
 
