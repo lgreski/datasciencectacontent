@@ -68,12 +68,12 @@ The course project data for *Getting and Cleaning Data* includes multiple files 
 2. Once the file is downloaded, we must unzip it in order to use it.
 
 
-    url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-    download.file(url,
+       url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+       download.file(url,
                   destfile='HAR.zip',
                   method="curl",
                   mode="wb") # "wb" means "write binary," and is used for binary files
-    unzip(zipfile = "HAR.zip") # unpack the files into subdirectories 
+       unzip(zipfile = "HAR.zip") # unpack the files into subdirectories 
 
 ## Putting it all together: a function for downloading files
 
