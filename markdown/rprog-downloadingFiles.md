@@ -1,6 +1,6 @@
 # Tutorial: Downloading files
 
-By the time students complete the programming assignments and quizzes in *R Programming*, they have had to download a number of files from URLs listed in the assignment / quiz instructions. As an example, the *Getting and Cleaning Data* class has a lecture that illustrates downloading the Baltimore City Cameras data.
+By the time students complete the programming assignments and quizzes in *R Programming*, they have had to download a number of files from URLs listed in the assignment / quiz instructions. As an example, the first quiz in *R Programming* has a number of questions that are based on a file that must be downloaded during the quiz. 
 
 A beginning student will simply download the file from the URL, save it to the R working directory, and proceed with writing the R code necessary to answer the quiz questions.
 
@@ -10,13 +10,15 @@ A wise student will save the code  for later reference.  Even more beneficial is
 
 The syntax for `download.file()` has a subtle complexity. The obvious parameters include the URL to be downloaded, and the name of the file to which the content will be saved on a local disk drive. After that, additional parameters are dependent on the type of file to be downloaded, as illustrated in the following code fragment.
 
+For the first few examples, we'll use a comma separated values file from the city of Baltimore. 
+
       #
       # download Baltimore City Cameras file
       #
       download.file("https://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD",
          "cameras.csv",  # stores file in R working directory
          method=dlMethod, # use OS-appropriate method
-         mode="w")  # "w" is used for text files
+         mode="w")  # "w" means "write," and is used for text files
          
 
 ## Upgrade 1: code that works on multiple operating systems
@@ -42,7 +44,7 @@ Now we can enhance our `download.files()` function to work correctly regardless 
       download.file("https://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD",
          "cameras.csv",  # stores file in R working directory
          method=dlMethod, # use OS-appropriate method
-         mode="w")        # "w" is used for text files
+         mode="w")        # "w" means "write," and is used for text files
          
 
 ## Upgrade 2: a good programmer is a lazy programmer...
@@ -55,7 +57,7 @@ Professor Peng talks about this in *R Programming*.  A lazy programmer doesn't d
           download.file("https://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD",
          "cameras.csv",  # stores file in R working directory
          method=dlMethod, # use OS-appropriate method
-         mode="w")        # "w" is used for text files
+         mode="w")        # "w" means "write," and is used for text files
       }
       
 
@@ -68,8 +70,11 @@ The course project data for *Getting and Cleaning Data* includes multiple files 
 
 
     url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-    download.file(url,destfile='HAR.zip',method="curl",mode="wb")
-    unzip(zipfile = "HAR.zip")
+    download.file(url,
+                  destfile='HAR.zip',
+                  method="curl",
+                  mode="wb") # "wb" means "write binary," and is used for binary files
+    unzip(zipfile = "HAR.zip") # unpack the files into subdirectories 
 
 ## Putting it all together: a function for downloading files
 
