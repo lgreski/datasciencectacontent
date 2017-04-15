@@ -1,4 +1,4 @@
-## Forms of the Extract Operator in R
+# Forms of the Extract Operator in R
 
 One of the things that confuses students in the Johns Hopkins Data Science Specialization *R Programming Course* is that the extract operator is introduced in a way that does not emphasize how important it is as a concept in the R language. Often students watch the lectures and then have difficulty applying what they've learned to answer questions 11 - 20 in the first quiz, questions that require use of the extract operator in various ways.
 
@@ -12,43 +12,13 @@ The first form, `[`, can be used to extract content from vector, lists, or data 
     x[13:15] # extract last 3 elements
     x[(length(x)-2):length(x)] # extract last 3 elements
 
-## Example: Reading Data Files with the Extract Operator
-
-Noting John Chambers' statement that <em>In R, everything is an object</em>, the `[` form of the extract operator can be used to extract data from the result of a function call. The following code executes `list.files()` on a subdirectory of the current R working directory that contains comma separated values files of Pokemon statistics, one file for each of the first 6 generations of Pokemon.
-
-Notice that there are 7 files in the subdirectory.
-
-<img src="./images/rprog-extractOperator03.png">
-
-    # return first two generations of Pokemon stored in
-    # pokemon data files retrieved from kaggle.com and
-    # broken out into 6 csv files, one per generation
-
-    thePokemonFiles <- list.files("./pokedata",
-                                  full.names=TRUE)[1:2]
-    thePokemonFiles
-
-The above code executes `list.files()`, and then the extract operator `[1:2]` is applied to the output object, resulting in a `thePokemonFiles` object containing the first two files returned from the `list.files()` function.
-
-<img src="./images/rprog-extractOperator04.png">
-
 When used with a list, `[` extracts one or more elements from the list.
 
-The second and third forms of the extract operator, `[[` and `$` extract a single item from an object. Note that `$` does not support a computed index, as illustrated in an example below.  
-
-Returning to our Pokemon example, we can use the output from `list.files()`, along with the `[[` form of the extract operator and `lapply()` to read a subset of columns from the data files.
-
-    pokemonData <- lapply(thePokemonFiles,function(x) read.csv(x)[["Attack"]])
-    # show the list of vectors
-    summary(pokemonData)
-
-<img src="./images/rprog-extractOperator05.png">
-
-The key feature of this code is use of an anonymous function within `lapply()` so we can apply the extract operator to the result of `read.csv()`. After the `lapply()` function executes, the `pokemonData` object is a list containing two vectors, the `Attack` column from each of the two files we read with `read.csv()`.
+The second and third forms of the extract operator, `[[` and `$` extract a single item from an object. Note that `$` does not support a computed index, as illustrated in an example in the next section of this article.  
 
 To combine the elements from the list into a single vector for subsequent processing, we can use the `unlist()` function.
 
-## Comparing Forms of the Extract Operator
+# Comparing Forms of the Extract Operator
 
 Since the easiest way to see how the various features of the extract operator work is to see code examples, we provide a number of code snippets to illustrate various ways to use the different forms of the operator.
 
@@ -112,7 +82,7 @@ Having illustrated different ways to extract content with the extract operator, 
     #             array instead of row numbers as in the prior example
     head(mtcars[!is.na(mtcars[,"cyl"]),])
 
-## Getting Help with Operators
+# Getting Help with Operators
 
 Students quickly learn that the help operator, `?`, is used to access R documentation. However, requesting help for an operator is a bit more complicated than it first appears:
 
@@ -124,8 +94,70 @@ Instead, one has to place the operator in double quotes, as in `?"["` to access 
 
 A more detailed explanation of the help function `help(...)` and help operator `?` may be found on the [Getting Help with R](https://www.r-project.org/help.html) page on the [R Project](https://www.r-project.org/) website.
 
-## References
+# Advanced Operations with the Extract Operator
+
+We've taken the extract operator through its paces with a variety of applications on a single data frame. Now, we'll expand on this to show how essential this operator is in combination with other R functions.
+
+## Concepts for R Programming -- Programming Assignment 1
+
+The first programming assignment in *R Programming* requires students to process a large number of pollution sensor files. The assignment is a big step up in complexity from the lectures in the first two weeks of the course, because it requires students to combine various elements of the lectures in ways that aren't obvious to a beginning R programmer.
+
+To provide a similar example that processes multiple files without using the actual assignment 1 content, we've adapted Alberto Barradas' [Pokémon Stats]() data from kaggle.com. Barradas' data includes basic statistics for the first 6 generations of Pokémon. By breaking the single file into 6 files, one for each generation, we can demonstrate a number of concepts that are relevant to solving the three components of *Programming Assignment 1* in *R Programming*.
+
+### Step 1: Retrieving File Names from a Subdirectory
+
+Noting John Chambers' statement that <em>In R, everything is an object</em>, the `[` form of the extract operator can be used to extract data from the result of a function call. The following code executes `list.files()` on a subdirectory of the current R working directory that contains comma separated values files of Pokémon statistics, one file for each of the first 6 generations of Pokémon.
+
+Notice that there are 7 files in the subdirectory, one for each generation of Pokémon, plus a seventh file that contains all the Pokémon.
+
+<img src="./images/rprog-extractOperator03.png">
+
+    # return first two generations of Pokémon stored in
+    # Pokémon data files retrieved from kaggle.com and
+    # broken out into 6 csv files, one per generation
+
+    thePokemonFiles <- list.files("./pokedata",
+                                  full.names=TRUE)[1:2]
+    thePokemonFiles
+
+The above code executes `list.files()`, and then the extract operator `[1:2]` is applied to the output object, resulting in a `thePokemonFiles` object containing the first two files returned from the `list.files()` function.
+
+<img src="./images/rprog-extractOperator04.png">
+
+### Step 2: Reading the Data
+
+Now that we have the list of files stored in a vector, we can use it along with the `[[` form of the extract operator and `lapply()` to read a subset of columns from the data files.
+
+    pokemonData <- lapply(thePokemonFiles,function(x) read.csv(x)[["Attack"]])
+
+    # show the list of vectors
+    summary(pokemonData)
+
+<img src="./images/rprog-extractOperator05.png">
+
+The key feature of this code is use of an anonymous function within `lapply()` so we can apply the extract operator to the result of `read.csv()`. After the `lapply()` function executes, the `pokemonData` object is a list containing two vectors, the `Attack` column from each of the two files we read with `read.csv()`.
+
+### Step 3: Using the Data
+
+At this point the `pokemonData` object is a list that contains the `Attack` column from each Pokémon from generations 1 and 2 of the game. How might we display a distribution of the `Attack` stats in a chart?
+
+First, we need to combine two vectors in the `pokemonData` object into a single object. Since the underlying data type is a numeric, we can use the `unlist()` function.
+
+Next, we'll display the data in a histogram.
+
+      hist(attackStats,
+           main="Pokemon Attack Stats: Gen 1 & 2")
+
+<img src="./images/rprog-extractOperator06.png">
+
+## Concepts for R Programming -- Programming Assignment 3
+
+### Example: Using the Extract Operator with `split()`
+
+
+
+# References
 
 1. [Extract {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Extract.html), retrieved 22 May 2016.
 2. [SlotOp {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/slotOp.html), retrieved 22 May 2016.
-3. [Pokemon Data by Alberto Barradas](https://www.kaggle.com/abcsds/pokemon)
+3. [Pokemon Stats by Alberto Barradas](http://bit.ly/2ovmmxu)
