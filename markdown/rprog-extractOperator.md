@@ -242,7 +242,9 @@ We can verify the results with an independent technique that will be covered in 
 
 <img src="./images/rprog-extractOperator08.png">
 
-Why are there 20 rows in the output data frame? There are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retrieved by the SQL query.
+Why are there 20 rows in the output data frame? The "data science" answer is that here we have another example of "untidy" data -- multiple rows in a data frame represent the same Pokémon. This is due to changes in the mechanics of Pokémon games over the last 20 years. The new mechanics are tracked as new versions of a given Pokémon, but retain the same National Pokédex Number as earlier version(s) of the Pokémon.  
+
+In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retrieved by the SQL query.
 
 Modification of the SQL query to eliminate the second Forme by using the `Total` stat is left as an interesting exercise for the reader.
 
