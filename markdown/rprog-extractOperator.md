@@ -222,7 +222,7 @@ In contrast to the earlier example where we used `unlist()` to combine the `Atta
 
 As we can see from the output, the result is a single data frame containing the first 5 columns from the input CSV file, containing the Pokémon for each type that has the lowest National Pokédex Number.
 
-We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` package. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the correlated subquery. The subquery is required to find the minimum National Pokédex Number for a given type.
+We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` function. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the correlated subquery. The subquery is required to find the minimum National Pokédex Number for a given type.
 
     # check the results within an independent technique: SQL with
     # a correlated subquery
@@ -248,7 +248,7 @@ Modification of the SQL query to eliminate the second Forme by using the `Total`
 
 # Concluding Remarks
 
-There you have it, a comprehensive overview of the extract operator, including a set of examples illustrating the key concepts for programming assignments 1 and 3 in *R Programming*. Solving the specific nuances of the actual assignment problems are left to the students to solve, such as handling of missing values and use of the parameters within each function.  
+There you have it, a comprehensive overview of the extract operator, including a set of examples illustrating the key concepts for programming assignments 1 and 3 in *R Programming*. Specific nuances of the actual assignment problems are left to the students to solve, such as handling of missing values and use of the parameters within each function.  
 
 # References
 
@@ -256,4 +256,4 @@ There you have it, a comprehensive overview of the extract operator, including a
 2. [SlotOp {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/slotOp.html), retrieved 22 May 2016.
 3. [Pokémon Stats by Alberto Barradas](http://bit.ly/2ovmmxu)
 
-**last update date: 15 April 2017** 
+**last update date: 15 April 2017**
