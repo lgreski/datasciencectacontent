@@ -102,7 +102,7 @@ We've taken the extract operator through its paces with a variety of application
 
 The first programming assignment in *R Programming* requires students to process a large number of pollution sensor files. The assignment is a big step up in complexity from the lectures in the first two weeks of the course, because it requires students to combine various elements of the lectures in ways that aren't obvious to a beginning R programmer.
 
-To provide a similar example that processes multiple files without using the actual assignment 1 content, we've adapted Alberto Barradas' [Pokémon Stats]() data from kaggle.com. Barradas' data includes basic statistics for the first 6 generations of Pokémon. By breaking the single file into 6 files, one for each generation, we can demonstrate a number of concepts that are relevant to solving the three components of *Programming Assignment 1* in *R Programming*.
+To provide a similar example that processes multiple files without using the actual assignment 1 content, we've adapted Alberto Barradas' [Pokémon Stats]() data from kaggle.com. Barradas' data includes basic statistics for the first 6 generations of Pokémon. By breaking the single file into 6 files, one for each generation, we can demonstrate a number of concepts that are relevant to solving the three components of the programming assignment.
 
 ### Step 1: Retrieving File Names from a Subdirectory
 
@@ -150,14 +150,110 @@ Next, we'll display the data in a histogram.
 
 <img src="./images/rprog-extractOperator06.png">
 
+The histogram shows us that most generation 1 and 2 Pokémon have an Attack stat between 50 and 100. A `summary()` function tells us that the median of this distribution is 75, and the inter-quartile range is 50 - 93.5, confirming what we see in the histogram.
+
 ## Concepts for R Programming -- Programming Assignment 3
 
-### Example: Using the Extract Operator with `split()`
+Having used the Pokémon data to illustrate concepts for the first programming assignment in *R Programming*, we now turn to assignment 3. This programming assignment also has three components, just like the first assignment. Students are required to use data from the U.S. Department of Health and Human Services [Hospital Compare Database](http://hospitalcompare.hhs.gov) to compare outcomes for specific illnesses at hospitals across the United States and U.S. territories.
 
+Each function requires students to sort the data to find a ranked outcome for an illness, such as the **best hospital for heart attack outcome in Maryland**, or the **10th ranked hospitals for pneumonia across all states and territories**.
 
+By this point in the course students have learned how to use `apply()` functions, and are therefore expected to use these techniques to write some of the functions for the assignment. One way to solve these problems is to use an `apply()` function with `split()`, because some of the functions require processing the data by state.  
+
+Again, we'll use the [Pokémon Stats](http://bit.ly/2ovmmxu) data to illustrate these concepts.
+
+### Step 1: Load the Data
+
+First, we'll load the complete version of the Pokémon data, rather than the generation-specific files. Since the original data files are already sorted according to National Pokédex ID Number, this means that they are also sorted by generation.
+
+     pokemon <- read.csv("./pokedata/Pokemon.csv")
+
+For our example, we want to look at Pokémon by type. Pokémon may have two types, and they are represented in the Pokémon data with two columns, `Type1` and `Type2`. To simplify our analysis, we'll consider `Type1` as the primary type for each Pokémon.
+
+How might we, for example, retrieve the first Pokémon of each type?
+
+### Step 2: Split the Pokémon by Type
+
+The `split()` function breaks a single data frame into a list of multiple data frames, based on the values of a factor variable that is passed as an argument to `split()`.  For the Pokémon data, it works like this.
+
+     pokemonTypes <- split(pokemon,pokemon$Type1)
+
+### Step 3: Use the Extract Operator
+
+At this point, `pokemonTypes` is a list of data frames, one for each of the 18 Pokémon types.
+Since the `pokemonTypes` object is a `list()`, we need to extract the right data frame from the list, and then extract the desired information.
+
+The individual data frames can be accessed by `Type1` name because the values of the factor variable used in `split()` are assigned as the element names in the output `list()` object.
+
+To extract the First *Fire* type Pokémon, we simply need to extract the `Fire` element from the list, and from this object extract the first row. We'll also only select columns `1:5` from the data frame.
+
+    # extract first Fire type, should be Charmander
+    pokemonTypes$Fire[1,1:5]
+
+Since the number of Pokémon by type varies by generation, extracting the last Pokémon for a particular type requires a bit more code. Here, we'll extract the last `Bug` type.
+
+    #extract last Bug type, should be Vivillon
+    pokemonTypes$Bug[nrow(pokemonTypes$Bug),1:5]
+
+Since there are three forms of the extract operator that are commonly used, we can also show that the `[[` works for this type of extraction.
+
+    # Also works using [[ form of extract operator
+    pokemonTypes$Bug[nrow(pokemonTypes[["Bug"]]),1:5]
+
+### Step 4: using Extract with `apply()`
+
+Having demonstrated how access an individual element in the list, we'll show how to extract a given row across a list of data frames.
+
+The key feature we'll need to use is an anonymous function, where the code within the function controls the rows and columns to be extracted from each data frame in a `list()`. For this purpose we'll use `lapply()`.
+
+    # extract first of all types using lapply
+    firstOfEachType <- lapply(pokemonTypes,function(x) {x[1,1:5]})
+
+At this point the `firstOfEachType` object is a list of 18 data frames, each containing a single row from the original list of data frames.
+
+### Step 5: Combining the List into a Single Data Frame  
+
+In contrast to the earlier example where we used `unlist()` to combine the `Attack` vectors in a list, we need to use a function that works with data frames. Fortunately, R provides a function, `do.call()`, that allows us to pass a list of arguments to another function. In this case, we'll use it with `rbind()`.
+
+    # combine into a single data frame and print
+    do.call(rbind,firstOfEachType)
+
+<img src="./images/rprog-extractOperator07.png">
+
+As we can see from the output, the result is a single data frame containing the first 5 columns from the input CSV file, containing the Pokémon for each type that has the lowest National Pokédex Number.
+
+We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` package. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the correlated subquery. The subquery is required to find the minimum National Pokédex Number for a given type.
+
+    # check the results within an independent technique: SQL with
+    # a correlated subquery
+    library(sqldf)
+    typeList <- c("Bug","Dark","Dragon","Electric","Fairy",
+                  "Fighting","Fire","Flying","Ghost","Grass","Ground",
+                  "Ice","Normal","Poison","Psychic","Rock","Steel","Water")
+    resultFrame <- NULL
+    for (theType in typeList) {
+         theQuery <- paste("select Number, Name, Type1, Type2, Total from pokemon ",
+         "where Type1 = '",theType,"' and Number = (select min(Number) from pokemon ",
+          "where Type1 = '",theType,"')",sep="")
+         resultFrame <-rbind(resultFrame, sqldf(theQuery))
+    }
+    # print the result
+    resultFrame
+
+<img src="./images/rprog-extractOperator08.png">
+
+Why are there 20 rows in the output data frame? There are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retrieved by the SQL query.
+
+Modification of the SQL query to eliminate the second Forme by using the `Total` stat is left as an interesting exercise for the reader.
+
+# Concluding Remarks
+
+There you have it, a comprehensive overview of the extract operator, including a set of examples illustrating the key concepts for programming assignments 1 and 3 in *R Programming*. Solving the specific nuances of the actual assignment problems are left to the students to solve, such as handling of missing values and use of the parameters within each function.  
 
 # References
 
 1. [Extract {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Extract.html), retrieved 22 May 2016.
 2. [SlotOp {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/slotOp.html), retrieved 22 May 2016.
-3. [Pokemon Stats by Alberto Barradas](http://bit.ly/2ovmmxu)
+3. [Pokémon Stats by Alberto Barradas](http://bit.ly/2ovmmxu)
+
+**last update date: 15 April 2017** 
