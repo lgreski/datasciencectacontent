@@ -6,7 +6,7 @@ Fortunately, past students have developed a fair amount of content to guide othe
 
 ## Assignment 1 Topics
 
-For assignment 1, [Derek Franks's Tutorial for those struggling with Programming Assignment 1](https://github.com/derekfranks/practice_assignment) is very helpful, along with my articles [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), [Forms of the Extract Operator](http://bit.ly/2bzLYTL) and [Breaking Down Pollutantmean](http://bit.ly/2cHyiCl).
+For assignment 1, [Derek Franks' Tutorial for those struggling with Programming Assignment 1](https://github.com/derekfranks/practice_assignment) is very helpful, along with my articles [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), [Forms of the Extract Operator](http://bit.ly/2bzLYTL) and [Breaking Down Pollutantmean](http://bit.ly/2cHyiCl).
 
 ## Assignment 2 Topics
 
