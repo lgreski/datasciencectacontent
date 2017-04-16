@@ -164,7 +164,7 @@ Again, we'll use the [Pokémon Stats](http://bit.ly/2ovmmxu) data to illustrate 
 
 ### Step 1: Load the Data
 
-First, we'll load the complete version of the Pokémon data, rather than the generation-specific files. Since the original data files are already sorted according to National Pokédex ID Number, this means that they are also sorted by generation.
+First, we'll load the complete version of the Pokémon data, rather than the generation-specific files. Since the original data file is already sorted according to National Pokédex ID Number, this means that it is also sorted by generation.
 
      pokemon <- read.csv("./pokedata/Pokemon.csv")
 
@@ -172,20 +172,26 @@ For our example, we want to look at Pokémon by type. Pokémon may have two type
 
 How might we, for example, retrieve the first Pokémon of each type?
 
-### Step 2: Split the Pokémon by Type
+### Step 2: If Necessary, Sort the Data
+
+In our case, we won't need to resort the data. However, since the `split()` function retains the sort order from the original data frame in all output data frames, if one needs to sort the data, sort it prior to using `split()`.
+
+For a descriptions of techniques used to sort a data frame, please review [Functions to Sort Data Frames](http://bit.ly/2dxItzw).
+
+### Step 3: Split the Pokémon by Type
 
 The `split()` function breaks a single data frame into a list of multiple data frames, based on the values of a factor variable that is passed as an argument to `split()`.  For the Pokémon data, it works like this.
 
      pokemonTypes <- split(pokemon,pokemon$Type1)
 
-### Step 3: Use the Extract Operator
+### Step 4: Experiment with Extracting a Pokémon
 
 At this point, `pokemonTypes` is a list of data frames, one for each of the 18 Pokémon types.
 Since the `pokemonTypes` object is a `list()`, we need to extract the right data frame from the list, and then extract the desired information.
 
 The individual data frames can be accessed by `Type1` name because the values of the factor variable used in `split()` are assigned as the element names in the output `list()` object.
 
-To extract the First *Fire* type Pokémon, we simply need to extract the `Fire` element from the list, and from this object extract the first row. We'll also only select columns `1:5` from the data frame.
+To extract the first *Fire* type Pokémon, we simply need to extract the `Fire` element from the list, and from this object extract the first row. We'll also only select columns `1:5` from the data frame.
 
     # extract first Fire type, should be Charmander
     pokemonTypes$Fire[1,1:5]
@@ -200,7 +206,7 @@ Since there are three forms of the extract operator that are commonly used, we c
     # Also works using [[ form of extract operator
     pokemonTypes$Bug[nrow(pokemonTypes[["Bug"]]),1:5]
 
-### Step 4: using Extract with `apply()`
+### Step 5: Use Extract with `apply()`
 
 Having demonstrated how access an individual element in the list, we'll show how to extract a given row across a list of data frames.
 
@@ -211,7 +217,7 @@ The key feature we'll need to use is an anonymous function, where the code withi
 
 At this point the `firstOfEachType` object is a list of 18 data frames, each containing a single row from the original list of data frames.
 
-### Step 5: Combining the List into a Single Data Frame  
+### Step 6: Combine the List into a Single Data Frame  
 
 In contrast to the earlier example where we used `unlist()` to combine the `Attack` vectors in a list, we need to use a function that works with data frames. Fortunately, R provides a function, `do.call()`, that allows us to pass a list of arguments to another function. In this case, we'll use it with `rbind()`.
 
@@ -221,6 +227,8 @@ In contrast to the earlier example where we used `unlist()` to combine the `Atta
 <img src="./images/rprog-extractOperator07.png">
 
 As we can see from the output, the result is a single data frame containing the first 5 columns from the input CSV file, containing the Pokémon for each type that has the lowest National Pokédex Number.
+
+#### Verifying Accuracy of the Results
 
 We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` function. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the correlated subquery. The subquery is required to find the minimum National Pokédex Number for a given type.
 
@@ -242,7 +250,9 @@ We can verify the results with an independent technique that will be covered in 
 
 <img src="./images/rprog-extractOperator08.png">
 
-Why are there 20 rows in the output data frame? The "data science" answer is that here we have another example of "untidy" data -- multiple rows in a data frame represent the same Pokémon. This is due to changes in the mechanics of Pokémon games over the last 20 years. The new mechanics are tracked as new versions of a given Pokémon, but retain the same National Pokédex Number as earlier version(s) of the Pokémon.  
+### Why are there 20 rows in the output data frame?
+
+The "data science" answer is that here we have another example of "untidy" data -- multiple rows in a data frame represent the same Pokémon. This is due to changes in the mechanics of Pokémon games over the last 20 years. The new mechanics are tracked as new versions of a given Pokémon, but retain the same National Pokédex Number as earlier version(s) of the Pokémon.  
 
 In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retrieved by the SQL query.
 
