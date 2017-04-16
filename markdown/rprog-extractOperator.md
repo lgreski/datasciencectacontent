@@ -102,7 +102,7 @@ We've taken the extract operator through its paces with a variety of application
 
 The first programming assignment in *R Programming* requires students to process a large number of pollution sensor files. The assignment is a big step up in complexity from the lectures in the first two weeks of the course, because it requires students to combine various elements of the lectures in ways that aren't obvious to a beginning R programmer.
 
-To provide a similar example that processes multiple files without using the actual assignment 1 content, we've adapted Alberto Barradas' [Pokémon Stats]() data from kaggle.com. Barradas' data includes basic statistics for the first 6 generations of Pokémon. By breaking the single file into 6 files, one for each generation, we can demonstrate a number of concepts that are relevant to solving the three components of the programming assignment.
+To provide a similar example that processes multiple files without using the actual assignment 1 content, we've adapted Alberto Barradas' [Pokémon Stats](http://bit.ly/2ovmmxu) data from kaggle.com. Barradas' data includes basic statistics for the first 6 generations of Pokémon. By breaking the original data file into 6 files, one for each generation, we can demonstrate a number of concepts that are relevant to solving the three components of the programming assignment. The original CSV file and the 6 generation-specific CSV files are also available at the [lgreski/pokemonData repository](http://bit.ly/2nB2Zzy) on Github.
 
 ### Step 1: Retrieving File Names from a Subdirectory
 
