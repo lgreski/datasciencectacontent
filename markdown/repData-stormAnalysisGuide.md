@@ -21,7 +21,7 @@ The course project assignment instructions make the task seem simple, asking stu
 
 > Your data analysis must address the following questions:
 >
-> 1. Across the United States, which types of events (as indicated in the  variable) are most harmful with respect to population health?<br><br>
+> 1. Across the United States, which types of events (as indicated in the EVTYPE variable) are most harmful with respect to population health?<br><br>
 >
 > 2. Across the United States, which types of events have the greatest economic consequences?
 
@@ -33,13 +33,13 @@ Also, for students who have completed *Getting and Cleaning Data* as well, the s
 <col width="275">
 <col width="500">
 <tr><td>
-<img src="./images/repData-stormDataGuide01.png"></td><td>1. Extract data from the compressed file, and load it into an R data frame.<br><br>
+<img src="./images/repData-stormDataGuide01.png"></td><td>1. Download and extract data from the compressed file included in the assignment instructions, and load it into an R data frame.<br><br>
 2. Run basic R functions against the data to understand its features, and determine the types of cleaning and data transformations needed to restructure data in order to answer the research questions.<br><br>
 3. Write R code to clean and transform the data.<br><br>
-4. Analyze the data, answering the questions required for the assignment, and support the analysis with relevant graphics and statistics.  </td></tr>
+4. Analyze the data: answer the questions required for the assignment, and support the analysis with relevant graphics and statistics.  </td></tr>
 </table>
 
-The course project  instructions include references to the [data file](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2), a [codebook](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf) provided by the NOAA, as well as the URL for the [frequently asked questions web page](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf) from the NOAA.
+The course project instructions include references to the [data file](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2), a [codebook](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf) provided by the NOAA, as well as the URL for the [frequently asked questions web page](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf) from the NOAA.
 
 Step 1, downloading and extracting data from the compressed file, is a straightforward process that students figure out by the time they complete *Getting and Cleaning Data*. One wrinkle in the download process is that the data file for this project uses the `bzip2` format instead of `zip`. Fortunately the `R.utils` package provides a `bunzip2()` function that can be used to extract the data.
 
@@ -76,13 +76,31 @@ Items to cover in this section include:
 
 # Solutions for Students: Defensible Responses to the Problems
 
-## 1. Solutions for Changing Data & Data Collection strategies
+Discuss the key to the assignment: any analysis decision that has a "defensible" answer will meet the grading criteria. Example: coding to Avatar the Last Airbender event types. According to the grading criteria, this is a valid way to analyze the data, and should receive full credit from graders. 
+
+## 1. Solutions for Changing Data & Data Collection Strategies
 
 ## 2. Solutions for Poor Data Quality
 
 ## 3. Solutions for Low Quality documentation
 
 ## 4. Solutions for Large Data Size
+
+# Additional Considerations
+
+## Passing the Peer review
+
+Key theme here, quoting [David Hood's](http://bit.ly/2jrYY1x) advice in his commentary on the *Getting and Cleaning Data* final assignment, "Make it easy on your graders."
+
+* use a checklist of requirements
+* match your assignment to the checklist
+* use headings that match the checklist to make the answers obvious to graders
+* Provide a meaningful text narrative / don't just submit the code and expect graders to figure it out
+
+## Fulfilling the Coursera Honor Code Requirements  
+
+* comments here about balancing the use of outside sources and "doing your own work"
+*
 
 # Conclusions
 
