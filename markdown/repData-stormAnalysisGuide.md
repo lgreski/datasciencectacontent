@@ -43,13 +43,13 @@ The course project  instructions include references to the [data file](https://d
 
 Step 1, downloading and extracting data from the compressed file, is a straightforward process that students figure out by the time they complete *Getting and Cleaning Data*. One wrinkle in the download process is that the data file for this project uses the `bzip2` format instead of `zip`. Fortunately the `R.utils` package provides a `bunzip2()` function that can be used to extract the data.
 
-The project instructions indicate that the data file is a comma separated values file. Therefore, it can be read into R with `read.csv()`. Depending on the speed of one's computer, the data load process can be more or less time consuming. After *Getting and Cleaning Data*, students can expect that 70 - 80% of the effort on this assignment will be related to cleaning the data. Therefore, the first decision to be made by the student is whether to simply load the data and start exploring it, or spend some additional time trying to make sense of the data by reading the NOAA documentation. 
+The project instructions indicate that the data file is a comma separated values file. Therefore, it can be read into R with `read.csv()`. Depending on the speed of one's computer, the data load process can be more or less time consuming. After *Getting and Cleaning Data*, students can expect that 70 - 80% of the effort on this assignment will be related to cleaning the data. Therefore, the first decision to be made by the student is whether to simply load the data and start exploring it, or spend some additional time trying to make sense of the data by reading the NOAA documentation.
 
 * strategies for figuring out what's in the file: stringsAsFactors? read a few lines? Read the codebook?
 
 Loading the data in R is also relatively easy because the raw data file can be read with the `read.csv()`. That said, the large size of the data  Once the data has been loaded into R, the challenges begin.  
 
-# Problem 1: Changing Data & Collection methods
+# Problem 1: Changing Data & Collection Methods
 
 Most students
 *
@@ -76,20 +76,32 @@ Items to cover in this section include:
 
 # Solutions for Students: Defensible Responses to the Problems
 
+## 1. Solutions for Changing Data & Data Collection strategies
+
+## 2. Solutions for Poor Data Quality
+
+## 3. Solutions for Low Quality documentation
+
+## 4. Solutions for Large Data Size
+
 # Conclusions
 
 # Appendix
 
 ## Information Available from the National Oceanographic and Atmospheric Administration
 
-[National Weather Services Directive 10-1605](https://www.ncdc.noaa.gov/stormevents/pd01016005curr.pdf)
+[National Weather Services Directive 10-1605](https://www.ncdc.noaa.gov/stormevents/pd01016005curr.pdf). This version of the document matches the one provided in the course assignment instructions as of 20 April 2017.
 
 [National Weather Service Operations Manual Chapter F-42](http://www.nws.noaa.gov/wsom/manual/archives/NF429405.HTML) Contains the 1994 version of the *User's Guide for the Storm Data Database*, which provides important details on how data is entered into the database.
 
 [NOAA StormData FAQ](https://www.ncdc.noaa.gov/stormevents/faq.jsp)
 
-[NOAA Storm Data Details](https://www.ncdc.noaa.gov/stormevents/details.jsp)
+[NOAA Storm Data Details Documentation](https://www.ncdc.noaa.gov/stormevents/details.jsp)
 
 [NOAA Storm Data Downloadable Files](https://www1.ncdc.noaa.gov/pub/data/swdi/stormevents/)
+
+[NOAA StormData Detailed CSV Files](ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/csvfiles/)
+
+[NOAA StormData Files and Documentation](ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/) includes access to all StormData content, including the data, documentation, photographs, and presentations describing the content.
 
 ##
