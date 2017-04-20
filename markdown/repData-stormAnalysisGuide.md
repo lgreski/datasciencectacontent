@@ -41,12 +41,17 @@ Also, for students who have completed *Getting and Cleaning Data* as well, the s
 
 The course project  instructions include references to the [data file](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2), a [codebook](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf) provided by the NOAA, as well as the URL for the [frequently asked questions web page](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf) from the NOAA.
 
-Step 1, downloading and extracting data from the compressed file, is a straightforward process.
+Step 1, downloading and extracting data from the compressed file, is a straightforward process that students figure out by the time they complete *Getting and Cleaning Data*. One wrinkle in the download process is that the data file for this project uses the `bzip2` format instead of `zip`. Fortunately the `R.utils` package provides a `bunzip2()` function that can be used to extract the data.
 
-Loading the data in R is also relatively easy because the raw data file can be read with the `read.csv()`. Once the data has been loaded, the challenges begin.  
+The project instructions indicate that the data file is a comma separated values file. Therefore, it can be read into R with `read.csv()`. Depending on the speed of one's computer, the data load process can be more or less time consuming. After *Getting and Cleaning Data*, students can expect that 70 - 80% of the effort on this assignment will be related to cleaning the data. Therefore, the first decision to be made by the student is whether to simply load the data and start exploring it, or spend some additional time trying to make sense of the data by reading the NOAA documentation. 
+
+* strategies for figuring out what's in the file: stringsAsFactors? read a few lines? Read the codebook?
+
+Loading the data in R is also relatively easy because the raw data file can be read with the `read.csv()`. That said, the large size of the data  Once the data has been loaded into R, the challenges begin.  
 
 # Problem 1: Changing Data & Collection methods
 
+Most students
 *
 
 # Problem 2: Poor Data Quality
