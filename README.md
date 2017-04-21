@@ -102,7 +102,7 @@ The next set of articles includes general commentary about the course, R program
 ## Course 5: Reproducible Research
 1. [Assignment 2 Checklist](http://bit.ly/2c6XFhQ)
 2. [Configuring knitr to Retain Markdown Output](http://bit.ly/2nITVJH) Explains how to configure knitr so that markdown file and any associated graphics are retained after building an HTML document, so they can be uploaded to Github and viewed there. 
-3. [Assignment 2: Improving Runtime Performance of Initial Data Load](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/repdata-improvingInitialFileReadSpeed.md)
+3. [Assignment 2: Improving Runtime Performance of Initial Data Load](http://bit.ly/2q0ieCO)
 
 ## Course 6: Statistical Inference
 
