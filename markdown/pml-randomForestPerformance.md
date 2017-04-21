@@ -119,7 +119,7 @@ Finally, to illustrate the impact that the resampling technique has on the runti
 <tr><td> HP Spectre x360 laptop</td><td>Random Forest</td><td>CV</td><td align="right">04.65 minutes</td></tr>
 <tr><td> Macbook Pro laptop</td><td>Random Forest</td><td>CV</td><td align="right">06.56 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Bootstrap</td><td align="right">17.00 minutes</td></tr>
-<tr><td> HP Envy X2 laptop</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
+<tr><td> HP Envy X2 tablet</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
 </table>
 
 ### Machine Configurations
