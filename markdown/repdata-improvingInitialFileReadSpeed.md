@@ -6,10 +6,10 @@ However, when working with large data sets, the default behavior of knitr to rer
 
 Here are four approaches to improving the response time performance of the initial load.  
 
-1. Set `stringsAsFactors=FALSE` on `read.csv()`. One of the default argument settings is to convert strings to factors, and this is very slow for the Storm Data data set (71 seconds read time on an [HP Spectre x-360 laptop]()) vs. 31 seconds when stringsAsFactors=FALSE.<br><br>
-2. Use a more efficient program to read the data, such as readr::read_csv(). I write about this in Real World Example: Reading the American Community Survey. On my laptop, readr::read_csv() reads the NOAA Storm Data data in 11.3 seconds.<br><br>
-3. Write logic to read the data once, and save it as a serialized object with saveRDS(). Once saved, the data can be read with readRDS(), which takes about 10.7 seconds on my laptop.<br><br>
-4. Use knitr options to cache results of code chunks.<br><br>
+1. Set `stringsAsFactors=FALSE` on `read.csv()`. One of the default argument settings is to convert strings to factors, and this is very slow for the Storm Data data set (71 seconds read time on an [HP Spectre x-360 laptop](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/repdata-improvingInitialFileReadSpeed.md#appendix-computer-specifications)) vs. 31 seconds when stringsAsFactors=FALSE.<br><br>
+2. Use a more efficient program to read the data, such as `readr::read_csv()`. I write about this in [Real World Example: Reading American Community Survey U.S. Census Data](http://bit.ly/2bAdLE9). On my laptop, `readr::read_csv()` reads the NOAA Storm Data data in 11.3 seconds.<br><br>
+3. Write logic to read the data once, and save it as a serialized object with `saveRDS()`. Once saved, the data can be read with `readRDS()`, which takes about 10.7 seconds on my laptop.<br><br>
+4. Use `knitr` options to [cache results of code chunks](http://rstudio-pubs-static.s3.amazonaws.com/180_77c843dcecf2406fb89d35dd0476628a).<br><br>
 
 With #3, the logic to do this would look like the following, including programming statements to track the load, save, and read times.
 
@@ -20,8 +20,7 @@ With #3, the logic to do this would look like the following, including programmi
            stormData <- read_csv("./repdata/assignment2/repdata-data-StormData.csv",
                                  n_max = 902297,
                                  col_names = TRUE,
-                                 na = "NA",
-                                 col_types = "ccccccccccccccccccccccccccccccccccccc")
+                                 ...) # additional arguments go here
            intervalEnd <- Sys.time()
            message(paste("readr::read_csv() took: ",intervalEnd - intervalStart,attr(intervalEnd - intervalStart,"units")))
            intervalStart <- Sys.time()
