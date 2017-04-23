@@ -18,7 +18,7 @@ Understanding of scoping is key to *R Programming Assignment 2*, because the fac
 
 A cache is a way to [store objects in memory to accelerate subsequent access](https://en.wikipedia.org/wiki/Cache_(computing)) to the same object. In statistics, some matrix algebra computations are notoriously expensive, such as calculating the inverse of a matrix. Therefore, if one needs to use the same inverted matrix for subsequent computations, it is advantageous to cache it in memory instead of repeatedly calculating the inverse. Programming Assignment 2 uses the scenario of needing to cache an inverted matrix as a way of illustrating how this might be done with a special matrix object that stores its inverse as an in-memory object. 
 
-The assignment uses an example of caching a mean to illustrate the underlying concepts of scoping and creating an S3 object, as I discuss in [R Objects, S Objects, and Lexical Scoping]](http://bit.ly/2dtOSXi). 
+The assignment uses an example of caching a mean to illustrate the underlying concepts of scoping and creating an S3 object, as I discuss in [R Objects, S Objects, and Lexical Scoping](http://bit.ly/2dtOSXi). 
 
 ## Overall Design of makeVector() and cachemean()
 
