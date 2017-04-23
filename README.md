@@ -98,6 +98,10 @@ The next set of articles includes general commentary about the course, R program
 2. [data.table Github Wiki](http://bit.ly/2og7rDK) Repository for `data.table` package, including video. 
 3. [Tutorial: Downloading Files](http://bit.ly/2iP2suj) Illustrates various ways of downloading files, including binary and text files. 
 
+## Course 4: Exploratory Data Analysis
+
+1. [Assignment 1: Reading a Subset of Raw Data](http://bit.ly/2oAHoqI)
+
 
 ## Course 5: Reproducible Research
 1. [Assignment 2 Checklist](http://bit.ly/2c6XFhQ)
