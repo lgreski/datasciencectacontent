@@ -57,7 +57,7 @@ Most students
 # Problem 2: Poor Data Quality
 
 * Even the NOAA says the data isn't accurate (see 2012 NOAA presentation)
-*
+* Longitude / latitude information requires transformation before use, not documented 
 
 # Problem 3: Low Quality Documentation
 
@@ -76,7 +76,7 @@ Items to cover in this section include:
 
 # Solutions for Students: Defensible Responses to the Problems
 
-Discuss the key to the assignment: any analysis decision that has a "defensible" answer will meet the grading criteria. Example: coding to Avatar the Last Airbender event types. According to the grading criteria, this is a valid way to analyze the data, and should receive full credit from graders. 
+Discuss the key to the assignment: any analysis decision that has a "defensible" answer will meet the grading criteria. Example: coding to Avatar the Last Airbender event types. According to the grading criteria, this is a valid way to analyze the data, and should receive full credit from graders.
 
 ## 1. Solutions for Changing Data & Data Collection Strategies
 
@@ -116,10 +116,8 @@ Key theme here, quoting [David Hood's](http://bit.ly/2jrYY1x) advice in his comm
 
 [NOAA Storm Data Details Documentation](https://www.ncdc.noaa.gov/stormevents/details.jsp)
 
-[NOAA Storm Data Downloadable Files](https://www1.ncdc.noaa.gov/pub/data/swdi/stormevents/)
-
 [NOAA StormData Detailed CSV Files](ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/csvfiles/)
 
-[NOAA StormData Files and Documentation](ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/) includes access to all StormData content, including the data, documentation, photographs, and presentations describing the content.
+[NOAA StormData Files and Documentation](ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/) includes access to all StormData content as downloadable files including the data, documentation, photographs, and presentations describing the content.
 
 ##
