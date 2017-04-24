@@ -57,7 +57,7 @@ Most students
 # Problem 2: Poor Data Quality
 
 * Even the NOAA says the data isn't accurate (see 2012 NOAA presentation)
-* Longitude / latitude information requires transformation before use, not documented 
+* Longitude / latitude information requires transformation before use, not documented
 
 # Problem 3: Low Quality Documentation
 
@@ -68,7 +68,7 @@ Items to cover in this section include:
 * Web documentation still looks like 1995-era website
 * Low signal to noise ratio in the documentation
 * Lots of unexplained jargon
-* Critical documentation is buried on FTP servers, requriing a lot of effort to discover it
+* Critical documentation is buried on FTP servers, requiring a lot of effort to discover it
 * NWS Directive does not explain how data collection varies over time
 * Need the Operations manual to fully understand the data, and it's not easily accessible
 
@@ -77,6 +77,10 @@ Items to cover in this section include:
 # Solutions for Students: Defensible Responses to the Problems
 
 Discuss the key to the assignment: any analysis decision that has a "defensible" answer will meet the grading criteria. Example: coding to Avatar the Last Airbender event types. According to the grading criteria, this is a valid way to analyze the data, and should receive full credit from graders.
+
+## Overall Plan of Attack
+
+Discuss how there needs to be a big picture to keep focused, avoid getting distracted on side issues (such as figuring out lat / long calculations). Focus on minimum required to get a "complete" assignment: one that fulfills the requirements of the [grading rubric](http://bit.ly/2c6XFhQ), and then expanding on it iteratively as time and curiousity permit. 
 
 ## 1. Solutions for Changing Data & Data Collection Strategies
 
