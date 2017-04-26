@@ -4,7 +4,6 @@
 
 Hello everyone. I'm noticing a number of people posting on the bulletin board about difficulties in solving the Quiz 2 questions. I thought that it might be helpful to discuss a general approach to determining the R features required for each one.
 
-
 The theme of Quiz 2 is reading and working with different types of data, based on the variety of approaches Professor Leek introduced during the first two lectures. As one works through the five questions in quiz, a general pattern of requirements emerges.
 
 **1) What type of file / API must I read, and how do I determine its type?**
