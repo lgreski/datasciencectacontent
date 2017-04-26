@@ -24,7 +24,7 @@ If the file has an associated code book, read the code book. This is often the c
 Again, Google is your friend. If it isn't obvious (e.g. XLSX files must be read with read.xlsx() or read.xlsx2() functions), run a search on "read <filetype\> into R", such as:
 
 
-![readingFiles02.png](./images/cleaningData-readingFiles01.png)
+![readingFiles02.png](./images/cleaningData-readingFiles02.png)
 
 Once you know the function name, you can install the required package(s) needed to use the function.
 
