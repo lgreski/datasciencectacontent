@@ -4,7 +4,6 @@
 
 Hello everyone. I'm noticing a number of people posting on the bulletin board about difficulties in solving the Quiz 2 questions. I thought that it might be helpful to discuss a general approach to determining the R features required for each one.
 
-
 The theme of Quiz 2 is reading and working with different types of data, based on the variety of approaches Professor Leek introduced during the first two lectures. As one works through the five questions in quiz, a general pattern of requirements emerges.
 
 **1) What type of file / API must I read, and how do I determine its type?**
@@ -13,7 +12,7 @@ To answer this question, you can directly access the file via a web browser, or 
 
 Sometimes the file type can be determined from the file extension. By now we all know what a .XLSX file is because it was reviewed in the Week 1 lecture, *Reading Excel Files*.  However, if you didn't know what an XLSX file is, remember, Google is your friend:
 
-![readingFiles01.png](./images/cleaningData-readingFiles01.png)
+![readingFiles00.png](./images/cleaningData-readingFiles00.png)
 
 In a similar manner, you can run a Google search to explain a file extension that you've never seen before.
 
@@ -24,7 +23,7 @@ If the file has an associated code book, read the code book. This is often the c
 Again, Google is your friend. If it isn't obvious (e.g. XLSX files must be read with read.xlsx() or read.xlsx2() functions), run a search on "read <filetype\> into R", such as:
 
 
-![readingFiles02.png](./images/cleaningData-readingFiles01.png)
+![readingFiles01.png](./images/cleaningData-readingFiles01.png)
 
 Once you know the function name, you can install the required package(s) needed to use the function.
 
