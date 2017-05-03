@@ -145,6 +145,7 @@ First, we need to combine two vectors in the `pokemonData` object into a single 
 
 Next, we'll display the data in a histogram.
 
+      attackStats <- unlist(pokemonData)
       hist(attackStats,
            main="Pokemon Attack Stats: Gen 1 & 2")
 
