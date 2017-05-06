@@ -71,10 +71,12 @@ Having illustrated different ways to extract content with the extract operator, 
     mtcars[20:22,]
 
     # approach 2: use logic in the row dimension of reference
+    #             select cars with 4 cylinders and manual transmissions
     head(mtcars[mtcars$cyl == 4 & mtcars$am == 1,])
     head(mtcars[mtcars[,"cyl"] == 4,])
 
     # approach 3: use which() function
+    #             select cars with 4 cylinders
     theSubsetRows <- which(mtcars$cyl == 4)
     head(mtcars[theSubsetRows,])
 
