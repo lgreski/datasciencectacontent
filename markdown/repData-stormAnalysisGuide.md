@@ -80,7 +80,7 @@ Discuss the key to the assignment: any analysis decision that has a "defensible"
 
 ## Overall Plan of Attack
 
-Discuss how there needs to be a big picture to keep focused, avoid getting distracted on side issues (such as figuring out lat / long calculations). Focus on minimum required to get a "complete" assignment: one that fulfills the requirements of the [grading rubric](http://bit.ly/2c6XFhQ), and then expanding on it iteratively as time and curiousity permit. 
+Discuss how there needs to be a big picture to keep focused, avoid getting distracted on side issues (such as figuring out lat / long calculations). Focus on minimum required to get a "complete" assignment: one that fulfills the requirements of the [grading rubric](http://bit.ly/2c6XFhQ), and then expanding on it iteratively as time and curiousity permit.
 
 ## 1. Solutions for Changing Data & Data Collection Strategies
 
@@ -115,6 +115,8 @@ Key theme here, quoting [David Hood's](http://bit.ly/2jrYY1x) advice in his comm
 [National Weather Services Directive 10-1605](https://www.ncdc.noaa.gov/stormevents/pd01016005curr.pdf). This version of the document matches the one provided in the course assignment instructions as of 20 April 2017.
 
 [National Weather Service Operations Manual Chapter F-42](http://www.nws.noaa.gov/wsom/manual/archives/NF429405.HTML) Contains the 1994 version of the *User's Guide for the Storm Data Database*, which provides important details on how data is entered into the database.
+
+[National Weather Service Operations Manual Archives](http://www.nws.noaa.gov/wsom/ARCHIVE.HTML#A_F) Contains the list of climate-related operating procedures, including the *StormData* documentation. 
 
 [NOAA StormData FAQ](https://www.ncdc.noaa.gov/stormevents/faq.jsp)
 
