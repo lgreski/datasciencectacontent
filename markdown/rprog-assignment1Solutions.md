@@ -15,7 +15,7 @@ Please note that the `pollutantmean()` function outline I discuss in [Breaking D
 
 # What does an "elegant" R program look like?
 
-I suggest that there are at least two key characteristics of an elegant R program, including:
+I suggest that there are at least three key characteristics of an elegant R program, including:
 
 1. Code that implements core R concepts (i.e. functional programming) in a minimum number of programming statements (that is, parsimonious code), and<br><br>
 2. Code that runs efficiently: requiring a minimum amount of resources, and <br><br>
