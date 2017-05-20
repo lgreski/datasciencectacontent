@@ -41,7 +41,7 @@ The early courses in the Data Science Specialization repeatedly encourage studen
 For example, the *R Programming* lexical scoping assignment can be completed with 3 changes in the example `cachemean.R` program, one of which is a global find / replace on the string *mean*, plus a couple of comment lines. Done this way, a student can get a perfect score on the assignment without actually learning how lexical scoping works. Extra work is required to fully comprehend what's going on in the smaple code, as I describe in [Demystifying makeVector().](http://bit.ly/2bTXXfq)
 
 Many students express frustration about this requirement when they struggle to complete the first few courses in the Specialization without understanding that it is actually a test of students' tenacity. To succeed in this field, one has to have a high level of ingenuity and creativity. One must also have an unwillingness to give up in the face of ambiguous problems. 
-Challenging students to develop these characteristics at the start of the Specialization by forcing them to find and use relevant resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistical Inference,* *Regression Models,* and *Practical Machine Learning.* 
+Challenging students to develop these characteristics at the start of the Specialization by forcing them to find and use relevant resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistical Inference,* *Regression Models,* *Practical Machine Learning,* and the *Capstone.* 
 
 # You: The Final Ingredient
 
@@ -58,6 +58,25 @@ The Data Science Specialization can prepare a student for an entry level data sc
 That said, beyond just completing the specialization, one needs to be able to discuss the projects completed, the techniques used, and most importantly, how one developed the "hacker mentality" necessary to figure things out on one's own. I see this as the most valuable aspect of the specialization for a beginning data scientist, because it changes the interview from "what do you already know?" to "how I can learn enough to solve any ambiguous problem quickly."
 
 # Appendix 
+
+## Capstone as the Ultimate Embodiment of the Hacker Mentality
+
+The Capstone project embodies all the things that are both exciting and frustrating about Data Science. Students must build a prediction algorithm in an area that is new to most students: natural language processing. The data source is a corpus of over 4 million English language texts from blogs, news sources, and twitter. 
+
+The assignment is deceptively simple: build an algorithm to predict the next word in a sentence, using the data provided for the project. Incorporate the algorithim into a Shiny application that can be installed on [Shinyapps.io](http://shinyapps.io) for peer review. The amount of instruction is minimal: weekly lectures consist of 1 - 3 minutes worth of content, plus references to academic papers in the area of natural language processing. 
+
+Students must do a considerable amount of work to solve the following challenges while building the predictive text application. 
+
+1. How much memory is consumed by the data relative to the compute power I have?
+2. How do I select one or more R packages that produce the deliverables I need to build my algorithm, and run efficiently on my computer?
+3. What does "good" look like for a text prediction algorithm? 
+4. How much data can I use in my prediction algorithm, given the processing limits of the free [Shinyapps.io](http://shinyapps.io) account? The three key considerations are load time, total memory used, and response time for predictions. 
+ 
+Finally, students must contend with a number of conflicting constraints and diverse commentary from other students, ranging from the desire to implement sophisticated algorithms like the [Katz Back Off Model](http://bit.ly/2pWECl0) versus the resources needed to execute it, to students who encourage others to implement the models on the Amazon EC2 cloud. 
+
+It takes a lot of self-discipline to wade through the natural language processing theory, figure out what one can actually execute given the compute power one has, and avoid time sinks in order to produce a working prediction app that runs on [Shinyapps.io](http://shinyapps.io). Ironically, the guidance I provide to students enrolled in *R Programming* [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A) still rings true: **make it work, make it right, make it fast.** 
+
+For those who persevere and finish the capstone project, there is a well deserved sense of accomplishment at solving a very challenging natural language processing problem. Having finished the Specialization, students are well equipped to tackle real life data science problems. 
 
 ## JHU Data Science Team Ask Me Anything Session
 
