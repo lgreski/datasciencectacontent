@@ -22,6 +22,10 @@ It took 1 hour 15 minutes to run the analysis, but it did complete successfully,
 
 If you're interested in seeing the impact of these variables on a machine learning problem, take a look at [Improving Performance of a Random Forest in caret::train()](http://bit.ly/2bYtutG), which compares the performance of four different machines processing of the course project.
 
-Second, buy as much speed as you can afford. Why? Faster machines allow you to explore the data more, so you understand it before developing hypothesis tests or using machine learning algorithms.
+Second, buy as much speed and processor cores as you can afford. Why? Faster machines allow you to explore the data more, so you understand it before developing hypothesis tests or using machine learning algorithms. A quad core machine will support eight independent threads, which greatly reduces runtime with packages that support parallel processing, such as `caret` in *Practical Machine Learning* and `quanteda` in the *Capstone*.  If you have to make a tradeoff between processor speed and number of cores, go with the machine that has more cores (e.g. quad core vs. dual core) because you'll appreciate the extra cores during *Practical Machine Learning* and the *Capstone*.
+
+Third, buy at least 16gb of RAM if at all possible. You'll need 16gb of RAM for the Capstone project if you want to use the entire data set to build the text prediction model without breaking the problem down into many smaller chunks and assembling these parts into a working model. A 16gb machine can process all of the data required for the Capstone, as I discuss in [n-grams and Computer Capacity](http://bit.ly/2couvxh).
 
 Finally, the quality of the code you write, as well as the performance characteristics of the R packages you use are the biggest determinants of program performance. Therefore, regardless of the machine you buy, it's worth learning how to write high performing R code.
+
+*last update: 21 May 2017*
