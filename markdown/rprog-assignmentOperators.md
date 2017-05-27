@@ -36,4 +36,4 @@ is the same as
     # rightward form
     15 -> x
 
-Note that the `=` form of the assignment operator is leftward form, and that it has other restrictions on its use. Therefore, most people who work in R prefer `<-` over `=`.
+Note that the `=` form of the assignment operator is leftward form only, and that it has other restrictions on its use. Therefore, most people who work in R prefer `<-` over `=`.
