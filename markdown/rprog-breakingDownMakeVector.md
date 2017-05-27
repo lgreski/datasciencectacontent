@@ -191,7 +191,12 @@ To summarize, the lexical scoping assignment in *R Programming* takes advantage 
 
 For additional commentary that explains how the assignment uses features of the S3 object system, please review [makeCacheMatrix() as an Object](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprogAssignment2Prototype.md).
 
-## Appendix A: cachemean.R
+## Appendix A: What's the Point of this Assignment? 
+
+Once students get through the assignment, they frequently ask questions about its value and purpose. A good article explaining the value of lexical scoping in statistical computing is [Lexical Scoping and Statistical Computing](http://bit.ly/2cmqAPy), written by Robert Gentleman and Ross Ihaka at the University of Auckland. 
+
+
+## Appendix B: cachemean.R
 
 Here is the entire listing for cachemean.R.
 
@@ -221,7 +226,7 @@ Here is the entire listing for cachemean.R.
     }
 
 
-## Appendix B: Frequently Asked Questions
+## Appendix C: Frequently Asked Questions
 
 ### Q: Why doesn't `cachemean()` return the cached value? My code looks like:
 
