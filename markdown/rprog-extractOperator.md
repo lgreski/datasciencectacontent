@@ -253,9 +253,11 @@ We can verify the results with an independent technique that will be covered in 
 
 <img src="./images/rprog-extractOperator08.png">
 
+The elegance of the R language is highlighted by the fact that the original version using `lapply()` requires significantly less code than the  `sqldf()` version. 
+
 ### Why are there 20 rows in the output data frame?
 
-The "data science" answer is that here we have another example of "untidy" data -- multiple rows in a data frame represent the same Pokémon. This is due to changes in the mechanics of Pokémon games over the last 20 years. The new mechanics are tracked as new versions of a given Pokémon, but retain the same National Pokédex Number as earlier version(s) of the Pokémon.  
+The "data science" answer is that here we have another example of ["untidy" data](http://bit.ly/2nyw5Ci) -- multiple rows in a data frame represent the same Pokémon. This is due to changes in the mechanics of Pokémon games over the last 20 years. The new mechanics are tracked as new versions of a given Pokémon, but retain the same National Pokédex Number as earlier version(s) of the Pokémon.  
 
 In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retrieved by the SQL query.
 
