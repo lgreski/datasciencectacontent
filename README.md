@@ -76,6 +76,7 @@ The next set of articles includes general commentary about the course, R program
 3. [Creative Use of R: Downloading Course Lectures](http://bit.ly/2bGlI7R) Article illustrating how to use R to automate the download of lectures from *Data Science Specialization* courses, such as *R Programming*. Techniques used in this article are helpful to make research reproducible, as required for courses like *Getting and Cleaning Data* and *Reproducible Research*.
 4. [How to Upgrade R without Losing Your Packages](http://bit.ly/2ejS8ox) article by Kris Eberwein on datascienceriot.com that includes code to save your list of packages to an rds file, and reinstall any packages that don't make it through the upgrade process.
 5. [Common R Mistakes: Overwriting R Functions with Output Variables](http://bit.ly/2i3gmoA)  
+6. [R Programming Cheat Sheet](http://bit.ly/2rwY4CD) Based on content from *R for Everyone* by Jared Lander. 
 
 ### Interesting R News and Blog Articles
 
