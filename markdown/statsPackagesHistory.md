@@ -8,9 +8,9 @@ Traditionally, the dominant languages used for data analysis by large companies 
 
 SPSS and SAS were originally designed to run on mainframe computers where the programs were run in batch mode, versus executing them line by line in an interactive session.   
 
-SPSS (Statistical Package for the Social Sciences) was originally written in Fortran in the 1960s to analyze data on punched cards. Additional information on the history of SPSS is located at [https://en.wikipedia.org/wiki/SPSS\#Versions\_and\_ownership\_history](https://en.wikipedia.org/wiki/SPSS#Versions_and_ownership_history).   
+SPSS (Statistical Package for the Social Sciences) was originally written in Fortran in the 1960s to analyze data on punched cards. Additional information on the history of SPSS is located at [SPSS Versions and Ownership History](https://en.wikipedia.org/wiki/SPSS#Versions_and_ownership_history).   
 
-SAS (Statistical Analysis System) was originally a combination of PL/1, Fortran, and Assembly Language. It was rewritten in C in 1985 as part of the SAS Institute's migration to a multi-vendor architecture, meaning that SAS could be compiled & run on multiple computer operating systems (IBM MVS, IBM VM/CMS, Windows PC, HP/UX, Sun, etc.).  Additional information on the history of SAS is located at [https://en.wikipedia.org/wiki/SAS\_(software)\#History](https://en.wikipedia.org/wiki/SAS_(software)#History).   
+SAS (Statistical Analysis System) was originally a combination of PL/1, Fortran, and Assembly Language. The first commercial release of SAS was in 1972, after approximately 6 years in development. It was rewritten in C in 1985 as part of the SAS Institute's migration to a multi-vendor architecture, meaning that SAS could be compiled & run on multiple computer operating systems (IBM MVS, IBM VM/CMS, Windows PC, HP/UX, Sun, etc.).  Additional information on the history of SAS is located at [SAS (software) History](https://en.wikipedia.org/wiki/SAS_(software)#History).   
 
 Programming languages and computing hardware have changed a lot since I used LISREL on an IBM 4381 to analyze political contributions to Illinois legislative candidates for my master's thesis. With a maximum RAM of 64MB, the 4381 had way less memory and disk space than my HP Envy X2 tablet, and I had to share its compute capacity with thousands of other users.   
 
