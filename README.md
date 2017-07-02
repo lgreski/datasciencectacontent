@@ -66,6 +66,7 @@ The next set of articles includes general commentary about the course, R program
 4. [Assignment 1: A More Elegant Solution](http://bit.ly/2kwBBlK)
 4. [Assignment 2: Demystifying makeVector](http://bit.ly/2bTXXfq)
 1. [Assignment 2: makeCacheMatrix as an Object](http://bit.ly/2byUe4e)
+4. [Assignment 2: Using Github Desktop](http://bit.ly/2udIoFf)
 2. [Assignment 2: Grading the SHA-1 Hash Code](http://bit.ly/2iUWoB6)
 3. [Assignment 3: Functions to Sort Data Frames](http://bit.ly/2dxItzw)
 
