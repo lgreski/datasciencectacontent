@@ -254,7 +254,7 @@ The elegance of the R language is highlighted by the fact that the original vers
 
 The "data science" answer is that here we have another example of ["untidy" data](http://bit.ly/2nyw5Ci) -- multiple rows in a data frame represent the same Pokémon. This is due to changes in the mechanics of Pokémon games over the last 20 years. The new mechanics are tracked as new versions of a given Pokémon, but retain the same National Pokédex Number as earlier version(s) of the Pokémon.  
 
-In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retrieved by the SQL query.
+In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retained when we subset the final data frame by National Pokédex Number.
 
 Modification of the SQL query to eliminate the second Forme by using the `Total` stat is left as an interesting exercise for the reader.
 
