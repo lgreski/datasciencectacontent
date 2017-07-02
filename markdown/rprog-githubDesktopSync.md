@@ -1,6 +1,6 @@
 # Using Github Desktop for Assignment 2
 
-This walkthrough is intended to illustrate how to save and post code for *Programming Assignment 2* from a local machine running RStudio to the forked copy of Professor Peng's [ProgrammingAssignment2](https://github.com/rdpeng/ProgrammingAssignment2) github repository.
+This walkthrough is intended to illustrate how to save and post code for *Programming Assignment 2* from a local machine running RStudio to a forked copy of Professor Peng's [ProgrammingAssignment2](https://github.com/rdpeng/ProgrammingAssignment2) github repository.
 
 ## Prerequisites
 
