@@ -2,14 +2,14 @@
 
 This walkthrough is intended to illustrate how to save and post code for *Programming Assignment 2* from a local machine running RStudio to the forked copy of Professor Peng's [ProgrammingAssignment2](https://github.com/rdpeng/ProgrammingAssignment2) github repository.
 
-Prerequisites
+## Prerequisites
 
 * R and RStudio installed
 * Github Desktop installed
 * Professor Peng's repository forked and accessible from your Github account
 * Local copy cloned from your remote Github repository and accessible in Github Desktop
 
-# Step 1: Edit the cachematrix.R file
+## Step 1: Edit the cachematrix.R file
 
 First, open the `cachematrix.R` file in RStudio, and edit to comply with the requirements of the programming assignment. Here is my version after adding a couple of comment lines prior to the `list()` function call at the end of `makeCacheMatrix()`.
 
@@ -19,7 +19,7 @@ Since I have configured RStudio / Git integration, I can now see that the file i
 
 <img src="./images/rprog-githubDesktop02.png">
 
-# Step 2: View the edited file in Github Desktop
+## Step 2: View the edited file in Github Desktop
 
 Open Github Desktop, access the ProgrammingAssignment2 repository, and you'll now see that `cachematrix.R` is noted as modified, as illustrated by the yellow icon next to the file name.
 
@@ -30,7 +30,7 @@ To see details of the changes in a manner similar to what we did in RStudio, cli
 <img src="./images/rprog-githubDesktop04.png">
 
 
-# Step 3: Commit changes
+## Step 3: Commit changes
 
 Each commit requires a text summary and description. Enter this information in the text entry boxes in the lower left corner of the Github Desktop window.
 
@@ -42,7 +42,7 @@ Once the changes have been committed to the local repository, you'll see the win
 
 <img src="./images/rprog-githubDesktop07.png">
 
-# Step 4: Push the changes to Github
+## Step 4: Push the changes to Github
 
 To push the updated file to the remote Github repository, press the `<Push origin>` button in the top navigation bar of Github Desktop.
 
@@ -52,7 +52,7 @@ Once the push completes, the button will now say `<fetch origin>`, meaning that 
 
 <img src="./images/rprog-githubDesktop09.png">
 
-# Step 5: Confirm changes are visible on Github
+## Step 5: Confirm changes are visible on Github
 
 Now you can navigate to your remote version of the *ProgrammingAssignment2* repository on Github, and view that the change has been made on the remote repository.
 
@@ -64,7 +64,7 @@ Second, we can click on the `cachematrix.R` file to view it, confirming that the
 
 <img src="./images/rprog-githubDesktop11.png">
 
-# Step 6: Find the SHA-1 hash code
+## Step 6: Find and Copy the SHA-1 hash code
 
 Finally, since students must post the SHA-1 hash code along with the URL for the Github repository for the assignment, view it by clicking on the first few characters of the hash code in the upper right corner of the file viewer window.
 
