@@ -235,21 +235,16 @@ As we can see from the output, the result is a single data frame containing the 
 
 We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` function. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the correlated subquery. The subquery is required to find the minimum National Pokédex Number for a given type.
 
-    # check the results within an independent technique: SQL with
-    # a correlated subquery
-    library(sqldf)
-    typeList <- c("Bug","Dark","Dragon","Electric","Fairy",
-                  "Fighting","Fire","Flying","Ghost","Grass","Ground",
-                  "Ice","Normal","Poison","Psychic","Rock","Steel","Water")
-    resultFrame <- NULL
-    for (theType in typeList) {
-         theQuery <- paste("select Number, Name, Type1, Type2, Total from pokemon ",
-         "where Type1 = '",theType,"' and Number = (select min(Number) from pokemon ",
-          "where Type1 = '",theType,"')",sep="")
-         resultFrame <-rbind(resultFrame, sqldf(theQuery))
-    }
-    # print the result
-    resultFrame
+     # check the results within an independent technique: SQL 
+     library(sqldf)
+     theQuery <- paste("select min(Number) as Number from pokemon ",
+                       "group by Type1")
+     theIDs <- sqldf(theQuery)[,"Number"]
+     # now use theIDs to subset original data
+     resultFrame <- pokemon[pokemon$Number %in% theIDs,1:5]
+     # order by type1
+     resultFrame <- resultFrame[order(resultFrame$Type1),]
+     resultFrame
 
 <img src="./images/rprog-extractOperator08.png">
 
