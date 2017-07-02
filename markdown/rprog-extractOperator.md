@@ -256,7 +256,7 @@ The "data science" answer is that here we have another example of ["untidy" data
 
 In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retained when we subset the final data frame by National Pokédex Number.
 
-Modification of the SQL query to eliminate the second Forme by using the `Total` stat is left as an interesting exercise for the reader.
+Modification of the code to eliminate the second Forme by using the `Total` stat is left as an interesting exercise for the reader.
 
 # Concluding Remarks
 
