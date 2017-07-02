@@ -7,7 +7,7 @@ Going back to the probability theory concepts that were covered in *Statistical 
 The following table illustrates the probability of predicting all 20 test cases, given a particular model accuracy.
 
 <table>
-<tr><th><br><br>Model<br>Accuracy</th><th>Probabilty<br>of Predicting <br>20 out of 20<br>Correctly</th>
+<tr><th><br><br>Model<br>Accuracy</th><th>Probability<br>of Predicting <br>20 out of 20<br>Correctly</th>
 </tr>
 <tr><td align=right>0.800</td><td align=right>0.0115</td></tr>
 <tr><td align=right>0.850</td><td align=right>0.0388</td></tr>
