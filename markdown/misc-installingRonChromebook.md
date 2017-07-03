@@ -11,7 +11,7 @@
 
 ## Administrator access
 
-Remember, sudo is your friend. 
+Remember, sudo is your friend.
 
 # Step 1: Install Linux on Chromebook
 
@@ -20,6 +20,16 @@ Remember, sudo is your friend.
 # Step 3: Install R Packages
 
 # Step 4: Install Git / Github
+
+# Using the System
+
+## Setting Working Directory
+
+## Storing Application Code
+
+## Storing & Accessing Data
+
+## Runtime Performance
 
 # References
 
