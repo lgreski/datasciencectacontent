@@ -16,7 +16,20 @@ Remember, sudo is your friend.
 
 # Step 1: Install Linux on Chromebook
 
+## Before you begin
+
+What are the consequences of installing in this manner 
+
 # Step 2: Install R and RStudio
+
+## Install R
+
+## Install Additional Modules
+
+## Install RStudio
+
+## Test the Installation
+
 
 # Step 3: Install R Packages
 
