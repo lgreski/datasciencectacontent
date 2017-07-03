@@ -32,6 +32,10 @@ Remember, sudo is your friend.
 
 ## Runtime Performance
 
+## Additional Tools
+
+using things like Atom to view files 
+
 # References
 
 [Installing Linux on Chromebook](https://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343)
