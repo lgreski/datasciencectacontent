@@ -6,6 +6,7 @@
 * Administrator access to the Chromebook
 * USB memory stick for additional storage
 * The "hacker mentality"
+* Enough Linux knowledge to be "dangerous"
 
 ## Chromebook & Specifications
 
