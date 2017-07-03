@@ -30,11 +30,15 @@ Remember, sudo is your friend.
 
 ## Storing & Accessing Data
 
-## Runtime Performance
+## Making it Work
+
+### Size of Problems One Can Solve
+
+### Runtime Performance
 
 ## Additional Tools
 
-using things like Atom to view files 
+using things like Atom to view files
 
 # References
 
