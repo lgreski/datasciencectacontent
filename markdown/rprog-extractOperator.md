@@ -235,21 +235,16 @@ As we can see from the output, the result is a single data frame containing the 
 
 We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` function. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the correlated subquery. The subquery is required to find the minimum National Pokédex Number for a given type.
 
-    # check the results within an independent technique: SQL with
-    # a correlated subquery
-    library(sqldf)
-    typeList <- c("Bug","Dark","Dragon","Electric","Fairy",
-                  "Fighting","Fire","Flying","Ghost","Grass","Ground",
-                  "Ice","Normal","Poison","Psychic","Rock","Steel","Water")
-    resultFrame <- NULL
-    for (theType in typeList) {
-         theQuery <- paste("select Number, Name, Type1, Type2, Total from pokemon ",
-         "where Type1 = '",theType,"' and Number = (select min(Number) from pokemon ",
-          "where Type1 = '",theType,"')",sep="")
-         resultFrame <-rbind(resultFrame, sqldf(theQuery))
-    }
-    # print the result
-    resultFrame
+     # check the results within an independent technique: SQL 
+     library(sqldf)
+     theQuery <- paste("select min(Number) as Number from pokemon ",
+                       "group by Type1")
+     theIDs <- sqldf(theQuery)[,"Number"]
+     # now use theIDs to subset original data
+     resultFrame <- pokemon[pokemon$Number %in% theIDs,1:5]
+     # order by type1
+     resultFrame <- resultFrame[order(resultFrame$Type1),]
+     resultFrame
 
 <img src="./images/rprog-extractOperator08.png">
 
@@ -259,9 +254,9 @@ The elegance of the R language is highlighted by the fact that the original vers
 
 The "data science" answer is that here we have another example of ["untidy" data](http://bit.ly/2nyw5Ci) -- multiple rows in a data frame represent the same Pokémon. This is due to changes in the mechanics of Pokémon games over the last 20 years. The new mechanics are tracked as new versions of a given Pokémon, but retain the same National Pokédex Number as earlier version(s) of the Pokémon.  
 
-In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retrieved by the SQL query.
+In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retained when we subset the final data frame by National Pokédex Number.
 
-Modification of the SQL query to eliminate the second Forme by using the `Total` stat is left as an interesting exercise for the reader.
+Modification of the code to eliminate the second Forme by using the `Total` stat is left as an interesting exercise for the reader.
 
 # Concluding Remarks
 
