@@ -47,7 +47,7 @@ The literature on confidence intervals for poisson means is confusing because th
 * intervals based on a rate, and <br><br>
 * intervals based on an average of several counts. <br><br>
 
-WHen the event count is large, many of these formulas use an approximation to the normal distribution where the standard deviation equals the mean of the event count, leading to a formula that looks like
+When the event count is large, many of these formulas use an approximation to the normal distribution where the standard deviation equals the mean of the event count, leading to a formula that looks like
 
      lambda +/- Z * sqrt(lambda)
      
