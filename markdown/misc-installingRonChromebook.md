@@ -20,11 +20,34 @@ One approach to making R work on the Chromebook is to install the Linux operatin
 
 ## Prerequisites
 
-* Own a Chromebook computer
-* Administrator access to the Chromebook
-* USB memory stick for additional storage
-* The "hacker mentality"
-* Enough Linux knowledge to be "dangerous"
+Before we begin, we'll list a few prerequisites for the process, including:
+
+* Administrator access to the Chromebook, <br><br>
+* USB memory stick for additional storage, <br><br>
+* The "hacker mentality", and <br><br>
+* Enough Linux knowledge to be "dangerous."<br><br>
+
+## Administrator Access
+
+Most of the Linux work requires administrator rights to the operating system. In Linux this means one must have the ability to run programs as "superuser." In practice, one's user account in the Linux operating system must have administrator privileges so s/he can run commands with superuser privileges via the  [sudo](https://en.wikipedia.org/wiki/Sudo) (or "superuser do") command.
+
+# The "hacker mentality"
+
+Students in the Johns Hopkins University Data Science Specialization are [introduced to this concept early in the specialization](http://bit.ly/2nGskYS). The "hacker  mentality" is the idea that a data scientist needs to have a certain tenacity to solve ill-defined problems, and the resourcefulness necessary to pull together enough information to solve a problem from any available resource.
+
+As an example, the question of how to integrate Google Sheets with r-fiddle is well outside the scope of the *R Programming* course, but since it was an interesting problem I did the research necessary to write this article. In the process of writing the article I had to piece together content from a wide variety of sources to deliver a working system that could access Google spreadsheets. I also had to learn a fair amount by trial and error (i.e. multiple installs of Linux to test out various sets of parameters / graphical desktops).
+
+If one takes the time to complete all the steps in this article, one will have a good start in understanding how to install a sophisticated operating system that is used by a wide variety of businesses, to configure it, and to install various types of open source software.
+
+
+
+## USB Memory stick
+
+Since the typical Chromebook has only 16Gb of on device storage, we'll need extra space to store data and R programs. I like to use the low profile USB memory sticks that are made by SanDisk and Samsung, that look like this.
+
+<img src="./images/misc-rOnChromebook01.png">
+
+Once installed in the Chromebook, the low profile makes it easy to leave the memory stick attached to the device rather than removing it each time the device is turned off.
 
 ## Chromebook Specifications
 
@@ -49,15 +72,27 @@ We installed R and RStudio on an early model Chromebook that has what would be c
      </tr>
 </table>
 
-## Administrator access
+## Administrator Access
 
-Remember, sudo is your friend.
+Most of the Linux work requires administrator rights to the operating system. In Linux this means one must have the ability to run programs as "superuser." In practice, one's user account in the Linux operating system must have administrator privileges so s/he can run commands with superuser privileges via the  [sudo](https://en.wikipedia.org/wiki/Sudo) (or "superuser do") command.
 
 # Step 1: Install Linux on Chromebook
 
 ## Before you begin
 
-What are the consequences of installing in this manner
+What are the consequences of installing in this manner?
+
+# The Process
+
+The remainder of this section is based on Whitson Gordon's 2013 article on [](lifehacker.com), [How to Install Linux on a Chromebook and Unlock its Full Potential](http://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343)
+
+1. Enable developer mode <br><br>
+2. Install Crouton <br><br>
+3. Optimize the Linux Desktop for your Chromebook <br><br>
+
+## Enable Developer mode
+
+
 
 # Step 2: Install R and RStudio
 
