@@ -158,6 +158,12 @@ If you've installed Unity, the desktop will look similar to this.
 
 ### Runtime Performance
 
+We ran two tests to check the performance of the Chromebook relative to other platforms on which I run RStudio. The first test was a run of an analysis conducted on data from the National Oceanographic and Atmospheric Administration regarding extreme weather events.
+
+The output is an R Markdown document published to RPubs, [NOAA Storm Data Analysis -- Chromebook Version](http://bit.ly/2trj5RC). This version of the analysis runs in less than 2 minutes. Not bad for a data file that consumes over 500Mb of RAM in R.
+
+The second test... 
+
 ## Additional Tools
 
 using things like Atom to view files
