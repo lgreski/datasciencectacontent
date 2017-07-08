@@ -23,9 +23,9 @@ One approach to making R work on the Chromebook is to install the Linux operatin
 Before we begin, we'll list a few prerequisites for the process, including:
 
 * Administrator access to the Chromebook, <br><br>
-* USB memory stick for additional storage, <br><br>
-* The "hacker mentality", and <br><br>
-* Enough Linux knowledge to be "dangerous."<br><br>
+* USB memory stick for additional storage, and <br><br>
+* The "hacker mentality," and <br><br>
+* Enough Linux knowledge to be "dangerous."
 
 ### Administrator Access
 
@@ -39,7 +39,7 @@ As an example, the question of how to integrate Google Sheets with r-fiddle is w
 
 If one takes the time to complete all the steps in this article, one will have a good start in understanding how to install a sophisticated operating system that is used by a wide variety of businesses, to configure it, and to install various types of open source software.
 
-### USB Memory stick
+### USB memory stick
 
 Since the typical Chromebook has only 16Gb of on device storage, we'll need extra space to store data and R programs. I like to use the low profile USB memory sticks that are made by SanDisk and Samsung that look like the following image.
 
@@ -47,10 +47,12 @@ Since the typical Chromebook has only 16Gb of on device storage, we'll need extr
 
 Once installed in the Chromebook the low profile makes it easy to leave the memory stick attached to the device rather than removing it each time the device is turned off. The low profile stick is also less likely to be damaged while inserted into the device.
 
-### Enough Linux Knowledge to be "Dangerous"
+### Enough Linux knowledge to be "dangerous"
 
-...add content here... 
-
+1. Ability to use a command line terminal
+2. Installing software
+3. Interpreting error messages
+4. Setting locale
 
 # Step 1: Install Linux on Chromebook
 
@@ -136,15 +138,76 @@ In this step we will install a number of Linux software applications that will b
 
 ## Install Linux libraries
 
+List the Linux libraries that one needs to install in advance to support installation of R and RStudio. These libraries are necessary to download files in R via the `download.files()` function, and to use secure sockets with Google Sheets.
+
+1. Install libcurl with the following commands in a Linux terminal.
+        sudo apt-get -y install libcurl4-gnutls-dev
+        sudo apt-get -y build-dep libcurl4-gnutls-dev
+2. Install curl with the following command from a Linux terminal.
+        sudo apt-get install curl
+3. Install openssl with the following command from a Linux terminal.
+        sudo apt-get install openssl
+
 ## Install Key Linux applications
 
-Install the Chromium Browser to use Google applications including Google Docs from within the Linux environment.
+At this point we will install a couple of applications that make the rest of the process easier, including the Chromium browser and the Atom text editor.
 
-Install the [Atom](http://atom.io) text editor.
+### Install the Chromium browser
 
-Install Git for source code version control
+Chromium is the open source browser on which Google Chrome is based. The [Chromium version excludes a number of proprietary software extensions](https://askubuntu.com/questions/6253/whats-the-difference-between-google-chrome-and-or-chromium-what-are-the-advant) such as Adobe Flash that are included in Google's version. To install Chromium, open a Linux terminal and enter the following command.
+
+      sudo apt-get install chromium  
+
+### Install the [Atom](http://atom.io) text editor
+
+As students interact with various forms of data, sometimes it is helpful to look at the raw data files to understand their content, such as "does this file have a header row of variable names?" The open source text editor, [Atom](http://atom.io), is useful for this purpose. To install Atom, take the following steps.
+
+1.  Download Atom from the Atom website's [download page](http://atom.io/download/deb).<br><br>
+2. Once the software has completed the download, open the file viewer, navigate to the Downloads folder, and double click on the atom-amd64.deb package to start the Ubuntu Package Installer.<br><br>
+3. The Package Installer will analyze the file, confirm that all required Linux libraries are present, and enable the `<Install Package>` button. Press the button to install the package.<br><br>
+4. When complete, you can find Atom in the Applications folder or by searching for Atom from the Unity search button in the upper left corner of the Desktop.  <br><br>
+<img src="./images/misc-rOnChromebook05.png"><br><br>
+5. Double click the icon to start Atom.
+
+### Install Git for source code version control
+
+Git and [GitHub](https://github.com) are components of a larger toolkit used by professional data scientists to create [reproducible research](https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/). As one begins to learn R programming, it is useful to write and save small snippets of code in case one needs to revert to a prior version of a program.
+
+Git is a version control application that saves and tracks multiple versions of software source. To install git, open a Linux terminal and type the following command.
+
+      sudo apt-get install git
+
+### Install Ubuntu Software Center
+
+The [Ubuntu Software Center](https://apps.ubuntu.com/cat/applications/precise/software-center/) is a graphical user interface that allows one to access a large volume of open source software that runs on Ubuntu. A searchable list of applications available for Ubuntu is also available via web browser as the [Ubuntu Apps Directory](https://apps.ubuntu.com/cat/).
+
+[Ubuntu Software Center](https://apps.ubuntu.com/cat/applications/precise/software-center/) may be installed in a Linux terminal via the following command.  
+
+      sudo apt-get install software-center
 
 ## Configure Linux Locale to US English
+
+The default installation of Ubuntu does not set the locale (i.e. language and country settings) to a specific language and country. RStudio will generate warning messages about the need to set the locale to `en_US.UTF-8` unless we set it in advance. To set the locale, use the following command in a Linux terminal.
+
+      sudo dpkg-reconfigure locales
+
+This will bring up a character-based application where we can set the locale to the right format.<br><br>
+<img src="./images/misc-rOnChromebook06.png"><br><br>
+The formats are based on 2 character language codes, and underscore, a country code, and an encoding format. Scroll down to `en_US.UTF-8` and press the `<space bar>` to toggle the selection, as illustrated below.  
+<br><br>
+<img src="./images/misc-rOnChromebook07.png"><br><br>
+Next, press the `<TAB>` key to move to the pushbuttons below the scrollable list. Then press the <OK> button, which will generate the appropriate encodings into the environment.
+
+To access the new encodings, one must logout of the Linux environment and log back in.
+
+After logging in, one can confirm that the locale has been set correctly by entering the following command in a Linux terminal.
+
+       locale
+
+The output should match the following image.
+
+<img src="./images/misc-rOnChromebook08.png">
+
 
 
 
