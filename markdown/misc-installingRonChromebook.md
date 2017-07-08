@@ -87,7 +87,7 @@ At this point you will need to login to the Chromebook with its original factory
 
 ### 2. Install Crouton
 
-Installing Crouton and loading Ubuntu Linux is an 8 step process.
+Installing Crouton and loading Ubuntu Linux is multi-step process.
 
 1. [Download Crouton](http://goo.gl/fd3zc) and save it in your `Downloads` folder.  <br><br>
 2. Press `<CNTL>+<ALT>+<T>` to bring up a terminal in your Chromebook. <br><br>
@@ -102,12 +102,33 @@ Installing Crouton and loading Ubuntu Linux is an 8 step process.
 5. If you would prefer to run the Unity desktop, which is the standard for Ubuntu Linux but takes up more space than xfce, run the following command:
 
        sudo sh -e ~/Downloads/crouton -t unity
+<img src="./images/misc-rOnChromebook03.png">
 
 6. If you're installing Linux on a device that has a touchscreen, such as the CHromebook Pixel or the HP Chromebook 11 G5 EE, enter the following to install touch support with the xfce desktop:
 
-       sudo sh -e ~/Downloads/crouton -t touch, xfce
+       sudo sh -e ~/Downloads/crouton -t touch,xfce
 
-7. Optional: you can encrypt your desktop with the optional `-e` flag, since Developer Mode weakens the security of the Chromebook. See the [Crouton Github site](https://github.com/dnschneid/crouton/blob/master/README.md) for more information about encryption. 
+
+7. Optional: you can encrypt your desktop with the optional `-e` flag, since Developer Mode weakens the security of the Chromebook. See the [Crouton Github site](https://github.com/dnschneid/crouton/blob/master/README.md) for more information about encryption. <br><br> AT this point your computer will install crouton and Ubuntu. Depending on the speed of yuor machine and intrenet conenction, this may take 20 - 30 minutes.<br><br> When the install is complete, it will ask you for a username and password for the new Ubuntu installation. This userid will have administrator rights, so it's important to guard the userid and password carefully. <br><br>
+8. Once installation is complete, enter the following command if you've installed xfce as your desktop environment.
+
+      sudo startxfce4
+
+9. If you installed Unity as your desktop, enter the following command to start the desktop.
+
+      sudo startunity
+
+If you've installed Unity, the desktop will look similar to this.
+
+<img src="./images/misc-rOnChromebook04.png">
+
+ Note that there are other desktop interfaces that can be installed instead of xfce or Unity, such as LXDE, KDE, or the Gnome Desktop. Please refer to the [Crouton Wiki](https://github.com/dnschneid/crouton/wiki) for information on the desktops that are supported by Crouton.
+
+ If you don't like the desktop that you installed, you can use crouton to uninstall the Linux partition, and start over again. To uninstall an Ubuntu partition installed with the default name of `xenial`, enter the following command in the crosh window in Chrome OS.
+
+       sudo delete-chroot xenial
+
+
 
 ### 3. Optimize Linux Desktop for Chromebook  
 
