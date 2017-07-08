@@ -196,7 +196,7 @@ This will bring up a character-based application where we can set the locale to 
 The formats are based on 2 character language codes, and underscore, a country code, and an encoding format. Scroll down to `en_US.UTF-8` and press the `<space bar>` to toggle the selection, as illustrated below.  
 <br><br>
 <img src="./images/misc-rOnChromebook07.png"><br><br>
-Next, press the `<TAB>` key to move to the pushbuttons below the scrollable list. Then press the <OK> button, which will generate the appropriate encodings into the environment.
+Next, press the `<TAB>` key to move to the pushbuttons below the scrollable list. Highlight the `<OK>` button by tabbing to it, and then press `<ENTER>` to select it. This will generate the appropriate encodings into the environment.
 
 To access the new encodings, one must logout of the Linux environment and log back in.
 
@@ -209,9 +209,9 @@ The output should match the following image.
 <img src="./images/misc-rOnChromebook08.png">
 
 
-
-
 # Step 3: Install R and RStudio
+
+Now we're finally ready to install R and RStudio. This section is largely based on an [r-bloggers article](https://www.r-bloggers.com/how-to-install-r-on-linux-ubuntu-16-04-xenial-xerus/)  by [Kris Eberwein](https://www.r-bloggers.com/author/kris-eberwein/) that describes how to install R and RStudio on Ubuntu Linux. 
 
 ## Install R
 
