@@ -18,6 +18,14 @@ Students will also be required to collect data and store it in Google Sheets pri
 
 One approach to making R work on the Chromebook is to install the Linux operating system with a tool called [crouton](https://github.com/dnschneid/crouton), short for Chromium OS [chroot](https://en.wikipedia.org/wiki/Chroot) Environment. Crouton enables the Chrome OS to install a linux partition, as well as the ability to toggle back and forth between Chrome and Linux. Once Linux is installed on the Chromebook, one can install R and RStudio, following instructions such as those in a 2016 [](r-bloggers.com) article on [Installing RStudio on Ubuntu Xenial](https://www.r-bloggers.com/how-to-install-r-on-linux-ubuntu-16-04-xenial-xerus/).
 
+## Target Audience
+
+Given that this article is a response to a question related to a high school AP statistics class, the primary audience is instructors and students in AP Statistics who which to use R and RStudio to support the instructional process.
+
+Data science has changed dramatically in the last 20 years, and the demand for data scientists will continue to increase for the foreseeable future. If you are a high school AP Statistics student reading this article, you are fortunate that your instructor is challenging you to use the types of analytic tools that are used by professional data scientists.
+
+Take advantage of this opportunity to develop skills that you can use to advance your career, and begin to develop the confidence that comes with figuring out how to solve ambiguous and challenging real world problems.
+
 ## Prerequisites
 
 Before we begin, we'll list a few prerequisites for the process, including:
@@ -52,7 +60,27 @@ Once installed in the Chromebook the low profile makes it easy to leave the memo
 1. Ability to use a command line terminal
 2. Installing software
 3. Interpreting error messages
-4. Setting locale
+
+#### Using the terminal
+
+Many of the steps in this walkthrough require use of the Linux terminal. In Chrome OS, the Linux terminal may be accessed by pressing `<CNTL>+<ALT>+<T>`.  From CHrome OS, the `crosh` shell looks like this.
+
+<img src="./images/misc-rOnChromebook03.png">
+
+The Linux shell increases one's visibility to any error messages generated as we configure the operating system to work with R and RStudio, and the ability to work with an operating system via terminal commands is a useful skill for anyone who aspires to be a data scientist because many of the software components that data scientists use do not have friendly graphical user interfaces.
+
+
+#### Installing software
+
+Most of the process described in this article is focused on installing software libraries (code that is directly accessed by other software programs, instead of end users) and software applications. An aspiring data scientist needs to get comfortable experimenting with different pieces of software because there is a large amount of innovation underway in the machine learning and artificial intelligence spaces, and one of the primary ways the innovation is distributed to data scientists is through open source software.
+
+The primary tool you will use to install software is the [Ubuntu Advanced Packaging Tool](https://help.ubuntu.com/community/AptGet/Howto), or APT. The command line version of this tool is `apt-get`.
+
+#### Interpreting error messages
+
+One last skill you'll need to get through this process is the ability to figure out why a process failed. As I worked through the process to install all the software needed to run the `googlesheets` package in RStudio, I experienced a number of errors where a step failed because of one or more Linux libraries on which the step depended were not already present in my Linux installation. The primary reason for this is that with Crouton we are installing a stripped down version of `Ubuntu` to save space, and therefore some of the libraries that we need aren't included in this versuion of Ubuntu. Fortunately, it's easy to add the components we need when we need them.
+
+While I have tried to minimize this by adding steps to install required Linux libraries before loading R and RStudio, depending on the choices you make (e.g. which GUI desktop to install) ,osme libraries that autoatically installed for me may not be present ni your installation .I fa process step fails., review the log for error messages, identify the missing library or libraries, and install them with `apt-get` before retrying the step that failed.
 
 # Step 1: Install Linux on Chromebook
 
