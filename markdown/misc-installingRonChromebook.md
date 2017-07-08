@@ -211,14 +211,67 @@ The output should match the following image.
 
 # Step 3: Install R and RStudio
 
-Now we're finally ready to install R and RStudio. This section is largely based on an [r-bloggers article](https://www.r-bloggers.com/how-to-install-r-on-linux-ubuntu-16-04-xenial-xerus/)  by [Kris Eberwein](https://www.r-bloggers.com/author/kris-eberwein/) that describes how to install R and RStudio on Ubuntu Linux. 
+Now we're finally ready to install R and RStudio. This section is largely based on an [r-bloggers article](https://www.r-bloggers.com/how-to-install-r-on-linux-ubuntu-16-04-xenial-xerus/)  by [Kris Eberwein](https://www.r-bloggers.com/author/kris-eberwein/) that describes how to install R and RStudio on Ubuntu Linux.  As with Whitson Gordon's article on installing Crouton and Linux on Chromebook, we've replicated the steps here as I used them on my Chromebook to reduce the number of websites one must have open in order to follow the directions. We have also edited the instructions so they reference the most recent version of RStudio.
 
 ## Install R
 
+As described in Kris Eberwein's article, we will install the most recent version of R versus the one that is available through the Ubuntu Software Center.
+
+1. Add the R Repository to the `/etc/apt/sources.list` file by executing the following commands in a terminal window. <br>
+        sudo echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | sudo tee -a /etc/apt/sources.list
+2. Add R to the Ubuntu Keyring by entering the following commands in a terminal window. <br>
+        gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+        gpg -a --export E084DAB9 | sudo apt-key add -
+3. Update the application repository and install `r-base` and `r-base-dev` with the following terminal commands.
+        sudo apt-get update
+        sudo apt-get install r-base r-base-dev
+The R installation will take 15 - 30 minutes depending on the speed of your machine and internet connection. The install will compile R from source, versus installing it from compiled modules as is the case with R on Windows or Mac OS X.
+
 ## Install RStudio
+
+Since we're installing most of our software through the terminal window instead of the Ubuntu Software Center or the Synaptic Package Manager, we'll use the following commands to install RStudio.
+
+        sudo apt-get install gdebi-core
+        wget https://download1.rstudio.org/rstudio-0.99.896-amd64.deb
+        sudo gdebi -n rstudio-0.99.896-amd64.deb
+
+**NOTE:** Once RStudio is installed, we will need to run it with administrator privileges in order to install packages in the correct folders within the operating system.
 
 ## Test the Installation
 
+To test the R installation, enter `sudo R` at a terminal prompt. THis will bring up an R session, into which one can execute R functions.
+
+<img src="./images/misc-rOnChromebook09.png">
+
+Here, we'll create a vector and calculate its mean.
+
+<img src="./images/misc-rOnChromebook10.png">
+
+So far, so good. to exit R, enter `quit()` at the R command prompt. Answer `n` when asked whether to save the workspace, and you will be returned to the terminal window.
+
+Next, we'll test the RStudio. To start RStudio, we'll enter `sudo rstudio` in the terminal window. RStudio will display its four-paned user interface. To run a simple test, we'll create an R Markdown document by selecting it from the menu bar.
+
+<img src="./images/misc-rOnChromebook11.png">
+
+Next, we'll enter `Sample` as the title and `Sample` as the author. Leave HTML selected as the output format, and press the `<OK>` button.
+
+<img src="./images/misc-rOnChromebook12.png">
+
+RStudio automatically generates a simple markdown document based on the Motor Trend cars dataset that is part of the R `datasets` package. The markdown document generates a scatterplot of data from the `mtcars` dataset.
+
+<img src="./images/misc-rOnChromebook13.png">
+
+To execute the program, press the `<knit>` icon at the top of the code editor pane in the upper left quadrant of RStudio. From the  popup menu that displays, select `<Knit to HTML>` to start the process of generating the graph.
+
+<img src="./images/misc-rOnChromebook14.png">
+
+At this point RStudio may ask to install a number of packages that are required to knit the document. Press the `Yes` button to update these packages. Once the packages are updated, RStudio will knit the document.  
+
+Enter `sample` as the name of the file when RStudio presents a file window, and then RStudio will generate an HTML document as listed below.
+
+<img src="./images/misc-rOnChromebook15.png">
+
+Congratulations! You now have a working version of RStudio installed on your Chromebook. 
 
 # Step 4: Install R Packages
 
