@@ -107,16 +107,13 @@ Installing Crouton and loading Ubuntu Linux is multi-step process.
 6. If you're installing Linux on a device that has a touchscreen, such as the CHromebook Pixel or the HP Chromebook 11 G5 EE, enter the following to install touch support with the xfce desktop:
 
        sudo sh -e ~/Downloads/crouton -t touch,xfce
-
-
-7. Optional: you can encrypt your desktop with the optional `-e` flag, since Developer Mode weakens the security of the Chromebook. See the [Crouton Github site](https://github.com/dnschneid/crouton/blob/master/README.md) for more information about encryption. <br><br> AT this point your computer will install crouton and Ubuntu. Depending on the speed of yuor machine and intrenet conenction, this may take 20 - 30 minutes.<br><br> When the install is complete, it will ask you for a username and password for the new Ubuntu installation. This userid will have administrator rights, so it's important to guard the userid and password carefully. <br><br>
+7. Optional: you can encrypt your desktop with the optional `-e` flag, since Developer Mode weakens the security of the Chromebook. See the [Crouton Github site](https://github.com/dnschneid/crouton/blob/master/README.md) for more information about encryption. <br><br> At this point your computer will install crouton and Ubuntu. Depending on the speed of your machine and intrenet conenction, this may take 20 - 30 minutes.<br><br> When the install is complete, it will ask you for a username and password for the new Ubuntu installation. This userid will have administrator rights, so it's important to guard the userid and password carefully. <br><br>
 8. Once installation is complete, enter the following command if you've installed xfce as your desktop environment.
 
-      sudo startxfce4
-
+       sudo startxfce4
 9. If you installed Unity as your desktop, enter the following command to start the desktop.
 
-      sudo startunity
+       sudo startunity
 
 If you've installed Unity, the desktop will look similar to this.
 
