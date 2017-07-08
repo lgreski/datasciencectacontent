@@ -49,7 +49,7 @@ Once installed in the Chromebook the low profile makes it easy to leave the memo
 
 ### Enough Linux Knowledge to be "Dangerous"
 
-
+...add content here... 
 
 
 # Step 1: Install Linux on Chromebook
@@ -66,11 +66,11 @@ Finally, it's important to know that you are never more than a [Powerwash](https
 
 The remainder of this section is based on Whitson Gordon's 2013 article on [](lifehacker.com), [How to Install Linux on a Chromebook and Unlock its Full Potential](http://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343). The content is copied here to make it easier to follow the entire set of instructions without jumping back and forth to multiple websites.
 
-1. Enable developer mode <br><br>
-2. Install Crouton <br><br>
-3. Optimize the Linux Desktop for your Chromebook <br><br>
+* Enable developer mode <br><br>
+* Install Crouton <br><br>
+* Optimize the Linux Desktop for your Chromebook <br><br>
 
-### 1. Enable Developer mode
+### Enable Developer mode
 
 This step will wipe local data, so make sure you back up anything that is not already stored in the cloud prior to proceding.
 
@@ -85,7 +85,7 @@ Note that some older Chromebooks have a physical switch that must be flipped in 
 
 At this point you will need to login to the Chromebook with its original factory settings, connect to a wireless access point, and reconnect to your Google account.
 
-### 2. Install Crouton
+### Install Crouton
 
 Installing Crouton and loading Ubuntu Linux is multi-step process.
 
@@ -102,12 +102,12 @@ Installing Crouton and loading Ubuntu Linux is multi-step process.
 5. If you would prefer to run the Unity desktop, which is the standard for Ubuntu Linux but takes up more space than xfce, run the following command:
 
        sudo sh -e ~/Downloads/crouton -t unity
-<img src="./images/misc-rOnChromebook03.png">
+<img src="./images/misc-rOnChromebook03.png"> <br><br>**NOTE:** the name of the new environment defaults to the version of the operating system being installed. For the default install of Ubuntu Linux, the current production version is named `xenial`. This is important if you need to uninstall the image at a later point.
 
-6. If you're installing Linux on a device that has a touchscreen, such as the CHromebook Pixel or the HP Chromebook 11 G5 EE, enter the following to install touch support with the xfce desktop:
+6. If you're installing Linux on a device that has a touchscreen, such as the Chromebook Pixel or the HP Chromebook 11 G5 EE, enter the following to install touch support with the xfce desktop:
 
        sudo sh -e ~/Downloads/crouton -t touch,xfce
-7. Optional: you can encrypt your desktop with the optional `-e` flag, since Developer Mode weakens the security of the Chromebook. See the [Crouton Github site](https://github.com/dnschneid/crouton/blob/master/README.md) for more information about encryption. <br><br> At this point your computer will install crouton and Ubuntu. Depending on the speed of your machine and intrenet conenction, this may take 20 - 30 minutes.<br><br> When the install is complete, it will ask you for a username and password for the new Ubuntu installation. This userid will have administrator rights, so it's important to guard the userid and password carefully. <br><br>
+7. Optional: you can encrypt your desktop with the optional `-e` flag, since Developer Mode weakens the security of the Chromebook. See the [Crouton Github site](https://github.com/dnschneid/crouton/blob/master/README.md) for more information about encryption. <br><br> At this point your computer will install crouton and Ubuntu. Depending on the speed of your machine and internet connection, this may take 20 - 30 minutes.<br><br> When the install is complete, it will ask you for a username and password for the new Ubuntu installation. This userid will have administrator rights, so it's important to guard the userid and password carefully. <br><br>
 8. Once installation is complete, enter the following command if you've installed xfce as your desktop environment.
 
        sudo startxfce4
@@ -126,23 +126,40 @@ If you've installed Unity, the desktop will look similar to this.
        sudo delete-chroot xenial
 
 
+### Optimize Linux Desktop for Chromebook  
 
-### 3. Optimize Linux Desktop for Chromebook  
+Discuss various bits of housekeeping here...
 
-# Step 2: Install R and RStudio
+# Step 2: Prepare Linux for RStudio
+
+In this step we will install a number of Linux software applications that will be useful to someone working in RStudio, including Git for source code version control,and Linux libraries on which R packages depend, such as `libxml2`, `curl`, and `libcurl`. We will also set the Linux locale to U.S. English with UTF-8 encoding, which is required for RStudio in the U.S.
+
+## Install Linux libraries
+
+## Install Key Linux applications
+
+Install the Chromium Browser to use Google applications including Google Docs from within the Linux environment.
+
+Install the [Atom](http://atom.io) text editor.
+
+Install Git for source code version control
+
+## Configure Linux Locale to US English
+
+
+
+# Step 3: Install R and RStudio
 
 ## Install R
-
-## Install Additional Modules
 
 ## Install RStudio
 
 ## Test the Installation
 
 
-# Step 3: Install R Packages
+# Step 4: Install R Packages
 
-# Step 4: Install Git / Github
+# Step 5: Register for Github and Connect with Local Git
 
 # Using the System
 
@@ -162,11 +179,11 @@ We ran two tests to check the performance of the Chromebook relative to other pl
 
 The output is an R Markdown document published to RPubs, [NOAA Storm Data Analysis -- Chromebook Version](http://bit.ly/2trj5RC). This version of the analysis runs in less than 2 minutes. Not bad for a data file that consumes over 500Mb of RAM in R.
 
-The second test... 
+The second test...
 
-## Additional Tools
+# Conclusion
 
-using things like Atom to view files
+At this point you've configured a professional operating system with leading tools for data science, including statistics, integration with Google Spreadsheets, and professional grade source code version control.
 
 # Appendix
 
