@@ -45,7 +45,7 @@ system.time(fit <- train(Class ~ ., method="rf",data=Sonar,trControl = fitContro
 # Step 4: de-register cluster
 #
 stopCluster(cluster)
-
+registerDoSEQ()
 #
 # Step 5: evaluate model fit 
 #

@@ -356,7 +356,18 @@ RStudio supports git / Github integration. To set this up within RStudio, please
 
 # Using the System
 
+From a boot of the Chromebook, the steps to run RStudio include:
+
+1. After logging into the Chromebook, press `<CNTL>+<ALT>+<T>` to start a Linux terminal in the Chrome browser.<br><br>
+2. In the terminal, enter `shell` <br><br>
+3. In the terminal, enter `sudo startunity` to start Ubuntu<br><br>
+4. Once Ubuntu initializes, open a terminal and type `sudo rstudio` to start RStudio<br><br>
+
 ### Size of Problems One Can Solve
+
+R processes everything in the [random access memory](https://en.wikipedia.org/wiki/Random-access_memory) (RAM) of the computer. Since Chromebooks typically have between 2Gb and 4Gb of RAM, an R installation on a Chromebook will be limited to data sets that consume less than the memory installed on your Chromebook. One can conduct very sophisticated analyses on a machine with 2Gb of RAM, such as the analysis of extreme weather events data from the National Oceanographic and Atmospheric Administration that is used as the final project in the Johns Hopkins University [Reproducible Research](https://www.coursera.org/learn/reproducible-research) course on [Coursera](http://coursera.org). The raw data file for this project consumes about 540Mb of RAM once it is loaded into R.
+
+Since it is unlikely that students in an AP Statistics course will analyze data sets larger than the NOAA storm data, the Chromebook has more than enough capacity to handle any problem that is covered in a high school statistics course.
 
 ### Runtime Performance
 
@@ -364,7 +375,11 @@ We ran two tests to check the performance of the Chromebook relative to other pl
 
 The output is an R Markdown document published to RPubs, [NOAA Storm Data Analysis -- Chromebook Version](http://bit.ly/2trj5RC). This version of the analysis runs in less than 2 minutes. Not bad for a data file that consumes over 500Mb of RAM in R.
 
-The second test...
+The second test focuses on the raw compute capacity of the Chromebook, using the final project from the Johns Hopkins University [Practical Machine Learning](https://www.coursera.org/learn/practical-machine-learning) course on [Coursera](http://coursera.org). The subject of the final project is an analysis called [Qualitative Activity Recognition of Weight Lifting Exercises](http://groupware.les.inf.puc-rio.br/work.jsf?p1=11201). Given that students in *Practical Machine Learning* frequently experience difficulties using the `randomForest` machine learning algorithm with this data set, I have written an article, [Improving Runtime Performance of Random Forest Models with caret::train()](http://bit.ly/2bYtutG), that explains how to improve the runtime performance of these types of models.
+
+Not only does the analysis run to completion on the Chromebook, its performance compares favorably to another machine that is optimized for long battery life: the HP Envy X2 tablet. This analysis runs in 20 minutes on the Chromebook, but takes over 70 minutes on the Envy X2.
+
+The bottom line is that not only does the Chromebook have the capacity to tackle relatively large data sets, it can also handle complex compute tasks with an acceptable response time. 
 
 # Working with Google Sheets
 

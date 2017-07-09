@@ -12,7 +12,7 @@ Fortunately, the `parallel` package works on R across all major operating system
 
 In practical terms for the *Practical Machine Learning* final project, the probability of correctly predicting all 20 test cases using an algorithm with 80% accuracy is very low, as described in [Required Model Accuracy](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-requiredModelAccuracy.md). The probability of correctly predicting all 20 test cases even with a model at 95% accuracy is only 0.36. Therefore, a student must use an algorithm that has at least 99% accuracy to have a reasonable probability of obtaining a perfect score on the quiz associated with the final project.
 
-One other tradeoff that we made in this analysis was changing the resampling method from the default of bootstrapping to k-fold cross-validation. The impact of this change is to reduce the number of samples against which the random forest algorithm is run from 25 to 5, and to change each sample's composition from leave one out to randomly selected training folds. Note that within each sample, the trees are still calculated with the underlying random forest algorithm, as described by [Leo Breiman](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#workings). 
+One other tradeoff that we made in this analysis was changing the resampling method from the default of bootstrapping to k-fold cross-validation. The impact of this change is to reduce the number of samples against which the random forest algorithm is run from 25 to 5, and to change each sample's composition from leave one out to randomly selected training folds. Note that within each sample, the trees are still calculated with the underlying random forest algorithm, as described by [Leo Breiman](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#workings).
 
 The change in resampling technique may trade processing performance for reduced model accuracy. However, our analysis shows that the 5 fold cross-validation resampling technique delivered the same accuracy as the more computationally expensive bootstrapping technique.
 
@@ -111,6 +111,8 @@ Since most students in *Practical Machine Learning* have older (and slower) hard
 
 Surprisingly, the random forest algorithm for the *Practical Machine Learning* course project runs flawlessly on the tablet. The runtime performance is very slow compared to the other machines, requiring 1 hour 15 minutes to complete the random forest, using all 4 threads across the two cores in its Intel Atom-based processor.
 
+In July 2017 we ran the analysis on an HP Chromebook on which we had installed Ubuntu Linux, in order to see how R performs on the Chromebook relative to the other hardware we tested in 2016. Amazingly, even with only 2 threads, the Chromebook outperformed the Envy X2 by a large margin, completing the 5 k-fold validation model in only 20.01 minutes.
+
 Finally, to illustrate the impact that the resampling technique has on the runtime performance, we fit the training data for the *Practical Machine Learning* course project on the HP Omen laptop with bootstrapping as the resampling method. The bootstrapping resampling method caused a significant increase in processing time, requiring 17 minutes instead of 3.22 minutes to train the model. Since the cross-validation resampling method resulted in an accuracy of .9945, the bootstrapping resampling method had no positive impact on model accuracy.
 
 #### Figure 2: Run time by By Machine & Resampling Technique
@@ -120,6 +122,7 @@ Finally, to illustrate the impact that the resampling technique has on the runti
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.22 minutes</td></tr>
 <tr><td> HP Spectre x360 laptop</td><td>Random Forest</td><td>CV</td><td align="right">04.65 minutes</td></tr>
 <tr><td> Macbook Pro laptop</td><td>Random Forest</td><td>CV</td><td align="right">06.56 minutes</td></tr>
+<tr><td> HP Chromebook</td><td>Random Forest</td><td>CV</td><td align="right">20.01 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Bootstrap</td><td align="right">17.00 minutes</td></tr>
 <tr><td> HP Envy X2 tablet</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
 </table>
@@ -147,6 +150,18 @@ Hardware specifications for the computers used in the performance timings in thi
         </td>
      </tr>
     <tr>
+        <tr>
+        <td valign=top>HP Chromebook 14-q010nr</td>
+        <td>
+            <ul>
+                <li>Operating system: Chrome OS</li>
+                <li>Processor: 1.4GHz Intel Celeron 2955U Processor, two cores </li>
+                <li>Memory: 2 gigabytes 1600Mhz DDR3L SDRAM</li>
+                <li>Disk: 16 gigabytes, solid state drive</li>
+                <li>Date built: November 2013</li>
+            </ul>
+        </td>
+     </tr>
     <td valign=top>HP Envy X2 tablet</td>
     <td>
         <ul>
@@ -183,4 +198,4 @@ Hardware specifications for the computers used in the performance timings in thi
 </tr>
 </table>
 
-*last updated: 10 December 2016*
+*last updated: 9 July 2017*
