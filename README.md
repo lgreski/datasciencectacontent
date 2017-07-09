@@ -26,6 +26,7 @@ The remainder of this document serves as a directory of the content, aligning in
 3. [Using Editor Modes in Discussion Forum Posts](http://bit.ly/2j4f1iX)
 4. [Buying a Computer for Data Science](http://bit.ly/2bHgwAY)
 5. [R and RStudio on Chromebook](http://bit.ly/2eQ8ipJ)
+6. [Installing R and RStudio on Chromebook](http://bit.ly/2tHLVOo) Walkthrough demonstrating how to install R and RStudio on a Chromebook with Crouton and Ubuntu Linux. 
 
 ### Issue: Students Struggle to find URLs in Lecture Slides
 
