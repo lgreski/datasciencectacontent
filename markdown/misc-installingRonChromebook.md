@@ -256,11 +256,14 @@ Now we're finally ready to install R and RStudio. This section is largely based 
 As described in Kris Eberwein's article, we will install the most recent version of R versus the one that is available through the Ubuntu Software Center.
 
 1. Add the R Repository to the `/etc/apt/sources.list` file by executing the following commands in a terminal window. <br>
+
         sudo echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | sudo tee -a /etc/apt/sources.list
 2. Add R to the Ubuntu Keyring by entering the following commands in a terminal window. <br>
+
         gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
         gpg -a --export E084DAB9 | sudo apt-key add -
 3. Update the application repository and install `r-base` and `r-base-dev` with the following terminal commands.
+
         sudo apt-get update
         sudo apt-get install r-base r-base-dev
 The R installation will take 15 - 30 minutes depending on the speed of your machine and internet connection. The install will compile R from source, versus installing it from compiled modules as is the case with R on Windows or Mac OS X.
