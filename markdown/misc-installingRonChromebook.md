@@ -20,7 +20,7 @@ One approach to making R work on the Chromebook is to install the Linux operatin
 
 ## Target Audience
 
-Given that this article is a response to a question related to a high school AP statistics class, the primary audience is instructors and students in AP Statistics who which to use R and RStudio to support the instructional process.
+Given that this article is a response to a question related to a high school AP statistics class, the primary audience is instructors and students in AP Statistics who wish to use R and RStudio to support the instructional process.
 
 Data science has changed dramatically in the last 20 years, and the demand for data scientists will continue to increase for the foreseeable future. If you are a high school AP Statistics student reading this article, you are fortunate that your instructor is challenging you to use the types of analytic tools that are used by professional data scientists.
 
@@ -53,7 +53,7 @@ Since the typical Chromebook has only 16Gb of on device storage, we'll need extr
 
 <img src="./images/misc-rOnChromebook01.png">
 
-Once installed in the Chromebook the low profile makes it easy to leave the memory stick attached to the device rather than removing it each time the device is turned off. The low profile stick is also less likely to be damaged while inserted into the device.
+Once installed in the Chromebook the low profile makes it easy to leave the memory stick attached to the device rather than removing it each time the device is turned off. The low profile stick is also less likely to be damaged while inserted in the device.
 
 ### Enough Linux knowledge to be "dangerous"
 
@@ -63,7 +63,7 @@ Once installed in the Chromebook the low profile makes it easy to leave the memo
 
 #### Using the terminal
 
-Many of the steps in this walkthrough require use of the Linux terminal. In Chrome OS, the Linux terminal may be accessed by pressing `<CNTL>+<ALT>+<T>`.  From CHrome OS, the `crosh` shell looks like this.
+Many of the steps in this walkthrough require use of the Linux terminal. In Chrome OS, the Linux terminal may be accessed by pressing `<CNTL>+<ALT>+<T>`.  From Chrome OS, the `crosh` shell looks like this.
 
 <img src="./images/misc-rOnChromebook03.png">
 
@@ -78,9 +78,9 @@ The primary tool you will use to install software is the [Ubuntu Advanced Packag
 
 #### Interpreting error messages
 
-One last skill you'll need to get through this process is the ability to figure out why a process failed. As I worked through the process to install all the software needed to run the `googlesheets` package in RStudio, I experienced a number of errors where a step failed because of one or more Linux libraries on which the step depended were not already present in my Linux installation. The primary reason for this is that with Crouton we are installing a stripped down version of `Ubuntu` to save space, and therefore some of the libraries that we need aren't included in this versuion of Ubuntu. Fortunately, it's easy to add the components we need when we need them.
+One last skill you'll need to get through this process is the ability to figure out why a process failed. As I worked through the process to install all the software needed to run the `googlesheets` package in RStudio, I experienced a number of errors where a step failed because of one or more Linux libraries on which the step depended were not already present in my Linux installation. The primary reason for this is that with Crouton we are installing a stripped down version of `Ubuntu` to save space, and therefore some of the libraries that we need aren't included in this version of Ubuntu. Fortunately, the [Ubuntu Advanced Packaging Tool](https://help.ubuntu.com/community/AptGet/Howto) makes it easy to add the components we need when we need them.
 
-While I have tried to minimize this by adding steps to install required Linux libraries before loading R and RStudio, depending on the choices you make (e.g. which GUI desktop to install) ,osme libraries that autoatically installed for me may not be present ni your installation .I fa process step fails., review the log for error messages, identify the missing library or libraries, and install them with `apt-get` before retrying the step that failed.
+While I have tried to minimize the need to respond to error messages by adding steps to install required Linux libraries before loading R and RStudio, depending on the choices you make (e.g. which GUI desktop to install) ,osme libraries that automatically installed for me may not be present in your installation. If a process step fails, review the log for error messages, identify the missing library or libraries, and install them with `apt-get` before retrying the step that failed.
 
 # Step 1: Install Linux on Chromebook
 
@@ -94,15 +94,15 @@ Finally, it's important to know that you are never more than a [Powerwash](https
 
 ## The Process
 
-The remainder of this section is based on Whitson Gordon's 2013 article on [](lifehacker.com), [How to Install Linux on a Chromebook and Unlock its Full Potential](http://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343). The content is copied here to make it easier to follow the entire set of instructions without jumping back and forth to multiple websites.
+The remainder of this section is based on Whitson Gordon's 2013 article on [](lifehacker.com), [How to Install Linux on a Chromebook and Unlock its Full Potential](http://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343). The content is copied here to make it easier to follow the entire set of instructions without jumping back and forth to multiple websites. Installing Linux requires three specific activities, including:
 
-* Enable developer mode <br><br>
-* Install Crouton <br><br>
-* Optimize the Linux Desktop for your Chromebook <br><br>
+* Enable developer mode, <br><br>
+* Install Crouton, and <br><br>
+* Optimize the Linux Desktop for your Chromebook. <br><br>
 
 ### Enable Developer mode
 
-This step will wipe local data, so make sure you back up anything that is not already stored in the cloud prior to proceding.
+This step will wipe local data, so make sure you back up anything that is not already stored in the cloud prior to proceeding.
 
 1. Press and hold the `<ESC>` and `<Refresh>` keys together, then press the `Power button` (while still holding the other two keys). This will reboot the Chromebook into Recovery Mode. <br><br>
 2. As soon as you see Recovery Mode pop up -- the screen with the yellow exclamation point -- press `<CTRL>+<D>`. THis will bring up a prompt asking if you want to turn on Developer Mode. <br><br>
@@ -191,7 +191,7 @@ Chromium is the open source browser on which Google Chrome is based. The [Chromi
 As students interact with various forms of data, sometimes it is helpful to look at the raw data files to understand their content, such as "does this file have a header row of variable names?" The open source text editor, [Atom](http://atom.io), is useful for this purpose. To install Atom, take the following steps.
 
 1.  Download Atom from the Atom website's [download page](http://atom.io/download/deb).<br><br>
-2. Once the software has completed the download, open the file viewer, navigate to the Downloads folder, and double click on the atom-amd64.deb package to start the Ubuntu Package Installer.<br><br>
+2. Once the software has completed the download, open the file viewer, navigate to the Downloads folder, and double click on the `atom-amd64.deb` package to start the Ubuntu Package Installer.<br><br>
 3. The Package Installer will analyze the file, confirm that all required Linux libraries are present, and enable the `<Install Package>` button. Press the button to install the package.<br><br>
 4. When complete, you can find Atom in the Applications folder or by searching for Atom from the Unity search button in the upper left corner of the Desktop.  <br><br>
 <img src="./images/misc-rOnChromebook05.png"><br><br>
@@ -299,10 +299,60 @@ To load a package once it's been downloaded, we use the `library()` function.
       library(googlesheets) #loads the googlesheets package
 
 
-
 # Step 5: Register for Github and Connect with Local Git
 
-This step is optional, but recommended. It enables you to store your R programs and data on Github, in case your Chromebook is lost, damaged, or stolen.  
+This step is optional, but recommended. It enables you to store your R programs and data on Github, in case your Chromebook is lost, damaged, or stolen. Since this step is optional, and there is a large volume of information already available on Github, we'll refer you to the [Data School Github Video Series](https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD) for this step.
+
+## Create an apStats Repository on Github
+
+Once you've registered a free account on Github, you can create a repository by selecting the `Repositories` tab from your Github home page. To create a repository, press the `New` button in the upper right section of the page.
+
+<img src="./images/misc-rOnChromebook18.png">
+
+This causes Github to display the new repository page. Enter the following information on the page in order to initialize the repository with a README file.
+
+1. Enter `apStats` as the repository name,
+2. Add a description for the repository, which will be used to initially popultae he README.md file,  
+3. Leave the `Public` radio button checked (private repositories require a paid Github account),
+4. Select an open source license (optional).
+5. Press the `Create Repository` button to create the repository.
+
+<img src="./images/misc-rOnChromebook19.png">
+
+GIthub will then display the home page for your repository. You can now clone this locally to your Chromebook and use it with RStudio.
+
+<img src="./images/misc-rOnChromebook20.png">
+
+
+## Setting up Git on the Chromebook
+
+When you set up git on your Chromebook, it's a good idea to create a single directory in which your git repositories will be stored. Create this directory on your USB drive to conserve disk space on the Chromebook's SSD drive. On my Chromebook, my USB disk is named "Samsung USB", so the following sequence of terminal commands would be used to create a `gitRepositories` directory.
+
+      cd "/media/removable/Samsung USB"
+      mkdir gitRepositories
+      cd gitRepositories
+
+<img src='./images/misc-rOnChromebook21.png'>
+
+The easiest way to synchronize a local copy of a remote Github repository is to use the `git clone` command.
+
+**NOTE:** Always run the `git clone` command from your `gitRepositories` directory so you can easily keep track of all of your repositories. Since we already have a terminal session open to this directory, we will clone the `apStats` repository that we created on Github.  The syntax for `git clone` is:
+
+      git clone https://github.com/username/repositoryName
+
+Since my Github userid is `lgreski`, I would enter the following:
+
+      git clone https://github/lgreski/apStats
+
+Git will clone the repository from Github, storing its contents into an `apStats` folder within the `gitRepositories` folder that we created earlier .
+
+<img src='./images/misc-rOnChromebook22.png'>
+
+If we change directories to `apStats` and list the folder contents, we can see the `README.md` file that Github generated when we created the repository on Github.
+
+<img src='./images/misc-rOnChromebook23.png'>
+
+RStudio supports git / Github integration. To set this up within RStudio, please read [Configuring RStudio / Github Integration OSX Version](http://bit.ly/2c9Q2bf). Since Mac OSX is actually a customized version of Linux, these instructions will work with your Chromebook.
 
 # Using the System
 
