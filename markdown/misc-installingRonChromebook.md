@@ -158,7 +158,17 @@ If you've installed Unity, the desktop will look similar to this.
 
 ### Optimize Linux Desktop for Chromebook  
 
-Discuss various bits of housekeeping here...
+Once installed, one can switch back and forth between Chrome OS and Ubuntu by pressing the following keys: `<CNTL>+<ALT>+<Shift>+<Back>` and `<CNTL>+<ALT>+<Shift>+<Forward>`.
+
+As you access the desktop, you'll notice that it has few programs installed, and that many of the default Ubuntu tools are left out. We'll explain how to install additional software later in this document.
+
+Also, if you installed the XFCE desktop, disable the screensaver because it causes graphics problems in Chrome OS.
+
+You'll notice that the Downloads folder in Chrome OS is the same as the Downloads folder on the Linux desktop, so you can use this as a common directory between Chrome and Linux. Once you install a USB stick in the Chromebook, it is also accessible between Linux and Chrome.
+
+As we noted earlier in the article, once your Chromebook is in Developer Mode, it will take up to an extra 30 seconds to boot since it shows the Developer Mode message. You can skip this by pressing `<CNTL>+<D>`.
+
+If you want to remove the Linux desktop and return solely to Chrome OS, you can reboot the Chromebook and press the spacebar at the prompt to re-enable OS verification. This will remove Crouton and Linux, and restore the Chromebook to its factory settings. Be sure you back up any files that aren't saved to the cloud before resetting the machine.
 
 # Step 2: Prepare Linux for RStudio
 
@@ -379,13 +389,13 @@ The second test focuses on the raw compute capacity of the Chromebook, using the
 
 Not only does the analysis run to completion on the Chromebook, its performance compares favorably to another machine that is optimized for long battery life: the HP Envy X2 tablet. This analysis runs in 20 minutes on the Chromebook, but takes over 70 minutes on the Envy X2.
 
-The bottom line is that not only does the Chromebook have the capacity to tackle relatively large data sets, it can also handle complex compute tasks with an acceptable response time. 
+The bottom line is that not only does the Chromebook have the capacity to tackle relatively large data sets, it can also handle complex compute tasks with an acceptable response time.
 
 # Working with Google Sheets
 
-After all of this effort, we can finally address the original question posed at the start of the article. Can we make R work with Google Sheets on a Chromebook. Having installed the `googlesheets` R package, we can fire up an RStudio session and attempt to access a Google Spreadsheet. For this exercise I've posted a copy of Pokémon statistics that I use for other articles on R. This data is based on Alberto Barradas' [Pokémon Stats](http://bit.ly/2ovmmxu) data from kaggle.com. Barradas' data includes basic statistics for the first 6 generations of Pokémon. The original data and separate files by Pokémon generation are also available at the [lgreski/pokemonData repository](http://bit.ly/2nB2Zzy) on Github.
+After all of this effort, we can finally address the original question posed at the start of the article: *Can we make R work with Google Sheets on a Chromebook?* Having installed the `googlesheets` R package, we can fire up an RStudio session and attempt to access a Google Spreadsheet. For this exercise I've posted a copy of Pokémon statistics that I use for other articles on R. This data is based on Alberto Barradas' [Pokémon Stats](http://bit.ly/2ovmmxu) data from kaggle.com. Barradas' data includes basic statistics for the first 6 generations of Pokémon. The original data and separate files by Pokémon generation are also available at the [lgreski/pokemonData repository](http://bit.ly/2nB2Zzy) on Github.
 
-First, we'll start a new RStudio session from the Linux terminal by typing `sudo rstudio`. Once RStudio begins, we'll load the `googlesheets` library and attempt to list the spreadsheets associated with one of my Google accounts, `greskilabs`.  You can either type the code directly into the R console, or create a new R script in the upper left pane of RStudio, type the code, highlight it and press the `<Run>` button
+First, we'll start a new RStudio session from the Linux terminal by typing `sudo rstudio`. Once RStudio begins, we'll load the `googlesheets` library and attempt to list the spreadsheets associated with one of my Google accounts.  You can either type the code directly into the R console, or create a new R script in the upper left pane of RStudio, type the code, highlight it and press the `<Run>` button
 
       library(googlesheets)
       theList <- gs_ls()
@@ -426,7 +436,9 @@ At this point we can conduct a variety of data analyses on the Pokémon data.
 
 # Conclusion
 
-At this point you've configured a professional operating system with leading tools for data science, including statistics, integration with Google Spreadsheets, and professional grade source code version control.
+At this point we have configured a professional operating system with leading tools for data science, including statistics, integration with Google Spreadsheets, and professional grade source code version control. We have also demonstrated that a Chromebook configured in this manner can tackle very sophisticated data science problems.
+
+Finally, this solution is very cost effective. All of the software used in this article is available for free over the internet, and a 128Gb low profile memory stick costs about $40 USD. Therefore, for less than $50 USD beyond the price of a Chromebook or less than $200 including the cost of a Chromebook, one can do serious "data science."
 
 # Appendix
 
