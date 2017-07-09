@@ -314,7 +314,7 @@ To load a package once it's been downloaded, we use the `library()` function.
 
 # Step 5: Register for Github and Connect with Local Git
 
-This step is optional, but recommended. It enables you to store your R programs and data on Github, in case your Chromebook is lost, damaged, or stolen. Since this step is optional, and there is a large volume of information already available on Github, we'll refer you to the [Data School Github Video Series](https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD) for this step.
+This step is optional, but recommended. It enables you to store your R programs and data on Github, in case your Chromebook is lost, damaged, or stolen. There is an entire set of videos about configuring git and Githb from Data School: [Data School Github Video Series](https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD). We'll leave it to you to sign up for Github. 
 
 ## Create an apStats Repository on Github
 
