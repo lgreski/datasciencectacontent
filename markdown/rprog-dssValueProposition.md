@@ -1,4 +1,4 @@
-# Data Science Specialization: What's the Value? 
+# Data Science Specialization: What's the Value?
 
 By the first or second week into *R Programming*, students in the Johns Hopkins Data Science Specialization often express frustration about the degree to which they have to figure things out on their own in order to complete quizzes and course assignments. This frustration usually comes in the form of forum posts, many of which generate large volumes of "me too" replies.
 
@@ -16,7 +16,7 @@ In my view, here's what a student gets for the $49 USD \(as of January 2017\) fo
 * A set of course projects that challenge students to produce legitimate work products that can be showcased in a portfolio, and <br><br>
 * Access to a community of students, mentors, and high quality [community-generated content](http://bit.ly/2ePZxfk) that provides context beyond what is covered in the lectures, built by people who have already taken the Specialization courses, some of whom are practicing data scientists or who manage teams of data scientists. <br><br>
 
-The bottom line is that the Data Science Specialization provides access to content from a prestigious U.S. university at a very affordable price, even if there is a lot less hand holding than is typical for a course in meat space at a university.
+The bottom line is that the Data Science Specialization provides access to content from a prestigious U.S. university at a very affordable price, even if there is significantly less personal attention than is typical for a graduate level course in meat space at a university.
 
 Furthermore, since the Specialization uses the open source language R, students also learn how to use very sophisticated statistics software at a fraction of the cost of commercial statistics packages, as I discuss in [Commercial Statistics Packages: An Historical Perspective](http://bit.ly/2fPj2qN).
 
@@ -40,12 +40,12 @@ The early courses in the Data Science Specialization repeatedly encourage studen
 
 For example, the *R Programming* lexical scoping assignment can be completed with 3 changes in the example `cachemean.R` program, one of which is a global find / replace on the string *mean*, plus a couple of comment lines. Done this way, a student can get a perfect score on the assignment without actually learning how lexical scoping works. Extra work is required to fully comprehend what's going on in the smaple code, as I describe in [Demystifying makeVector().](http://bit.ly/2bTXXfq)
 
-Many students express frustration about this requirement when they struggle to complete the first few courses in the Specialization without understanding that it is actually a test of students' tenacity. To succeed in this field, one has to have a high level of ingenuity and creativity. One must also have an unwillingness to give up in the face of ambiguous problems. 
-Challenging students to develop these characteristics at the start of the Specialization by forcing them to find and use relevant resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistical Inference,* *Regression Models,* *Practical Machine Learning,* and the *Capstone.* 
+Many students express frustration about this requirement when they struggle to complete the first few courses in the Specialization without understanding that it is actually a test of students' tenacity. To succeed in this field, one has to have a high level of ingenuity and creativity. One must also have an unwillingness to give up in the face of ambiguous problems.
+Challenging students to develop these characteristics at the start of the Specialization by forcing them to find and use relevant resources outside the lectures makes them a habit by the time students take the statistics courses, including *Statistical Inference,* *Regression Models,* *Practical Machine Learning,* and the *Capstone.*
 
 # You: The Final Ingredient
 
-The Specialization courses provide everything one needs to direct one's learning in data science at an affordable price. The final ingredient is the student's motivation and determination to solve problems. Yes, the introductory assignments in *R Programming* are a big jump in difficulty from the lectures. Yes, the course projects for *Getting and Cleaning Data*, *Reproducible Research*, and *Practical Machine Learning* are very challenging. Yes, the mathematics in *Statistical Inference* and *Regression Models* are tough for students who haven't previously studied statistics. Yes, the course projects for *Reproducible Research*, *Practical Machine Learning*, and the *Capstone* stress the limits of old, low memory computer equipment. 
+The Specialization courses provide everything one needs to direct one's learning in data science at an affordable price. The final ingredient is the student's motivation and determination to solve problems. Yes, the introductory assignments in *R Programming* are a big jump in difficulty from the lectures. Yes, the course projects for *Getting and Cleaning Data*, *Reproducible Research*, and *Practical Machine Learning* are very challenging. Yes, the mathematics in *Statistical Inference* and *Regression Models* are tough for students who haven't previously studied statistics. Yes, the course projects for *Reproducible Research*, *Practical Machine Learning*, and the *Capstone* stress the limits of old, low memory computer equipment.
 
 On the other hand, the Specialization presents an opportunity for students to produce some outstanding quality deliverables for their portfolios, solving challenging problems that relate well to real world work in data science.
 
@@ -53,44 +53,43 @@ After all, that's what Data Science in real life is all about: ambiguous problem
 
 # What Type of Job Can I Expect After Completing the Specialization?
 
-The Data Science Specialization can prepare a student for an entry level data science job. If you're coming from a lower paid profession (e.g. a middle-schoool or high school teacher in the United States), the curriculum can help you immediately get a better paying job, especially if you invest the effort in developing a github repository with high quality projects. On the other hand, if you're already in a higher paid profession (e.g. software developer), you may have to take a pay cut to gain the experience necessary to qualify for a data science job that pays more than your current job. 
+The Data Science Specialization can prepare a student for an entry level data science job. If you're coming from a lower paid profession (e.g. a middle-schoool or high school teacher in the United States), the curriculum can help you immediately get a better paying job, especially if you invest the effort in developing a github repository with high quality projects. On the other hand, if you're already in a higher paid profession (e.g. software developer), you may have to take a pay cut to gain the experience necessary to qualify for a data science job that pays more than your current job.
 
 That said, beyond just completing the specialization, one needs to be able to discuss the projects completed, the techniques used, and most importantly, how one developed the "hacker mentality" necessary to figure things out on one's own. I see this as the most valuable aspect of the specialization for a beginning data scientist, because it changes the interview from "what do you already know?" to "how I can learn enough to solve any ambiguous problem quickly."
 
-# Appendix 
+# Appendix
 
 ## Capstone as the Ultimate Embodiment of the Hacker Mentality
 
-The Capstone project embodies all the things that are both exciting and frustrating about Data Science. Students must build a prediction algorithm in an area that is new to most students: natural language processing. The data source is a corpus of over 4 million English language texts from blogs, news sources, and twitter. 
+The Capstone project embodies all the things that are both exciting and frustrating about Data Science. Students must build a prediction algorithm in an area that is new to most students: natural language processing. The data source is a corpus of over 4 million English language texts from blogs, news sources, and twitter.
 
-The assignment is deceptively simple: build an algorithm to predict the next word in a sentence, using the data provided for the project. Incorporate the algorithim into a Shiny application that can be installed on [Shinyapps.io](http://shinyapps.io) for peer review. The amount of instruction is minimal: weekly lectures consist of 1 - 3 minutes worth of content, plus references to academic papers in the area of natural language processing. 
+The assignment is deceptively simple: build an algorithm to predict the next word in a sentence, using the data provided for the project. Incorporate the algorithim into a Shiny application that can be installed on [Shinyapps.io](http://shinyapps.io) for peer review. The amount of instruction is minimal: weekly lectures consist of 1 - 3 minutes worth of content, plus references to academic papers in the area of natural language processing.
 
-Students must do a considerable amount of work to solve the following challenges while building the predictive text application. 
+Students must do a considerable amount of work to solve the following challenges while building the predictive text application.
 
 1. How much memory is consumed by the data relative to the compute power I have?
 2. How do I select one or more R packages that produce the deliverables I need to build my algorithm, and run efficiently on my computer?
-3. What does "good" look like for a text prediction algorithm? 
-4. How much data can I use in my prediction algorithm, given the processing limits of the free [Shinyapps.io](http://shinyapps.io) account? The three key considerations are load time, total memory used, and response time for predictions. 
- 
-Finally, students must contend with a number of conflicting constraints and diverse commentary from other students, ranging from the desire to implement sophisticated algorithms like the [Katz Back Off Model](http://bit.ly/2pWECl0) versus the resources needed to execute it, to students who encourage others to implement the models on the Amazon EC2 cloud. 
+3. What does "good" look like for a text prediction algorithm?
+4. How much data can I use in my prediction algorithm, given the processing limits of the free [Shinyapps.io](http://shinyapps.io) account? The three key considerations are load time, total memory used, and response time for predictions.
+
+Finally, students must contend with a number of conflicting constraints and diverse commentary from other students, ranging from the desire to implement sophisticated algorithms like the [Katz Back Off Model](http://bit.ly/2pWECl0) versus the resources needed to execute it, to students who encourage others to implement the models on the Amazon EC2 cloud.
 
 It takes a lot of self-discipline to wade through the natural language processing theory, figure out what one can actually execute given the compute power one has, and avoid time sinks (e.g. figuring out how to do the project on Amazon EC2 without prior experience) in order to produce a working prediction app that runs on [Shinyapps.io](http://shinyapps.io). That said, the guidance I provide to students enrolled in *R Programming:* [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A) still rings true: **make it work, make it right, make it fast.**  
 
-It's encouraging to know that the instruction provided in *R Programming* provides a good foundation for tackling the challenges of the capstone course. If you've been developing your hacker skills since *R Programming*, you're ready to take on the challenges of natural language processing. 
+It's encouraging to know that the instruction provided in *R Programming* provides a good foundation for tackling the challenges of the capstone course. If you've been developing your hacker skills since *R Programming*, you're ready to take on the challenges of natural language processing.
 
-For those who persevere and finish the capstone project, there is a well deserved sense of accomplishment at solving a very challenging natural language processing problem. Having finished the Specialization, students are well equipped to tackle real life data science problems. 
+For those who persevere and finish the capstone project, there is a well deserved sense of accomplishment at solving a very challenging natural language processing problem. Having finished the Specialization, students are well equipped to tackle real life data science problems.
 
 ## JHU Data Science Team Ask Me Anything Session
 
-To provide additional background on how the professors think about the curriculum, here is a link to the [Ask Me Anything session](http://bit.ly/2irzBcn) that the JHU Data Science team conducted on Reddit in early 2016. 
+To provide additional background on how the professors think about the curriculum, here is a link to the [Ask Me Anything session](http://bit.ly/2irzBcn) that the JHU Data Science team conducted on Reddit in early 2016.
 
 Hat tip to a Community Mentor, Stephanie Clark, from the *Exploratory Data Analysis* course.
 
-## Acknowledgements 
+## Acknowledgements
 
-Thanks to [David Hood](http://bit.ly/2jCe3eo) and Alan Berger for feedback about the value of quizzes as a sandbox that I've incorporated into the article. 
+Thanks to [David Hood](http://bit.ly/2jCe3eo) and Alan Berger for feedback about the value of quizzes as a sandbox that I've incorporated into the article.
 
 ## About the Author
 
-More information about the author is available on [Len's LinkedIn profile page](http://bit.ly/2jjJABL). 
-
+More information about the author is available on [Len's LinkedIn profile page](http://bit.ly/2jjJABL).
