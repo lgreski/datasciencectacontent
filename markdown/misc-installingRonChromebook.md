@@ -285,17 +285,26 @@ Congratulations! You now have a working version of RStudio installed on your Chr
 
 # Step 4: Install R Packages
 
+Now that we've demonstated that both R and RStudio are working, we can execute the following code to run Google Sheets within RStudio. We'll use the `install.packages()` function after we create a list of packages for R to install.
+
+      pkgList <- c("openssl","curl","dtplyr","googlesheets")
+      install.packages(pkgList)
+
+Note, in addition to these packages, R will install any packages on which these depend, such as `httr` for `googlesheets`.
+
+In Ubuntu R must install all packages from source, so this process will take a while as R downloads and compiles all the packages required to support Google Sheets. I also included the `curl` package because it is necessary for the `download.files()` function, which is very useful to gather data from websites.
+
+To load a package once it's been downloaded, we use the `library()` function.
+
+      library(googlesheets) #loads the googlesheets package
+
+
+
 # Step 5: Register for Github and Connect with Local Git
 
+This step is optional, but recommended. It enables you to store your R programs and data on Github, in case your Chromebook is lost, damaged, or stolen.  
+
 # Using the System
-
-## Setting Working Directory
-
-## Storing Application Code
-
-## Storing & Accessing Data
-
-## Making it Work
 
 ### Size of Problems One Can Solve
 
@@ -306,6 +315,49 @@ We ran two tests to check the performance of the Chromebook relative to other pl
 The output is an R Markdown document published to RPubs, [NOAA Storm Data Analysis -- Chromebook Version](http://bit.ly/2trj5RC). This version of the analysis runs in less than 2 minutes. Not bad for a data file that consumes over 500Mb of RAM in R.
 
 The second test...
+
+# Working with Google Sheets
+
+After all of this effort, we can finally address the original question posed at the start of the article. Can we make R work with Google Sheets on a Chromebook. Having installed the `googlesheets` R package, we can fire up an RStudio session and attempt to access a Google Spreadsheet. For this exercise I've posted a copy of Pokémon statistics that I use for other articles on R. This data is based on Alberto Barradas' [Pokémon Stats](http://bit.ly/2ovmmxu) data from kaggle.com. Barradas' data includes basic statistics for the first 6 generations of Pokémon. The original data and separate files by Pokémon generation are also available at the [lgreski/pokemonData repository](http://bit.ly/2nB2Zzy) on Github.
+
+First, we'll start a new RStudio session from the Linux terminal by typing `sudo rstudio`. Once RStudio begins, we'll load the `googlesheets` library and attempt to list the spreadsheets associated with one of my Google accounts, `greskilabs`.  You can either type the code directly into the R console, or create a new R script in the upper left pane of RStudio, type the code, highlight it and press the `<Run>` button
+
+      library(googlesheets)
+      theList <- gs_ls()
+
+The Google Sheets package will generate a URL for you to cut and paste into a browser, so Google can generate an authorization token that will allow the Google Sheets package to interact with your Google Drive and Google Docs documents, including Sheets.
+
+<img src="./images/googlesheets01.png">
+
+Highlight the URL, copy it into the clipboard with `<CNTL>+<C>`,  start a Chromium browser session, and paste the URL from the clipboard into the URL field in the browser. Google will respond with an account for you to login.  
+
+<img src="./images/googlesheets02.png">
+
+After logging in, Google will ask you to give permission to the Google Sheets application to access Google Drive. Press the `<Allow>` button to continue.
+
+<img src="./images/googlesheets03.png">
+
+Next, Google will display an authorization token (my token has been blurred out for this walkthrough).  Highlight the entire token and copy it into the clipboard. Then, return to RStudio.
+
+<img src="./images/googlesheets04.png">
+
+Now, paste the authorization code into the R Console and press `<Enter>` for R to continue processing.
+
+<img src="./images/googlesheets05.png">
+
+Next, we'll print the object created by `gs_ls()` to show the spreadsheets that are on Google Drive for the account we just authorized.
+
+<img src="./images/googlesheets06.png">
+
+To work with a Google spreadsheet in R, one must "register" the sheet with the `googleapps` package. One way to do this is via the spreadsheet's url, using the `gs_url()` function as illustrated below. We save the result to an object called `pokemonGS`. We use this object as the argument to the `gs_read()` function to load the data from Google into R.
+
+<img src="./images/googlesheets07.png">
+
+Finally, to print the first few rows of the data, we use the `head()` function.
+
+<img src="./images/googlesheets08.png">
+
+At this point we can conduct a variety of data analyses on the Pokémon data.
 
 # Conclusion
 
@@ -339,7 +391,7 @@ We installed R and RStudio on an early model Chromebook that has what would be c
 
 ## RStudio: R Markdown Test
 
-To run a more complex test of the RStudio implementation, we'll create an R Markdown document by selecting it from the menu bar. Since I've already updated all the required packages for R Markdown and knitr, I won't receive messages asking me to update these package, but "your mileage may vary."
+To run a more complex test of the RStudio implementation, we'll create an R Markdown document by selecting it from the menu bar. Since I've already updated all the required packages for R Markdown and knitr, I did not receive messages asking me to update these packages, but "your mileage may vary."
 
 <img src="./images/misc-rOnChromebook11.png">
 
