@@ -444,7 +444,7 @@ At this point we can conduct a variety of data analyses on the Pokémon data.
 
 # Conclusion
 
-At this point we have configured a professional operating system with leading tools for data science, including statistics, integration with Google Spreadsheets, and professional grade source code version control. We have also demonstrated that a Chromebook configured in this manner can tackle very sophisticated data science problems.
+At this point we have configured an operating system suitable for professional software development with leading tools for data science, including statistics, integration with Google Spreadsheets, and professional grade source code version control. We have also demonstrated that a Chromebook configured in this manner can tackle very sophisticated data science problems.
 
 Finally, this solution is very cost effective. All of the software used in this article is available for free over the internet, and a 128Gb low profile memory stick costs about $40 USD. Therefore, for less than $50 USD beyond the price of a Chromebook or less than $200 including the cost of a Chromebook, one can do serious "data science."
 
