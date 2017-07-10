@@ -63,7 +63,7 @@ Once installed in the Chromebook the low profile makes it easy to leave the memo
 
 #### Using the terminal
 
-Many of the steps in this walkthrough require use of the Linux terminal. In Chrome OS, the Linux terminal may be accessed by pressing `<CNTL>+<ALT>+<T>`.  From Chrome OS, the `crosh` shell looks like this.
+Many of the steps in this walkthrough require use of the Linux terminal. In Chrome OS, the Linux terminal may be accessed by pressing `<CNTL>+<ALT>+<T>`.  From Chrome OS, the `crosh` (short for Chrome OS shell) shell looks like this.
 
 <img src="./images/misc-rOnChromebook03.png">
 
@@ -158,7 +158,9 @@ If you've installed Unity, the desktop will look similar to this.
 
 ### Optimize Linux Desktop for Chromebook  
 
-Once installed, one can switch back and forth between Chrome OS and Ubuntu by pressing the following keys: `<CNTL>+<ALT>+<Shift>+<Back>` and `<CNTL>+<ALT>+<Shift>+<Forward>`.
+Once installed, one can switch back and forth between Chrome OS and Ubuntu by pressing the following keys: `<CNTL>+<ALT>+<Shift>+<Backward>` and `<CNTL>+<ALT>+<Shift>+<Forward>`. Note that some hardware uses `<CNTL>+<ALT>+<Backward>` and `<CNTL>+<ALT>+<Forward>` so you may have to check the documentation for your Chromebook to confirm which version of these keystrokes is correct for your hardware. 
+
+For example, Whitson Gordon's article says that Intel machines use `<CNTL>+<ALT>+<Backward>` and `<CNTL>+<ALT>+<Forward>`, but my Chromebook has an Intel processor yet the commands that work correctly on my machine are `<CNTL>+<ALT>+<Shift>+<Backward>` and `<CNTL>+<ALT>+<Shift>+<Forward>`.
 
 As you access the desktop, you'll notice that it has few programs installed, and that many of the default Ubuntu tools are left out. We'll explain how to install additional software later in this document.
 
@@ -179,11 +181,14 @@ In this step we will install a number of Linux software applications that will b
 List the Linux libraries that one needs to install in advance to support installation of R and RStudio. These libraries are necessary to download files in R via the `download.files()` function, and to use secure sockets with Google Sheets.
 
 1. Install libcurl with the following commands in a Linux terminal.
+
         sudo apt-get -y install libcurl4-gnutls-dev
         sudo apt-get -y build-dep libcurl4-gnutls-dev
 2. Install curl with the following command from a Linux terminal.
+
         sudo apt-get install curl
 3. Install openssl with the following command from a Linux terminal.
+
         sudo apt-get install openssl
 
 ## Install Key Linux applications
