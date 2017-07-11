@@ -6,13 +6,22 @@ The [extract operator](https://stat.ethz.ch/R-manual/R-devel/library/base/html/E
 
 In this article we will illustrate various forms of the extract operator, focusing on how to use it with data frames.
 
-The first form, `[`, can be used to extract content from vector, lists, or data frames. The following code defines a vector and then extracts the last 3 elements from it using two techniques. The first technique directly references elements 13 through 15. The second approach uses the length of the vector to calculate the indexes of last three elements.
+The first form, `[`, can be used to extract content from vector, lists, or data frames. Since vectors are one dimensional, i.e. they contain a between 1 and N elements, we apply the extract operator to the vector as a single number or a list of numbers as follows. 
+
+     x[ selection criteria here ]
+     
+
+The following code defines a vector and then extracts the last 3 elements from it using two techniques. The first technique directly references elements 13 through 15. The second approach uses the length of the vector to calculate the indexes of last three elements.
 
     x <- 16:30 # define a vector
     x[13:15] # extract last 3 elements
     x[(length(x)-2):length(x)] # extract last 3 elements
 
 When used with a list, `[` extracts one or more elements from the list.
+
+When used with a data frame, the extract operator can select rows, columns, or both rows and columns. Therefore, the extract opertor takes the following form: rows then a comma, then columns. 
+
+     x[select criteria for rows , select criteria for columns]
 
 The second and third forms of the extract operator, `[[` and `$` extract a single item from an object. Note that `$` does not support a computed index, as illustrated in an example in the next section of this article.  
 
