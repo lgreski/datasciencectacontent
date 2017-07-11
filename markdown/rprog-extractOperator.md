@@ -6,7 +6,7 @@ The [extract operator](https://stat.ethz.ch/R-manual/R-devel/library/base/html/E
 
 In this article we will illustrate various forms of the extract operator, focusing on how to use it with data frames.
 
-The first form, `[`, can be used to extract content from vector, lists, or data frames. Since vectors are one dimensional, i.e. they contain a between 1 and N elements, we apply the extract operator to the vector as a single number or a list of numbers as follows. 
+The first form, `[`, can be used to extract content from vector, lists, or data frames. Since vectors are one dimensional, i.e. they contain between 1 and N elements, we apply the extract operator to the vector as a single number or a list of numbers as follows. 
 
      x[ selection criteria here ]
      
