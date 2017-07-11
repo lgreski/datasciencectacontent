@@ -5,7 +5,7 @@ Students in the Johns Hopkins University Data Science Specialization often strug
 One can create a PDF suitable for submission for the course project in three different ways, including:
 
 1. Generate an HTML document with knitr, and then use a PDF printing tool like the Windows 10 built-in "Microsoft Print to PDF" printer driver or [CutePDF](http://cutepdf.com) to print the HTML document as a PDF,
-2. Generate a Microsoft Word document with knitr, and print the Word document as a PDF using Word 2013+ PDF print driver, or
+2. Generate a Microsoft Word document with knitr, and save the Word document as a PDF using Word 2016+ or print the Word document as a PDF using Word 2013+ PDF print driver, or
 3. Install a version of LaTeX that is appropriate for your operating system, and use knitr to directly generate PDF files.
 
 For the purposes of this article, we will focus on alternative 3, specifically for the Windows 10 operating system.
