@@ -242,7 +242,7 @@ As we can see from the output, the result is a single data frame containing the 
 
 #### Verifying Accuracy of the Results
 
-We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` function. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the correlated subquery. The subquery is required to find the minimum National Pokédex Number for a given type.
+We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` function. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the `group by` clause. The `group by` clause allows us to find the minimum National Pokédex Number for each type of Pokémon.
 
      # check the results within an independent technique: SQL 
      library(sqldf)
