@@ -32,6 +32,11 @@ The remainder of this document serves as a directory of the content, aligning in
 
 If you're interested in the URLs for the lecture slides, they are available in the [Data Science Specialization Courses](http://bit.ly/2bJcXNW) github repository. Each course is stored in a subdirectory within the repository, and the slides are built in R Markdown language, a technique you'll learn in *Developing Data Products*.
 
+### Miscellaneous Articles about Data Science
+
+1. [The Future of Data Analysis](http://bit.ly/2uC9atX) by John Tukey, 1962 paper where he challenges statisticians to move away from ever more complicated mathematics to tackle data analysis problems in more realistic ways. 
+2. [50 Years of Data Science](http://bit.ly/2tKcaQu) by David Donoho, a 2015 retrospective on John Tukey's 1962 paper. 
+
 ## Course 2: R Programming
 
 ### START HERE
