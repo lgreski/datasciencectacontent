@@ -14,7 +14,7 @@ The specific requirements for `pollutantmean()` are covered in [Breaking down po
 2. Calculate a mean for one of the pollutants, either `nitrate` or `sulfate`
 3. Write the code for 1 and 2 in a way that one can run the analysis by passing a set of parameters to the code, versus copying & pasting the code to handle different sets of sensors and/or pollutants, as illustrated in the [sample output from the assignment](https://d396qusza40orc.cloudfront.net/rprog%2Fdoc%2Fpollutantmean-demo.html).
 
-<img="./images/rprog-pollutantmeanWithSAS01.png">
+<img src="./images/rprog-pollutantmeanWithSAS01.png">
 
 Reading and calculating a mean of one sensor file in SAS is very easy. We will illustrate this with one of the examples from the assignment 1 instructions from the *R Programming* course.
 
