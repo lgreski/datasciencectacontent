@@ -14,7 +14,7 @@ For assignment 1, [Derek Franks' Tutorial for those struggling with Programming 
 
 For assignment 2, DanieleP's [Tutorial for those Struggling with Programming Assignment 2](https://github.com/DanieleP/PA2-clarifying_instructions) is helpful, along with my articles [makeCacheMatrix as an Object](http://bit.ly/2byUe4e), and [R Objects, S Objects, and Lexical Scoping](http://bit.ly/2dtOSXi), which references an extended version of the Lexical Scoping lecture from a 2003 JHU Biostatistics class. Given all of the challenges people have in understanding this assignment, I have also posted a complete walkthrough of the <code>makeVector()</code> function in the article [Demystifying makeVector()](http://bit.ly/2bTXXfq).
 
-### Github
+### Git and Github
 
 Many students struggle with use of Github for this assignment. Git and Github are covered in *The Data Scientist's Toolbox*, and there is a lot of content explaining how to use Git and Github on the Data Science Specializtion Community Site's [Data Scientist's Toolbox](http://bit.ly/2c9FGMa) page. 
 
