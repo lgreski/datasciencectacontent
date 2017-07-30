@@ -52,6 +52,9 @@ registerDoSEQ()
 fit
 fit$resample
 confusionMatrix.train(fit)
+#average OOB error
+mean(fit$finalModel$err.rate[,"OOB"])
+
 plot(fit,main="Accuracy by Predictor Count")
 varImpPlot(fit$finalModel,
            main="Variable Importance Plot: Random Forest")
