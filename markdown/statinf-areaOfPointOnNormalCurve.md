@@ -1,16 +1,25 @@
 # Calculating Area for a Point on the Normal Curve
 
-**Add introduction here**
+A student in the July 2017 run of the Johns Hopkins University *Statistical Inference* course asked how one could calculate the probability for a specific point on a normal curve, given Professor Caffo's statement that we assign probability values to ranges of continuous variables. The key question here is "Why can't we calculate the probability of a specific value for a continuous variable when we can calculate the probability of a specific value for a discrete variable?"
 
-Since <img src='./images/statinf-areaOfPointOnNormalCurve000.png'> the area under any specific point on the normal curve is 0. However, one can use the mean and standard deviation of a distribution along with a specific value to associate it with a quantile, as Professor Caffo defined on slide 21 of the Probability lecture.
+[Integral calculus](https://en.wikipedia.org/wiki/Integral) provides the mathematics to calculate the area under a curve. An integral is essentially the reverse of a [derivative](https://en.wikipedia.org/wiki/Derivative), and the [fundamental theorem of calculus](https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus) explains how the two relate for a continuous real function.
 
-**change following paragraph to replace personal reference in discussion thread with more general explanation of the height of adults problem** 
+<blockquote> if *f* is a continuous real-valued function  defined on a <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)#Terminology">closed interval </a>[a, b], then, once an antiderivative F of f is known, the definite integral of *f* over that interval is given by<br><br>
 
-Since you referenced the height of an adult population in your post, I've obtained data from the United States Centers for Disease Control's summary of the [National Health and Nutrition Index Survey - Anthropometric Reference Data for Children and Adults 2011 - 2014](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi2_LOLxbzVAhXDPFAKHYTvDWEQFggmMAA&url=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fdata%2Fseries%2Fsr_03%2Fsr03_039.pdf&usg=AFQjCNG_oCKDQ3G4PDZJPfhgDjT2ZXQZZw).
+ <img src='./images/statinf-areaOfPointOnNormalCurve04.png'>
+ </blockquote>
+
+From the above definition it logically follows that <img src='./images/statinf-areaOfPointOnNormalCurve000.png'>. Therefore, the area under any specific point on the normal curve is 0 because *F(a) - F(a) = 0*. However, one can use the mean and standard deviation of a distribution along with a specific value to associate it with a [quantile](https://en.wikipedia.org/wiki/Quantile), as Professor Caffo defined on slide 21 of the Probability lecture.
+
+We can also calculate the area for a small slice of the normal curve surrounding the exact value in which we are interested.
+
+We'll illustrate this technique with the details supporting the question asked by the student on the *Statistical Inference* discussion forum. Let's look at the heights of males in the United States. What would we do if we wanted to calculate the probability that an individual's height is 1.7 meters?
+
+We can answer this question with data from the United States Centers for Disease Control's summary of the [National Health and Nutrition Index Survey - Anthropometric Reference Data for Children and Adults 2011 - 2014](http://bit.ly/2wa3d4E).
 
 <img src='./images/statinf-areaOfPointOnNormalCurve01.png'>
 
-I selected the table that includes average height (in centimeters) and percentiles for varying age categories of adult males. We can calculate the standard deviation for height manipulating the formula for a Z score at the 5th percentile to solve for the sample standard deviation *s*, where <img src='./images/statinf-areaOfPointOnNormalCurve00.png'>
+We will use the table that includes average height (in centimeters) and percentiles for varying age categories of adult males. We can calculate the standard deviation for height manipulating the formula for a Z score at the 5th percentile to solve for the sample standard deviation *s*, where <img src='./images/statinf-areaOfPointOnNormalCurve00.png'>
 
 For the purpose of this exercise, we will assume that height of males in the U.S. is normally distributed. Given the assumption of a normal distribution we can calculate where a height of 170 centimeters (1.7 meters) is on a normal curve (the Z distribution) as follows.
 
