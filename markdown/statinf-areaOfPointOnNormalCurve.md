@@ -1,6 +1,10 @@
 # Calculating Area for a Point on the Normal Curve
 
+**Add introduction here**
+
 Since <img src='./images/statinf-areaOfPointOnNormalCurve000.png'> the area under any specific point on the normal curve is 0. However, one can use the mean and standard deviation of a distribution along with a specific value to associate it with a quantile, as Professor Caffo defined on slide 21 of the Probability lecture.
+
+**change following paragraph to replace personal reference in discussion thread with more general explanation of the height of adults problem** 
 
 Since you referenced the height of an adult population in your post, I've obtained data from the United States Centers for Disease Control's summary of the [National Health and Nutrition Index Survey - Anthropometric Reference Data for Children and Adults 2011 - 2014](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi2_LOLxbzVAhXDPFAKHYTvDWEQFggmMAA&url=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fdata%2Fseries%2Fsr_03%2Fsr03_039.pdf&usg=AFQjCNG_oCKDQ3G4PDZJPfhgDjT2ZXQZZw).
 
