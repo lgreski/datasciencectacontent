@@ -119,7 +119,8 @@ The next set of articles includes general commentary about the course, R program
 ## Course 6: Statistical Inference
 
 1. [Reference Materials for Statistical Inference](http://bit.ly/2c50sKo)  Start here if you're looking for help on the statistical techniques taught in this course.
-4. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](http://bit.ly/2doF4OT)
+2. [Using MathJax with Discussion Forums, R Markdown, and Github Pages](http://bit.ly/2doF4OT)
+3. [CONCEPTS: Calculating Area for a Point on the Normal Curve](http://bit.ly/2hw5AMF) Explains why one cannot calculate the exact proability for a specific value within a distribution for a continuous variable.
 4. [Poisson Confidence Interval Explained](http://bit.ly/2m8qQ8y) Explains the formulas on slide 26 of the *Asymptopia* lecture, illustrates the differences in two calculations on slide 27. 
 5. [Power Calculations: Optimal Sample size](http://bit.ly/2i1RDGa)
 6. [Permutation Tests Explained](http://bit.ly/2iV2HEx)
