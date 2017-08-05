@@ -4,7 +4,7 @@ A student in the July 2017 run of the Johns Hopkins University *Statistical Infe
 
 [Integral calculus](https://en.wikipedia.org/wiki/Integral) provides the mathematics to calculate the area under a curve. An integral is essentially the reverse of a [derivative](https://en.wikipedia.org/wiki/Derivative), and the [fundamental theorem of calculus](https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus) explains how the two relate for a continuous real function.
 
-<blockquote> if <i>f</i> is a continuous real-valued function  defined on a <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)#Terminology">closed interval </a>[a, b], then, once an antiderivative F of f is known, the definite integral of <i>f</i> over that interval is given by<br><br>
+<blockquote> if <i>f</i> is a continuous real-valued function  defined on a <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)#Terminology">closed interval </a>[a, b], then, once an antiderivative <i>F</i> of <i>f</i> is known, the definite integral of <i>f</i> over that interval is given by<br><br>
 
  <img src='./images/statinf-areaOfPointOnNormalCurve04.png'>
  </blockquote>
