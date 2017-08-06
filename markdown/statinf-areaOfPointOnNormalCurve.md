@@ -4,14 +4,14 @@ A student in the July 2017 run of the Johns Hopkins University *Statistical Infe
 
 [Integral calculus](https://en.wikipedia.org/wiki/Integral) provides the mathematics to calculate the area under a curve. An integral is essentially the reverse of a [derivative](https://en.wikipedia.org/wiki/Derivative), and the [fundamental theorem of calculus](https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus) explains how the two relate for a continuous real function.
 
-<blockquote> if <i>f</i> is a continuous real-valued function  defined on a <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)#Terminology">closed interval </a>[a, b], then, once an antiderivative F of f is known, the definite integral of <i>f</i> over that interval is given by<br><br>
+<blockquote> if <i>f</i> is a continuous real-valued function  defined on a <a href="https://en.wikipedia.org/wiki/Interval_(mathematics)#Terminology">closed interval </a>[a, b], then, once an antiderivative <i>F</i> of <i>f</i> is known, the definite integral of <i>f</i> over that interval is given by<br><br>
 
  <img src='./images/statinf-areaOfPointOnNormalCurve04.png'>
  </blockquote>
 
 From the above definition it logically follows that <img src='./images/statinf-areaOfPointOnNormalCurve000.png'>. Therefore, the area under any specific point on the normal curve is 0 because *F(a) - F(a) = 0*. However, one can use the mean and standard deviation of a distribution along with a specific value to associate it with a [quantile](https://en.wikipedia.org/wiki/Quantile), as Professor Caffo defined on slide 21 of the Probability lecture.
 
-We can also calculate the area for a small slice of the normal curve surrounding the exact value in which we are interested.
+A quantile calculates the area from the bottom of the curve to a specific point, allowing us to use the fixed integral technique as we described above. We can also calculate the area for a small slice of the normal curve surrounding the exact value in which we are interested.
 
 We'll illustrate this technique with the details supporting the question asked by the student on the *Statistical Inference* discussion forum. Let's look at the heights of males in the United States. What would we do if we wanted to calculate the probability that an individual's height is 1.7 meters?
 
