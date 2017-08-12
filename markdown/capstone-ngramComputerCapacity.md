@@ -41,11 +41,11 @@ Note that due to the size of the objects, a machine with a minimum of 16Gb of RA
 
 # Processing with Less Memory
 
-Most students do not have 16Gb of RAM on the computers they use for the Capstone project. In this situation, students have two options for processing the data, sampling, and iterative processing.
+Most students do not have 16Gb of RAM on the computers they use for the Capstone project. In this situation, students have two options for processing the data: sampling, and iterative processing.
 
 The sampling approach is relatively straightforward: take a random sample of the documents, and perform subsequent steps against the sampled documents.
 
-The iterative approach is more complex, because one must complete the following steps in sequence to process the data.
+The iterative approach is more complex because one must complete the following steps in sequence to process the data.
 
 1. Break the incoming documents into `n` groups, each of which is small enough to process within the RAM limits of the computer used for the analysis.
 
@@ -59,7 +59,7 @@ The iterative approach is more complex, because one must complete the following 
 
 4. aggregate to summarize each n-gram file into frequencies by base
 
-Depending on the RAM available on one's computer, this approach can take a long time.
+Depending on the RAM available on one's computer, this approach can take a long time. Also the total clock time required will increase in inverse proportion to the RAM on a machine. That is, a machine with 2Gb of RAM will require smaller processing chunks and therefore more clock time than a machine with 4Gb or 8Gb of RAM. 
 
 ## Example: Sampling Approach on Macbook Pro
 
