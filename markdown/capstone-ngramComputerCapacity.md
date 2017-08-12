@@ -1,8 +1,8 @@
-## Capstone n-grams: how much processing power is required?
+# Capstone n-grams: how much processing power is required?
 
 Students in the Johns Hopkins University Data Science Specialization Capstone course typically struggle with the course project because of the amount of memory consumed by the objects needed to analyze text. To help reduce the guesswork in the memory utilization, here is a table that illustrates the amount of RAM consumed by objects required to analyze the files for the Swift Key sponsored capstone: predicting text.
 
-For the purposes of this analysis, all code was run on an HP Omen laptop with the following specifications.
+To assess our ability to process the complete corpus of data, we Used an HP Omen laptop with the following specifications.
 
 <table>
     <tr>
@@ -14,7 +14,7 @@ For the purposes of this analysis, all code was run on an HP Omen laptop with th
    <td>
        <ul>
            <li>Operating system: Microsoft Windows 10, 64bit</li>
-           <li>Processor: Intel i7-4710HQ at 2.5Ghz, turbo up to 3.5Ghz, four cores</li>
+           <li>Processor: Intel i7-4710HQ at 2.5Ghz, turbo up to 3.5Ghz, four cores with two threads each</li>
            <li>Memory: 16 gigabytes</li>
            <li>Disk: 512 gigabytes, solid state drive</li>
            <li>Date built: December 2013</li>
@@ -32,14 +32,71 @@ Note that due to the size of the objects, a machine with a minimum of 16Gb of RA
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
 <tr><td>Load data from the three raw data files into a corpus</td><td align="right">1.0Gb</td><td align="right">37 seconds</td></tr>
 <tr><td>Tokenize corpus into sentences, using <code>quanteda::tokenize()</code></td><td align="right">1.3Gb</td><td align="right">509 seconds</td></tr>
-<tr><td>Convert sentences into a character vector to be reprocessed by <code>quanteda::corpus()</code> and <code>quanteda::tokenize()</code></td><td align="right">N.A.</td><td align="right">6 seconds</td></tr>
-<tr><td>Build corpus with text data organized into single sentences</td><td align="right">5.9Gb</td><td align="right">180 seconds</td></tr>
 <tr><td>Build 2-grams</td><td align="right">6.3Gbs</td><td align="right">619 seconds</td></tr>
 <tr><td>Build 3-grams</td><td align="right">6.5Gbs</td><td align="right">894 seconds</td></tr>
 <tr><td>Build 4-grams</td><td align="right">6.5Gbs</td><td align="right">925 seconds</td></tr>
 <tr><td>Build 5-grams</td><td align="right">6.3Gbs</td><td align="right">930 seconds</td></tr>
 <tr><td>Build 6-grams</td><td align="right">6.1Gbs</td><td align="right">1,007 seconds</td></tr>
 </table>
+
+# Processing with Less Memory
+
+Most students do not have 16Gb of RAM on the computers they use for the Capstone project. In this situation, students have two options for processing the data, sampling, and iterative processing.
+
+The sampling approach is relatively straightforward: take a random sample of the documents, and perform subsequent steps against the sampled documents.
+
+The iterative approach is more complex, because one must complete the following steps in sequence to process the data.
+
+1. Break the incoming documents into `n` groups, each of which is small enough to process within the RAM limits of the computer used for the analysis.
+
+2. For each item, complete the following steps:
+
+    * Build the corpus
+    * Tokenize the corpus
+    * generate n-grams of varying sizes<br><br>
+
+3. Assemble the subcomponent files by n-gram size, and break the n-grams into base and predicted words
+
+4. aggregate to summarize each n-gram file into frequencies by base
+
+Depending on the RAM available on one's computer, this approach can take a long time.
+
+## Example: Sampling Approach on Macbook Pro
+
+The performance timings in this section were taken on a Macbook Pro with the following configuration.
+
+<table>
+    <tr>
+        <th>Computer</th>
+        <th>Configuration</th>
+    </tr>
+    <tr>
+        <td valign=top>Apple Macbook Pro</td>
+        <td>
+            <ul>
+                <li>Operating system: OS X Yosemite 10.10.4 (14E46)</li>
+                <li>Processor: Intel i5 at 2.6Ghz, turbo up to 3.3Ghz, two cores with two threads each</li>
+                <li>Memory: 8 gigabytes</li>
+                <li>Disk: 512 gigabytes, solid state drive</li>
+                <li>Date built: April 2013</li>
+            </ul>
+        </td>
+     </tr>
+</table>
+
+As stated above, we need to sample at a level where the combined size of the tokenized corpus and the result n-gram object are less then the amount of RAM available on the machine. We selected a 25% sample, resulting in a tokenized words object of 1.4Gb in size. Since we expect the resulting n-gram objects to be 1.5 - 3 times the size of the tokenized words object, a 25% sample will process within the 8Gb of RAM on the Macbook Pro we used to generate n-grams. Summarizing in the same manner as we did with the analysis on the HP Omen, here are the object sizes and timings for the 25% sample.  
+
+<table>
+<tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
+<tr><td>Load data from the three raw data files into a corpus</td><td align="right">265 Mb</td><td align="right">6 seconds</td></tr>
+<tr><td>Tokenize corpus into sentences, using <code>quanteda::tokenize()</code></td><td align="right">1.4Gb</td><td align="right">59 seconds</td></tr>
+<tr><td>Build 2-grams</td><td align="right">2.0Gbs</td><td align="right">79 seconds</td></tr>
+<tr><td>Build 3-grams</td><td align="right">2.9Gbs</td><td align="right">162 seconds</td></tr>
+<tr><td>Build 4-grams</td><td align="right">3.6Gbs</td><td align="right">420 seconds</td></tr>
+<tr><td>Build 5-grams</td><td align="right">3.9Gbs</td><td align="right">339 seconds</td></tr>
+<tr><td>Build 6-grams</td><td align="right">4.0Gbs</td><td align="right">343 seconds</td></tr>
+</table>
+
 
 # Appendix: Choosing a Text Analysis Package for the Capstone
 
@@ -60,7 +117,7 @@ The [CRAN Task View for Natural Language Processing](https://cran.r-project.org/
 
 Each package has its strengths and weaknesses. For example, `ngram` is fast but it's capability is limited solely to the production of ngrams. `RWeka` and `tm` have a broader set of text mining features, but have significantly slower performance and do not scale well to a large corpus such as the one we must use for the Capstone project.
 
-## Why use quanteda? 
+## Why use quanteda?
 
 `quanteda` provides a rich set of text analysis features coupled with excellent performance relative to Java-based R packages for text analysis. Quoting Kenneth Benoit from the [quanteda github README](https://github.com/kbenoit/quanteda):
 
@@ -68,4 +125,4 @@ Each package has its strengths and weaknesses. For example, `ngram` is fast but 
 
 The aspect of quanteda being "R like" is very useful, in contrast to packages like `ngram`. Also, since `quanteda` relies on `data.table`, it's particularly well suited to use for the Capstone. Why? `data.table` has features to index a data table so students can retrieve values by index rather than having to sequentially process an entire data frame to extract a small number of rows. Since the final deliverable for the Capstone project is a text prediction app written in Shiny, students will find `data.table` is an effective and efficient mechanism to use with a text prediction algorithm.   
 
-*last updated: 18 May 2017*
+*last updated: 12 August 2017*
