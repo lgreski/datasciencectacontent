@@ -10,7 +10,7 @@ If the data is in a fixed length format, one could use a text editor like [Ultra
 
 As an example of visually inspecting a file, here is a file of software application data that has been read into the *UltraEdit* text editor.
 
-<img src="./images/cleaningdata-readingFiles02.png">
+<img src="./images/cleaningData-readingFiles02.png">
 
 Notice the column numbers across the top of the editor window. These can be used to evaluate the location of data in a fixed record format.  
 
