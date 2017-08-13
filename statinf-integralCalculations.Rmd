@@ -1,0 +1,18 @@
+---
+title: "statinf-integralCalculations"
+author: "Len Greski"
+date: "8/5/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Fixed Integral of a Point
+
+$\int_{a}^{a} f(x) dx = 0$
+
+## Standard Deviation from Census Table Data
+
+$s = \frac{x_{5 ptile}-\bar{x}}{Z_{5 ptile}}$.
