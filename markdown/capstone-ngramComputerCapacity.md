@@ -31,7 +31,7 @@ Note that due to the size of the objects, a machine with a minimum of 16Gb of RA
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
 <tr><td>Load data from the three raw data files into a corpus</td><td align="right">1.0Gb</td><td align="right">37 seconds</td></tr>
-<tr><td>Tokenize corpus into sentences, using <code>quanteda::tokenize()</code></td><td align="right">1.3Gb</td><td align="right">509 seconds</td></tr>
+<tr><td>Tokenize corpus using <code>quanteda::tokenize()</code></td><td align="right">1.3Gb</td><td align="right">509 seconds</td></tr>
 <tr><td>Build 2-grams</td><td align="right">6.3Gbs</td><td align="right">619 seconds</td></tr>
 <tr><td>Build 3-grams</td><td align="right">6.5Gbs</td><td align="right">894 seconds</td></tr>
 <tr><td>Build 4-grams</td><td align="right">6.5Gbs</td><td align="right">925 seconds</td></tr>
@@ -59,7 +59,7 @@ The iterative approach is more complex because one must complete the following s
 
 4. aggregate to summarize each n-gram file into frequencies by base
 
-Depending on the RAM available on one's computer, this approach can take a long time. Also the total clock time required will increase in inverse proportion to the RAM on a machine. That is, a machine with 2Gb of RAM will require smaller processing chunks and therefore more clock time than a machine with 4Gb or 8Gb of RAM. 
+Depending on the RAM available on one's computer, this approach can take a long time. Also the total clock time required will increase in inverse proportion to the RAM on a machine. That is, a machine with 2Gb of RAM will require smaller processing chunks and therefore more clock time than a machine with 4Gb or 8Gb of RAM.
 
 ## Example: Sampling Approach on Macbook Pro
 
@@ -89,7 +89,7 @@ As stated above, we need to sample at a level where the combined size of the tok
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
 <tr><td>Load data from the three raw data files into a corpus</td><td align="right">265 Mb</td><td align="right">6 seconds</td></tr>
-<tr><td>Tokenize corpus into sentences, using <code>quanteda::tokenize()</code></td><td align="right">1.4Gb</td><td align="right">59 seconds</td></tr>
+<tr><td>Tokenize corpus using <code>quanteda::tokenize()</code></td><td align="right">1.4Gb</td><td align="right">59 seconds</td></tr>
 <tr><td>Build 2-grams</td><td align="right">2.0Gbs</td><td align="right">79 seconds</td></tr>
 <tr><td>Build 3-grams</td><td align="right">2.9Gbs</td><td align="right">162 seconds</td></tr>
 <tr><td>Build 4-grams</td><td align="right">3.6Gbs</td><td align="right">420 seconds</td></tr>
