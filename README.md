@@ -144,7 +144,8 @@ The next set of articles includes general commentary about the course, R program
 
 
 ## Course 8: Practical Machine Learning
-1. [Week 4: Combining Predictors Math Explained](http://bit.ly/2i5z0Q4)
+1. [Week 3: Installing Rgtk2 and Rattle on OS X](http://bit.ly/2w13R8B)
+2. [Week 4: Combining Predictors Math Explained](http://bit.ly/2i5z0Q4)
 2. [Course Project - gh-pages Setup with RStudio](http://bit.ly/2bTvGqr)
 2. [Course Project - Improving Runtime Performance of Random Forest Models with caret::train()](http://bit.ly/2bYtutG)
 2. [Course Project - Predicting Test Scores based on Training Model Accuracy](http://bit.ly/2i5A3zx)
