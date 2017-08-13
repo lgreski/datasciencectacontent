@@ -74,7 +74,7 @@ The performance timings in this section were taken on a Macbook Pro with the fol
         <td valign=top>Apple Macbook Pro</td>
         <td>
             <ul>
-                <li>Operating system: OS X Yosemite 10.10.4 (14E46)</li>
+                <li>Operating system: OS X Sierra 10.12.6 (16G29)</li>
                 <li>Processor: Intel i5 at 2.6Ghz, turbo up to 3.3Ghz, two cores with two threads each</li>
                 <li>Memory: 8 gigabytes</li>
                 <li>Disk: 512 gigabytes, solid state drive</li>
