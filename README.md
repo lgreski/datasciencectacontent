@@ -69,6 +69,7 @@ The next set of articles includes general commentary about the course, R program
 1. [Assignment 1: Breaking Down Pollutantmean](http://bit.ly/2cHyiCl)
 2. [Assignment 1: A SAS Version of  Pollutantmean](http://bit.ly/2d3DR4e)
 3. [Assignment 1: Common Mistakes - Weighted vs. Unweighted Means](http://bit.ly/2cA0fSh)
+3. [Assignment 1: Common Mistakes - complete("specdata",332:1) fails](http://bit.ly/2uSLhui)
 4. [Assignment 1: A More Elegant Solution](http://bit.ly/2kwBBlK)
 4. [Assignment 2: Demystifying makeVector](http://bit.ly/2bTXXfq)
 1. [Assignment 2: makeCacheMatrix as an Object](http://bit.ly/2byUe4e)
