@@ -109,6 +109,7 @@ The next set of articles includes general commentary about the course, R program
 ## Course 4: Exploratory Data Analysis
 
 1. [Assignment 1: Reading a Subset of Raw Data](http://bit.ly/2oAHoqI)
+2. [CONCEPTS: Strategies for Imputing Missing Values](http://bit.ly/2w1b0FN)
 
 
 ## Course 5: Reproducible Research
