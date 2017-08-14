@@ -109,9 +109,9 @@ All performance timings were run on an Apple Macbook Pro 13 with the following s
      </tr>
 </table>
 
-## Appendix 2: Additional Articles that Measure R performance
+## Appendix 2: Additional Resources Regarding R performance
 
-For additional background on the measurement of R performance, please review the following articles.
+For additional background on the measurement of R performance, please review the following resources.
 
 - [Advanced R: Performance](http://bit.ly/2mi67mV) The *Performance* chapter from Hadley Wickham's book, *Advanced R*, which explains techniques for measuring and improving the perfrmance of an R program. <br><br>
 - [Course Project - Improving Runtime Performance of Random Forest Models with caret::train()](http://bit.ly/2bYtutG) Explains how the choice of parameters and use of multithreading can improve the performance of `caret::train()` by 58% on a machine with a fast processor.<br><br>
