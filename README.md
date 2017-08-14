@@ -69,6 +69,7 @@ The next set of articles includes general commentary about the course, R program
 1. [Assignment 1: Breaking Down Pollutantmean](http://bit.ly/2cHyiCl)
 2. [Assignment 1: A SAS Version of  Pollutantmean](http://bit.ly/2d3DR4e)
 3. [Assignment 1: Common Mistakes - Weighted vs. Unweighted Means](http://bit.ly/2cA0fSh)
+3. [Assignment 1: Common Mistakes - complete("specdata",332:1) fails](http://bit.ly/2uSLhui)
 4. [Assignment 1: A More Elegant Solution](http://bit.ly/2kwBBlK)
 4. [Assignment 2: Demystifying makeVector](http://bit.ly/2bTXXfq)
 1. [Assignment 2: makeCacheMatrix as an Object](http://bit.ly/2byUe4e)
@@ -109,6 +110,7 @@ The next set of articles includes general commentary about the course, R program
 ## Course 4: Exploratory Data Analysis
 
 1. [Assignment 1: Reading a Subset of Raw Data](http://bit.ly/2oAHoqI)
+2. [CONCEPTS: Strategies for Imputing Missing Values](http://bit.ly/2w1b0FN)
 
 
 ## Course 5: Reproducible Research
@@ -144,7 +146,8 @@ The next set of articles includes general commentary about the course, R program
 
 
 ## Course 8: Practical Machine Learning
-1. [Week 4: Combining Predictors Math Explained](http://bit.ly/2i5z0Q4)
+1. [Week 3: Installing Rgtk2 and Rattle on OS X](http://bit.ly/2w13R8B)
+2. [Week 4: Combining Predictors Math Explained](http://bit.ly/2i5z0Q4)
 2. [Course Project - gh-pages Setup with RStudio](http://bit.ly/2bTvGqr)
 2. [Course Project - Improving Runtime Performance of Random Forest Models with caret::train()](http://bit.ly/2bYtutG)
 2. [Course Project - Predicting Test Scores based on Training Model Accuracy](http://bit.ly/2i5A3zx)
