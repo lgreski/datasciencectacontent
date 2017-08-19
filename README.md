@@ -45,7 +45,8 @@ If you're new to the course and trying to figure out what to do in what order, s
 
 1. [Resources for R Programming](http://bit.ly/2dhZ8Dy) Provides a summary of student-generated content to support the course, some of which is indexed on the [Data Science Specialization's github.io](http://datasciencespecialization.github.io/) site
 2. [References for R Programming](http://bit.ly/2b8AxhF) Provides a list of references for R programming, ranging from beginning to advanced topics.
-3. [Data Science Specialization: what is the value?](http://bit.ly/2j3EcCn) Addresses a common question raised by students in *R Programming* who are frustrated by the amount of work they have to do on their own to complete quizzes and assignments. 
+3. [Data Science Specialization: what is the value?](http://bit.ly/2j3EcCn) Addresses a common question raised by students in *R Programming* who are frustrated by the amount of work they have to do on their own to complete quizzes and assignments.
+3. [Swirl: common problems & getting help](http://bit.ly/2vbIZX6) Discusses a couple of frequent problems students have getting swirl to work on their computers, and provides URLs to support from the creators of swirl. 
 4. [R versus Python](http://bit.ly/2kleU76) Roundup of articles and surveys comparing R and Python, including usage, history, and pros / cons. 
 
 The next set of articles includes general commentary about the course, R programming in general, and R in relationship to other statistics packages.
