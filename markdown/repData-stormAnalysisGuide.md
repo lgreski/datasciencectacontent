@@ -110,13 +110,17 @@ Key theme here, quoting [David Hood's](http://bit.ly/2jrYY1x) advice in his comm
 
 # Appendix
 
+## references
+
+[Handling of Exponents in PROPDMGEXP and CROPDMGEXP](http://bit.ly/2nOFOVb) Exploratory analysis of the exponents data in the NOAA storm data. 
+
 ## Information Available from the National Oceanographic and Atmospheric Administration
 
 [National Weather Services Directive 10-1605](https://www.ncdc.noaa.gov/stormevents/pd01016005curr.pdf). This version of the document matches the one provided in the course assignment instructions as of 20 April 2017.
 
 [National Weather Service Operations Manual Chapter F-42](http://www.nws.noaa.gov/wsom/manual/archives/NF429405.HTML) Contains the 1994 version of the *User's Guide for the Storm Data Database*, which provides important details on how data is entered into the database.
 
-[National Weather Service Operations Manual Archives](http://www.nws.noaa.gov/wsom/ARCHIVE.HTML#A_F) Contains the list of climate-related operating procedures, including the *StormData* documentation. 
+[National Weather Service Operations Manual Archives](http://www.nws.noaa.gov/wsom/ARCHIVE.HTML#A_F) Contains the list of climate-related operating procedures, including the *StormData* documentation.
 
 [NOAA StormData FAQ](https://www.ncdc.noaa.gov/stormevents/faq.jsp)
 
