@@ -12,12 +12,13 @@ In the case of a single coin flip for a binomial distribution, the binomial dist
 
 <img src="./images/statinf-varOfBinomialDistribution02.png">
 
+This matches the result of the calculation using the second central moment formula.
 
 If we flip a fair coin 8 times, the variance of the binomial distribution of flips is:
 
 <img src="./images/statinf-varOfBinomialDistribution03.png">
 
-That is, since the events *Z* are independent, the variance of the sum of *n* events is equal to the sum of the independent variances.
+That is, since the events *Z* are independent, the variance of the total of *n* events is equal to the sum of the individual event variances.
 
 The conclusion is that the variance of a binomial distribution of *n* flips increases as the number of flips increases because we are measuring the mean of the counts of 1 over the total number of flips.
 
