@@ -17,7 +17,9 @@ If we flip a fair coin 8 times, the variance of the binomial distribution of fli
 
 <img src="./images/statinf-varOfBinomialDistribution03.png">
 
+That is, since the events *Z* are independent, the variance of the sum of *n* events is equal to the sum of the independent variances.
 
 The conclusion is that the variance of a binomial distribution of *n* flips increases as the number of flips increases because we are measuring the mean of the counts of 1 over the total number of flips.
+
 
 This makes sense intuitively because if *n = 10*, the mean of the count of 1s can vary between 0 and 10 with *E[X] = 5*, but if *n = 100* the mean of counts can vary between 0 and 100 with *E[X] = 50*.
