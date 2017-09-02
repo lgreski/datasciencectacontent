@@ -19,7 +19,7 @@ Three of the four regions appear to have little to no data collection prior to 1
 
 A search on the internet for [Indian Ocean Cyclones](http://bit.ly/2wIpkDC) shows that there were many [cyclones recorded before 1950](http://bit.ly/2vz5zcI). Therefore, the data on the Weather Underground site used for the Data Visual chart is incomplete. Another search for *Pacific Ocean Cyclones* results in additional information about [cyclones before 1950 in New Zealand](http://bit.ly/2vz5zcI), calling into question the data for the two Pacific Ocean regions.
 
-**Bottom line:** the conclusion drawn in the original chart is wrong until we can confirm that the all four regions are correctly coded for hurricanes prior to 1950.
+**Bottom line:** the conclusion drawn in the original chart is wrong until we can confirm the accuracy of data collected for hurricanes and tropical storms prior to 1950.
 
 <img src="./images/cleaningData-valueOfCleaningData03.png">
 
