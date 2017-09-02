@@ -29,7 +29,7 @@ If we aggregate the data across all four regions, the standard deviation for hur
 
 Furthermore, given our demonstration above that the data prior to 1950 is not complete, what happens if we run a linear model on year and the sum of storms + hurricanes? If the conclusion "on the rise since 1851" is appropriate, `year` should explain a substantively meaningful proportion of variance in total storms and hurricanes after 1950 as well as before 1950.
 
-As we see from the following model output, in the aggregated data after 1950, year explains 0.005% of the variance in the total storms + hurricanes. Its regression slope is neither statistically (p < 0.85) nor substantively significant.
+As we see from the following model output, in the aggregated data after 1950, year explains 0.005% of the variance in the total storms + hurricanes. Its regression slope is neither statistically (p > 0.10) nor substantively significant.
 
 <img src="./images/cleaningData-valueOfCleaningData04.png">
 
