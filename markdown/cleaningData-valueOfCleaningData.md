@@ -69,7 +69,7 @@ Next, we need the code to generate execute the reader on the four files and gene
     #
     gitRepoDir <- "~/gitrepos/datasciencedepot/data/"
 
-Run the following code to generate the four charts and linear model that I posted on Twitter.
+Run the following code to generate the four charts that I posted on Twitter, and the linear model.
 
     #
     # read the four regional hurricane history files
