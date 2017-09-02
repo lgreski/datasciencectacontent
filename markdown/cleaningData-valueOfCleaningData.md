@@ -62,7 +62,9 @@ First, we need the code to read one of the HTML files. We've built it as an R fu
     }
 
 
-Next, we need the code to generate execute the reader on the four files and generate the charts.  In order to execute this code, one must clone the [lgreski/datasciencedepot](http://bit.ly/2eN3K6i) github repository, and edit the following code to point to its data directory.
+Next, we need the code to generate execute the reader on the four files and generate the charts. The original data is not structured enough to be read by an R script. I had to hand edit the files to ensure each year's entry spanned 10 and only 10 lines within the HTML files.
+
+Therefore, in order to execute this code, one must clone the [lgreski/datasciencedepot](http://bit.ly/2eN3K6i) github repository to use my hand edited versions of the HTML data files, and edit the following code to point to its data directory.
 
     #
     # set directory where datasciencedepot/data was cloned
