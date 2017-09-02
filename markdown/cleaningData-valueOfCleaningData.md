@@ -4,7 +4,7 @@ Hurricane Harvey was a major weather event in the United States during late Augu
 
 <img src="./images/cleaningData-valueOfCleaningData01.png">
 
-As we can see from the chart footer, the data was sourced from the [Weather Underground Hurricane Archive](http://bit.ly/2vz4S2L). Using techniques learned in *Getting & Cleaning Data*, we can parse the HTML data into R and analyze it ourselves. There are four regions for which data is collected, including:
+As we can see from the chart footer, the data was sourced from the [Weather Underground Hurricane Archive](http://bit.ly/2vz4S2L). Using techniques learned in the Johns Hopkins University *Getting & Cleaning Data* course on [coursera.org](http://coursera.org), we can parse the HTML data into R and analyze it ourselves. There are four regions for which data is collected, including:
 
 * North Atlantic Ocean
 * Indian Ocean
@@ -17,15 +17,19 @@ When we draw some simple plots (a technique taught in the Johns Hopkins *Explora
 
 Three of the four regions appear to have little to no data collection prior to 1950, and the only region with data back to 1851 seems to have no discernible trend in hurricane frequency. If I run a linear model on the Atlantic Ocean data, we find that the *R squared* for year predicting the number of hurricanes is only 0.0492, meaning that the two variables year and hurricane are pretty close to independent (where *R squared* = 0).
 
-A search on the internet for [Indian Ocean Cyclones](http://bit.ly/2wIpkDC) shows that there were many [cyclones recorded before 1950](http://bit.ly/2vz5zcI). Therefore, the data on the Weather Underground site used for the Data Visual chart is incomplete. Additional searches for Pacific Ocean Cyclones results in additional information about [cyclones before 1950 in New Zealand](http://bit.ly/2vz5zcI), calling into question the data for the two Pacific Ocean regions.
+A search on the internet for [Indian Ocean Cyclones](http://bit.ly/2wIpkDC) shows that there were many [cyclones recorded before 1950](http://bit.ly/2vz5zcI). Therefore, the data on the Weather Underground site used for the Data Visual chart is incomplete. Another search for *Pacific Ocean Cyclones* results in additional information about [cyclones before 1950 in New Zealand](http://bit.ly/2vz5zcI), calling into question the data for the two Pacific Ocean regions.
 
-Bottom line: the conclusion drawn in the original chart is wrong until we can confirm that the all four regions are correctly coded for hurricanes prior to 1950.
+**Bottom line:** the conclusion drawn in the original chart is wrong until we can confirm that the all four regions are correctly coded for hurricanes prior to 1950.
 
 <img src="./images/cleaningData-valueOfCleaningData03.png">
 
+Another error in the [@datavisualinfo](http://bit.ly/2izTItC) chart is that it includes both hurricanes and tropical storms, but draws the conclusion that "hurricanes and tropical cyclones are increasing," not accounting for the data showing that tropical storms are more numerous than hurricanes / tropical cyclones, and therefore, should have more variability.
+
+If we aggregate the data across all four regions, the standard deviation for hurricanes is 13.8, whereas the standard deviation for storms per year is 28.6, more than twice the  standard deviation for hurricanes. Therefore, it is not appropriate to draw conclusions about hurricanes & cyclones after combining them with the tropical storms data. 
+
 # Appendix
 
-## How about some Reproducible Research?
+## Reproducible Research, Anyone?
 
 Since the data on web pages can change frequently, I saved the relevant HTML pages so I could reproduce the research. These files are stored on my [datasciencedepot github repository](http://bit.ly/2xDLoMX).
 
