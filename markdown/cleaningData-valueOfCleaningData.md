@@ -15,7 +15,7 @@ When we draw some simple plots (a technique taught in the Johns Hopkins *Explora
 
 <img src="./images/cleaningData-valueOfCleaningData02.png">
 
-Three of the four regions appear to have little to no data collection prior to 1950, and the only region with data back to 1851 seems to have no discernible trend in hurricane frequency. If I run a linear model on the Atlantic Ocean data, we find that the *R squared* for year predicting the number of hurricanes is only 0.0492, meaning that the two variables year and hurricane are pretty close to independent (where *R squared* = 0).
+Three of the four regions appear to have little to no data collection prior to 1950, and the only region with data back to 1851 seems to have no discernible trend in hurricane frequency. If I run a linear model on the Atlantic Ocean data, we find that year explains only 4.92% of the variability in number of hurricanes, meaning that the two variables year and hurricane are pretty close to independent (*R squared* = 0). The percentage of variability in annual hurricanes explained by year is statistically significant (p < 0.01) but substantively meaningless.
 
 A search on the internet for [Indian Ocean Cyclones](http://bit.ly/2wIpkDC) shows that there were many [cyclones recorded before 1950](http://bit.ly/2vz5zcI). Therefore, the data on the Weather Underground site used for the Data Visual chart is incomplete. Another search for *Pacific Ocean Cyclones* results in additional information about [cyclones before 1950 in New Zealand](http://bit.ly/2vz5zcI), calling into question the data for the two Pacific Ocean regions.
 
@@ -26,6 +26,12 @@ A search on the internet for [Indian Ocean Cyclones](http://bit.ly/2wIpkDC) show
 Another error in the [@datavisualinfo](http://bit.ly/2izTItC) chart is that it includes both hurricanes and tropical storms, but draws the conclusion that "hurricanes and tropical cyclones are increasing," not accounting for the data showing that tropical storms are more numerous than hurricanes / tropical cyclones, and therefore, should have more variability.
 
 If we aggregate the data across all four regions, the standard deviation for hurricanes is 13.8, whereas the standard deviation for storms per year is 28.6, more than twice the  standard deviation for hurricanes. Therefore, it is not appropriate to draw conclusions about hurricanes & cyclones after combining them with the tropical storms data.
+
+Furthermore, given our demonstration above that the data prior to 1950 is not complete, what happens if we run a linear model on year and the sum of storms + hurricanes? If the conclusion "increasing since 1949" is appropriate, `year` should explain a substantively meaningful proportion of variance in total storms and hurricanes.
+
+As we see from the following model output, in the aggregated data after 1950, year explains 0.005% of the variance in the total storms + hurricanes. Its regression slope is neither statistically (p < 0.85) nor substantively significant.
+
+<img src="./images/cleaningData-valueOfCleaningData04.png">
 
 # Appendix
 
@@ -118,6 +124,15 @@ Run the following code to generate the four charts that I posted on Twitter, and
     fileUrl <- paste(gitRepoDir,"/westPacificHurricanes.html",sep="")
     westPacific <- readHurricaneData(fileUrl,
                                      firstTableRow=606,startYear=1851,endYear=2015)
+                                     
+     atlanticOcean$area <- "Atlantic"
+     eastPacific$area <- "E. Pacific"
+     westPacific$area <- "W. Pacific"
+     indianOcean$area <- "Indian"
+     atlanticOcean$total <- atlanticOcean$hurricanes + atlanticOcean$storms
+     eastPacific$total <- eastPacific$hurricanes + eastPacific$storms
+     westPacific$total <- westPacific$hurricanes + westPacific$storms
+     indianOcean$total <- indianOcean$hurricanes + indianOcean$storms
 
     plot(indianOcean$year,indianOcean$hurricanes,type="l",
          xlab = "Year",
@@ -140,4 +155,20 @@ Run the following code to generate the four charts that I posted on Twitter, and
          main = "Hurricanes by Year: West Pacific Ocean")
 
     aModel <- lm(hurricanes ~ year,data = atlanticOcean)
+    summary(aModel)
+
+## Analyzing the Aggregated Data
+
+The following code was used to aggregate the four hurricane files and generate a linear model for the total storms + hurricanes after 1950.
+
+    theData <- rbind(atlanticOcean,eastPacific,westPacific,indianOcean)
+
+    library(sqldf)
+
+    sqlStmt <- paste("select sum(hurricanes) as hurricanes,",
+                     "sum(storms) as storms, sum(total) as total, year from theData",
+                     "group by year"
+    )
+    aggStorms <- sqldf(sqlStmt)
+    aModel <- lm(total ~ year,data = aggStorms[aggStorms$year>1950,])
     summary(aModel)
