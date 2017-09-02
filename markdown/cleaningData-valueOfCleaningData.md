@@ -25,13 +25,13 @@ A search on the internet for [Indian Ocean Cyclones](http://bit.ly/2wIpkDC) show
 
 Another error in the [@datavisualinfo](http://bit.ly/2izTItC) chart is that it includes both hurricanes and tropical storms, but draws the conclusion that "hurricanes and tropical cyclones are increasing," not accounting for the data showing that tropical storms are more numerous than hurricanes / tropical cyclones, and therefore, should have more variability.
 
-If we aggregate the data across all four regions, the standard deviation for hurricanes is 13.8, whereas the standard deviation for storms per year is 28.6, more than twice the  standard deviation for hurricanes. Therefore, it is not appropriate to draw conclusions about hurricanes & cyclones after combining them with the tropical storms data. 
+If we aggregate the data across all four regions, the standard deviation for hurricanes is 13.8, whereas the standard deviation for storms per year is 28.6, more than twice the  standard deviation for hurricanes. Therefore, it is not appropriate to draw conclusions about hurricanes & cyclones after combining them with the tropical storms data.
 
 # Appendix
 
 ## Reproducible Research, Anyone?
 
-Since the data on web pages can change frequently, I saved the relevant HTML pages so I could reproduce the research. These files are stored on my [datasciencedepot github repository](http://bit.ly/2xDLoMX).
+Since the data on web pages can change frequently, I saved the relevant HTML pages from the [Weather Underground Hurricane Archive](http://bit.ly/2vz4S2L) so I (or others) could reproduce the research from the files I used on August 26, 2017. These files are stored on my [datasciencedepot github repository](http://bit.ly/2xDLoMX).
 
 To reproduce my research, one can run the following R scripts.
 
@@ -42,21 +42,37 @@ First, we need the code to read one of the HTML files. We've built it as an R fu
     #
 
     readHurricaneData <- function(fileUrl,firstTableRow=606,startYear=1851,endYear=2015){
+
+         # data we need ends well before row 2500 in the input file
          theFile <- readLines(fileUrl,n=2500)
+
+         # clean out text stings that would prevent us from converting
+         # raw data to numeric
          theFile <- gsub("\t","",theFile)
          theFile <- gsub("<td>","",theFile)
          theFile <- gsub("</td>","",theFile)
          theFile <- gsub(",","",theFile)
+
+         # data in the table is in reverse year order
          year <- endYear:startYear
+
+         # create vectors to store parsed data
          storms <- rep(0,length(year))
          hurricanes <- rep(0,length(year))
          deaths <- rep(" ",length(year))
          damage <- rep(" ",length(year))
+
+         # create a data frame using vectors we initialized
          theData <- data.frame(year,storms,hurricanes,deaths,damage,stringsAsFactors=FALSE)
+
+         # raw data is in sequences of 10 rows of HTML per year
          lineCt <- seq(from = firstTableRow,to = sum(firstTableRow,length(year) * 10,-1),by=10)
          i <- 0 # output row
          for (line in lineCt ){
-              i <- i + 1
+              i <- i + 1 # increment output data frame row counter
+
+              # parse the data and write it to appropriate column in data frame
+              # items were originally located by visually inspecting the HTML files
               theData[i,"storms"] <- as.numeric(theFile[line + 2])
               theData[i,"hurricanes"] <- as.numeric(theFile[line + 3])
               theData[i,"deaths"] <- theFile[line + 4] # some rows have > symbols
