@@ -97,10 +97,11 @@ The next set of articles includes general commentary about the course, R program
 
 ## Course 3: Getting and Cleaning Data
 
-1. [Real World Example: Reading American Community Survey data](http://bit.ly/2bAdLE9) Illustrates concepts covered in *Getting and Cleaning Data* with U.S. Census data, including how to process a hierarchical file format in R, as well as using an electronic codebook to generate the parameters required to read the data file into a data frame.
-2. [Common Problems: Quiz 1 - Missing Java Runtime](http://bit.ly/2jjtyXM) Explains how to solve the problem of a missing Java Runtime for the question that requires students to process a Microsoft Excel spreadsheet. 
-3. [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF)
-4. [Common Problems: Quiz 2 - sqldf() driver fails to connect](http://bit.ly/2kD2KTY)
+1. [Week 1: Demystifying HTML Parsing: Baltimore Ravens Game Scores](http://bit.ly/2gv12SS)
+2. [Real World Example: Reading American Community Survey data](http://bit.ly/2bAdLE9) Illustrates concepts covered in *Getting and Cleaning Data* with U.S. Census data, including how to process a hierarchical file format in R, as well as using an electronic codebook to generate the parameters required to read the data file into a data frame.
+3. [Common Problems: Quiz 1 - Missing Java Runtime](http://bit.ly/2jjtyXM) Explains how to solve the problem of a missing Java Runtime for the question that requires students to process a Microsoft Excel spreadsheet. 
+4. [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF)
+5. [Common Problems: Quiz 2 - sqldf() driver fails to connect](http://bit.ly/2kD2KTY)
 
 ### Articles and Content Related to Getting and Cleaning Data
 
