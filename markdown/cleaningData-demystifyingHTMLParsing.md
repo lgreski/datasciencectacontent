@@ -58,6 +58,8 @@ Complicating matters is the fact that the history pages are rendered as HTML tab
 2. We will also need to use additional content within the tag to determine whether to include a given element, so we'll need to find patterns (e.g. wins vs. losses) to ensure the lengths of the output vectors match across data elements.<br><br>
 3. There is a one week period called a "bye week" in the National Football League, where a subset of teams take a week off during the middle part of the season. This is why although the regular season is 17 weeks long, each team plays only 16 games.<br><br>
 
+We address each of these challenges in the following R script.
+
 
       fileUrl <- 'http://www.espn.com/nfl/team/schedule/_/name/bal/year/2016'
       doc <- htmlTreeParse(fileUrl, useInternal=TRUE)
@@ -74,7 +76,7 @@ Complicating matters is the fact that the history pages are rendered as HTML tab
 
       opponent <- xpathSApply(doc, "//li[@class='team-name']", xmlValue)
 
-      # third, use a similar technique to extract game dates from the table
+      # third, use a similar technique to extract game dates from the table, ignoring bye week
       daysOfWeek <- c("//td['Sun,']","//td['Mon,']","//td['Thu,']","//td['Sat,']")
       date <- grep("Sun,|Mon,|Thu,|Sat,",xpathSApply(doc,daysOfWeek,xmlValue),value=TRUE)
 
