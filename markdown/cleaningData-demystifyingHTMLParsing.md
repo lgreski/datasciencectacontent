@@ -1,28 +1,28 @@
-# Demystifying HTML Parsing: Baltimore Ravens Homepage
+# Demystifying HTML Parsing: Baltimore Ravens ESPN Home Page
 
 Students in the Johns Hopkins University *Getting and Cleaning Data* course on [coursera.org](http://coursera.org) bring a variety of expectations to the course. Given that the lectures focus on the R code needed to collect and transform data from a wide variety of data sources, students often try to replicate the examples from the lectures.
 
-Since the lectures were recoded in the 2013 - 2014 timeframe, sometimes the data sources change. One such example is the *Reading XML* lecture, where the code from the final example in the lecture no longer accurately parses the data source. When situations like this happen, students periodically express their frustrations on the Discussion Forums. Between summer of 2016 and August 2017 18 different posts on this topic were written within the *Getting and Cleaning Data* discussion forum.
+Since the lectures were recoded in the 2013 - 2014 timeframe, sometimes the data sources change. One such example is the *Reading XML* lecture, where the code from the final example in the lecture no longer accurately parses the data source. When situations like this happen, students periodically express their frustrations on the Discussion Forums. Between summer of 2016 and August 2017, 18 different posts on this topic were written within the *Getting and Cleaning Data* discussion forum.
 
 # Background on the Example
 
-Approximately 9 minutes into the lecture, Professor Leek introduces the ESPN home page for the Baltimore Ravens, and American football team. He uses this web page to illustrate how to read it into R and parse it with the `xpathSApply()` function.  
+Approximately 9 minutes into the lecture, Professor Leek introduces the ESPN home page for the Baltimore Ravens, an American football team. He uses this web page to illustrate how to read it into R and parse it with the `xpathSApply()` function.  
 
 <img src="./images/cleaningData-htmlParsing00.png">
 
- Professor Leek uses a web browser to view the source code, and highlights items that are tagged with the HTML  list`<li>` tag that are coded with a specific `class` name.
+ Professor Leek proceeds to use a web browser to view the source code, and highlights items that are tagged with the HTML  list`<li>` tag that are coded with a specific `class` name.
 
 <img src="./images/cleaningData-htmlParsing01.png">
 
-Finally, he demonstrates how to read the file into R and parse the `scores` and `team` elements from the list tags.
+Finally, he demonstrates how to read the file into R and parse the `score` and `team-name` elements from the list tags.
 
 <img src="./images/cleaningData-htmlParsing02.png">
 
 # What's Broken?
 
-We're just about to start the 2017 American football season. Almost four years have passed since the screen capture of the 2013 version of the Baltimore Ravens Homepage on ESPN.com. The 2017 version looks quite a bit different than the 2013 version, as ESPN has added a scrollable scoreboard, among other features to the NFL team homepage.
+I'm writing this article on September 3, 2017. The National Football League in the U.S. has just completed its pre-season, and is about to begin the 2017 - 2018 regular season. Almost four years have passed since the screen capture of the Baltimore Ravens Homepage on ESPN.com was saved by Professor Leek in late December 2013. The 2017 version looks quite a bit different than the 2013 version, as ESPN has added a scrollable scoreboard and other features to the NFL team homepage.
 
-<img src="./images/cleaningData-htmlParsing02.png">
+<img src="./images/cleaningData-htmlParsing10.png">
 
 Given that the page design has changed, it's not surprising to discover that the HTML document class tags have changed. By inspecting the page, we find that opponents' team names are now stored in a division `<div>` tag instead of the list tag, with a class name of `game-info`.
 
