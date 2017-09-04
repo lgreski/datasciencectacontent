@@ -7,12 +7,13 @@ In addition to using the command line version of git to synchronize a local repo
 1. Install R
 2. Install RStudio
 3. Setup an account on Github.com
-4. If necessary, install git on the local machine, and configure your username and email address (they are saved to the .gitconfig file) as explained during the Week 2 lectures
-Once you've made it this far, you should be able to start RStudio, and run git from a command line.
+4. If necessary, install git on the local machine, and configure your username and email address (they are saved to the .gitconfig file) as explained during the Week 2 lectures in *The Data Scientist's Toolbox*. 
 
 For detailed instructions on how to configure git on your local machine, please review the *Git / Github* section on the [Data Science Specialization: Toolbox](http://bit.ly/2c9FGMa) page of the *DSS community content* that has been posted to the internet. 
 
-Configure RStudio
+Once you've made it this far, you should be able to start RStudio, and run git from a command line.
+
+## Configure RStudio
 Start RStudio, and from the main pulldown menu, select **Preferences**
 
 <img src="./images/configRStudioGit1.png">

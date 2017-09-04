@@ -4,10 +4,12 @@ In addition to using the command line version of git to synchronize a local repo
 
 ### Prework Steps
 
+THis walkthrough 
+
 1. Install R
 2. Install RStudio
 3. Setup an account on Github.com
-4. If necessary, install git on the local machine, and configure your username and email address (they are saved to the `.gitconfig` file) as explained during the Week 2 lectures
+4. If necessary, install git on the local machine, and configure your username and email address (they are saved to the `.gitconfig` file) as explained during the Week 2 lectures in *The Data Scientist's Toolbox*. 
 
 For detailed instructions on how to configure git on your local machine, please review the *Git / Github* section on the [Data Science Specialization: Toolbox](http://bit.ly/2c9FGMa) page of the *DSS community content* that has been posted to the internet. 
 
