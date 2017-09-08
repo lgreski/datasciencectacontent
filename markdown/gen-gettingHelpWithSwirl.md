@@ -18,6 +18,22 @@ Students (especially those outside the United States) sometimes experience diffi
 
 **SOLUTION:** Finish the assignments and don't worry about getting "credit" for them.
 
+## ISSUE 3: Finding the Assignment Token
+
+Another common problem students experience when attempting to submit work for credit is where to find the assignment token that is requested by swirl at the end of a lesson.
+
+From the course home page, select the Week 1 pull down to make the content visible for Week 1.
+
+<img src="./images/gen-gettingHelpWithSwirl01.png">
+
+The Week 1 content includes videos, a quiz, and practice exercises. Select the `Practice Exercises` icon.
+
+<img src="./images/gen-gettingHelpWithSwirl02.png">
+
+This will bring up the assignment instructions page. The Assignment Token is visible in a shaded box on the right side of the web page. Use the email address and assignment token when requested by Swirl to grade your assignment and have the grade posted to Coursera. 
+
+<img src="./images/gen-gettingHelpWithSwirl03.png">
+
 # Where to Get Help with Swirl
 
 Swirl is supported by [swirlstats.com](https://swirlstats.com), whose lead developer is [Sean Kross](http://seankross.com).
