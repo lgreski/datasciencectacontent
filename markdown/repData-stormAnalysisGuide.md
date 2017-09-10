@@ -39,7 +39,7 @@ Also, for students who have completed *Getting and Cleaning Data* as well, the s
 4. Analyze the data: answer the questions required for the assignment, and support the analysis with relevant graphics and statistics.  </td></tr>
 </table>
 
-The course project instructions include references to the [data file](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2), a [codebook](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf) provided by the NOAA, as well as the URL for the [frequently asked questions web page](https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf) from the NOAA.
+The course project instructions include references to the [data file](http://bit.ly/2eXThs5), a [codebook](http://bit.ly/2fcseGm) provided by the NOAA, as well as the URL for the [frequently asked questions web page](http://bit.ly/2xXKlrf) from the NOAA.
 
 Step 1, downloading and extracting data from the compressed file, is a straightforward process that students figure out by the time they complete *Getting and Cleaning Data*. One wrinkle in the download process is that the data file for this project uses the `bzip2` format instead of `zip`. Fortunately the `R.utils` package provides a `bunzip2()` function that can be used to extract the data.
 
@@ -116,18 +116,18 @@ Key theme here, quoting [David Hood's](http://bit.ly/2jrYY1x) advice in his comm
 
 ## Information Available from the National Oceanographic and Atmospheric Administration
 
-[National Weather Services Directive 10-1605](https://www.ncdc.noaa.gov/stormevents/pd01016005curr.pdf). This version of the document matches the one provided in the course assignment instructions as of 20 April 2017.
+[National Weather Services Directive 10-1605](http://bit.ly/2oNS1Hb). This version of the document matches the one provided in the course assignment instructions as of 20 April 2017.
 
-[National Weather Service Operations Manual Chapter F-42](http://www.nws.noaa.gov/wsom/manual/archives/NF429405.HTML) Contains the 1994 version of the *User's Guide for the Storm Data Database*, which provides important details on how data is entered into the database.
+[National Weather Service Operations Manual Chapter F-42](http://bit.ly/2nKdZLI) Contains the 1994 version of the *User's Guide for the Storm Data Database*, which provides important details on how data is entered into the database.
 
-[National Weather Service Operations Manual Archives](http://www.nws.noaa.gov/wsom/ARCHIVE.HTML#A_F) Contains the list of climate-related operating procedures, including the *StormData* documentation.
+[National Weather Service Operations Manual Archives](http://bit.ly/2pYfUzB) Contains the list of climate-related operating procedures, including the *StormData* documentation.
 
-[NOAA StormData FAQ](https://www.ncdc.noaa.gov/stormevents/faq.jsp)
+[NOAA StormData FAQ](http://bit.ly/2xokLOX)
 
-[NOAA Storm Data Details Documentation](https://www.ncdc.noaa.gov/stormevents/details.jsp)
+[NOAA Storm Data Details Documentation](http://bit.ly/2xoJraj)
 
 [NOAA StormData Detailed CSV Files](ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/csvfiles/)
 
-[NOAA StormData Files and Documentation](ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/) includes access to all StormData content as downloadable files including the data, documentation, photographs, and presentations describing the content.
+[NOAA StormData Files and Documentation](http://bit.ly/2xoDCJF) includes access to all StormData content as downloadable files including the data, documentation, photographs, and presentations describing the content.
 
 ##
