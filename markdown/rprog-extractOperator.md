@@ -6,10 +6,10 @@ The [extract operator](https://stat.ethz.ch/R-manual/R-devel/library/base/html/E
 
 In this article we will illustrate various forms of the extract operator, focusing on how to use it with data frames.
 
-The first form, `[`, can be used to extract content from vector, lists, or data frames. Since vectors are one dimensional, i.e. they contain between 1 and N elements, we apply the extract operator to the vector as a single number or a list of numbers as follows. 
+The first form, `[`, can be used to extract content from vector, lists, or data frames. Since vectors are one dimensional, i.e. they contain between 1 and N elements, we apply the extract operator to the vector as a single number or a list of numbers as follows.
 
      x[ selection criteria here ]
-     
+
 
 The following code defines a vector and then extracts the last 3 elements from it using two techniques. The first technique directly references elements 13 through 15. The second approach uses the length of the vector to calculate the indexes of last three elements.
 
@@ -19,7 +19,7 @@ The following code defines a vector and then extracts the last 3 elements from i
 
 When used with a list, `[` extracts one or more elements from the list.
 
-When used with a data frame, the extract operator can select rows, columns, or both rows and columns. Therefore, the extract opertor takes the following form: rows then a comma, then columns. 
+When used with a data frame, the extract operator can select rows, columns, or both rows and columns. Therefore, the extract opertor takes the following form: rows then a comma, then columns.
 
      x[select criteria for rows , select criteria for columns]
 
@@ -244,7 +244,7 @@ As we can see from the output, the result is a single data frame containing the 
 
 We can verify the results with an independent technique that will be covered in *Getting and Cleaning Data*, the `sqldf()` function. `sqldf()` is an implementation of *Structured Query Language* (SQL) with data frames. We will use this technique because of a specific SQL feature: the `group by` clause. The `group by` clause allows us to find the minimum National Pokédex Number for each type of Pokémon.
 
-     # check the results within an independent technique: SQL 
+     # check the results within an independent technique: SQL
      library(sqldf)
      theQuery <- paste("select min(Number) as Number from pokemon ",
                        "group by Type1")
@@ -257,7 +257,7 @@ We can verify the results with an independent technique that will be covered in 
 
 <img src="./images/rprog-extractOperator08.png">
 
-The elegance of the R language is highlighted by the fact that the original version using `lapply()` requires significantly less code than the  `sqldf()` version. 
+The elegance of the R language is highlighted by the fact that the original version using `lapply()` requires significantly less code than the  `sqldf()` version.
 
 ### Why are there 20 rows in the output data frame?
 
@@ -266,6 +266,29 @@ The "data science" answer is that here we have another example of ["untidy" data
 In our scenario that extracts the first Pokémon of each type, there are two Pokémon, Tornadus and Steelix, who have multiple entries because they either have multiple Formes (Tornadus) or whose stats can be enhanced with a Mega stone (Steelix). The additional Formes have the same National Pokédex Number, so all Formes are retained when we subset the final data frame by National Pokédex Number.
 
 Modification of the code to eliminate the second Forme by using the `Total` stat is left as an interesting exercise for the reader.
+
+# Selecting Beyond the End of the Data Frame
+
+*Programming Assignment 3* includes test cases where students must handle missing values in the output data frame. We'll illustrate how this works with the Pokémon data. What we need to do is create a situation where we'll try to extract the n-th Pokémon by its primary type, with a number that exceeds the total number within a particular primary type for at least 1 type.
+
+As illustrated earlier in the article, code to extract the first Pokémon from a list of data frames split by `Type1` is straightforward.
+
+      # extract first of all types using lapply
+      firstOfEachType <- lapply(pokemonTypes,function(x) {x[1,1:5]})
+
+To find the number of Pokémon by type, we'll use the `sqldf` package.
+
+<img src="./images/rprog-extractOperator09.png">
+
+As we review the output from the SQL query, we see that there are three types that have fewer than 25 Pokémon: Fairy, Flying, and Ice.
+
+Now, we'll extract the 25th Pokémon from each data frame in the `list()` and combine them into a single data frame.
+
+<img src="./images/rprog-extractOperator10.png">
+
+As we can see from the result of `do.call()`, the row label shows the three types that have fewer than 25 Pokémon: Fairy, Flying, and Ice. Since R sets the row names of the output data frame to the name of each input data frame, we can use the `rownames()` function to reset the missing data in the output data frame. 
+
+One could further experiment with the data, say, "extract the 25th Pokémon for each primary type by descending Total stat." To do this, we'd sort the data by Type1 and Total, split the data by primary type, and extract from the list. I'll leave that as an interesting exercise for the reader.
 
 # Concluding Remarks
 
