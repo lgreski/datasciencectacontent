@@ -286,7 +286,7 @@ Now, we'll extract the 25th Pokémon from each data frame in the `list()` and co
 
 <img src="./images/rprog-extractOperator10.png">
 
-As we can see from the result of `do.call()`, the row label shows the three types that have fewer than 25 Pokémon: Fairy, Flying, and Ice. Since R sets the row names of the output data frame to the name of each input data frame, we can use the `rownames()` function to reset the missing data in the output data frame. 
+As we can see from the result of `do.call()`, the row label shows the three types that have fewer than 25 Pokémon: Fairy, Flying, and Ice. Since R sets the row names of the output data frame to the name of each input data frame, we can use the `rownames()` function to assign the missing values of `Type1` in the output data frame. 
 
 One could further experiment with the data, say, "extract the 25th Pokémon for each primary type by descending Total stat." To do this, we'd sort the data by Type1 and Total, split the data by primary type, and extract from the list. I'll leave that as an interesting exercise for the reader.
 
