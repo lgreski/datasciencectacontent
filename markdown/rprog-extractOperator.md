@@ -292,7 +292,7 @@ One could further experiment with the data, say, "extract the 25th Pokémon for 
 
 # Concluding Remarks
 
-There you have it, a comprehensive overview of the extract operator, including a set of examples illustrating the key concepts for programming assignments 1 and 3 in *R Programming*. Specific nuances of the actual assignment problems are left to the students to solve, such as handling of missing values and use of the parameters within each function.  
+There you have it, a comprehensive overview of the extract operator, including a set of examples illustrating the key concepts for programming assignments 1 and 3 in *R Programming*. Specific nuances of the actual assignment problems are left to the students to solve, such as handling of missing values, sorting the data, and use of the parameters within each function.  
 
 # References
 
