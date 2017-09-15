@@ -300,4 +300,4 @@ There you have it, a comprehensive overview of the extract operator, including a
 2. [SlotOp {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/slotOp.html), retrieved 22 May 2016.
 3. [Pokémon Stats by Alberto Barradas](http://bit.ly/2ovmmxu)
 
-**last update date: 15 April 2017**
+**last update date: 15 September 2017**
