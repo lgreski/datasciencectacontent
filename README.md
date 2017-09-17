@@ -30,7 +30,7 @@ The remainder of this document serves as a directory of the content, aligning in
 
 ### Issue: Students Struggle to find URLs in Lecture Slides
 
-If you're interested in the URLs for the lecture slides, they are available in the [Data Science Specialization Courses](http://bit.ly/2bJcXNW) github repository. Each course is stored in a subdirectory within the repository, and the slides are built in R Markdown language, a technique you'll learn in *Developing Data Products*.
+If you're interested in the URLs for the lecture slides, they are available in the [Data Science Specialization Courses](http://bit.ly/2bJcXNW) github repository. Each course is stored in a subdirectory within the repository, and the slides are built in R Markdown language, a technique you'll learn in *Reproducible Research*.
 
 ### Miscellaneous Articles about Data Science
 
