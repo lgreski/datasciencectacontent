@@ -52,7 +52,7 @@ registerDoSEQ()
 fit
 fit$resample
 confusionMatrix.train(fit)
-#average OOB error
+#average OOB error from final model
 mean(fit$finalModel$err.rate[,"OOB"])
 
 plot(fit,main="Accuracy by Predictor Count")
