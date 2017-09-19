@@ -2,7 +2,7 @@
 
 Author: Len Greski
 
-This repository contains content developed during my time as either a student or Community Mentor in the Data Science Specialization from Johns Hopkins University that is offered over [Coursera](http://coursera.org). A number of people have developed content to help students work through the ten courses in the specialization. The main index for this content is [datasciencespecialization.github.io](http://datasciencespecialization.github.io/).
+This repository contains content developed during my time as either a student or Community Mentor in the Data Science Specialization from Johns Hopkins University that is offered over [Coursera](http://coursera.org). A number of people have developed content to help students work through the ten courses in the specialization. The main index for community generated content across the Specialization is [datasciencespecialization.github.io](http://datasciencespecialization.github.io/).
 
 
 # Repository Contents
