@@ -8,22 +8,22 @@ Since then I've written a wide variety of software in SAS, including a principal
 
 If you've ever used *SAS/IML*, the interactive matrix language, you'll find many parts of R are like *SAS/IML*. Since *SAS/IML* uses a programming model that is significantly different from *Base SAS*, as you learn R you will experience a learning curve that is similar to a SAS user learning to work with *SAS/IML*.
 
-The bottom line is that thinking in R is significantly different than thinking in SAS. To highlight some of the differences, take a look at [Thinking in R versus Thinking in SAS](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/exampleSortRvsSAS.md), and [Why is R Harder than SAS?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/whyIsRHarderThanSAS.md)
+The bottom line is that thinking in R is significantly different than thinking in SAS. To highlight some of the differences, take a look at [Thinking in R versus Thinking in SAS](http://bit.ly/2cH3u8x), and [Why is R Harder than SAS?](http://bit.ly/2erxk3A)
 
 Before you begin working on the first programming assignment, read the following, in order:
 
-[Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md),
+[Strategy for the Programming Assignments](http://bit.ly/2ddFh9A),
 
 [Derek Franks' Tutorial for Those Struggling with Assignment 1](https://github.com/derekfranks/practice_assignment), and
 
-[Breaking Down Pollutantmean()](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-discussPollutantmean.md), which provides a detailed walkthrough illustrating how to organize this function.
+[Breaking Down Pollutantmean()](http://bit.ly/2cHyiCl), which provides a detailed walkthrough illustrating how to organize this function.
 
-You might also enjoy [Commercial Statistics Packages: An Historical Perspective](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/statsPackagesHistory.md), but it's not required to get through the assignment. 
+You might also enjoy [Commercial Statistics Packages: An Historical Perspective](http://bit.ly/2fPj2qN), but it's not required to get through the assignment. 
 
 Another interesting but not required read is [Linda Burtch's](http://www.kdnuggets.com/author/linda-burtch) article [SAS vs. R vs. Python: Which Tool do Analytics Pros Prefer?](http://www.kdnuggets.com/2016/07/burtchworks-sas-r-python-analytics-pros-prefer.html) on the kdnuggets.com website. 
 
-Finally, if you're interested in understanding how R compares to other statistics packages for a variety of statistical analyses, take a look at the [Data Analysis Examples](http://bit.ly/2kQGe9D) page on UCLA's Institute for Digital Research and Education website. 
+Finally, if you're interested in understanding how R compares to other statistics packages for a variety of statistical analyses, take a look at the [Data Analysis Examples](http://bit.ly/2hdIsyU) page on UCLA's Institute for Digital Research and Education website. 
 
-After completing the first programming assignment, you'll discover that the R-based solution to `pollutantmean()` is significantly less complicated than a SAS-based solution. How can I say this? [A SAS Version of pollutantmean()?](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-pollutantmeanSASVersion.md) illustrates the code needed to replicate `pollutantmean()` in SAS. Believe it or not, one can complete the `pollutantmean()` assignment in a single R statement. It's a complex statement of nested functions, but it evaluates as a single R statement.
+After completing the first programming assignment, you'll discover that the R-based solution to `pollutantmean()` is significantly less complicated than a SAS-based solution. How can I say this? [A SAS Version of pollutantmean()?](http://bit.ly/2d3DR4e) illustrates the code needed to replicate `pollutantmean()` in SAS. Believe it or not, one can complete the `pollutantmean()` assignment in a single R statement. It's a complex statement of nested functions, but it evaluates as a single R statement.
 
 The SAS version of `pollutantmean()` is a lot more complicated than the most elegant R solution, in part because the design of SAS forces one into using SAS macros because SAS does not make it easy for end users to write their own SAS procedures. While it is technically possible for an end user to write a SAS procedure \(see [Betancourt 1985](http://www.sascommunity.org/sugi/SUGI85/Sugi-10-127%20Betancourt.pdf)\), it requires a significant effort.
