@@ -94,7 +94,7 @@ Finally, it's important to know that you are never more than a [Powerwash](https
 
 ## The Process
 
-The remainder of this section is based on Whitson Gordon's 2013 article on [](lifehacker.com), [How to Install Linux on a Chromebook and Unlock its Full Potential](http://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343). The content is copied here to make it easier to follow the entire set of instructions without jumping back and forth to multiple websites. Installing Linux requires three specific activities, including:
+The remainder of this section is based on Whitson Gordon's 2013 article on [lifehacker.com](http://lifehacker.com), [How to Install Linux on a Chromebook and Unlock its Full Potential](http://lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-509039343). The content is copied here to make it easier to follow the entire set of instructions without jumping back and forth to multiple websites. Installing Linux requires three specific activities, including:
 
 * Enable developer mode, <br><br>
 * Install Crouton, and <br><br>
