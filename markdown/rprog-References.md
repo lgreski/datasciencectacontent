@@ -6,7 +6,9 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 <tr><th>Reference</th><th>Description</th></tr>
 
 <tr><td><a href="https://leanpub.com/rprogramming"> R Programming for Data Science </a></td><td>Start here! <em>R Programming for Data Science</em> is written by Roger Peng specifically to be read along with the JHU <em>R Programming</em> course. Since it's available on leanpub.org, you can decide how much to pay for it, including "free." </td></tr>
-<tr><td><a href="https://cran.r-project.org/manuals.html"> R Documentation</a></td><td>The Comprehensive R Archive Network (CRAN) is the authoritiative source for all things related to R. The R Documentation page on CRAN provides an index to a variety of manuals and other documentation related to R. </td>
+<tr><td><a href="https://cran.r-project.org/manuals.html"> R Documentation</a></td><td>The Comprehensive R Archive Network (CRAN) is the authoritiative source for all things related to R. The R Documentation page on CRAN provides an index to a variety of manuals and other documentation related to R. </td></tr>
+<tr><td><a href="http://bit.ly/2x6Rf0y"> Getting Used to R, RStudio, and R Markdown</a></td><td>Developed by Chester Ismay, <em>Getting Used to R, RStudio, and R Markdown</em> is a free online reference designed to help people develop reproducible research. It focuses on the server version of RStudio, but many of the concepts are applicable to the desktop version. 
+</td></tr>  
 
 <tr><td><a href="http://www.amazon.com/Art-Programming-Statistical-Software-Design/dp/1593273843/ref=sr_1_1?ie=UTF8&qid=1464579557&sr=8-1&keywords=the+art+of+R+programming"> The Art of R Programming </a></td><td>Written by Norman Matloff, <em>The Art of R Programming</em> is focused on R as a programming language, even though Matloff is a statistician. In the book you'll find plenty of examples that will help you solve R coding problems. It's available on Amazon.com in e-book format for $19.99 USD. </td></tr>
 <tr><td><a href="https://www.amazon.com/Cookbook-OReilly-Cookbooks-Paul-Teetor-ebook/dp/B004VB3UYW?ie=UTF8&keywords=r%20cookbook%20o%27reilly%20cookbooks&qid=1464579855&ref_=sr_1_1_twi_kin_2&s=books&sr=1-1"> R Cookbook </a></td><td>Written by Paul Teetor <em>R Cookbook</em> is designed like a cookbook, or like Christopher Alexander's <em>A Pattern Language</em> if you're familiar with the software patterns movement from the late 1990s. It is structured as a series of <em>problem / solution / discussion</em> topics to help the reader solve very specific problems with R. It's available on Amazon.com in e-book format for $20.49 USD. </td></tr>
@@ -27,4 +29,4 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 
 In addition to the references above, the Frank's World website has a list of [60 free data science books](http://bit.ly/2bFDN6s). Hat tip to Geoff Snowman from the August *R Programming* course on coursera.org for making me aware of this resource.
 
-*last updated: 1 September 2017*
+*last updated: 1 October 2017*
