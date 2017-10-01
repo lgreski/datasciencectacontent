@@ -142,6 +142,7 @@ The next set of articles includes general commentary about the course, R program
 6. [Kable Tables with Data Frames](http://bit.ly/2j40Wlw) illustrates how to display a custom table in a `knitr()` document by creating a data frame to contain the information to be rendered with `kable()`.
 7. [Installing MiKTeX on Windows 10 / Generating a PDF with knitr](http://bit.ly/2iiGNbu)
 8. [Commentary on Factorial Design in Toothgrowth Analysis](http://bit.ly/2eEVRhw) Illustrates how to conduct a full factorial analysis of variance with the toothgrowth data, comparing it to the techniques used in the course project for *Statistical Inference*. 
+9. [Knitr Reference](http://bit.ly/2yOg4vv) Online reference maintained by [Yihui Xe](http://bit.ly/2kh2tK3) an RStudio engineer who wrote the [knitr](http://bit.ly/2g1m1xr) package. 
 
 ## Course 7: Regression Models
 
