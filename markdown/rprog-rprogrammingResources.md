@@ -6,7 +6,14 @@ Fortunately, past students have developed a fair amount of content to guide othe
 
 ## Assignment 1 Topics
 
-For assignment 1, [Derek Franks' Tutorial for those struggling with Programming Assignment 1](https://github.com/derekfranks/practice_assignment) is very helpful, along with my articles [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), [Forms of the Extract Operator](http://bit.ly/2bzLYTL) and [Breaking Down Pollutantmean](http://bit.ly/2cHyiCl).
+For assignment 1, [Derek Franks' Tutorial for those struggling with Programming Assignment 1](https://github.com/derekfranks/practice_assignment) is very helpful, along with my articles:
+* [Strategy for the Programming Assignments](http://bit.ly/2ddFh9A), 
+* [Forms of the Extract Operator](http://bit.ly/2bzLYTL),  
+* [Breaking Down Pollutantmean](http://bit.ly/2cHyiCl), 
+* [Assignment 1: Common Mistakes - Weighted vs. Unweighted Means](http://bit.ly/2cA0fSh), 
+* [Assignment 1: Common Mistakes - complete("specdata",332:1) fails](http://bit.ly/2uSLhui), and 
+* [Assignment 1: A More Elegant Solution](http://bit.ly/2kwBBlK) 
+
 
 ## Assignment 2 Topics
 
