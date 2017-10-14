@@ -60,7 +60,7 @@ The El Niño Southern Oscillation is a combined atmospheric and ocean system con
 
 <img src="./images/cleaningData-week2q5-08.png">
 
-**[PRO TIP]** Bookmark this article because you can use the codebook illustrated here as a template for your final project in *Getting and Cleaning Data*.  Ironically, most of the data sets on the NOAA website have no codebooks, or they are very difficult to find and poorly written, as students will discover during the *Reproducible Research* course within the Data Science Specialization.
+**[PRO TIP]** Bookmark this article because you can use the codebook illustrated here as a template for your final project in *Getting and Cleaning Data*.  Ironically, most of the data sets on the NOAA website have no codebooks or they are very difficult to find and poorly written, as students will discover during the *Reproducible Research* course within the Data Science Specialization.
 
 # References
 
