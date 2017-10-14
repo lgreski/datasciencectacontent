@@ -1,6 +1,6 @@
 # The Definitive Guide to Solving Week 2 Question 5
 
-Question 5 in the week 2 quiz for *Getting and Cleaning Data* is deceptively simple: *report the sum of the fourth of the nine columns.* To answer this question correctly, one **MUST**  view the file before writing R code. As noted in [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF), one can download the [Atom](http://atom.io) editor for free.
+Question 5 in the week 2 quiz for *Getting and Cleaning Data* is deceptively simple: *report the sum of the fourth of the nine columns.* To answer this question correctly, one **MUST**  view the file before writing R code. As noted in [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF), one can download the [Atom](http://atom.io) editor for free and use it to view the file.
 
 <img src="./images/cleaningData-week2q5-01.png">
 
