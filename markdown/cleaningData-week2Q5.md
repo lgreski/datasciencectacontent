@@ -1,6 +1,6 @@
 # The Definitive Guide to Solving Week 2 Question 5
 
-Question 5 in the week 2 quiz for *Getting and Cleaning Data* is deceptively simple: *report the sum of the fourth of the nine columns.* To answer this question correctly, one **MUST**  view the file before writing R code. As noted in [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF), one can download the [Atom](http://atom.io) editor for free and use it to view the file.
+Question 5 in the week 2 quiz for *Getting and Cleaning Data* in the Johns Hopkins Data Science Specialization on Coursera is deceptively simple: *report the sum of the fourth of the nine columns.* To answer this question correctly, one **MUST**  view the file before writing R code. As noted in [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF), one can download the [Atom](http://atom.io) editor for free and use it to view the file.
 
 <img src="./images/cleaningData-week2q5-01.png">
 
@@ -44,6 +44,8 @@ As of October 14, 2017, the data from the NOAA has 1,449 observations, the most 
 
 <img src="./images/cleaningData-week2q5-06.png">
 
+**[PRO TIP]** Use the `summary()` function to compare the data set you load into R against the values listed in the codebook below to confirm that the data file has been read correctly.
+
 # Appendix
 
 The data set is maintained by the United States National Oceanographic and Atmospheric Administration. SST is an abbreviation of *sea surface temperature*. SSTA is an abbreviation of *sea surface temperature anomaly*. *Anomaly* is calculated as the deviation from a 30 year average. for the *Sea Surface Temperature Index* data set, the mean includes data collected within the El Niño Southern Oscillation between 1981 and 2010.
@@ -58,6 +60,7 @@ The El Niño Southern Oscillation is a combined atmospheric and ocean system con
 
 <img src="./images/cleaningData-week2q5-08.png">
 
+**[PRO TIP]** Bookmark this article because you can use the codebook illustrated here as a template for your final project in *Getting and Cleaning Data*.  Ironically, most of the data sets on the NOAA website have no codebooks, or they are very difficult to find and poorly written, as students will discover during the *Reproducible Research* course within the Data Science Specialization.
 
 # References
 
