@@ -16,7 +16,7 @@ Nine columns? At first glance the screen capture looks like 5 columns, not 9. Ho
 8. Nino4SST
 9. Nino4SSTA
 
-For detailed descriptions of each data element, please review the [NOAA SST an SSTA Data Set Codebook](http://bit.ly/2wVyR6K) included in the Appendix of this article.
+For detailed descriptions of each data element, please review the [NOAA SST and SSTA Data Set Codebook](http://bit.ly/2wVyR6K) included in the Appendix of this article.
 
 The subtlety one must see to distinguish 9 columns from the list of 5 is that for some rows, the initial character for some of the columns is a minus sign.
 
