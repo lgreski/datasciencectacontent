@@ -1,13 +1,12 @@
-# Getting and Cleaning Data: Reading Fixed Width Files for Quiz 2
+# The Definitive Guide to Solving Week 2 Question 5
 
-Question 5 in the week 2 quiz is deceptively simple: *report the sum of the fourth of the nine columns.* To answer this question correctly, it is important to view the file before writing any R code.
-
+Question 5 in the week 2 quiz for *Getting and Cleaning Data* is deceptively simple: *report the sum of the fourth of the nine columns.* To answer this question correctly, one **MUST**  view the file before writing R code. As noted in [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF), one can download the [Atom](http://atom.io) editor for free.
 
 <img src="./images/cleaningData-week2q5-01.png">
 
-Nine columns? The screen capture looks like 5 columns, not 9. However, there are truly 9 columns of data in this file, including:
+Nine columns? At first glance the screen capture looks like 5 columns, not 9. However, there are truly 9 columns of data in this file, including:
 
-1. week
+1. Week
 2. Nino1and2SST
 3. Nino1and2SSTA
 4. Nino3SST
@@ -16,6 +15,8 @@ Nine columns? The screen capture looks like 5 columns, not 9. However, there are
 7. Nino34SSTA
 8. Nino4SST
 9. Nino4SSTA
+
+For detailed descriptions of each data element, please review the [NOAA SST an SSTA Data Set Codebook](http://bit.ly/2wVyR6K) included in the Appendix of this article.
 
 The subtlety one must see to distinguish 9 columns from the list of 5 is that for some rows, the initial character for some of the columns is a minus sign.
 
@@ -43,7 +44,7 @@ As of October 14, 2017, the data from the NOAA has 1,449 observations, the most 
 
 <img src="./images/cleaningData-week2q5-06.png">
 
-## Background on the Data Set
+# Appendix
 
 The data set is maintained by the United States National Oceanographic and Atmospheric Administration. SST is an abbreviation of *sea surface temperature*. SSTA is an abbreviation of *sea surface temperature anomaly*.
 
@@ -60,8 +61,12 @@ There are four regions for which the NOAA collects data to track the El Niño So
 
 # References
 
-[Climate  Glossary](http://www.cpc.ncep.noaa.gov/products/outreach/glossary.shtml): National Oceanographic and Atmospheric Administration website, retrieved 14 October 2017.
+[Climate Glossary](http://bit.ly/2ynHKcC): Climate Prediction Center of the National Oceanographic and Atmospheric Administration, United States of America, retrieved 14 October 2017.
 
-[Optimum Interpolation Sea Surface Temperatures](https://www.esrl.noaa.gov/psd/data/gridded/data.noaa.oisst.v2.html): National Oceanographic and Atmosphereic Administration, retrieved 14 October 2017.
+[El Niño Southern Oscillation](http://bit.ly/2gapR73): Climate Prediction Center of the National Oceanographic and Atmospheric Administration, United States of America, retrieved 14 October 2017.
+
+[Monthly Atmospheric and Sea Surface Temperature Indices](http://bit.ly/2xFkUcz): Climate Prediction Center of the National Oceanographic and Atmospheric Administration, United States of America, retrieved 14 October 2017.
+
+[Optimum Interpolation Sea Surface Temperatures - V2](http://bit.ly/2z8n1GT): Climate Prediction Center of the National Oceanographic and Atmospheric Administration, United States of America, retrieved 14 October 2017.
 
 *Last Updated: 14 October 2017*

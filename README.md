@@ -103,6 +103,7 @@ The next set of articles includes general commentary about the course, R program
 3. [Common Problems: Quiz 1 - Missing Java Runtime](http://bit.ly/2jjtyXM) Explains how to solve the problem of a missing Java Runtime for the question that requires students to process a Microsoft Excel spreadsheet. 
 4. [Strategy for Reading Files & APIs / Quiz 2](http://bit.ly/2e4L5oF)
 5. [Common Problems: Quiz 2 - sqldf() driver fails to connect](http://bit.ly/2kD2KTY)
+5. [Definitive Guide to Week 2 Question 5](http://bit.ly/2wVyR6K) A comprehensive guide to understanding the final question the week two quiz, including a detailed codebook for the data set. 
 
 ### Articles and Content Related to Getting and Cleaning Data
 
