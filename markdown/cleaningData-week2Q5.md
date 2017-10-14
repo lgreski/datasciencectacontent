@@ -46,9 +46,9 @@ As of October 14, 2017, the data from the NOAA has 1,449 observations, the most 
 
 # Appendix
 
-The data set is maintained by the United States National Oceanographic and Atmospheric Administration. SST is an abbreviation of *sea surface temperature*. SSTA is an abbreviation of *sea surface temperature anomaly*.
+The data set is maintained by the United States National Oceanographic and Atmospheric Administration. SST is an abbreviation of *sea surface temperature*. SSTA is an abbreviation of *sea surface temperature anomaly*. *Anomaly* is calculated as the deviation from a 30 year average. for the *Sea Surface Temperature Index* data set, the mean includes data collected within the El Niño Southern Oscillation between 1981 and 2010.
 
-There are four regions for which the NOAA collects data to track the El Niño Southern Oscillation, a combined atmospheric and ocean system, as illustrated below.
+The El Niño Southern Oscillation is a combined atmospheric and ocean system consisting of four regions for which the NOAA collects data, as illustrated below.
 
 ### El Niño Southern Oscillation
 
