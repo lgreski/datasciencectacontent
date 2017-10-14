@@ -4,7 +4,7 @@ One of the things that confuses students in the Johns Hopkins Data Science Speci
 
 The [extract operator](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Extract.html) is used to retrieve data from objects in R. The operator may take four forms, including `[, [[, $,` and `@`. The fourth form, `@`, is called the [slot operator](https://stat.ethz.ch/R-manual/R-devel/library/methods/html/slot.html), and is used to extract content from an object built with the S4 object system, also known as a *formally defined object*. Use of the S4 object system is a more advanced topic so we won't discuss it further here.
 
-In this article we will illustrate various forms of the extract operator, focusing on how to use it with data frames.
+In this article we will illustrate how to use the three most commonly used forms of the extract operator, focusing on how they work with data frames. Knowing how to use the extract operator with data frames is very a key skill one must have to effectively use R. It's also important to note that [a data frame is also a list](http://bit.ly/2fmMRAp), which means that we can use the same extract operator techniques with data frames that one can use with a `list()` object. 
 
 The first form, `[`, can be used to extract content from vector, lists, or data frames. Since vectors are one dimensional, i.e. they contain between 1 and N elements, we apply the extract operator to the vector as a single number or a list of numbers as follows.
 
@@ -300,4 +300,4 @@ There you have it, a comprehensive overview of the extract operator, including a
 2. [SlotOp {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/slotOp.html), retrieved 22 May 2016.
 3. [Pokémon Stats by Alberto Barradas](http://bit.ly/2ovmmxu)
 
-**last update date: 15 September 2017**
+**last update date: 14 October 2017**
