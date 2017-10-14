@@ -1,11 +1,11 @@
 # Getting and Cleaning Data: Reading Fixed Width Files for Quiz 2
 
-To answer this question correctly, it is important to view the file before writing any R code.
+Question 5 in the week 2 quiz is deceptively simple: *report the sum of the fourth of the nine columns.* To answer this question correctly, it is important to view the file before writing any R code.
 
 
 <img src="./images/cleaningData-week2q5-01.png">
 
-There are 9 columns of data in this file, including:
+Nine columns? The screen capture looks like 5 columns, not 9. However, there are truly 9 columns of data in this file, including:
 
 1. week
 2. Nino1and2SST
@@ -17,7 +17,9 @@ There are 9 columns of data in this file, including:
 8. Nino4SST
 9. Nino4SSTA
 
-The challenge is how to read the fourth column, Nino3SST, correctly. The columns are real numbers, not integers as stated in one of the prior posts. That is, they contain decimal points and one value to the right of the decimal point.
+The subtlety one must see to distinguish 9 columns from the list of 5 is that for some rows, the initial character for some of the columns is a minus sign.
+
+The challenge is how to read the fourth column, Nino3SST, correctly. The columns are real numbers, not integers as stated in a Discussion Forum post on Coursera. That is, they contain decimal points and one value to the right of the decimal point.
 
 <img src="./images/cleaningData-week2q5-02.png">
 
@@ -25,7 +27,7 @@ A text editor such as UltraEdit that provides a column number display makes it a
 
 <img src="./images/cleaningData-week2q5-03.png">
 
-Also notice that the SSTA columns have negative signs for some rows, and this must be accounted for in the R function used to read the data.
+The negative signs and column numbers must both be accounted for in the R function used to read the data.
 
 ## Additional Considerations
 
@@ -41,4 +43,25 @@ As of October 14, 2017, the data from the NOAA has 1,449 observations, the most 
 
 <img src="./images/cleaningData-week2q5-06.png">
 
-*Last Updated: 14 October 2017* 
+## Background on the Data Set
+
+The data set is maintained by the United States National Oceanographic and Atmospheric Administration. SST is an abbreviation of *sea surface temperature*. SSTA is an abbreviation of *sea surface temperature anomaly*.
+
+There are four regions for which the NOAA collects data to track the El Niño Southern Oscillation, a combined atmospheric and ocean system, as illustrated below.
+
+### El Niño Southern Oscillation
+
+<img src="./images/cleaningData-week2q5-07.png">
+
+### Codebook
+
+<img src="./images/cleaningData-week2q5-08.png">
+
+
+# References
+
+[Climate  Glossary](http://www.cpc.ncep.noaa.gov/products/outreach/glossary.shtml): National Oceanographic and Atmospheric Administration website, retrieved 14 October 2017.
+
+[Optimum Interpolation Sea Surface Temperatures](https://www.esrl.noaa.gov/psd/data/gridded/data.noaa.oisst.v2.html): National Oceanographic and Atmosphereic Administration, retrieved 14 October 2017.
+
+*Last Updated: 14 October 2017*
