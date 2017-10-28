@@ -32,11 +32,11 @@ Note that due to the size of the objects, a machine with a minimum of 16Gb of RA
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
 <tr><td>Load data from the three raw data files into a corpus</td><td align="right">1.0Gb</td><td align="right">37 seconds</td></tr>
 <tr><td>Tokenize corpus using <code>quanteda::tokenize()</code></td><td align="right">1.3Gb</td><td align="right">509 seconds</td></tr>
-<tr><td>Build 2-grams</td><td align="right">6.3Gbs</td><td align="right">619 seconds</td></tr>
-<tr><td>Build 3-grams</td><td align="right">6.5Gbs</td><td align="right">894 seconds</td></tr>
-<tr><td>Build 4-grams</td><td align="right">6.5Gbs</td><td align="right">925 seconds</td></tr>
-<tr><td>Build 5-grams</td><td align="right">6.3Gbs</td><td align="right">930 seconds</td></tr>
-<tr><td>Build 6-grams</td><td align="right">6.1Gbs</td><td align="right">1,007 seconds</td></tr>
+<tr><td>Build 2-grams</td><td align="right">6.3Gb</td><td align="right">619 seconds</td></tr>
+<tr><td>Build 3-grams</td><td align="right">6.5Gb</td><td align="right">894 seconds</td></tr>
+<tr><td>Build 4-grams</td><td align="right">6.5Gb</td><td align="right">925 seconds</td></tr>
+<tr><td>Build 5-grams</td><td align="right">6.3Gb</td><td align="right">930 seconds</td></tr>
+<tr><td>Build 6-grams</td><td align="right">6.1Gb</td><td align="right">1,007 seconds</td></tr>
 </table>
 
 # Processing with Less Memory
@@ -90,11 +90,48 @@ As stated above, we need to sample at a level where the combined size of the tok
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
 <tr><td>Load data from the three raw data files into a corpus</td><td align="right">265 Mb</td><td align="right">6 seconds</td></tr>
 <tr><td>Tokenize corpus using <code>quanteda::tokenize()</code></td><td align="right">1.4Gb</td><td align="right">59 seconds</td></tr>
-<tr><td>Build 2-grams</td><td align="right">2.0Gbs</td><td align="right">79 seconds</td></tr>
-<tr><td>Build 3-grams</td><td align="right">2.9Gbs</td><td align="right">162 seconds</td></tr>
-<tr><td>Build 4-grams</td><td align="right">3.6Gbs</td><td align="right">420 seconds</td></tr>
-<tr><td>Build 5-grams</td><td align="right">3.9Gbs</td><td align="right">339 seconds</td></tr>
-<tr><td>Build 6-grams</td><td align="right">4.0Gbs</td><td align="right">343 seconds</td></tr>
+<tr><td>Build 2-grams</td><td align="right">2.0Gb</td><td align="right">79 seconds</td></tr>
+<tr><td>Build 3-grams</td><td align="right">2.9Gb</td><td align="right">162 seconds</td></tr>
+<tr><td>Build 4-grams</td><td align="right">3.6Gb</td><td align="right">420 seconds</td></tr>
+<tr><td>Build 5-grams</td><td align="right">3.9Gb</td><td align="right">339 seconds</td></tr>
+<tr><td>Build 6-grams</td><td align="right">4.0Gb</td><td align="right">343 seconds</td></tr>
+</table>
+
+# Example: Sampling Approach on HP Chromebook 11 G5
+
+The performance timings in this section were taken on an HP Chromebook 11 G5 with the following configuration.
+
+<table>
+    <tr>
+        <th>Computer</th>
+        <th>Configuration</th>
+    </tr>
+    <tr>
+        <td valign=top>HP Chromebook 11 G5</td>
+        <td>
+            <ul>
+                <li>Operating system: Chrome OS Version 61.0.3163.123 (Official Build) (64-bit), with R installed on Linux Xenial 16.04 running via Crouton</li>
+                <li>Processor: Intel Celeron N3010, two cores with one thread each</li>
+                <li>Memory: 4 gigabytes</li>
+                <li>Disk: 32 gigabytes, solid state drive</li>
+                <li>Date built: June 2017</li>
+            </ul>
+        </td>
+     </tr>
+</table>
+
+The Chromebook has significantly less capacity than either of the two machines previously tested. However, we were able to run the n-gram build script for 2-grams through 6-grams on a 5% sample on the Chromebook. A 10% sample terminated with an out of memory error while generating 4-grams. A 15% sample terminated with an out of memory error while generating 3-grams. Performance timings for the 5% sample are listed in the following table. \\
+
+<table>
+<tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
+<tr><td>Load data from the three raw data files into a corpus</td><td align="right">53 Mb</td><td align="right">4 seconds</td></tr>
+<tr><td>Tokenize corpus into sentences using <code>quanteda::tokenize()</code></td><td align="right">89Mb</td><td align="right">147 seconds</td></tr>
+<tr><td>Tokenize sentences into words using <code>quanteda::tokenize()</code></td><td align="right">319Mb</td><td align="right">106 seconds</td></tr>
+<tr><td>Build 2-grams</td><td align="right">492Mb</td><td align="right">77 seconds</td></tr>
+<tr><td>Build 3-grams</td><td align="right">649Mb</td><td align="right">96  seconds</td></tr>
+<tr><td>Build 4-grams</td><td align="right">740Mb</td><td align="right">146 seconds</td></tr>
+<tr><td>Build 5-grams</td><td align="right">747Mb</td><td align="right">152 seconds</td></tr>
+<tr><td>Build 6-grams</td><td align="right">733Mb</td><td align="right">118 seconds</td></tr>
 </table>
 
 
