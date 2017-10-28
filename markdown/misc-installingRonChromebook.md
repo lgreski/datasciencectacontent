@@ -256,7 +256,7 @@ The output should match the following image.
 `libxml2` is required to for R to compile the Google Sheets package. To install it, enter the following commands from the command shell.
 
      apt-cache search libxml2
-     sudo apt-get libxml2
+     sudo apt-get libxml2-dev
 
 
 
