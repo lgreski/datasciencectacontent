@@ -30,7 +30,7 @@ Finally, the quality of the code you write, as well as the performance character
 
 # Appendix: Operating System Selection -- Linux, OS X or Windows?
 
-Periodically aspiring data scientists ask questions about which operating system is "best" for R. The R software runs equally well in Linux, OS X, and Windows. [RStudio](http://bit.ly/2zj1iiW) is also supported on OS X, Windows, and a variety of Linux platforms. Interestingly, via the Crouton tool, one can also [install R and RStudio on a Chromebook](http://bit.ly/2tHLVOo).
+ Aspiring data scientists periodically ask questions about which operating system is "best" for R. The R software runs equally well in Linux, OS X, and Windows. [RStudio](http://bit.ly/2zj1iiW) is also supported on OS X, Windows, and a variety of Linux platforms. Interestingly, via the Crouton tool, one can also [install R and RStudio on a Chromebook](http://bit.ly/2tHLVOo).
 
 I have installed R on all of these platforms so I could benchmark its performance on different platforms. Generally speaking, OS X and Windows are easiest to use because most R packages can be installed directly from CRAN as binary packages, avoiding the need for compilation from source on your computer.
 
