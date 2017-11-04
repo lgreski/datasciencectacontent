@@ -158,7 +158,7 @@ If you've installed Unity, the desktop will look similar to this.
 
 ### Optimize Linux Desktop for Chromebook  
 
-Once installed, one can switch back and forth between Chrome OS and Ubuntu by pressing the following keys: `<CNTL>+<ALT>+<Shift>+<Backward>` and `<CNTL>+<ALT>+<Shift>+<Forward>`. Note that some hardware uses `<CNTL>+<ALT>+<Backward>` and `<CNTL>+<ALT>+<Forward>` so you may have to check the documentation for your Chromebook to confirm which version of these keystrokes is correct for your hardware. 
+Once installed, one can switch back and forth between Chrome OS and Ubuntu by pressing the following keys: `<CNTL>+<ALT>+<Shift>+<Backward>` and `<CNTL>+<ALT>+<Shift>+<Forward>`. Note that some hardware uses `<CNTL>+<ALT>+<Backward>` and `<CNTL>+<ALT>+<Forward>` so you may have to check the documentation for your Chromebook to confirm which version of these keystrokes is correct for your hardware.
 
 For example, Whitson Gordon's article says that Intel machines use `<CNTL>+<ALT>+<Backward>` and `<CNTL>+<ALT>+<Forward>`, but my Chromebook has an Intel processor yet the commands that work correctly on my machine are `<CNTL>+<ALT>+<Shift>+<Backward>` and `<CNTL>+<ALT>+<Shift>+<Forward>`.
 
@@ -251,6 +251,14 @@ The output should match the following image.
 
 <img src="./images/misc-rOnChromebook08.png">
 
+## Install libxml2 Library
+
+`libxml2` is required to for R to compile the Google Sheets package. To install it, enter the following commands from the command shell.
+
+     apt-cache search libxml2
+     sudo apt-get libxml2-dev
+
+
 
 # Step 3: Install R and RStudio
 
@@ -319,7 +327,7 @@ To load a package once it's been downloaded, we use the `library()` function.
 
 # Step 5: Register for Github and Connect with Local Git
 
-This step is optional, but recommended. It enables you to store your R programs and data on Github, in case your Chromebook is lost, damaged, or stolen. There is an entire set of videos about configuring git and Githb from Data School: [Data School Github Video Series](https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD). We'll leave it to you to sign up for Github. 
+This step is optional, but recommended. It enables you to store your R programs and data on Github, in case your Chromebook is lost, damaged, or stolen. There is an entire set of videos about configuring git and Githb from Data School: [Data School Github Video Series](https://www.youtube.com/playlist?list=PL5-da3qGB5IBLMp7LtN8Nc3Efd4hJq0kD). We'll leave it to you to sign up for Github.
 
 ## Create an apStats Repository on Github
 
