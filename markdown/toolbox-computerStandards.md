@@ -26,6 +26,16 @@ Second, buy as much speed and as many processor cores as you can afford. Why? Fa
 
 Third, buy at least 16gb of RAM if at all possible. You'll need 16gb of RAM for the Capstone project if you want to use the entire data set to build the text prediction model without breaking the problem down into many smaller chunks and assembling these parts into a working model. A 16gb machine can process all of the data required for the Capstone, as I discuss in [n-grams and Computer Capacity](http://bit.ly/2couvxh).
 
-Finally, the quality of the code you write, as well as the performance characteristics of the R packages you use are the biggest determinants of program performance. Therefore, regardless of the machine you buy, it's worth learning how to write high performing R code.
+Finally, the quality of the code you write, as well as the performance characteristics of the R packages you use are the biggest determinants of program performance. Therefore, regardless of the machine you buy, it's worth learning how to write high performance R code.
 
-*last update: 21 May 2017*
+# Appendix: Operating System Selection -- Linux, OS X or Windows?
+
+Periodically aspiring data scientists ask questions about which operating system is "best" for R. The R software runs equally well in Linux, OS X, and Windows. [RStudio](http://bit.ly/2zj1iiW) is also supported on OS X, Windows, and a variety of Linux platforms. Interestingly, via the Crouton tool, one can also [install R and RStudio on a Chromebook](http://bit.ly/2tHLVOo).
+
+I have installed R on all of these platforms so I could benchmark its performance on different platforms. Generally speaking, OS X and Windows are easiest to use because most R packages can be installed directly from CRAN as binary packages, avoiding the need for compilation from source on your computer.
+
+## Caveat Linux?
+
+Most R packages must be compiled from source on Linux. Often these packages require additional Linux libraries that must be installed on the operating system before the R packages will compile. Depending on the version of Linux being used, this requirement can lead to interesting discoveries as one determines the exact versions of Linux libraries required by the R packages. However, with some additional effort, Linux works just as well as OS X or Windows.
+
+*last update: 4 November 2017*
