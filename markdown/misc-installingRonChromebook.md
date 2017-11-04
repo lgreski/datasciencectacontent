@@ -132,7 +132,10 @@ Installing Crouton and loading Ubuntu Linux is multi-step process.
 5. If you would prefer to run the Unity desktop, which is the standard for Ubuntu Linux but takes up more space than xfce, run the following command:
 
        sudo sh -e ~/Downloads/crouton -t unity
-<img src="./images/misc-rOnChromebook03.png"> <br><br>**NOTE:** the name of the new environment defaults to the version of the operating system being installed. For the default install of Ubuntu Linux, the current production version is named `xenial`. This is important if you need to uninstall the image at a later point.
+
+<img src="./images/misc-rOnChromebook03.png"> <br><br>
+
+**NOTE:** the name of the new environment defaults to the version of the operating system being installed. For the default install of Ubuntu Linux, the current production version is named `xenial`. This is important if you need to uninstall the image at a later point.
 
 6. If you're installing Linux on a device that has a touchscreen, such as the Chromebook Pixel or the HP Chromebook 11 G5 EE, enter the following to install touch support with the xfce desktop:
 
@@ -199,7 +202,7 @@ At this point we will install a couple of applications that make the rest of the
 
 Chromium is the open source browser on which Google Chrome is based. The [Chromium version excludes a number of proprietary software extensions](https://askubuntu.com/questions/6253/whats-the-difference-between-google-chrome-and-or-chromium-what-are-the-advant) such as Adobe Flash that are included in Google's version. To install Chromium, open a Linux terminal and enter the following command.
 
-      sudo apt-get install chromium  
+      sudo apt-get install chromium-browser  
 
 ### Install the [Atom](http://atom.io) text editor
 
