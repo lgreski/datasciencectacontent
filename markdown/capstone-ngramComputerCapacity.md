@@ -111,7 +111,7 @@ The performance timings in this section were taken on an HP Chromebook 11 G5 wit
         <td>
             <ul>
                 <li>Operating system: Chrome OS Version 61.0.3163.123 (Official Build) (64-bit), with R installed on Linux Xenial 16.04 running via Crouton</li>
-                <li>Processor: Intel Celeron N3010, two cores with one thread each</li>
+                <li>Processor: Intel Celeron N3010 at 1.6Ghz, up to 2.48Ghz in burst mode, two cores with one thread each</li>
                 <li>Memory: 4 gigabytes</li>
                 <li>Disk: 32 gigabytes, solid state drive</li>
                 <li>Date built: June 2017</li>

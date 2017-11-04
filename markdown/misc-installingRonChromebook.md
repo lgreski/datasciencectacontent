@@ -286,13 +286,18 @@ The R installation will take 15 - 30 minutes depending on the speed of your mach
 
 ## Install RStudio
 
-Since we're installing most of our software through the terminal window instead of the Ubuntu Software Center or the Synaptic Package Manager, we'll use the following commands to install RStudio.
+### Alternative 1: install from command line
+Since we're installing most of our software through the terminal window instead of the Ubuntu Software Center or the Synaptic Package Manager, we'll use the following commands to install RStudio. As of summer 2017, the version of RStudio was 0.99.896. Before running these commands, check the [RStudio website](http://bit.ly/2hEYW4q) to obtain the current version number.
 
         sudo apt-get install gdebi-core
         wget https://download1.rstudio.org/rstudio-0.99.896-amd64.deb
         sudo gdebi -n rstudio-0.99.896-amd64.deb
 
 **NOTE:** Once RStudio is installed, we will need to run it with administrator privileges in order to install packages in the correct folders within the operating system.
+
+### Alternative 2: download and install from custom Installer
+
+Since the time of the original writing of this article RStudio created an install package for Ubuntu. The install package for Ubuntu 9+ can be downloaded from the [RStudio download page](http://bit.ly/2hEYW4q). Once downloaded, double click on the package and the Ubuntu Software Center will install the software on the computer.
 
 ## Test the Installation
 
@@ -394,7 +399,7 @@ From a boot of the Chromebook, the steps to run RStudio include:
 
 ### Size of Problems One Can Solve
 
-R processes everything in the [random access memory](https://en.wikipedia.org/wiki/Random-access_memory) (RAM) of the computer. Since Chromebooks typically have between 2Gb and 4Gb of RAM, an R installation on a Chromebook will be limited to data sets that consume less than the memory installed on your Chromebook. One can conduct very sophisticated analyses on a machine with 2Gb of RAM, such as the analysis of extreme weather events data from the National Oceanographic and Atmospheric Administration that is used as the final project in the Johns Hopkins University [Reproducible Research](https://www.coursera.org/learn/reproducible-research) course on [Coursera](http://coursera.org). The raw data file for this project consumes about 540Mb of RAM once it is loaded into R.
+R processes everything in the [random access memory](https://en.wikipedia.org/wiki/Random-access_memory) (RAM) of the computer. Since Chromebooks typically have between 2Gb and 4Gb of RAM, an R installation on a Chromebook will be limited to data sets that consume less than the memory installed on your Chromebook. One can conduct very sophisticated analyses on a machine with 2Gb of RAM, such as the analysis of [extreme weather events](http://bit.ly/2xoJraj) data from the [United States National Oceanographic and Atmospheric Administration](http://bit.ly/2zcZ0Qf) that is used as the final project in the Johns Hopkins University [Reproducible Research](https://www.coursera.org/learn/reproducible-research) course on [Coursera](http://coursera.org). The raw data file for this project consumes about 540Mb of RAM once it is loaded into R.
 
 Since it is unlikely that students in an AP Statistics course will analyze data sets larger than the NOAA storm data, the Chromebook has more than enough capacity to handle any problem that is covered in a high school statistics course.
 
@@ -524,3 +529,5 @@ We've now demonstrated that our installation of RStudio will produce graphics.
 [Installing R on Ubuntu Linux 16.04](https://www.r-bloggers.com/how-to-install-r-on-linux-ubuntu-16-04-xenial-xerus/)
 
 [crouton Wiki](https://github.com/dnschneid/crouton/wiki)
+
+*Last update: 4 November 2017*
