@@ -62,7 +62,7 @@ Parallel processing in `caret` can be accomplished with the `parallel` and `doPa
 The most critical arguments for the trainControl function are the resampling method `method`, the `number` that specifies the quantity of folds for k-fold cross-validation, and `allowParallel` which tells caret to use the cluster that we've registered in the previous step.
 
     fitControl <- trainControl(method = "cv",
-                               number = 10,
+                               number = 5,
                                allowParallel = TRUE)
 
 ### Step 3: Develop training model
