@@ -198,4 +198,4 @@ Hardware specifications for the computers used in the performance timings in thi
 </tr>
 </table>
 
-*last updated: 9 July 2017*
+*last updated: 12 November 2017*
