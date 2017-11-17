@@ -152,7 +152,7 @@ The [CRAN Task View for Natural Language Processing](https://cran.r-project.org/
 * [RWeka](https://cran.r-project.org/web/packages/RWeka/RWeka.pdf)
 * [tm](https://cran.r-project.org/web/packages/tm/vignettes/tm.pdf)
 
-Each package has its strengths and weaknesses. For example, `ngram` is fast but it's capability is limited solely to the production of ngrams. `RWeka` and `tm` have a broader set of text mining features, but have significantly slower performance and do not scale well to a large corpus such as the one we must use for the Capstone project.
+Each package has its strengths and weaknesses. For example, `ngram` is fast but its capability is limited solely to the production of ngrams. `RWeka` and `tm` have a broader set of text mining features, but have significantly slower performance and do not scale well to a large corpus such as the one we must use for the Capstone project.
 
 ## Why use quanteda?
 
