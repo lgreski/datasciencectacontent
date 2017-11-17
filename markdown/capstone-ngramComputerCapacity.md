@@ -2,7 +2,7 @@
 
 Students in the Johns Hopkins University Data Science Specialization Capstone course typically struggle with the course project because of the amount of memory consumed by the objects needed to analyze text. To help reduce the guesswork in the memory utilization, here is a table that illustrates the amount of RAM consumed by objects required to analyze the files for the Swift Key sponsored capstone: predicting text.
 
-To assess our ability to process the complete corpus of data, we Used an HP Omen laptop with the following specifications.
+To assess our ability to process the complete corpus of data, we used an HP Omen laptop with the following specifications.
 
 <table>
     <tr>
