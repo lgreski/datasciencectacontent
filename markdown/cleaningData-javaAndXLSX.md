@@ -20,7 +20,8 @@ For `openxlsx`, it's very easy.
 
       install.packages("openxlsx")
       library(openxlsx)
-      # read the help file to use the right arguments
+      # read the help file to identify the arguments needed to 
+      # correctly read the file
       ?openxlsx
       theData <- read.xlsx(...)
       
@@ -28,7 +29,8 @@ The same process can be used for `readxl`.
 
       install.packages("readxl")
       library(readxl)
-      # read the help file to use the right arguments
+      # read the help file to identify the arguments needed to 
+      # correctly read the file 
       ?readxl
       theData <- read_excel(...)
       
