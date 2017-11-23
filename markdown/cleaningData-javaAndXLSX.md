@@ -2,7 +2,7 @@
 
 Students often have problems answering quiz questions related to the xlsx package that is used to read Excel spreadsheets. This article highlights common problems and their solutions.
 
-## 1. Java Runtime Not Installed
+# Java Runtime Not Installed
 
 First, many students new to the Data Science Specialization have not previously needed to install a Java runtime on their computers. The `xlsx` package depends on the `rJava` and `xlsxjars` packages.  `rJava` requires the Java Runtime Environment 1.2 or above to also be present on the student's computer.
 
@@ -12,7 +12,26 @@ If a student attempts to load the xlsx package without a Java runtime envrionmen
 
 After this error message is displayed at the operating system level, RStudio will terminate.
 
+## Solution 1: Use an Excel Reader Package that Doesn't Require Java
+
 <b>PRO TIP: </b> The easiest way to work around this problem is to use an R package that does not depend on Java, such as [openxlsx](https://cran.r-project.org/web/packages/openxlsx/openxlsx.pdf) or [readxl](https://cran.r-project.org/web/packages/readxl/readxl.pdf). 
+
+For `openxlsx`, it's very easy.
+
+      install.packages("openxlsx")
+      library(openxlsx)
+      # read the help file to use the right arguments
+      ?openxlsx
+      
+The same process can be used for `readxl`. 
+
+      install.packages("readxl")
+      library(readxl)
+      # read the help file to use the right arguments
+      ?readxl
+      
+
+## Solution 2: Install Java and Required R Packages
 
 That said, for students who want to use the `xlsx` package to answer the question, there are workable solutions for  Windows,  Mac OSX, and Ubuntu Linux.
 
@@ -32,10 +51,12 @@ Then in R / RStudio install the `xlsx` package.
 
       install.packages("xlsx")
 
-## 2. 32-bit vs. 64-bit Java in Windows
+# 32-bit vs. 64-bit Java in Windows
 
 Another common problem students may encounter is an incompatibility between the version of the Java Runtime Environment that is installed on their computer and the version of R, either 32-bit or 64-bit.
 
 For example, if one has installed the 64-bit version of R but has the 32-bit version of Java Runtime Environment installed, R will not have visibility to the Java Runtime Environment, generating the same "Java not installed error" as noted above.
 
 <b>SOLUTION: </b> This problem can be resolved by either [installing the 64-bit version of Java Runtime for Windows](https://java.com/en/download/), or by changing the RStudio configuration to use the 32-bit version of R.
+
+*last updated 23 November 2017* 
