@@ -120,7 +120,7 @@ The performance timings in this section were taken on an HP Chromebook 11 G5 wit
      </tr>
 </table>
 
-The Chromebook has significantly less capacity than either of the two machines previously tested. However, we were able to run the n-gram build script for 2-grams through 6-grams on a 5% sample on the Chromebook. A 10% sample terminated with an out of memory error while generating 4-grams. A 15% sample terminated with an out of memory error while generating 3-grams. Performance timings for the 5% sample are listed in the following table. \\
+The Chromebook has significantly less capacity than either of the two machines previously tested. However, we were able to run the n-gram build script for 2-grams through 6-grams on a 5% sample on the Chromebook. A 10% sample terminated with an out of memory error while generating 4-grams. A 15% sample terminated with an out of memory error while generating 3-grams. Performance timings for the 5% sample are listed in the following table. 
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
