@@ -22,6 +22,7 @@ For `openxlsx`, it's very easy.
       library(openxlsx)
       # read the help file to use the right arguments
       ?openxlsx
+      theData <- read.xlsx(...)
       
 The same process can be used for `readxl`. 
 
@@ -29,6 +30,7 @@ The same process can be used for `readxl`.
       library(readxl)
       # read the help file to use the right arguments
       ?readxl
+      theData <- read_excel(...)
       
 
 ## Solution 2: Install Java and Required R Packages
