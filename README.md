@@ -166,6 +166,7 @@ The next set of articles includes general commentary about the course, R program
 2. [n-gram Computations and Computer Capacity](http://bit.ly/2couvxh) Explains the amount of memory required to convert the text files for the course project into n-grams, using the <strong>quanteda</strong> package.
 3. [Capstone Strategy](http://bit.ly/2rGcgc6) Describes a general strategy to get through the Capstone: use the simplest approaches possible.
 4. [Choosing a Text Analysis Package](http://bit.ly/2qagsPa) Reviews pros and cons of various R packages used for natural language processing, in the context of requirements for the Capstone project. 
+5. [Common Problems: Running out of Memory Converting Document Feature Matrix to Regular Matrix](http://bit.ly/2hZQf8b)
 
 ## Content for Community Mentors
 1. [Tips for New Community Mentors](http://bit.ly/2bZJniM) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the *Coursera Learner Help Center*, to how to optimize the value of content that is posted by mentors.
