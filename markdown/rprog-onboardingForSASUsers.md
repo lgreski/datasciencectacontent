@@ -18,11 +18,13 @@ Before you begin working on the first programming assignment, read the following
 
 [Breaking Down Pollutantmean()](http://bit.ly/2cHyiCl), which provides a detailed walkthrough illustrating how to organize this function.
 
-You might also enjoy [Commercial Statistics Packages: An Historical Perspective](http://bit.ly/2fPj2qN), but it's not required to get through the assignment. 
+You might also enjoy [Commercial Statistics Packages: An Historical Perspective](http://bit.ly/2fPj2qN), but it's not required to get through the assignment.
 
-Another interesting but not required read is [Linda Burtch's](http://www.kdnuggets.com/author/linda-burtch) article [SAS vs. R vs. Python: Which Tool do Analytics Pros Prefer?](http://www.kdnuggets.com/2016/07/burtchworks-sas-r-python-analytics-pros-prefer.html) on the kdnuggets.com website. 
+Another interesting but not required read is [Linda Burtch's](http://www.kdnuggets.com/author/linda-burtch) article [SAS vs. R vs. Python: Which Tool do Analytics Pros Prefer?](http://www.kdnuggets.com/2016/07/burtchworks-sas-r-python-analytics-pros-prefer.html) on the kdnuggets.com website.
 
-Finally, if you're interested in understanding how R compares to other statistics packages for a variety of statistical analyses, take a look at the [Data Analysis Examples](http://bit.ly/2hdIsyU) page on UCLA's Institute for Digital Research and Education website. 
+The "expert" on the topic of converting from SAS to R is Bob Muenchen, author of [R for SPSS and SAS Users](http://bit.ly/2AmXTjs), where you'll find a detailed introduction to R for experienced users of SAS and SPSS. 
+
+Finally, if you're interested in understanding how R compares to other statistics packages for a variety of statistical analyses, take a look at the [Data Analysis Examples](http://bit.ly/2hdIsyU) page on UCLA's Institute for Digital Research and Education website.
 
 After completing the first programming assignment, you'll discover that the R-based solution to `pollutantmean()` is significantly less complicated than a SAS-based solution. How can I say this? [A SAS Version of pollutantmean()?](http://bit.ly/2d3DR4e) illustrates the code needed to replicate `pollutantmean()` in SAS. Believe it or not, one can complete the `pollutantmean()` assignment in a single R statement. It's a complex statement of nested functions, but it evaluates as a single R statement.
 
