@@ -25,4 +25,14 @@ Each package has its strengths and weaknesses. For example, `ngram` is fast but 
 
 The aspect of quanteda being "R like" is very useful, in contrast to packages like `ngram`. Also, since `quanteda` relies on `data.table`, it's particularly well suited to use for the Capstone. Why? `data.table` has features to index a data table so students can retrieve values by index rather than having to sequentially process an entire data frame to extract a small number of rows. Since the final deliverable for the Capstone project is a text prediction app written in Shiny, students will find `data.table` is an effective and efficient mechanism to use with a text prediction algorithm.
 
-*last updated: 21 May 2017*
+## Quanteda Resources 
+
+Ken Benoit and the quanteda team have recently upgraded the documentation for the quanteda package. As of late 2017 a number of resources are available to help people become productive with Quanteda, including the following.  
+
+* [Quanteda Overview](http://bit.ly/2k3DVBC)
+* [Quick Start Guide](http://bit.ly/2AHy3V2)
+* [Detailed Function Reference](http://bit.ly/2op7PF1)
+* [Source Repository](http://bit.ly/2CnJPUG)
+* [Report a Problem](http://bit.ly/2yIR3AE)
+
+*last updated: 16 Dec 2017*
