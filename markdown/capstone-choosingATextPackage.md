@@ -29,7 +29,8 @@ The aspect of quanteda being "R like" is very useful, in contrast to packages li
 
 Ken Benoit and the quanteda team have recently upgraded the documentation for the quanteda package. As of late 2017 a number of resources are available to help people become productive with Quanteda, including the following.  
 
-* [Quanteda Overview](http://bit.ly/2k3DVBC)
+* [Quanteda Overview](http://bit.ly/2k3DVBC) 
+* [Quanteda Design / Structure](http://bit.ly/2zhssX0)
 * [Quick Start Guide](http://bit.ly/2AHy3V2)
 * [Detailed Function Reference](http://bit.ly/2op7PF1)
 * [Source Repository](http://bit.ly/2CnJPUG)
