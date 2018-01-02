@@ -6,7 +6,11 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 <tr><th>Reference</th><th>Description</th></tr>
 
 <tr><td><a href="https://leanpub.com/rprogramming"> R Programming for Data Science </a></td><td>Start here! <em>R Programming for Data Science</em> is written by Roger Peng specifically to be read along with the JHU <em>R Programming</em> course. Since it's available on leanpub.org, you can decide how much to pay for it, including "free." </td></tr>
+
 <tr><td><a href="https://cran.r-project.org/manuals.html"> R Documentation</a></td><td>The Comprehensive R Archive Network (CRAN) is the authoritiative source for all things related to R. The R Documentation page on CRAN provides an index to a variety of manuals and other documentation related to R. </td></tr>
+
+<tr><td><a href="http://bit.ly/2CcN9Ct"> R for Data Science</a></td><td>Written by Garrett Grolemund and Hadley Wickham, <em>R for Data Science </em> explains how to load data into R, transform it for data analysis, model it, and generate graphics / reports. <br><br>Throughout the book Grolemund and Wickham introduce key tools in the <a href="http://bit.ly/2ihagWZ">tidyverse </a>, a collection of R packages designed to create, manage, and analyze what is called <em>tidy data</em>, a concept that originated with Wickham's 2014 paper in the <a href="http://bit.ly/2guNg2K">Journal of Statistical Software</a>.</td></tr>
+
 <tr><td><a href="http://bit.ly/2x6Rf0y"> Getting Used to R, RStudio, and R Markdown</a></td><td>Developed by Chester Ismay, <em>Getting Used to R, RStudio, and R Markdown</em> is a free online reference designed to help people develop reproducible research. It focuses on the server version of RStudio, but many of the concepts are applicable to the desktop version. 
 </td></tr>  
 
