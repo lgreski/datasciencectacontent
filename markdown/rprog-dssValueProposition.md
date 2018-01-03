@@ -78,7 +78,7 @@ It takes a lot of self-discipline to wade through the natural language processin
 
 It's encouraging to know that the instruction provided in *R Programming* provides a good foundation for tackling the challenges of the capstone course. If you've been developing your hacker skills since *R Programming*, you're ready to take on the challenges of natural language processing.
 
-For those who persevere and finish the capstone project, there is a well deserved sense of accomplishment at solving a very challenging natural language processing problem. Having finished the Specialization, students are well equipped to tackle real life data science problems.
+Completing the Capstone is not easy. In fact, of the over 4 million people who have taken at least one JHU data science specialization course on Coursera since 2014, only [6,235 people had completed the capstone as of August 2017](http://bit.ly/2xLCtvX). For those who persevere and complete the capstone project, there is a well deserved sense of accomplishment at solving a very challenging natural language processing problem. Having finished the Specialization, students are well equipped to tackle real life data science problems.
 
 ## JHU Data Science Team Ask Me Anything Session
 
