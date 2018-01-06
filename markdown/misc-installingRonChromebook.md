@@ -530,4 +530,4 @@ We've now demonstrated that our installation of RStudio will produce graphics.
 
 [crouton Wiki](https://github.com/dnschneid/crouton/wiki)
 
-*Last update: 4 November 2017*
+*Last update: 6 January 2018*
