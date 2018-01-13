@@ -25,7 +25,7 @@ The following table illustrates the probability of predicting all 20 test cases,
 
 # Appendix: Accuracy Required for 95% Confidence Across 20 Tests
 
-In January 2018 a student posted an [issue](http://bit.ly/2mv5Dr4) on my github site, suggesting that a better way to calculate the required accuracy would be to use the formula `(1-.05)^20`. This approach leverages the concept of familywise error rates across multiple comparisons of means in the week 4 lectures from the *Statistical Inference* course. This specific calculation is known as the [Šidák correction for multiple tests](http://bit.ly/2DuPwlq).
+In January 2018 a student posted an [issue](http://bit.ly/2mv5Dr4) on my github site, suggesting that a better way to calculate the required accuracy would be to use the formula `(1-.05)^(1/20)`. This approach leverages the concept of familywise error rates across multiple comparisons of means in the week 4 lectures from the *Statistical Inference* course. This specific calculation is known as the [Šidák correction for multiple tests](http://bit.ly/2DuPwlq).
 
 When we compare the two approaches we find that they produce the same result within .001. To have 95% confidence that all 20 predictions will be accurate, we need a familywise accuracy rate of .9974386, as illustrated below.
 
