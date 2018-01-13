@@ -46,7 +46,7 @@ When we compare the two approaches we find that they produce the same result wit
       11   0.9975000   0.95116988
       >
       > # alternate approach: Šidák's correction of multiple tests
-      > # generate 95% confidence for 20 tests
+      > # generate 95% confidence familywise accuracy needed across 20 tests
       > (1 - .05)^(1/20)
       [1] 0.9974386
       >
