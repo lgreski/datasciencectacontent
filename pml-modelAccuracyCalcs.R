@@ -4,7 +4,8 @@
 # 
 # reference: https://github.com/lgreski/datasciencectacontent/issues/7 
 # 
-mdlAccuracy <- c(.8,.85,.9,.95,.99,.995,.996,.997,.9974,0.9974386,.9975)
+options(digits=9)
+mdlAccuracy <- c(.8,.85,.9,.95,.99,.995,.996,.997,.9974,0.9974386,0.99743863,0.99743865,.9975)
 predAccuracy <- mdlAccuracy^20
 data.frame(mdlAccuracy,predAccuracy)
 
