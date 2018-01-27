@@ -11,7 +11,9 @@ The install requires the gtk toolkit, and on Mac one must do the following, per 
 1. [Install macports](https://www.macports.org/install.php) — tool for installing mac packages <br><br>
 2. run SUDO to install gtk2 on mac<br> `sudo port install gtk2  ## (X11 -- not aqua)`<br><br>
 3. export new path <br>`export PATH=/opt/local/bin:/opt/local/sbin:$PATH`<br><br>
-4. From RStudio, install rgtk2 with<br> `install.packages(“RGtk2”)` including compile<br><br>
+4. From command line R, enter install rgtk2 with<br> `install.packages(“RGtk2”,type="source")` to compile from source<br><br>
+
+**NOTE:** For the `RGtk2` install to work correctly from RStudio, one must first confirm that the `PATH` change listed above is applied to the shell that is used to start RStudio. 
 
 The most complete set of instructions is located at [Sebastian Kopf's Gist page](https://gist.github.com/sebkopf/9405675) and verified by my own install on June 17, 2017. Once installed, loading the rattle library will generate the following output in the R console.
 
@@ -36,3 +38,6 @@ Here we've replicated the code needed to generate a fancy tree diagram with `car
       fancyRpartPlot(modFit$finalModel)
 
 <img src="./images/pml-installingRattleOnMacOSX02.png">
+
+
+*Last updated: 27 January 2018* 
