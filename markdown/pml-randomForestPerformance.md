@@ -122,14 +122,16 @@ Finally, to illustrate the impact that the resampling technique has on the runti
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.22 minutes</td></tr>
 <tr><td> HP Spectre x360 laptop</td><td>Random Forest</td><td>CV</td><td align="right">04.65 minutes</td></tr>
 <tr><td> Macbook Pro laptop</td><td>Random Forest</td><td>CV</td><td align="right">06.56 minutes</td></tr>
-<tr><td> HP Chromebook</td><td>Random Forest</td><td>CV</td><td align="right">20.01 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Bootstrap</td><td align="right">17.00 minutes</td></tr>
+<tr><td> HP Chromebook</td><td>Random Forest</td><td>CV</td><td align="right">20.01 minutes</td></tr>
 <tr><td> HP Envy X2 tablet</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
 </table>
 
+
+
 ### Machine Configurations
 
-Hardware specifications for the computers used in the performance timings in this article are listed below.
+Hardware specifications for the computers used in the performance timings in this article are listed below. Note that all of the Intel processors listed below have two threads per core except the Celeron 2955U, which has one thread per core, which limits the utility of the parallel processing capabilities in R. 
 
 #### Figure 3: Machine Hardware Specifications
 <table>
@@ -198,4 +200,4 @@ Hardware specifications for the computers used in the performance timings in thi
 </tr>
 </table>
 
-*last updated: 12 November 2017*
+*last updated: 22 March 2018*
