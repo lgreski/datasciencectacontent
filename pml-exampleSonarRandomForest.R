@@ -3,6 +3,7 @@
 #
 
 library(mlbench)
+library(randomForest) # needed for varImpPlot
 data(Sonar)
 #
 # review distribution of Class column
