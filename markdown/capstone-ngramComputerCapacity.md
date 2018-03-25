@@ -97,7 +97,7 @@ As stated above, we need to sample at a level where the combined size of the tok
 <tr><td>Build 6-grams</td><td align="right">4.0Gb</td><td align="right">343 seconds</td></tr>
 </table>
 
-# Example: Sampling Approach on HP Chromebook 11 G5
+## Example: Sampling Approach on HP Chromebook 11 G5
 
 The performance timings in this section were taken on an HP Chromebook 11 G5 with the following configuration.
 
