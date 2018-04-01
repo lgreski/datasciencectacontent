@@ -50,7 +50,7 @@ Changes in the quanteda tokenization algorithm between version 0.99 and 1.1.1 ca
 
 **Bottom line:** total processing to generate the n-grams from the word tokenized corpus is almost 3 hours.
 
-###  System Information
+###  System Information: HP Omen
 
 The performance timings and sizes listed above were generated with the following versions of R and R packages.
 
