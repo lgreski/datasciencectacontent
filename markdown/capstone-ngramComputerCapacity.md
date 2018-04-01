@@ -123,7 +123,7 @@ The performance timings in this section were taken on a Macbook Pro with the fol
      </tr>
 </table>
 
-As stated above, we need to sample at a level where the combined size of the tokenized corpus and the result n-gram object are less then the amount of RAM available on the machine. We selected a 30% sample, resulting in a tokenized words object of 525 Mb in size. Since we expect the resulting n-gram objects to be 1.5 - 4 times the size of the tokenized words object, a 30% sample will process within the 8Gb of RAM on the Macbook Pro we used to generate n-grams. Summarizing in the same manner as we did with the analysis on the HP Omen, here are the object sizes and timings for the 30% sample.  
+As stated above, we need to sample at a level where the combined size of the tokenized corpus and the result n-gram object are less then the amount of RAM available on the machine. We selected a 30% sample, resulting in a tokenized words object of 601 Mb in size. Since we expect the resulting n-gram objects to be 1.5 - 4 times the size of the tokenized words object, a 30% sample will process within the 8Gb of RAM on the Macbook Pro we used to generate n-grams. Summarizing in the same manner as we did with the analysis on the HP Omen, here are the object sizes and timings for the 30% sample.  
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
