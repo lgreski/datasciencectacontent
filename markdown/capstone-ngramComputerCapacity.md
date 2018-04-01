@@ -13,7 +13,7 @@ To assess our ability to process the complete corpus of data, we used an HP Omen
    <td valign=top>HP Omen laptop</td>
    <td>
        <ul>
-           <li>Operating system: Microsoft Windows 10, 64bit</li>
+           <li>Operating system: Microsoft Windows 10 Home, 64bit, Version 1709 </li>
            <li>Processor: Intel i7-4710HQ at 2.5Ghz, turbo up to 3.5Ghz, four cores with two threads each</li>
            <li>Memory: 16 gigabytes</li>
            <li>Disk: 512 gigabytes, solid state drive</li>
@@ -26,18 +26,57 @@ To assess our ability to process the complete corpus of data, we used an HP Omen
 
 All text processing was completed with the <strong>quanteda</strong> package. The three input files for blogs, news, and twitter data were read as character strings and combined into a single object that was used as input to the `corpus()` function. The total number of texts processed across the combined file is 4,269,678.
 
-Note that due to the size of the objects, a machine with a minimum of 16Gb of RAM is required to process the entire data set. The tokenized texts consume about 5.1 Gb of RAM, and must remain in memory in order to use them as input to the `quanteda::ngrams()` function. Therefore, the minimum number of objects in memory at any time is 2 -- the tokenized texts, and the output `ngrams` object. Since the object output by `ngrams()` is also over 5Gb, one must be judicious about deleting objects not needed before progressing to subsequent steps in order to avoid running out of memory on the machine, even if it has 16Gb of RAM.
+<strong>NOTE:</strong> Due to ongoing changes in the quanteda package, performance of these processes change over time. The timings in this article were originally conducted during September 2016 with quanteda version 0.99. As of March 31, 2018, quanteda has had multiple revisions, leading to significant changes in the performance times that I originally published, as well as the sizes of the objects. I have updated the article to reflect the performance timings of quanteda 1.1.1.
+
+Note that due to the size of the objects, a machine with a minimum of 16Gb of RAM is required to process the entire data set. The tokenized texts consume about 2.0 Gb of RAM, and must remain in memory in order to use them as input to the `quanteda::ngrams()` function. The 2.0 Gb sizing for the word token object is a large improvement vs. quanteda 0.99, which consumed 5.1 Gb of RAM.
+
+The minimum number of objects in memory at any time is 2 -- the tokenized texts, and the output `ngrams` object. Since the object output by `ngrams()` is also over 5Gb, one must be judicious about deleting objects not needed before progressing to subsequent steps in order to avoid running out of memory on the machine, even if it has 16Gb of RAM.
+
+
+Changes in the quanteda tokenization algorithm between version 0.99 and 1.1.1 caused the sentence tokenization step to run out of memory about about 95% of completion. Because quanteda supports use of the `c()` function to combine tokenized texts into a single corpus, and the sentences for each document are independent of other documents, I revised my algorithm so it processes the three sources of documents in a `list()` until the step where sentences are tokenized to words.
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
-<tr><td>Load data from the three raw data files into a corpus</td><td align="right">1.0Gb</td><td align="right">37 seconds</td></tr>
-<tr><td>Tokenize corpus using <code>quanteda::tokenize()</code></td><td align="right">1.3Gb</td><td align="right">509 seconds</td></tr>
-<tr><td>Build 2-grams</td><td align="right">6.3Gb</td><td align="right">619 seconds</td></tr>
-<tr><td>Build 3-grams</td><td align="right">6.5Gb</td><td align="right">894 seconds</td></tr>
-<tr><td>Build 4-grams</td><td align="right">6.5Gb</td><td align="right">925 seconds</td></tr>
-<tr><td>Build 5-grams</td><td align="right">6.3Gb</td><td align="right">930 seconds</td></tr>
-<tr><td>Build 6-grams</td><td align="right">6.1Gb</td><td align="right">1,007 seconds</td></tr>
+<tr><td>Remove non-ASCII characters from data files</td><td align="right">N.A.</td><td align="right">103 seconds</td></tr>
+<tr><td>Build 3 corpii and tokenize to sentences using <code>quanteda::corpus_reshape()</code></td><td align="right">N.A.</td><td align="right">1,749 seconds</td></tr>
+<tr><td>Combine corpii to single corpus</td><td align="right">1.8Gb</td><td align="right">5.9 seconds</td></tr>
+<tr><td>Tokenize corpus to words</td><td align="right">2.0Gb</td><td align="right">867 seconds</td></tr>
+<tr><td>Build 2-grams</td><td align="right">2.6Gb</td><td align="right">618 seconds</td></tr>
+<tr><td>Build 3-grams</td><td align="right">4.8Gb</td><td align="right">1,681 seconds</td></tr>
+<tr><td>Build 4-grams</td><td align="right">6.8Gb</td><td align="right">2,204 seconds</td></tr>
+<tr><td>Build 5-grams</td><td align="right">7.6Gb</td><td align="right">2,574 seconds</td></tr>
+<tr><td>Build 6-grams</td><td align="right">7.8Gb</td><td align="right">2,919 seconds</td></tr>
 </table>
+
+**Bottom line:** total processing to generate the n-grams from the word tokenized corpus is almost 3 hours.
+
+###  System Information
+
+The performance timings and sizes listed above were generated with the following versions of R and R packages.
+
+    sessionInfo()
+    R version 3.4.4 (2018-03-15)
+    Platform: x86_64-w64-mingw32/x64 (64-bit)
+    Running under: Windows >= 8 x64 (build 9200)
+
+    Matrix products: default
+
+    locale:
+    [1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252    LC_MONETARY=English_United States.1252
+    [4] LC_NUMERIC=C                           LC_TIME=English_United States.1252
+
+    attached base packages:
+    [1] parallel  stats     graphics  grDevices utils     datasets  methods   base
+
+    other attached packages:
+    [1] quanteda_1.1.1 stringi_1.1.7  stringr_1.3.0  dtplyr_0.0.2   readr_1.1.1
+
+    loaded via a namespace (and not attached):
+     [1] Rcpp_0.12.16        bindr_0.1.1         magrittr_1.5        stopwords_0.9.0     network_1.13.0      hms_0.4.2           munsell_0.4.3
+     [8] colorspace_1.3-2    lattice_0.20-35     R6_2.2.2            rlang_0.2.0         fastmatch_1.1-0     plyr_1.8.4          dplyr_0.7.4
+    [15] tools_3.4.4         grid_3.4.4          data.table_1.10.4-3 gtable_0.2.0        spacyr_0.9.6        RcppParallel_4.4.0  lazyeval_0.2.1
+    [22] yaml_2.1.18         assertthat_0.2.0    tibble_1.4.2        Matrix_1.2-12       bindrcpp_0.2        ggplot2_2.2.1       ggrepel_0.7.0
+    [29] glue_1.2.0          compiler_3.4.4      pillar_1.2.1        scales_0.5.0        lubridate_1.7.3     pkgconfig_2.0.1
 
 # Processing with Less Memory
 
@@ -74,7 +113,7 @@ The performance timings in this section were taken on a Macbook Pro with the fol
         <td valign=top>Apple Macbook Pro</td>
         <td>
             <ul>
-                <li>Operating system: OS X Sierra 10.12.6 (16G29)</li>
+                <li>Operating system: OS X High Sierra 10.13.4 (17E199)</li>
                 <li>Processor: Intel i5 at 2.6Ghz, turbo up to 3.3Ghz, two cores with two threads each</li>
                 <li>Memory: 8 gigabytes</li>
                 <li>Disk: 512 gigabytes, solid state drive</li>
@@ -84,18 +123,56 @@ The performance timings in this section were taken on a Macbook Pro with the fol
      </tr>
 </table>
 
-As stated above, we need to sample at a level where the combined size of the tokenized corpus and the result n-gram object are less then the amount of RAM available on the machine. We selected a 25% sample, resulting in a tokenized words object of 1.4Gb in size. Since we expect the resulting n-gram objects to be 1.5 - 3 times the size of the tokenized words object, a 25% sample will process within the 8Gb of RAM on the Macbook Pro we used to generate n-grams. Summarizing in the same manner as we did with the analysis on the HP Omen, here are the object sizes and timings for the 25% sample.  
+As stated above, we need to sample at a level where the combined size of the tokenized corpus and the result n-gram object are less then the amount of RAM available on the machine. We selected a 30% sample, resulting in a tokenized words object of 525 Mb in size. Since we expect the resulting n-gram objects to be 1.5 - 3 times the size of the tokenized words object, a 30% sample will process within the 8Gb of RAM on the Macbook Pro we used to generate n-grams. Summarizing in the same manner as we did with the analysis on the HP Omen, here are the object sizes and timings for the 30% sample.  
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
-<tr><td>Load data from the three raw data files into a corpus</td><td align="right">265 Mb</td><td align="right">6 seconds</td></tr>
-<tr><td>Tokenize corpus using <code>quanteda::tokenize()</code></td><td align="right">1.4Gb</td><td align="right">59 seconds</td></tr>
-<tr><td>Build 2-grams</td><td align="right">2.0Gb</td><td align="right">79 seconds</td></tr>
-<tr><td>Build 3-grams</td><td align="right">2.9Gb</td><td align="right">162 seconds</td></tr>
-<tr><td>Build 4-grams</td><td align="right">3.6Gb</td><td align="right">420 seconds</td></tr>
-<tr><td>Build 5-grams</td><td align="right">3.9Gb</td><td align="right">339 seconds</td></tr>
-<tr><td>Build 6-grams</td><td align="right">4.0Gb</td><td align="right">343 seconds</td></tr>
+<tr><td>Remove non-ASCII characters from data files</td><td align="right">N.A.</td><td align="right">14 seconds</td></tr>
+<tr><td>Build 3 corpii and tokenize to sentences using <code>quanteda::corpus_reshape()</code></td><td align="right">N.A.</td><td align="right">314 seconds</td></tr>
+<tr><td>Combine corpii to single corpus</td><td align="right">1.8Gb</td><td align="right">1.70 seconds</td></tr>
+<tr><td>Tokenize corpus to words</td><td align="right">601Mb</td><td align="right">200 seconds</td></tr>
+<tr><td>Build 2-grams</td><td align="right">919Mb</td><td align="right">42 seconds</td></tr>
+<tr><td>Build 3-grams</td><td align="right">1.6Gb</td><td align="right">105 seconds</td></tr>
+<tr><td>Build 4-grams</td><td align="right">2.2Gb</td><td align="right">145 seconds</td></tr>
+<tr><td>Build 5-grams</td><td align="right">2.4Gb</td><td align="right">265 seconds</td></tr>
+<tr><td>Build 6-grams</td><td align="right">2.4Gb</td><td align="right">380 seconds</td></tr>
 </table>
+
+### System Information: MacBook Processor
+
+Performance timings and sizes listed above were generated with the following R and R package versions.
+
+    sessionInfo()
+    R version 3.4.4 (2018-03-15)
+    Platform: x86_64-apple-darwin15.6.0 (64-bit)
+    Running under: macOS High Sierra 10.13.4
+
+    Matrix products: default
+    BLAS: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+    LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
+
+    locale:
+    [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+    attached base packages:
+    [1] parallel  stats     graphics  grDevices utils     datasets  methods   base     
+
+    other attached packages:
+    [1] quanteda_1.1.1 stringi_1.1.7  stringr_1.3.0  dtplyr_0.0.2   readr_1.1.1   
+
+    loaded via a namespace (and not attached):
+     [1] Rcpp_0.12.16        bindr_0.1.1         magrittr_1.5       
+     [4] stopwords_0.9.0     network_1.13.0      hms_0.4.2          
+     [7] munsell_0.4.3       colorspace_1.3-2    lattice_0.20-35    
+    [10] R6_2.2.2            rlang_0.2.0         fastmatch_1.1-0    
+    [13] plyr_1.8.4          dplyr_0.7.4         tools_3.4.4        
+    [16] grid_3.4.4          data.table_1.10.4-3 gtable_0.2.0       
+    [19] spacyr_0.9.6        RcppParallel_4.4.0  lazyeval_0.2.1     
+    [22] yaml_2.1.18         assertthat_0.2.0    tibble_1.4.2       
+    [25] Matrix_1.2-12       bindrcpp_0.2.2      ggplot2_2.2.1      
+    [28] ggrepel_0.7.0       glue_1.2.0          compiler_3.4.4     
+    [31] pillar_1.2.1        scales_0.5.0        lubridate_1.7.3    
+    [34] pkgconfig_2.0.1
 
 ## Example: Sampling Approach on HP Chromebook 11 G5
 
@@ -120,7 +197,9 @@ The performance timings in this section were taken on an HP Chromebook 11 G5 wit
      </tr>
 </table>
 
-The Chromebook has significantly less capacity than either of the two machines previously tested. However, we were able to run the n-gram build script for 2-grams through 6-grams on a 5% sample on the Chromebook. A 10% sample terminated with an out of memory error while generating 4-grams. A 15% sample terminated with an out of memory error while generating 3-grams. Performance timings for the 5% sample are listed in the following table. 
+The Chromebook has significantly less capacity than either of the two machines previously tested. However, we were able to run the n-gram build script for 2-grams through 6-grams on a 5% sample on the Chromebook. A 10% sample terminated with an out of memory error while generating 4-grams. A 15% sample terminated with an out of memory error while generating 3-grams. Performance timings for the 5% sample are listed in the following table.
+
+**NOTE:** These timings were generated with quanteda 0.99.12, versus the other timings that were taken with quanteda 1.1.1.
 
 <table>
 <tr><th>Activity</th><th>Memory Used</th><th>Processing Time</th></tr>
@@ -162,4 +241,4 @@ Each package has its strengths and weaknesses. For example, `ngram` is fast but 
 
 The aspect of quanteda being "R like" is very useful, in contrast to packages like `ngram`. Also, since `quanteda` relies on `data.table`, it's particularly well suited to use for the Capstone. Why? `data.table` has features to index a data table so students can retrieve values by index rather than having to sequentially process an entire data frame to extract a small number of rows. Since the final deliverable for the Capstone project is a text prediction app written in Shiny, students will find `data.table` is an effective and efficient mechanism to use with a text prediction algorithm.   
 
-*last updated: 12 August 2017*
+*last updated: 1 April 2018*
