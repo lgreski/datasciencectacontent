@@ -138,7 +138,7 @@ As stated above, we need to sample at a level where the combined size of the tok
 <tr><td>Build 6-grams</td><td align="right">2.4Gb</td><td align="right">380 seconds</td></tr>
 </table>
 
-### System Information: MacBook Processor
+### System Information: MacBook Pro
 
 Performance timings and sizes listed above were generated with the following R and R package versions.
 
