@@ -5,12 +5,12 @@ Students in the Statistical Inference Course within the Johns Hopkins University
 <table>
 <tr><th>Reference</th><th>Description</th></tr>
 
-<tr><td><a href="https://leanpub.com/LittleInferenceBook"> Statistical Inference for Data Science </a></td><td>Start here! Written by Brian Caffo, the instructor for <em>Statistical Inference</em>, this is the book that is designed to accompany the Johns Hopkins University <em>Statistical Inference</em> course, and it's available for low (or no) cost on leanpub.org. </td></tr>
+<tr><td><a href="http://bit.ly/2Gxolre"> Statistical Inference for Data Science </a></td><td>Start here! Written by Brian Caffo, the instructor for <em>Statistical Inference</em>, this is the book that is designed to accompany the Johns Hopkins University <em>Statistical Inference</em> course, and it's available for low (or no) cost on leanpub.org. </td></tr>
 
-<tr><td><a href="https://openintro.org/stat"> OpenIntro Statistics </a></td><td>Openintro.org provides a set of three statistics courses that include books and videos. The courses are targeted at different categories of students, ranging from high school to college. <br><br> All of these resources are available for free. </td></tr>
+<tr><td><a href="http://bit.ly/2jTPJn8"> OpenIntro Statistics </a></td><td>Openintro.org provides a set of three statistics courses that include books and videos. The courses are targeted at different categories of students, ranging from high school to college. <br><br> All of these resources are available for free. </td></tr>
 
-<tr><td><a href="http://bit.ly/2xTQEP1">ModernDive - An Introduction to the Statistical and Data Sciences via R</a></td><td> Developed by Chester Ismay and Albert Kim, <em>ModernDive - An Introduction to the Statistical and Data Sciences via R</em> is a <em>gentle</em> introduction to data science and statistics using R. For students who are frustrated by the <em>hacker mentality</em> in the Johns Hopkins Data Science Specialization, this online book will help students get through the <em>Statistical Inference</em> content. Chapter 8 on Hypothesis Testing is directly applicable to the JHU <em>Statistical Inference</em> course. 
-</td></tr> 
+<tr><td><a href="http://bit.ly/2xTQEP1">ModernDive - An Introduction to the Statistical and Data Sciences via R</a></td><td> Developed by Chester Ismay and Albert Kim, <em>ModernDive - An Introduction to the Statistical and Data Sciences via R</em> is a <em>gentle</em> introduction to data science and statistics using R. For students who are frustrated by the <em>hacker mentality</em> in the Johns Hopkins Data Science Specialization, this online book will help students get through the <em>Statistical Inference</em> content. Chapter 8 on Hypothesis Testing is directly applicable to the JHU <em>Statistical Inference</em> course.
+</td></tr>
 
 <tr><td><a href="http://bit.ly/2jQ3uYx"> Free Statistics eBooks </a></td><td>R-Statistics blog article by Tal Galili that contains links to a number of free eBooks on statistics from a variety of sources. Make sure you review the comments, because they include additional sources of content provided by readers of the original blog post.</td></tr>
 
@@ -29,4 +29,4 @@ Students in the Statistical Inference Course within the Johns Hopkins University
 
 We will continue to periodically update this list with new reference material.
 
-*Last updated: 1 October 2017*
+*Last updated: 2 April 2018*
