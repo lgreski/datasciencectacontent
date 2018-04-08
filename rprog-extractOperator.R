@@ -17,3 +17,7 @@ pokemonData <- lapply(thePokemonFiles,function(x) read.csv(x)[["Attack"]])
 
 # show the list of vectors
 summary(pokemonData)
+
+attackStats <- unlist(pokemonData)
+hist(attackStats,
+     main="Pokemon Attack Stats: Gen 1 & 2")
