@@ -94,6 +94,7 @@ The next set of articles includes general commentary about the course, R program
 2. [Scaling R for Data Science](http://oreil.ly/2b8pQyR) August 2016 article by Federico Castanedo explaining three ways to scale R.  
 3. [Lexical Scoping and Statistical Computing](http://bit.ly/2cmqAPy) Article by Robert Gentleman and Ross Ihaka at the University of Auckland describing how lexical scoping works, and why it is valuable in statistical computing.
 4. [Data Science Job Report 2017: R Passes SAS, But Python Leaves Them Both Behind](http://bit.ly/2oCHulX) Bob Muenchen's take on the job market for various data science langauges.
+5. [Redmonk Programming Language Rankings: June 2018](http://bit.ly/2MBKV4M) Steven O'Grady's analysis of popularity of programming languages, based on their activity on [Github](https://github.com) and [Stackoverflow](https://stackoverflow.com). 
 
 ## Course 3: Getting and Cleaning Data
 
