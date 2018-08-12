@@ -26,7 +26,7 @@ Second, buy as much speed and as many processor cores as you can afford. Why? Fa
 
 Third, buy at least 16gb of RAM if at all possible. You'll need 16gb of RAM for the Capstone project if you want to use the entire data set to build the text prediction model without breaking the problem down into many smaller chunks and assembling these parts into a working model. A 16gb machine can process all of the data required for the Capstone, as I discuss in [n-grams and Computer Capacity](http://bit.ly/2couvxh).
 
-Finally, the quality of the code you write, as well as the performance characteristics of the R packages you use are the biggest determinants of program performance. Therefore, regardless of the machine you buy, it's worth learning how to write high performance R code.
+Finally, the quality of the code you write, as well as the performance characteristics of the R packages you use are the biggest determinants of program performance. Therefore, regardless of the machine you buy, it's worth learning how to write high performance R code. A good example of the difference that high performance code makes is [Reading American Community Survey Census Data with R](http://bit.ly/2bAdLE9). 
 
 # Appendix: Operating System Selection -- Linux, OS X or Windows?
 
