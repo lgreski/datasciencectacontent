@@ -2,7 +2,7 @@
 
 The second programming assignment in the Johns Hopkins University *R Programming* course on Coursera.org makes use of a prototype set of functions that illustrate caching of a mean from a vector. The overall objective of the assignment is to demonstrate the concept of lexical scoping. This assignment often confuses students because it is difficult for them to understand the concepts simply by looking at their implementation in code.
 
-This article explains the code in the cachemean.R file, highlighting key R concepts and features that make the program work as expected. In addition to the concept of scoping, the assignment also introduces use of S3 objects without explicitly explaining how object orientation is implemented in R, causing large amounts of frustration in students when they are unable to get their implementations of `makeVector()` and `cacheSolve()` to work correctly.
+This article explains the code in the `cachemean.R` file, highlighting key R concepts and features that make the program work as expected. In addition to the concept of scoping, the assignment also introduces use of S3 objects without explicitly explaining how object orientation is implemented in R, causing large amounts of frustration in students when they are unable to get their implementations of `makeVector()` and `cacheSolve()` to work correctly.
 
 ## What is lexical scoping?
 
@@ -144,7 +144,7 @@ the function call will fail with an error explaining that `cachemean()` was unab
 
 ## Explaining cachemean()
 
-Without `cachemean()`, the `makeVector()` function is incomplete. Why? As designed, `cachemean()` is required to populate or retrieve the mean from an object of type `makeVector()`. 
+Without `cachemean()`, the `makeVector()` function is incomplete. Why? As designed, `cachemean()` is required to populate and/or retrieve the mean from an object of type `makeVector()`. 
 
     cachemean <- function(x, ...) {
          ...
