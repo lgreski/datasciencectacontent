@@ -75,7 +75,9 @@ The diagram includes three environments:
 
 1. The global environment, containing the objects `y`, `f()` and `g()`,
 2. The `f()` environment, containing the objects `x` and a local version of `y`. Note that `g()` is retrieved from the parent environment versus using an object specific to the `f()` environment, and
-3. the `g()` environment, containing the object `x`. Note that `y` is retrieved from the parent environment.
+3. the `g()` environment, containing the object `x`. Note that `y` is retrieved from the parent environment. Since `g()` is a sibling of `f()`, it accesses the version of `y` stored in the global environment, not the version stored in `f()`. 
+
+Therefore, `f(3)` returns 34. 
 
 We can confirm the accuracy of the diagram by inspecting the Global Environment with the Environment Viewer in RStudio.
 

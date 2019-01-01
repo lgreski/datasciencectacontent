@@ -7,7 +7,7 @@ Coming into the Data Science Specialization with years of experience in SAS and 
 >
 >    -- John Chambers, quoted in *Advanced R* (1)
 
-As I progressed through the Specialization and began work as a Community TA, I noticed other students struggling with the same issue, especially students who had prior experience with SAS. Arguably, one's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS.
+As I progressed through the Specialization and began work as a Community Mentor, I noticed other students struggling with the same issue, especially students who had prior experience with SAS. Arguably, one's SAS experience becomes an impediment to learning R to the degree that we expect R to work like SAS.
 
 For example, once you've had experience in SAS, you tend to think about sorting like this:
 

@@ -11,7 +11,7 @@ The install requires the gtk toolkit, and on Mac one must do the following, per 
 1. [Install macports](https://www.macports.org/install.php) — tool for installing mac packages <br><br>
 2. run SUDO to install gtk2 on mac<br> `sudo port install gtk2  ## (X11 -- not aqua)`<br><br>
 3. export new path <br>`export PATH=/opt/local/bin:/opt/local/sbin:$PATH`<br><br>
-4. From command line R, enter install rgtk2 with<br> `install.packages(“RGtk2”,type="source")` to compile from source<br><br>
+4. From command line R, enter install rgtk2 with<br> `install.packages("RGtk2",type="source")` to compile from source<br><br>
 
 **NOTE:** For the `RGtk2` install to work correctly from RStudio, one must first confirm that the `PATH` change listed above is applied to the shell that is used to start RStudio. 
 

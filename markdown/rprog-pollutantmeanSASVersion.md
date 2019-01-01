@@ -4,7 +4,7 @@ Between summer 2015 and spring 2016 a number of students in the [Johns Hopkins U
 
 A basic illustration of some of the differences between the two languages is covered in the article [Thinking in R versus Thinking in SAS](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/exampleSortRvsSAS.md), where something that is very straightforward to a SAS programmer \(sorting a data set\), appears to be much more complicated in R.
 
-That said, once a person knows R, things that are very easy in R can be much more complex in SAS. Ironically, one example of this phenomenon is the `pollutantmean()` function that is one of three components in the first programming assignment in the *R Programming* course.
+That said, once a person knows R, things that are very easy in R can be much more complex in SAS. Ironically, one example of this phenomenon is the `pollutantmean()` function that is one of three components in the first programming assignment in the *R Programming* course. As I explain in [Assignment 1: a more elegant solution](http://bit.ly/2kwBBlK), the `pollutantmean()` function can be written in a single line of R code. It turns out that replicating this function in SAS requires quite a bit more than one line of code.
 
 ## Requirements for a SAS-based Solution
 

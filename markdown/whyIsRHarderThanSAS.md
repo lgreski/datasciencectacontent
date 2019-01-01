@@ -50,6 +50,6 @@ SAS Macro language is a code generator -- it allows you to create segments of co
 
 
 
-Without additional context, it's difficult to understand the behavior of this macro, which is take a list of variable names, and either combine them with prefixes & suffixes to be processed as a group, or to generate a set of macro calls one word at a time.    
+Without additional context, it's difficult to understand the behavior of this macro, which takes a list of variable names, and either combines them with prefixes & suffixes to be processed as a group, or  generates a set of macro calls one word at a time.    
 
 In summary, the key things that make SAS easier to learn than R are the quality of its documentation that evolved over a 40+ year period, and the concreteness of the language that makes it easy to get simple tasks done without having to learn a large volume of abstract symbols. Still, it's not $9,000 worth of "easier," especially if you're on a student's budget.   
