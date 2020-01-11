@@ -149,7 +149,7 @@ Without `cachemean()`, the `makeVector()` function is incomplete. Why? As design
     cachemean <- function(x, ...) {
          ...
          
-Like `makeVector()`, `cachemean()` starts with a single argument, `x`, and an ellipsis that allows the caller to pass additional arguments into the function. 
+Like `makeVector()`, `cachemean()` starts with a single argument, `x`, and an [ellipsis](http://bit.ly/37ToVN9) that allows the caller to pass additional arguments into the function. 
 
 Next, the function attempts to retrieve a mean from the object passed in as the argument. First, it calls the `getmean()` function on the input object. 
 
