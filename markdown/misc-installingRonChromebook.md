@@ -273,7 +273,7 @@ As described in Kris Eberwein's article, we will install the most recent version
 
 1. Add the R Repository to the `/etc/apt/sources.list` file by executing the following commands in a terminal window. <br>
 
-        sudo echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | sudo tee -a /etc/apt/sources.list
+        sudo echo "deb https://cloud.r-project.org/bin/linux/ubuntu xenial-cran35/" | sudo tee -a /etc/apt/sources.list
 2. Add R to the Ubuntu Keyring by entering the following commands in a terminal window. <br>
 
         gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
@@ -530,4 +530,4 @@ We've now demonstrated that our installation of RStudio will produce graphics.
 
 [crouton Wiki](https://github.com/dnschneid/crouton/wiki)
 
-*Last update: 6 January 2018*
+*Last update: 24 February 2019*
