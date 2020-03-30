@@ -163,6 +163,7 @@ The next set of articles includes general commentary about the course, R program
 
 ## Course 9: Developing Data Products
 1. [Configuring shinyapps.io Application Timeout](http://bit.ly/2dEq8O8) A walkthrough on how to configure a Shiny application so it doesn't waste the free monthly server processing time.
+2. [Mastering Shiny](https://bit.ly/3bD6f6c) The online version of Hadley Wickham's forthcoming book (expected late 2020). 
 
 ## Course 10: Capstone
 1. [Speech and Language Processing, 3rd Edition](https://web.stanford.edu/~jurafsky/slp3/) Working version of Jurafsky, et. al. book on natural language processing whose content on n-grams is helpful for the capstone.
