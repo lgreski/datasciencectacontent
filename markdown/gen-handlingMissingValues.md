@@ -27,7 +27,7 @@ To provide more background on this topic, I've compiled the following list of re
 <tr>
     <td><a href="https://lgreski.github.io/datasciencedepot/references/missingValueImputation-Gelman.PDF">Chapter 25: Missing Data Imputation</a>
     </td>
-    <td>Author(s): Andrew Gelman, Jennifer Hill<br><br>Professor Gelman posted chapter 25 of his book <a href="https://www.amazon.com/Analysis-Regression-Multilevel-Hierarchical-Models/dp/052168689X/ref=sr_1_2?ie=UTF8&qid=1502639282&sr=8-2&keywords=gelman+statistics">Data Analysis Using Regression and Multilevel / Hierarchical Models</a>on his website at Columbia University. The book is considered an important reference for social scientists using linear and hierarchical models. The missing values chapter describes a variety of ways to handle missing data, and includes examples coded in R.
+    <td>Author(s): Andrew Gelman, Jennifer Hill<br><br>Professor Gelman posted chapter 25 of his book <a href="https://www.amazon.com/Analysis-Regression-Multilevel-Hierarchical-Models/dp/052168689X/ref=sr_1_2?ie=UTF8&qid=1502639282&sr=8-2&keywords=gelman+statistics">Data Analysis Using Regression and Multilevel / Hierarchical Models</a> on his website at Columbia University. The book is considered an important reference for social scientists using linear and hierarchical models. The missing values chapter describes a variety of ways to handle missing data, and includes examples coded in R.
     </td>
 </tr>
 <tr>
