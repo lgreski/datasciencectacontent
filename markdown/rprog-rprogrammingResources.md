@@ -38,6 +38,8 @@ Here we list some answers to basic R questions that I have posted to Stackoverfl
 1. [What happens inside the curly braces?](https://bit.ly/2UK6o28)
 2. [What is the meaning of $ in an R function?](https://bit.ly/2V1K7M5)
 3. [What is the difference between the workspace and environments?](https://bit.ly/3e0ar1Y)
+4. [How do I read .txt files from a subdirectory in R?](https://bit.ly/39F2viZ)
+5. [How do I repeatedly shuffle a deck of cards in R?](https://bit.ly/3aMNn4z)
 
 # Appendix: Len's R Programming articles
 
