@@ -31,6 +31,16 @@ Finally, for assignment 3, take a look at DanieleP's [Tutorial for those Struggl
 
 A list of other R resources is available at [References for R Programming](http://bit.ly/2b8AxhF). If you have a background in SAS, the transition to R can be challenging. I've posted a number of articles on this topic, starting with [R Onboarding for SAS Users](http://bit.ly/2dr7yum). Finally, if you're stuck, make sure you use the Discussion Forums to get help. A significant part of the learning process in online courses occurs on the Discussion Forums. The more you invest in them, the more you'll learn.
 
+# Relevant posts on Stackoverflow
+
+Here we list some answers to basic R questions that I have posted to Stackoverflow.com over the past few years.
+
+1. [What happens inside the curly braces?](https://bit.ly/2UK6o28)
+2. [What is the meaning of $ in an R function?](https://bit.ly/2V1K7M5)
+3. [What is the difference between the workspace and environments?](https://bit.ly/3e0ar1Y)
+
 # Appendix: Len's R Programming articles
 
 All of the articles I've written to support *R Programming* are located at [R Programming Articles](http://bit.ly/2nRyKsf).
+
+*last updated 5 April 2020*
