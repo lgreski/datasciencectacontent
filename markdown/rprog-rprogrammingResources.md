@@ -33,7 +33,7 @@ A list of other R resources is available at [References for R Programming](http:
 
 # Relevant posts on Stackoverflow
 
-Here we list some answers to basic R questions that I have posted to Stackoverflow.com over the past few years.
+One of the best ways to learn about R is to read code written by other people. Stackoverflow.com is a great place to look for example code. Here we list some answers to basic R questions that I have posted to Stackoverflow.com over the past few years that illustrate essential R concepts to solve various problems. 
 
 1. [What happens inside the curly braces?](https://bit.ly/2UK6o28)
 2. [What is the meaning of $ in an R function?](https://bit.ly/2V1K7M5)
