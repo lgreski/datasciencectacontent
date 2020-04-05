@@ -5,7 +5,7 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 <table>
 <tr><th>Reference</th><th>Description</th></tr>
 
-<tr><td><a href="http://bit.ly/2yhQkdq"> R Programming for Data Science </a></td><td>Start here! <em>R Programming for Data Science</em> is written by Roger Peng specifically to be read along with the JHU <em>R Programming</em> course. Since it's available on leanpub.org, you can decide how much to pay for it, including "free." </td></tr>
+<tr><td><a href="http://bit.ly/2yhQkdq"> R Programming for Data Science </a></td><td>Start here! <em>R Programming for Data Science</em> is written by Roger Peng specifically to be read along with the JHU <em>R Programming</em> course. Since it's available on leanpub.com, you can decide how much to pay for it, including "free." </td></tr>
 
 <tr><td><a href="https://bit.ly/2x6aVTt"> R Documentation</a></td><td>The Comprehensive R Archive Network (CRAN) is the authoritiative source for all things related to R. The R Documentation page on CRAN provides an index to a variety of manuals and other documentation related to R. </td></tr>
 
