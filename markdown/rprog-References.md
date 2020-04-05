@@ -22,7 +22,6 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 
 <tr><td><a href="http://bit.ly/2wlKuml"> Advanced R </a></td><td>Don't let the title intimidate you from getting this book. Written by Hadley Wickham, <em>Advanced R</em> contains a lot of valuable content for any R developer, including beginners. <em>Advanced R</em> is available in e-book format on Amazon.com for $47.36 USD.<br><br> Wickham also maintains a website that includes content related to the book, it's called <a href="http://bit.ly/2wlKuml">Advanced R</a>, and is maintained as a companion to the book.
 <br><br>As of April 2020, <a href="https://bit.ly/advR2ndEd"> Advanced R Second Edition </a> is now avaliable online. It represents a significant revision of the concepts presented in the first edition, and is well worth the read. </td></tr>
-<tr><td><a href="http://bit.ly/2jjIUQN"> Statistical Analysis with R: a quick start </a></td><td> Written by Oleg Nenadic´ and Walter Zucchini, this PDF is available free, and is a 47 page introduction to R. Thanks to Gregory Horne who posted this in an October 2016 run of the <em>R Programming</em> course. </td></tr>
 <tr><td><a href="http://bit.ly/2vwTj0Z"> R Tutor Website </a></td><td>This website provides three sets of tutorials, basic R, elementary statistics with R, and graphics processor unit computing with R. The site is maintained by Chi Yau, who has a Ph.D. in Mathematics. </td></tr>
 <tr><td><a href="http://bit.ly/2wWjXht"> R Inferno </a></td><td>A humorous look at the various problems people have when learning R, based on Dante's <em>Inferno</em>. Written by <a href="http://www.burns-stat.com/about-burns-statistics/"> Patrick Burns, Ph.D.</a>, a statistics consultant and one of the lead developers of S-PLUS early in its development. </td></tr>
 <tr><td><a href="http://bit.ly/2cmqAPy"> Lexical Scoping and Statistical Computing </a></td><td>Article by Robert Gentleman and Ross Ihaka that explains the use of lexical scoping within statistical computing, the topic of programming assignment 2. </td></tr>
@@ -33,6 +32,6 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 
 </table>
 
-In addition to the references above, the Frank's World website has a list of [60 free data science books](http://bit.ly/2bFDN6s). Hat tip to Geoff Snowman from the August *R Programming* course on coursera.org for making me aware of this resource.
+In addition to the references above, the learndatasci website has a list of [100+free  books on data science, machine learning, big data, etc.](https://bit.ly/2ReZMqi). The list was compiled by Brendan Martin.  
 
 *last updated: 5 April 2020*
