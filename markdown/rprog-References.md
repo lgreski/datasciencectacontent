@@ -11,7 +11,7 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 
 <tr><td><a href="http://bit.ly/2CcN9Ct"> R for Data Science</a></td><td>Written by Garrett Grolemund and Hadley Wickham, <em>R for Data Science </em> explains how to load data into R, transform it for data analysis, model it, and generate graphics / reports using packages from what is called the <strong>tidyverse</strong>, which is covered in <em>Getting and Cleaning Data</em>. Best of all, the entire book can be accessed online for free.<br><br>Throughout the book Grolemund and Wickham introduce key tools in the <a href="http://bit.ly/2ihagWZ">tidyverse </a>, a collection of R packages designed to create, manage, and analyze what is called <em>tidy data</em>, a concept that originated with Wickham's 2014 paper in the <a href="http://bit.ly/2guNg2K">Journal of Statistical Software</a>.</td></tr>
 
-<tr><td><a href="https://bit.ly/2wxptv7"> Hands On Programming with R</a></td><td>Written by Garrett Grolemund, coauthor of <em>R for Data Science</em>, <em>Gands On Programming with R</em> is a free online version of a book that provides an in depth introduction to programming R functions and objects through a series of projects.  
+<tr><td><a href="https://bit.ly/2wxptv7"> Hands On Programming with R</a></td><td>Written by Garrett Grolemund, coauthor of <em>R for Data Science</em>, <em>Hands On Programming with R</em> is a free online version of a book that provides an in depth introduction to programming R functions and objects through a series of projects.  
 </td></tr>
 
 <tr><td><a href="http://bit.ly/2x6Rf0y"> Getting Used to R, RStudio, and R Markdown</a></td><td>Developed by Chester Ismay, <em>Getting Used to R, RStudio, and R Markdown</em> is a free online reference designed to help people develop reproducible research. It focuses on the server version of RStudio, but many of the concepts are applicable to the desktop version. 
@@ -38,4 +38,4 @@ Periodically students in the Johns Hopkins University *R Programming* course on 
 
 In addition to the references above, the learndatasci website has a list of [100+free  books on data science, machine learning, big data, etc.](https://bit.ly/2ReZMqi). The list was compiled by Brendan Martin.  
 
-*last updated: 5 April 2020*
+*last updated: 11 April 2020*
