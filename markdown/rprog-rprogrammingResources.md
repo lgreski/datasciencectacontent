@@ -2,7 +2,13 @@
 
 Here is a list of resources that will be helpful as you progress through the Johns Hopkins University Data Science Specialization's *R Programming* course. One of the challenges presented by this course is that it depends on the hacker mentality that the professors introduced in the *Data Scientist's Toolbox* -- you have to spend some time figuring out the resources beyond the lectures and slides to help solve the problems.
 
-Fortunately, past students have developed a fair amount of content to guide others through the course, starting with the [R Programming](http://datasciencespecialization.github.io/rprog/) page on the [Data Science Specialization](http://datasciencespecialization.github.io/) github site.
+# R Tutorials
+
+In 2017, [Data Science Central](https://bit.ly/2KYoY0N) published a list of [100 Free Tutorials for R](https://bit.ly/2Wsz3s6). The list is divided into two categories: one focused on Learning R, and another where the focus is on data science topics but including R tutorials. 
+
+## Coursera R Programming
+
+Beyond resources that aren't directly related to the JHU Data Science Specialization, past students have developed a large amount of content to guide others through the course, starting with the [R Programming](http://datasciencespecialization.github.io/rprog/) page on the [Data Science Specialization](http://datasciencespecialization.github.io/) github site.
 
 ## Assignment 1 Topics
 
