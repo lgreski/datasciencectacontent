@@ -117,6 +117,8 @@ The next set of articles includes general commentary about the course, R program
 
 1. [Assignment 1: Reading a Subset of Raw Data](http://bit.ly/2oAHoqI)
 2. [CONCEPTS: Strategies for Imputing Missing Values](http://bit.ly/2w1b0FN)
+3. [The Fundamentals of Data Visualization](https://bit.ly/35WjP2E)
+4. [Data Visualization: a practical introduction](https://bit.ly/2YSWL3A)
 
 
 ## Course 5: Reproducible Research
