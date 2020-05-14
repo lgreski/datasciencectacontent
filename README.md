@@ -112,6 +112,7 @@ The next set of articles includes general commentary about the course, R program
 1. [Tidy Data](http://bit.ly/2nyw5Ci) Hadley Wickham's paper on Tidy Data, required reading for the course project.
 2. [data.table Github Wiki](http://bit.ly/2og7rDK) Repository for `data.table` package, including video.
 3. [Tutorial: Downloading Files](http://bit.ly/2iP2suj) Illustrates various ways of downloading files, including binary and text files.
+4. [Cheatsheet: R Syntax Comparison](https://bit.ly/3cxWabo) Illustrates how to perfrom various tasks in R using three "dialects" of syntax, including the [$ form of the extract operator](http://bit.ly/2bzLYTL), formulas, and the [pipe operator](https://bit.ly/2Luu8BT) that is central to the Tidyverse family of packages.  
 
 ## Course 4: Exploratory Data Analysis
 
