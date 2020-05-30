@@ -1,4 +1,4 @@
-## What happened to the ElemStatLearn package and how do we access data from this package?
+## What happened to the ElemStatLearn package and how does one access data from this package?
 
 In early 2020 students in the Johns Hopkins *Practical Machine Learning* course on Coursera began to experience problems during quiz 3 and quiz 4 due to the fact that the `ElemStatLearn` package had been [archived by CRAN](https://CRAN.R-project.org/package=ElemStatLearn), the Comprehensive R Archive Network.
 
