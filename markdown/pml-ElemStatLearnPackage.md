@@ -21,7 +21,7 @@ As usual, there are multiple ways to do something in R. To obtain the data neede
 
 ### Access data from the ESL website
 
-All of the data sets supporting the book can be accessed from the `datasets` subdirectory on the web server where the course website is stored. The URL for this subdirectory is https://web.stanford.edu/~hastie/ElemStatLearn/datasets/. By navigating to this directory in a web browser we can view the names of the files in the directory. 
+All of the data sets supporting the book can be accessed from the `datasets` subdirectory on the web server where the course website is stored. The URL for this subdirectory is https://web.stanford.edu/~hastie/ElemStatLearn/datasets/. By navigating to this directory in a web browser we can view the names of the files in the directory. The following figure illustrates the first screen of data files. 
 
 <img src="./images/pml-ElemStatLearn02.png">
 
@@ -59,8 +59,36 @@ This sequence of R functions produces the following output.
     
 ### Accessing the archived version of the ElemStatLearn package
 
-The last way to access the data needed for the quizzes is to download and install the last version of the `ElemStatLearn` package that was posted to CRAN, along with its dependencies. 
+The last way to access the data needed for the quizzes is to download and install the last version of the `ElemStatLearn` package that was posted to CRAN, along with its dependencies. First, we navigate via web browser to the directory where the archive for `ElemStatLearn` [is stored](https://bit.ly/3dmvACA).
 
 
+<img src="./images/pml-ElemStatLearn03.png">
+
+From the file listing, we see that `ElemStatLearn_2015.6.26.tar.gz` is the most recent version of the package that is saved in the CRAN archive. We use R to download the most recent version of the package and unzip it.  
+
+    url <- "http://cran.r-project.org/src/contrib/Archive/ElemStatLearn/ElemStatLearn_2015.6.26.tar.gz"
+    pkgFile <- "ElemStatLearn_2015.6.26.tar.gz"
+    download.file(url = url, destfile = pkgFile)
+    
+Before installing the `ElemStatLearn` package it is important to install any package dependencies. Since `ElemStatLearn` has no dependencies, we can skip this step, and proceed directly to installing `ElemStatLearn`. We use the `type = "source"` and `repos = NULL` arguments to read the file as source, and not to reference a remote repository. To verify the installation, we load the package into memory and access the `bone` data set. 
+
+     install.packages(pkgs = pkgFile, type = "source", repos = NULL)
+     library(ElemStatLearn)
+     head(bone)
+
+...and the output:
 
 
+    > head(bone)
+      idnum   age gender      spnbmd
+    1     1 11.70   male 0.018080670
+    2     1 12.70   male 0.060109290
+    3     1 13.75   male 0.005857545
+    4     2 13.25   male 0.010263930
+    5     2 14.30   male 0.210526300
+    6     2 15.30   male 0.040843210
+    > 
+
+**Reference:** [How do I download a package that has been archived from CRAN?](https://bit.ly/2ZQQ42r)
+
+ 
