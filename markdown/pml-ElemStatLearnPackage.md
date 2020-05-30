@@ -97,9 +97,9 @@ Using techniques taught in the Johns Hopkins *Getting and Cleaning Data* course,
 
 We will use the `rvest` package to process the HTML page, convert the table of files to a data frame, and download the files to subdirectory on our local machine.
 
-theURL <- "https://web.stanford.edu/~hastie/ElemStatLearn/datasets/"
-library(rvest)
-theFiles <- read_html(theURL)
+    theURL <- "https://web.stanford.edu/~hastie/ElemStatLearn/datasets/"
+    library(rvest)
+    theFiles <- read_html(theURL)
 
 At this point we can print the `theFiles` object to inspect its HTML tags. We see two of them, a `<head>` tag and a `<body>` tag.
 
