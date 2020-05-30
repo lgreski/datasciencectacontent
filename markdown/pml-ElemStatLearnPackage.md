@@ -140,16 +140,16 @@ Next, we create a subdirectory to store the downloaded data files, and use the `
 
 Finally, for each subdirectory that we extracted above we create subdirectories, parse the HTML for the associated web page, and then download all of the data files.
 
-# download data from subdirectories
-returnValues <- lapply(subdirectories,function(x){
-     aURL <- paste0(theURL,x)
-     message(aURL)
-     if(!dir.exists(paste0("./ElemStatLearn/",x))) dir.create(paste0("./ElemStatLearn/",x))
-     theFiles <- html(aURL)
-     html_node(theFiles,"body") %>% html_node("table") %>% html_table() -> eslFiles
-     names(eslFiles) <- gsub(" ",".",names(eslFiles))
-     eslFiles <- eslFiles[eslFiles$Last.modified != "",]
-     unlist(lapply(eslFiles$Name,function(y,z){
-          download.file(paste0("https://web.stanford.edu/~hastie/ElemStatLearn/datasets/",z,y),paste0("./ElemStatLearn/",z,y))
-     },x))
-})
+    # download data from subdirectories
+    returnValues <- lapply(subdirectories,function(x){
+         aURL <- paste0(theURL,x)
+         message(aURL)
+         if(!dir.exists(paste0("./ElemStatLearn/",x))) dir.create(paste0("./ElemStatLearn/",x))
+         theFiles <- html(aURL)
+         html_node(theFiles,"body") %>% html_node("table") %>% html_table() -> eslFiles
+         names(eslFiles) <- gsub(" ",".",names(eslFiles))
+         eslFiles <- eslFiles[eslFiles$Last.modified != "",]
+         unlist(lapply(eslFiles$Name,function(y,z){
+              download.file(paste0("https://web.stanford.edu/~hastie/ElemStatLearn/datasets/",z,y),paste0("./ElemStatLearn/",z,y))
+         },x))
+    })
