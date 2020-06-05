@@ -1,4 +1,4 @@
-## Improving Performance of Random Forest in <em>caret::train()</em>
+## Introduction
 
 During the December 2015 run of the *Practical Machine Learning* course within the Johns Hopkins University Data Science Specialization offered via coursera.org, many students struggled with the slow performance of some of the machine learning models, especially *Random Forest*.
 
@@ -8,13 +8,9 @@ This approach takes away one of the key advantages of the `caret` package: its a
 
 To improve processing time of the multiple executions of the `train()` function, `caret` supports the parallel processing capabilities of the `parallel` package. Unfortunately, the documentation of [parallel processing with `caret`](http://topepo.github.io/caret/parallel.html) uses a technique, the `doMC` package, which is not available for Microsoft Windows versions of R.
 
-Fortunately, the `parallel` package works on R across all major operating system platforms: Linux, Mac OSX, and Windows. One's ability to run these models in parallel to obtain a manageable response time is often the difference between using a highly effective algorithm like *random forest* versus a less effective but more computationally efficient algorithm (such as *linear discriminant analysis*).
+Fortunately, the `parallel` package works on R across all major operating system platforms: Linux, Mac OSX, and Windows. One's ability to run these models in parallel is often the difference between using a highly effective algorithm like *random forest* versus a less effective but more computationally efficient algorithm (such as *linear discriminant analysis*).
 
-In practical terms for the *Practical Machine Learning* final project, the probability of correctly predicting all 20 test cases using an algorithm with 80% accuracy is very low, as described in [Required Model Accuracy](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/pml-requiredModelAccuracy.md). The probability of correctly predicting all 20 test cases even with a model at 95% accuracy is only 0.36. Therefore, a student must use an algorithm that has at least 99% accuracy to have a reasonable probability of obtaining a perfect score on the quiz associated with the final project.
-
-One other tradeoff that we made in this analysis was changing the resampling method from the default of bootstrapping to k-fold cross-validation. The impact of this change is to reduce the number of samples against which the random forest algorithm is run from 25 to 5, and to change each sample's composition from leave one out to randomly selected training folds. Note that within each sample, the trees are still calculated with the underlying random forest algorithm, as described by [Leo Breiman](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#workings).
-
-The change in resampling technique may trade processing performance for reduced model accuracy. However, our analysis shows that the 5 fold cross-validation resampling technique delivered the same accuracy as the more computationally expensive bootstrapping technique.
+One other tradeoff that we made in this analysis was changing the resampling method from the default of bootstrapping to k-fold cross-validation. The change in resampling technique may trade processing performance for reduced model accuracy. However, our analysis shows that the 5 fold cross-validation resampling technique delivered the same accuracy as the more computationally expensive bootstrapping technique.
 
 Finally, we note that `caret::train()` supports a wide variety of tuning parameters that vary by model type. For the purposes of this analysis, we chose only to vary the resampling method for `train(x,y,method="rf",...)`, leaving other parameters such as `mtry` constant.  
 
@@ -31,58 +27,110 @@ Once a person works through the varied sources of documentation on the machine l
 
 For the purpose of illustrating the syntax required for parallel processing, we'll use the `Sonar` data set that is also used as the example in the [caret model training documentation](http://topepo.github.io/caret/training.html).
 
-    library(mlbench)
-    data(Sonar)
-    library(caret)
-    set.seed(95014)
 
-    # create training & testing data sets
 
-    inTraining <- createDataPartition(Sonar$Class, p = .75, list=FALSE)
-    training <- Sonar[inTraining,]
-    testing <- Sonar[-inTraining,]
+```r
+intervalStart <- Sys.time()
+library(mlbench)
+data(Sonar)
+library(caret)
+```
 
-    # set up training run for x / y syntax because model format performs poorly
-    x <- training[,-61]
-    y <- training[,61]
+```
+## Loading required package: lattice
+```
 
+```
+## Loading required package: ggplot2
+```
+
+```r
+set.seed(95014)
+```
+
+### Create training & testing data sets
+
+
+```r
+inTraining <- createDataPartition(Sonar$Class, p = .75, list=FALSE)
+training <- Sonar[inTraining,]
+testing <- Sonar[-inTraining,]
+# set up x and y to avoid slowness of caret() with model syntax
+y <- training[,61]
+x <- training[,-61]
+```
 
 ### Step 1: Configure parallel processing
 
 Parallel processing in `caret` can be accomplished with the `parallel` and `doParallel` packages.  The following code loads the required libraries (note, these libraries also depend on the `iterators` and `foreach` libraries).
 
-    library(parallel)
-    library(doParallel)
-    cluster <- makeCluster(detectCores() - 1) # convention to leave 1 core for OS
-    registerDoParallel(cluster)
 
+
+```r
+library(parallel)
+library(doParallel)
+
+cluster <- makeCluster(detectCores() - 1) # convention to leave 1 core for OS
+registerDoParallel(cluster)
+```
 
 ### Step 2: Configure trainControl object
 
-The most critical arguments for the trainControl function are the resampling method `method`, the `number` that specifies the quantity of folds for k-fold cross-validation, and `allowParallel` which tells caret to use the cluster that we've registered in the previous step.
+The most critical arguments for the trainControl function are the resampling metdhod `method`, the `number` that specifies the quantity of folds for k-fold cross-validation, and `allowParallel` which tells caret to use the cluster that we've registered in the previous step.
 
-    fitControl <- trainControl(method = "cv",
-                               number = 5,
-                               allowParallel = TRUE)
+
+
+```r
+fitControl <- trainControl(method = "cv",
+number = 5,
+allowParallel = TRUE)
+```
 
 ### Step 3: Develop training model
 
 Next, we use `caret::train()` to train the model, using the `trainControl()` object that we just created.
 
-    fit <- train(x,y, method="rf",data=Sonar,trControl = fitControl)
+
+
+```r
+system.time(fit <- train(x,y, method="rf",data=Sonar,trControl = fitControl))
+```
+
+```
+##    user  system elapsed 
+##    0.63    0.08    4.83
+```
+
+```r
+system.time(fit <- train(Class ~ ., method="rf",data=Sonar,trControl = fitControl))
+```
+
+```
+##    user  system elapsed 
+##    0.62    0.03    1.20
+```
 
 ### Step 4: De-register parallel processing cluster
 
-After processing the data, we explicitly shut down the cluster by calling the `stopCluster()` and `registerDoSEQ()` functions. The `registerDoSEQ()` function is required to force R to return to single threaded processing.
+After processing the data, we explicitly shut down the cluster by calling the `stopCluster()` function.
 
-    stopCluster(cluster)
-    registerDoSEQ()
+
+
+```r
+stopCluster(cluster)
+registerDoSEQ()
+```
 
 At this point we have a trained model in the `fit` object, and can take a number of steps to evaluate the suitability of this model, including accuracy and a confusion matrix that is based on comparing the modeled data to the held out folds.
 
-    fit
-    fit$resample
-    confusionMatrix.train(fit)
+
+
+```r
+fit
+fit$resample
+confusionMatrix.train(fit)
+```
+
 
 If desired, at this point one can make a prediction on the held out `testing` data partition. Since the primary purpose of this article is to illustrate the syntax required for parallel processing and to discuss its impact on the course project for *Practical Machine Learning*, we will not fit the testing data or evaluate the model accuracy here.
 
@@ -103,7 +151,7 @@ As illustrated in the following table, multi-threading has a significant, positi
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Single-threaded</td><td align="right">462.6 seconds</td></tr>
 </table>
 
-### Test Scenario 2: Multi-threading performance by machine
+### Test Scenario 2: Multi-threading performance by machine for *Practical Machine Learning* course project 
 
 This section of the analysis used four different laptop computers to assess the performance of `caret::train()`. CPU speed, number of processor cores, and disk speed (to a lesser extent) all impact runtime performance. All four machines have Intel-based processors with multiple cores, and each core contains two processing threads that can be assigned to execute instructions in parallel. As expected, the machine with the largest number of cores and fastest disk speed returns the fastest response time, completing the 5 k-fold cross-validation model in 3.22 minutes.
 
@@ -111,93 +159,145 @@ Since most students in *Practical Machine Learning* have older (and slower) hard
 
 Surprisingly, the random forest algorithm for the *Practical Machine Learning* course project runs flawlessly on the tablet. The runtime performance is very slow compared to the other machines, requiring 1 hour 15 minutes to complete the random forest, using all 4 threads across the two cores in its Intel Atom-based processor.
 
-In July 2017 we ran the analysis on an HP Chromebook on which we had installed Ubuntu Linux, in order to see how R performs on the Chromebook relative to the other hardware we tested in 2016. Amazingly, even with only 2 threads, the Chromebook outperformed the Envy X2 by a large margin, completing the 5 k-fold validation model in only 20.01 minutes.
+To illustrate the impact that the resampling technique has on the runtime performance, we fit the training data for the *Practical Machine Learning* course project on the HP Omen laptop with bootstrapping as the resampling method. The bootstrapping resampling method caused a significant increase in processing time, requiring 17 minutes instead of 3.22 minutes to train the model. Since the cross-validation resampling method resulted in an accuracy of .9945, the bootstrapping resampling method had no positive impact on model accuracy.
 
-Finally, to illustrate the impact that the resampling technique has on the runtime performance, we fit the training data for the *Practical Machine Learning* course project on the HP Omen laptop with bootstrapping as the resampling method. The bootstrapping resampling method caused a significant increase in processing time, requiring 17 minutes instead of 3.22 minutes to train the model. Since the cross-validation resampling method resulted in an accuracy of .9945, the bootstrapping resampling method had no positive impact on model accuracy.
+Finally, in June 2020 I ran the analysis on newer, more powerful hardware. A six core, twelve thread Intel i7-8750H CPU runs the analysis in under 2.6 minutes, a 21% improvement over the four core i7-4710HQ that powers the HP Omen laptop. 
 
 #### Figure 2: Run time by By Machine & Resampling Technique
 
 <table>
 <tr><th><br>Machine</th><th><br>Model</th><th>Resampling<br> Technique</th><th><br>Result</th></tr>
+<tr><td> HP Spectre x360-15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">02.55 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.22 minutes</td></tr>
-<tr><td> HP Spectre x360 laptop</td><td>Random Forest</td><td>CV</td><td align="right">04.65 minutes</td></tr>
-<tr><td> Macbook Pro laptop</td><td>Random Forest</td><td>CV</td><td align="right">06.56 minutes</td></tr>
+<tr><td> HP Spectre x360-13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">04.65 minutes</td></tr>
+<tr><td> Macbook Pro 13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">06.56 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Bootstrap</td><td align="right">17.00 minutes</td></tr>
-<tr><td> HP Chromebook</td><td>Random Forest</td><td>CV</td><td align="right">20.01 minutes</td></tr>
-<tr><td> HP Envy X2 tablet</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
+<tr><td> HP Envy X2 laptop</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
 </table>
-
-
 
 ### Machine Configurations
 
-Hardware specifications for the computers used in the performance timings in this article are listed below. Note that all of the Intel processors listed below have two threads per core except the Celeron 2955U, which has one thread per core, which limits the utility of the parallel processing capabilities in R. 
+Hardware specifications for the computers used in the performance timings in this article are listed below.
 
-#### Figure 3: Machine Hardware Specifications
+### Figure 3: Machine Hardware Specifications
+
+
 <table>
-    <tr>
-        <th>Computer</th>
-        <th>Configuration</th>
-    </tr>
-    <tr>
-        <td valign=top>Apple Macbook Pro</td>
-        <td>
-            <ul>
-                <li>Operating system: OS X Yosemite 10.10.4 (14E46)</li>
-                <li>Processor: Intel i5 at 2.6Ghz, turbo up to 3.3Ghz, two cores</li>
-                <li>Memory: 8 gigabytes</li>
-                <li>Disk: 512 gigabytes, solid state drive</li>
-                <li>Date built: April 2013</li>
-            </ul>
-        </td>
-     </tr>
-    <tr>
-        <tr>
-        <td valign=top>HP Chromebook 14-q010nr</td>
-        <td>
-            <ul>
-                <li>Operating system: Chrome OS</li>
-                <li>Processor: 1.4GHz Intel Celeron 2955U Processor, two cores </li>
-                <li>Memory: 2 gigabytes 1600Mhz DDR3L SDRAM</li>
-                <li>Disk: 16 gigabytes, solid state drive</li>
-                <li>Date built: November 2013</li>
-            </ul>
-        </td>
-     </tr>
-    <td valign=top>HP Envy X2 tablet</td>
-    <td>
-        <ul>
-            <li>Operating system: Microsoft Windows 10, 32bit</li>
-            <li>Processor: Intel Atom Z2760 at 1.8Ghz, two cores</li>
-            <li>Memory: 2 gigabytes</li>
-            <li>Disk: 128 gigabytes, solid state drive</li>
-            <li>Date built: February 2013</li>
-        </ul>
-    </td>
+<tr>
+<th>Computer</th>
+<th>Configuration</th>
+</tr>
+ <tr>
+ <td valign=top>Apple Macbook Pro 13</td>
+ <td>
+ <ul>
+ <li>Operating system: OS X Yosemite 10.10.4 (14E46)</li>
+ <li>Processor: Intel i5 at 2.6Ghz, turbo up to 3.3Ghz, two cores</li>
+ <li>Memory: 8 gigabytes</li>
+ <li>Disk: 512 gigabytes, solid state drive</li>
+ <li>Date built: April 2013</li>
+ </ul>
+  </td>
+ </tr>
+ <tr>
+ <td valign=top>HP Envy X2 tablet</td>
+ <td>
+ <ul>
+  <li>Operating system: Microsoft Windows 10, 32bit</li>
+  <li>Processor: Intel Atom Z2760 at 1.8Ghz, two cores</li>
+  <li>Memory: 2 gigabytes</li>
+ <li>Disk: 128 gigabytes, solid state drive</li>
+ <li>Date built: February 2013</li>
+ </ul>
+ </td>
 </tr>
 <tr>
-   <td valign=top>HP Omen laptop</td>
-   <td>
-       <ul>
-           <li>Operating system: Microsoft Windows 10, 64bit</li>
-           <li>Processor: Intel i7-4710HQ at 2.5Ghz, turbo up to 3.5Ghz, four cores</li>
-           <li>Memory: 16 gigabytes</li>
-           <li>Disk: 512 gigabytes, solid state drive</li>
-           <li>Date built: December 2013</li>
-       </ul>
-   </td>
+ <td valign=top>HP Omen laptop</td>
+ <td>
+ <ul>
+ <li>Operating system: Microsoft Windows 10, 64bit</li>
+ <li>Processor: Intel i7-4710HQ at 2.5Ghz, turbo up to 3.5Ghz, four cores</li>
+ <li>Memory: 16 gigabytes</li>
+ <li>Disk: 512 gigabytes, solid state drive</li>
+ <li>Date built: December 2013</li>
+ </ul>
+ </td>
 </tr>
-<td valign=top>HP Spectre X360 laptop</td>
+<td valign=top>HP Spectre X360-13 laptop</td>
 <td>
-    <ul>
-        <li>Operating system: Microsoft Windows 10, 64bit</li>
-        <li>Processor: Intel Core i7-6500U at 2.5Ghz, turbo up to 3.1Ghz, two cores</li>
-        <li>Memory: 8 gigabytes</li>
-        <li>Disk: 512 gigabytes, solid state drive</li>
-        <li>Date built: December 2015</li>
-    </ul>
+<ul>
+<li>Operating system: Microsoft Windows 10, 64bit</li>
+<li>Processor: Intel Core i7-6500U at 2.5Ghz, turbo up to 3.1Ghz, two cores</li>
+<li>Memory: 8 gigabytes</li>
+<li>Disk: 512 gigabytes, solid state drive</li>
+<li>Date built: December 2015</li>
+</ul>
 </td>
 </tr>
+</tr>
+<td valign=top>HP Spectre X360-15 laptop</td>
+<td>
+<ul>
+<li>Operating system: Microsoft Windows 10, 64bit</li>
+<li>Processor: Intel Core i7-8750H at 2.2Ghz, turbo up to 4.1Ghz, six cores</li>
+<li>Memory: 16 gigabytes</li>
+<li>Disk: 1,024 gigabytes, solid state drive</li>
+<li>Date built: May 2019</li>
+</ul>
+</td>
+</tr>
+
 </table>
 
-*last updated: 22 March 2018*
+
+```r
+sessionInfo()
+```
+
+```
+## R version 4.0.0 (2020-04-24)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 18363)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+## [1] doParallel_1.0.15 iterators_1.0.12  foreach_1.5.0     caret_6.0-86     
+## [5] ggplot2_3.3.0     lattice_0.20-41   mlbench_2.1-1    
+## 
+## loaded via a namespace (and not attached):
+##  [1] tidyselect_1.1.0     xfun_0.14            purrr_0.3.4         
+##  [4] reshape2_1.4.4       splines_4.0.0        colorspace_1.4-1    
+##  [7] vctrs_0.3.0          generics_0.0.2       stats4_4.0.0        
+## [10] htmltools_0.4.0      yaml_2.2.1           survival_3.1-12     
+## [13] prodlim_2019.11.13   rlang_0.4.6          e1071_1.7-3         
+## [16] ModelMetrics_1.2.2.2 pillar_1.4.4         glue_1.4.1          
+## [19] withr_2.2.0          lifecycle_0.2.0      plyr_1.8.6          
+## [22] lava_1.6.7           stringr_1.4.0        timeDate_3043.102   
+## [25] munsell_0.5.0        gtable_0.3.0         recipes_0.1.12      
+## [28] codetools_0.2-16     evaluate_0.14        knitr_1.28          
+## [31] class_7.3-16         Rcpp_1.0.4.6         scales_1.1.1        
+## [34] ipred_0.9-9          digest_0.6.25        stringi_1.4.6       
+## [37] dplyr_0.8.5          grid_4.0.0           tools_4.0.0         
+## [40] magrittr_1.5         tibble_3.0.1         randomForest_4.6-14 
+## [43] crayon_1.3.4         pkgconfig_2.0.3      ellipsis_0.3.1      
+## [46] MASS_7.3-51.5        Matrix_1.2-18        data.table_1.12.8   
+## [49] pROC_1.16.2          lubridate_1.7.8      gower_0.2.1         
+## [52] assertthat_0.2.1     rmarkdown_2.1        R6_2.4.1            
+## [55] rpart_4.1-15         nnet_7.3-13          nlme_3.1-147        
+## [58] compiler_4.0.0
+```
+
+
+*Copyright 2017 - 2020, Len Greski - copying with attribution permitted* 
