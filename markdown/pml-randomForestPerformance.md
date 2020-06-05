@@ -242,7 +242,7 @@ Hardware specifications for the computers used in the performance timings in thi
  <td valign=top>Apple Macbook Pro 15</td>
  <td>
  <ul>
- <li>Operating system: OS X Catalina 10.15.5 (14E46)</li>
+ <li>Operating system: OS X Catalina 10.15.5 (19F101)</li>
  <li>Processor: Intel i7 at 2.5Ghz, turbo up to 3.7Ghz, four cores</li>
  <li>Memory: 16 gigabytes</li>
  <li>Disk: 512 gigabytes, solid state drive</li>
