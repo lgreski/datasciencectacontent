@@ -2,7 +2,7 @@
 
 During the December 2015 run of the *Practical Machine Learning* course within the Johns Hopkins University Data Science Specialization offered via coursera.org, many students struggled with the slow performance of some of the machine learning models, especially *Random Forest*.
 
-Although the Community Mentors provided pointers on how to improve the performance of the `caret::train()` function by using the `parallel` package in conjunction with the `trainControl()` function in `caret`, many students were not able to construct a series of function calls that enabled `caret::train()` to run fast enough to be considered "usable" by the students. Consequently, students used the `randomForest::randomForest()` function to develop predictions for the course project.
+Although the Community Teaching Assistants provided pointers on how to improve the performance of the `caret::train()` function by using the `parallel` package in conjunction with the `trainControl()` function in `caret`, many students were not able to construct a series of function calls that enabled `caret::train()` to run fast enough to be considered "usable" by the students. Consequently, students used the `randomForest::randomForest()` function to develop predictions for the course project.
 
 This approach takes away one of the key advantages of the `caret` package: its ability to estimate an out of sample error by aggregating the accuracy analysis across a series of training runs. This is because `caret` automates the process of fitting multiple versions of a given model by varying its parameters and/or folds within a resampling / cross-validation process.
 
@@ -34,21 +34,10 @@ intervalStart <- Sys.time()
 library(mlbench)
 data(Sonar)
 library(caret)
-```
-
-```
-## Loading required package: lattice
-```
-
-```
-## Loading required package: ggplot2
-```
-
-```r
 set.seed(95014)
 ```
 
-### Create training & testing data sets
+### create training & testing data sets
 
 
 ```r
@@ -69,7 +58,6 @@ Parallel processing in `caret` can be accomplished with the `parallel` and `doPa
 ```r
 library(parallel)
 library(doParallel)
-
 cluster <- makeCluster(detectCores() - 1) # convention to leave 1 core for OS
 registerDoParallel(cluster)
 ```
@@ -98,7 +86,7 @@ system.time(fit <- train(x,y, method="rf",data=Sonar,trControl = fitControl))
 
 ```
 ##    user  system elapsed 
-##    0.63    0.08    4.83
+##   0.718   0.032   4.800
 ```
 
 ```r
@@ -107,7 +95,7 @@ system.time(fit <- train(Class ~ ., method="rf",data=Sonar,trControl = fitContro
 
 ```
 ##    user  system elapsed 
-##    0.62    0.03    1.20
+##   0.729   0.013   1.581
 ```
 
 ### Step 4: De-register parallel processing cluster
@@ -127,8 +115,57 @@ At this point we have a trained model in the `fit` object, and can take a number
 
 ```r
 fit
+```
+
+```
+## Random Forest 
+## 
+## 208 samples
+##  60 predictor
+##   2 classes: 'M', 'R' 
+## 
+## No pre-processing
+## Resampling: Cross-Validated (5 fold) 
+## Summary of sample sizes: 167, 167, 165, 167, 166 
+## Resampling results across tuning parameters:
+## 
+##   mtry  Accuracy   Kappa    
+##    2    0.8266753  0.6483543
+##   31    0.8022959  0.5994756
+##   60    0.7881155  0.5705158
+## 
+## Accuracy was used to select the optimal model using the largest value.
+## The final value used for the model was mtry = 2.
+```
+
+```r
 fit$resample
+```
+
+```
+##    Accuracy     Kappa Resample
+## 1 0.7317073 0.4546554    Fold1
+## 2 0.9024390 0.8024096    Fold2
+## 3 0.8571429 0.7110092    Fold5
+## 4 0.8048780 0.6019417    Fold4
+## 5 0.8372093 0.6717557    Fold3
+```
+
+```r
 confusionMatrix.train(fit)
+```
+
+```
+## Cross-Validated (5 fold) Confusion Matrix 
+## 
+## (entries are percentual average cell counts across resamples)
+##  
+##           Reference
+## Prediction    M    R
+##          M 48.1 12.0
+##          R  5.3 34.6
+##                             
+##  Accuracy (average) : 0.8269
 ```
 
 
@@ -161,16 +198,18 @@ Surprisingly, the random forest algorithm for the *Practical Machine Learning* c
 
 To illustrate the impact that the resampling technique has on the runtime performance, we fit the training data for the *Practical Machine Learning* course project on the HP Omen laptop with bootstrapping as the resampling method. The bootstrapping resampling method caused a significant increase in processing time, requiring 17 minutes instead of 3.22 minutes to train the model. Since the cross-validation resampling method resulted in an accuracy of .9945, the bootstrapping resampling method had no positive impact on model accuracy.
 
-Finally, in June 2020 I ran the analysis on newer, more powerful hardware. A six core, twelve thread Intel i7-8750H CPU runs the analysis in under 2.6 minutes, a 21% improvement over the four core i7-4710HQ that powers the HP Omen laptop. 
+Finally, in 2020 I ran the analysis on newer, more powerful hardware. A four core, eight thread Intel i7-4870HQ CPU runs the analysis in 3.07 minutes, about the same speed as the HP Omen. A six core, twelve thread Intel i7-8750H CPU runs the analysis in under 2.6 minutes, a 21% improvement over the four core i7-4710HQ that powers the HP Omen laptop. 
 
 #### Figure 2: Run time by By Machine & Resampling Technique
 
 <table>
 <tr><th><br>Machine</th><th><br>Model</th><th>Resampling<br> Technique</th><th><br>Result</th></tr>
 <tr><td> HP Spectre x360-15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">02.55 minutes</td></tr>
+<tr><td> Macbook Pro 15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.07 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.22 minutes</td></tr>
 <tr><td> HP Spectre x360-13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">04.65 minutes</td></tr>
 <tr><td> Macbook Pro 13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">06.56 minutes</td></tr>
+<tr><td> HP Spectre x360-15</td><td>Random Forest</td><td>Bootstrap</td><td align="right">12.99 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Bootstrap</td><td align="right">17.00 minutes</td></tr>
 <tr><td> HP Envy X2 laptop</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
 </table>
@@ -199,6 +238,19 @@ Hardware specifications for the computers used in the performance timings in thi
  </ul>
   </td>
  </tr>
+  <tr>
+ <td valign=top>Apple Macbook Pro 15</td>
+ <td>
+ <ul>
+ <li>Operating system: OS X Catalina 10.15.5 (14E46)</li>
+ <li>Processor: Intel i7 at 2.5Ghz, turbo up to 3.7Ghz, four cores</li>
+ <li>Memory: 16 gigabytes</li>
+ <li>Disk: 512 gigabytes, solid state drive</li>
+ <li>Date built: mid 2015</li>
+ </ul>
+  </td>
+ </tr>
+
  <tr>
  <td valign=top>HP Envy X2 tablet</td>
  <td>
@@ -256,17 +308,15 @@ sessionInfo()
 
 ```
 ## R version 4.0.0 (2020-04-24)
-## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 10 x64 (build 18363)
+## Platform: x86_64-apple-darwin17.0 (64-bit)
+## Running under: macOS Catalina 10.15.5
 ## 
 ## Matrix products: default
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
-## [1] LC_COLLATE=English_United States.1252 
-## [2] LC_CTYPE=English_United States.1252   
-## [3] LC_MONETARY=English_United States.1252
-## [4] LC_NUMERIC=C                          
-## [5] LC_TIME=English_United States.1252    
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
 ## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
@@ -277,7 +327,7 @@ sessionInfo()
 ## [5] ggplot2_3.3.0     lattice_0.20-41   mlbench_2.1-1    
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] tidyselect_1.1.0     xfun_0.14            purrr_0.3.4         
+##  [1] tidyselect_1.1.0     xfun_0.13            purrr_0.3.4         
 ##  [4] reshape2_1.4.4       splines_4.0.0        colorspace_1.4-1    
 ##  [7] vctrs_0.3.0          generics_0.0.2       stats4_4.0.0        
 ## [10] htmltools_0.4.0      yaml_2.2.1           survival_3.1-12     
@@ -287,17 +337,17 @@ sessionInfo()
 ## [22] lava_1.6.7           stringr_1.4.0        timeDate_3043.102   
 ## [25] munsell_0.5.0        gtable_0.3.0         recipes_0.1.12      
 ## [28] codetools_0.2-16     evaluate_0.14        knitr_1.28          
-## [31] class_7.3-16         Rcpp_1.0.4.6         scales_1.1.1        
+## [31] class_7.3-17         Rcpp_1.0.4.6         scales_1.1.0        
 ## [34] ipred_0.9-9          digest_0.6.25        stringi_1.4.6       
-## [37] dplyr_0.8.5          grid_4.0.0           tools_4.0.0         
+## [37] dplyr_0.8.99.9003    grid_4.0.0           tools_4.0.0         
 ## [40] magrittr_1.5         tibble_3.0.1         randomForest_4.6-14 
 ## [43] crayon_1.3.4         pkgconfig_2.0.3      ellipsis_0.3.1      
-## [46] MASS_7.3-51.5        Matrix_1.2-18        data.table_1.12.8   
+## [46] MASS_7.3-51.6        Matrix_1.2-18        data.table_1.12.8   
 ## [49] pROC_1.16.2          lubridate_1.7.8      gower_0.2.1         
-## [52] assertthat_0.2.1     rmarkdown_2.1        R6_2.4.1            
-## [55] rpart_4.1-15         nnet_7.3-13          nlme_3.1-147        
-## [58] compiler_4.0.0
+## [52] rmarkdown_2.1        R6_2.4.1             rpart_4.1-15        
+## [55] nnet_7.3-14          nlme_3.1-147         compiler_4.0.0
 ```
+
 
 
 *Copyright 2017 - 2020, Len Greski - copying with attribution permitted* 
