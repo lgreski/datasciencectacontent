@@ -30,7 +30,7 @@ A text editor such as UltraEdit that provides a column number display makes it a
 
 The negative signs and column numbers must both be accounted for in the R function used to read the data.
 
-## Additional Considerations
+# Additional Considerations
 
 To answer the quiz question correctly, students must read the correct data file. The quiz question provides two URLs, [one to be used for the quiz](https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for) and another that is a link to the original data source that is continually updated.
 
@@ -45,6 +45,24 @@ As of October 14, 2017, the data from the NOAA has 1,449 observations, the most 
 <img src="./images/cleaningData-week2q5-06.png">
 
 **[PRO TIP]** Use the `summary()` function to compare the data set you load into R against the values listed in the codebook below to confirm that the data file has been read correctly.
+
+# Partial Solutions: choosing the right R function is key
+
+Once we know that the data is in a fixed record format, and particularly a fortran format file, a solution is straightforward. Here is a stub of a solution with `read.fortran()`. 
+
+    originalSource <- "https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"
+    download.file(originalSource,"./data/wksst8110-20171003.for")
+    fileURL <- "./data/getdata-wksst8110.for"
+    # set addresses for fixed length fortran-style input file 
+    theAddresses <- c(*** magic goes here ***)
+    mydata <- read.fortran(file=fileURL,theAddresses,skip = 4)
+    theColumns <- c("week","nino1and2sst","nino1and2ssta","nino3sst",
+                "nino3ssta","nino34sst","nino34ssta",
+                "nino4sst","nino4ssta")
+    colnames(mydata) <- theColumns
+
+
+At this point one can write the remaining code required to answer the question. 
 
 # Appendix
 
@@ -72,4 +90,4 @@ The El Niño Southern Oscillation is a combined atmospheric and ocean system con
 
 [Optimum Interpolation Sea Surface Temperatures - V2](http://bit.ly/2z8n1GT): Climate Prediction Center of the National Oceanographic and Atmospheric Administration, United States of America, retrieved 14 October 2017.
 
-*Last Updated: 14 October 2017*
+*Last Updated: 14 September 2020*
