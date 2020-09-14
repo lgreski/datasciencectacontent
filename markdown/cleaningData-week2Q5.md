@@ -52,7 +52,7 @@ Once we know that the data is in a fixed record format, and particularly a fortr
 
     originalSource <- "https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"
     download.file(originalSource,"./data/wksst8110.for")
-    fileURL <- "./data/getdata-wksst8110.for"
+    fileURL <- "./data/wksst8110.for"
     # set addresses for fixed length fortran-style input file 
     theAddresses <- c(*** magic goes here ***)
     mydata <- read.fortran(file=fileURL,theAddresses,skip = 4)
