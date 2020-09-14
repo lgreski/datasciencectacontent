@@ -51,7 +51,7 @@ As of October 14, 2017, the data from the NOAA has 1,449 observations, the most 
 Once we know that the data is in a fixed record format, and particularly a fortran format file, a solution is straightforward. Here is a stub of a solution with `read.fortran()`. 
 
     originalSource <- "https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"
-    download.file(originalSource,"./data/wksst8110-20171003.for")
+    download.file(originalSource,"./data/wksst8110.for")
     fileURL <- "./data/getdata-wksst8110.for"
     # set addresses for fixed length fortran-style input file 
     theAddresses <- c(*** magic goes here ***)
