@@ -48,7 +48,7 @@ As of September 14th 2020, the data from the NOAA has 1,601 observations, the mo
 
 # Partial Solutions: choosing the right R function is key
 
-Once we know that the data is in a fixed record format, and particularly a fortran format file, a solution is straightforward. Here is a stub of a solution with `read.fortran()`. 
+Once we know that the data is in a fixed record format, and particularly a fortran format file, a solution is straightforward, once one figures out how to specify the fortran formats needed as an argument to `read.fortran()`. Here is a stub of a solution with `read.fortran()`. 
 
     originalSource <- "https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"
     download.file(originalSource,"./data/wksst8110.for")
@@ -60,6 +60,12 @@ Once we know that the data is in a fixed record format, and particularly a fortr
                 "nino3ssta","nino34sst","nino34ssta",
                 "nino4sst","nino4ssta")
     colnames(mydata) <- theColumns
+
+A partial solution with the `read.fwf()` function from Base R looks like this, where one must also configure a column specification object that is used as an argument to the function. 
+
+    fwfCols <- c(*** magic goes here ***)
+    mydata2 <- read.fwf(fileURL,widths=fwfCols,skip=4,
+                        col.names=theColumns)
 
 
 At this point one can write the remaining code required to answer the question. 
