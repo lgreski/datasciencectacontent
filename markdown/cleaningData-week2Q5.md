@@ -40,7 +40,7 @@ Many students get frustrated because they read the original data source directly
 
 <img src="./images/cleaningData-week2q5-05.png">
 
-As of October 14, 2017, the data from the NOAA has 1,449 observations, the most recent of which is from October 4th, 2017.
+As of September 14th 2020, the data from the NOAA has 1,601 observations, the most recent of which is from September 2nd, 2020.
 
 <img src="./images/cleaningData-week2q5-06.png">
 
