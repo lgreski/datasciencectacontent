@@ -51,8 +51,9 @@ Every computer program includes a list of design assumptions, that is, condition
 * The only files in the `specdata` directory will be the 332 sensor files.
 * There are two types of pollutants stored in the sensor files, `sulfate` and `nitrate`.
 * Some of the values of `sulfate` and `nitrate` are missing, and we will need to handle this within our function.
-* The sensor files have data that is separated by commas, and therefore there must be an R function that reads these types of files.
-* The files are organized by sensor number, and therefore there must be a way in R to use the `id` argument to decide which files to read.
+* The sensor files have data that is separated by commas, and therefore we will need to use an R function that reads these types of files.
+* The files are organized by sensor number, and all files within the `specdata` subdirectory have the file type `.csv`. Therefore, we can use the `id` argument to decide which files to read.
+* The file names contain leading zeroes (e.g. sensor 1 is stored as `001.csv`), which may be relevant depending on the technique we use to read the data files. 
 
 One of the benefits of listing the assumptions is that they allow us to begin to flesh out the design, or to limit the code we need to write.
 
@@ -60,9 +61,10 @@ For example, if we know that the `id` argument will be a list of integers that v
 
 It's also important to note what is NOT assumed to be constant, because these conditions must be accounted for within the design of our function. We can observe "non-assumptions" by looking at the test cases and output that are provided along with the assignment instructions that we referenced above.  
 
-* `id` can be passed as a list of non-sequential integers
-* `id` does not have to start at 1
 * `id` does not have to include all 332 files
+* `id` does not have to start at 1
+* `id` values do not have to be in ascending order
+* `id` can be passed as a list of non-sequential integers
 
 ## Output
 
@@ -78,15 +80,29 @@ We know from the above discussion that we must read one or more files from disk 
 2. Combine the files into a single file / data frame, and
 3. Calculate the mean of the requested pollutant and return it to the parent environment.
 
+We can stub these steps out in R as follows.
+
+    pollutantmean <- function(directory,pollutant,id=1:332){
+    
+        # Read the files
+    
+        # Combine the files into a single data frame
+    
+        # Calculate mean and return it to parent environment 
+    
+    }
+
 Breaking this down to the next level of detail makes the design a bit more complicated, as we account for the assumptions we discussed earlier in the article. One way to solve the problem is as follows:
 
 1. Obtain a list of sensor files from the `specdata` folder, given the assumption that the `specdata` folder is a subfolder of the R Working Directory.<br><br>
 2. Create an empty data frame into which you will collect all of the sensor files to be read<br><br>
-3. Subset the list of sensor files down to only those to be used in the calculation of the mean. HINT: this can be done with vector subscripting.<br><br>
+3. Subset the list of sensor files down to only those to be used in the calculation of the mean. HINT: this can be done with vector subscripting, given some of the assumptions we listed above.<br><br>
 4. Loop through each file in the subsetted list and do the following: read the raw data file with an appropriate file reading function, bind the file to the data frame you created in step 2.<br><br>
 5. Calculate the mean and return it to the parent environment
 
-While some of these steps can be combined by using `apply()` functions in combination with other R functions such as `do.call()`, I've written this approach using a loop in step 4 so we can highlight where to subset the file list: do this BEFORE reading the data files from disk into memory.
+While some of these steps can be combined by using `apply()` functions in combination with other R functions such as `do.call()`, I've written this approach using a loop in step 4 so we can highlight where to subset the file list: **do this BEFORE reading the data files from disk into memory.**
+
+That said, a technique for reading and combining files with the `lapply()` function and `do.call()` is covered in [Forms of the Extract Operator](http://bit.ly/2bzLYTL). 
 
 Once you have your outline, you can organize your coding around the outline, like this:
 
