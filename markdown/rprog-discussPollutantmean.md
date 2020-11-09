@@ -132,3 +132,5 @@ One last hint: if your program is more than 8 - 12 programming statements, it's 
 Having given an outline for one potential solution, it can be modified in a number of ways. For example, to prevent a problem with files beyond `001.csv` to `332.csv` being in the `specdata` subdirectory, one could use R functions to build the filenames directly from the `id` vector instead of retrieving them by using a function that lists files in a directory. This technique could be employed in a `for()` loop or with an `apply()` function.
 
 Another modification as stated above would be to use `apply()` functions rather than a loop to read and combine the files.
+
+*Copyright Len Greski 2016 - 2020, copying with attribution permitted* 
