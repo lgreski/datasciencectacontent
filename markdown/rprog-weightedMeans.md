@@ -91,3 +91,15 @@ Here is the code from the screen captures that illustrate the second approach
     # Finally, calculate the weighted mean
 
     sum((theMeans * theSums)) / sum(theSums)
+    
+## Appendix B: Do the assignment instructions describe a weighted mean? 
+
+Some students on the Discussion Forum raised the issue that the assignment does not distinguish between a weighted and unweighted mean. The key part of the assignment instructions for part 1 is:
+
+<img src="./images/rprog-weightedMean07.png">
+
+If one literally follows the instructions, it results in a single mean being calculated across all of the sensor files. Each "observation" in the mean is a pollution reading at a given point in time from a single sensor. Therefore, a sensor with more valid observations contributes more observations to the mean than a sensor with fewer valid observations. 
+
+A weighted mean requires a function that reads the data files and combines them before calculating a mean, rather than a function that reads each file, calculates a mean, and after reading all the files calculates a mean of the file means. 
+
+**NOTE:** some students run afoul of this requirement by testing their calculations in Microsoft Excel, where they read a few sensor files, calculate the means by file, and then calculate a mean of means. The resulting `pollutantmean()` function matches the Excel output, but does not match the sample output. 
