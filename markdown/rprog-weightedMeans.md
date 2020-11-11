@@ -103,3 +103,5 @@ If one literally follows the instructions, it results in a single mean being cal
 A weighted mean requires a function that reads the data files and combines them before calculating a mean, rather than a function that reads each file, calculates a mean, and after reading all the files calculates a mean of the file means. 
 
 **NOTE:** some students run afoul of this requirement by testing their calculations in Microsoft Excel, where they read a few sensor files, calculate the means by file, and then calculate a mean of means. The resulting `pollutantmean()` function matches the Excel output, but does not match the sample output. 
+
+*Copyright Leonard Greski, 2015 - 2020*
