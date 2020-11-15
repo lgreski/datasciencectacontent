@@ -121,6 +121,20 @@ Once you have your outline, you can organize your coding around the outline, lik
        # calculate mean and return to parent environment
     }
 
+# Helpful R functions
+
+As students work the problem they wind up searching for the right functions to perform various parts of the work. Here is a listing o R functions that are helpful for the assignment.
+
+<table>
+<th>Function</th><th>Where to use it</th>
+<td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td>
+<td>do.call()</td><td>Used with `lapply()` to combine data files in a more efficient manner than using a `for()` loop</td>
+<td>for()</td><td>Used to loop through the list of files so they can be read and combined into a single data frame</td>
+<td>lapply()</td><td>Used to process the list of files in a vectorized manner, allows one to write the `pollutantmean()` function without a `for()` loop</td>
+<td>mean()</td><td>Calculates the mean of a vector</td>
+<td>paste()<br>paste0()</td><td>Combine `directory` argument with default directory symbols as an argument to `list.files()`</td>
+</table> 
+
 # Next Steps
 
 Having provided a relatively detailed walkthrough of the design process, all that's left is for the student to determine the R functions that are required for each step in the process.  Remember what the instructors said during *The Data Scientist's Toolbox,* "Google is your friend." Use it frequently, as I explained in [Strategy for the Programming Assignments](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/makeItRun.md).
