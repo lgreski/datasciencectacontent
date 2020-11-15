@@ -53,7 +53,7 @@ Every computer program includes a list of design assumptions, that is, condition
 * Some of the values of `sulfate` and `nitrate` are missing, and we will need to handle this within our function.
 * The sensor files have data that is separated by commas, and therefore we will need to use an R function that reads these types of files.
 * The files are organized by sensor number, and all files within the `specdata` subdirectory have the file type `.csv`. Therefore, we can use the `id` argument to decide which files to read.
-* The file names contain leading zeroes (e.g. sensor 1 is stored as `001.csv`), which may be relevant depending on the technique we use to read the data files. 
+* The file names contain leading zeroes (e.g. sensor 1 is stored as `001.csv`), which may be relevant depending on the technique we use to read the data files.
 
 One of the benefits of listing the assumptions is that they allow us to begin to flesh out the design, or to limit the code we need to write.
 
@@ -83,13 +83,13 @@ We know from the above discussion that we must read one or more files from disk 
 We can stub these steps out in R as follows.
 
     pollutantmean <- function(directory,pollutant,id=1:332){
-    
+
         # Read the files
-    
+
         # Combine the files into a single data frame
-    
-        # Calculate mean and return it to parent environment 
-    
+
+        # Calculate mean and return it to parent environment
+
     }
 
 Breaking this down to the next level of detail makes the design a bit more complicated, as we account for the assumptions we discussed earlier in the article. One way to solve the problem is as follows:
@@ -102,7 +102,7 @@ Breaking this down to the next level of detail makes the design a bit more compl
 
 While some of these steps can be combined by using `apply()` functions in combination with other R functions such as `do.call()`, I've written this approach using a loop in step 4 so we can highlight where to subset the file list: **do this BEFORE reading the data files from disk into memory.**
 
-That said, a technique for reading and combining files with the `lapply()` function and `do.call()` is covered in [Forms of the Extract Operator](http://bit.ly/2bzLYTL). 
+That said, a technique for reading and combining files with the `lapply()` function and `do.call()` is covered in [Forms of the Extract Operator](http://bit.ly/2bzLYTL).
 
 Once you have your outline, you can organize your coding around the outline, like this:
 
@@ -133,7 +133,11 @@ As students work the problem they wind up searching for the right functions to p
 <tr><td>lapply()</td><td>Process the list of files in a vectorized manner, allows one to write the <code>pollutantmean()</code> function without a <code>for()</code> loop</td></tr>
 <tr><td>mean()</td><td>Calculates the mean of a vector</td></tr>
 <tr><td>paste()<br>paste0()</td><td>Combine <code>directory</code> argument with default directory symbols as an argument to <code>list.files()</code></td></tr>
-</table> 
+</table>
+
+## A closing hint
+
+Students often struggle to figure out how to code the handling of the pollutant name in the `mean()` function.  One approach is to use an `if()` statement. However, a more "R-like" approach is to use what is called *variable substitution within the Extract Operator.* I describe this technique in the article [Forms of the Extract Operator](http://bit.ly/2bzLYTL), specifically the section [Comparing Forms of the Extract Operator](https://bit.ly/36xxZrW). 
 
 # Next Steps
 
@@ -147,4 +151,4 @@ Having given an outline for one potential solution, it can be modified in a numb
 
 Another modification as stated above would be to use `apply()` functions rather than a loop to read and combine the files.
 
-*Copyright Len Greski 2016 - 2020, copying with attribution permitted* 
+*Copyright Len Greski 2016 - 2020, copying with attribution permitted*
