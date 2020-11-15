@@ -126,7 +126,7 @@ Once you have your outline, you can organize your coding around the outline, lik
 As students work the problem they wind up searching for the right functions to perform various parts of the work. Here is a listing of R functions that are helpful for the assignment.
 
 <table>
-<tr><th>Function</th><th>Where to use it</th></tr>
+<tr><th align="left">Function</th><th align="left">Where to use it</th></tr>
 <tr><td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td></tr>
 <tr><td>do.call()</td><td>Used with <code>lapply()</code> to combine data files in a more efficient manner than using a <code>for()</code> loop</td></tr>
 <tr><td>for()</td><td>Loop through the list of files so they can be read and combined into a single data frame</td></tr>
@@ -137,7 +137,7 @@ As students work the problem they wind up searching for the right functions to p
 
 ## A closing hint
 
-Students often struggle to figure out how to code the handling of the pollutant name in the `mean()` function.  One approach is to use an `if()` statement. However, a more "R-like" approach is to use what is called *variable substitution within the Extract Operator.* I describe this technique in the article [Forms of the Extract Operator](http://bit.ly/2bzLYTL), specifically the section [Comparing Forms of the Extract Operator](https://bit.ly/36xxZrW). 
+Students often struggle to figure out how to code the handling of the pollutant name in the `mean()` function.  One approach is to use an `if()` statement. However, a more "R-like" approach is to use what is called *variable substitution within the Extract Operator.* I describe this technique in the article [Forms of the Extract Operator](http://bit.ly/2bzLYTL), specifically the section [Comparing Forms of the Extract Operator](https://bit.ly/36xxZrW).
 
 # Next Steps
 

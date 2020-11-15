@@ -78,7 +78,7 @@ A stubbed version of the potential solution looks like this.
 As we provided with `pollutantmean()`, here is a list of functions that may be helpful for solving this problem.
 
 <table>
-<tr><th>Function</th><th>Where to use it</th></tr>
+<tr><th align="left">Function</th><th align="left">What it does</th></tr>
 <tr><td>complete.cases()</td><td>Creates a vector that is TRUE when all columns for a case are non-missing, and FALSE when at least one column has a missing value, NA. Note that the vector returned by this function has one element per row in the data frame passed as an argument to <code>complete.cases()</code></td></tr>
 <tr><td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td></tr>
 <tr><td>for()</td><td>Loop through the list of files so they can be read and complete case counts created</td></tr>
