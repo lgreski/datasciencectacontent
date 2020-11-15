@@ -21,7 +21,7 @@ The first part of the assignment requires students to calculate a single average
 Every computer program starts with one or more "inputs," and ends with some type of "output." `pollutantmean()` starts with three inputs, or *arguments,* each of which must be named within the `function()` function used to define `pollutantmean()`, also known as a function declaration:
 
 <table>
-<tr><th>Argument</th><th>Description</th></tr>
+<tr><th align="left">Argument</th><th align="left">Description</th></tr>
 <tr><td>directory</td><td>The name of a subdirectory from which the 332 pollution sensors will be read. A key assumption for this assignment is that the name of the directory is <code>specdata</code>, and that it is a child directory from the <em>current R working directory</em>.  </td></tr>
 <tr><td>pollutant</td><td>Each sensor file contains measurements for two pollutants, <em>sulfate,</em> and <em>nitrate.</em></td></tr>
 <tr><td>id</td><td>a list of numbers that can vary from 1 to 332, indicating the sensor number(s) that are to be included in calculation of the mean. Each file is in a special format, comma separated values or <code>.csv,</code> such that the names of the files look like <code>001.csv, 002.csv,</code> ... <code>332.csv.</code> </td></tr>

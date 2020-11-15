@@ -87,3 +87,6 @@ As we provided with `pollutantmean()`, here is a list of functions that may be h
 <tr><td>sum()</td><td>Combine <code>directory</code> used to summarize the vector created by <code>complete.cases()</code></td></tr>
 <tr><td>unlist()</td><td>Used with <code>lapply()</code> to create a vector of observation counts in a more efficient manner than using a <code>for()</code> loop</td></tr>
 </table>
+
+
+*Copyright Len Greski 2020, copying with attribution permitted*
