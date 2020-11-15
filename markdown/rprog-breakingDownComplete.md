@@ -57,7 +57,9 @@ As we think about the problem, we can solve it in three major steps.
 2. Read each file and calculate the number of complete cases
 3. Create a data frame containing the required output, and return it to the parent environment.
 
-Note that if we use an approach that creates a vector of complete case counts, we can combine it with the `id` vector in step 3. A stubbed version of the potential solution looks like this.
+Note that if we use an approach that creates a vector of complete case counts, we can combine it with the `id` vector in step 3. Also note that unlike the `pollutantmean()` problem, we want to count cases by sensor, and therefore there is no need to combine the files before calculating the counts.
+
+A stubbed version of the potential solution looks like this.
 
     complete <- function(directory,id=1:332){
 
@@ -68,5 +70,20 @@ Note that if we use an approach that creates a vector of complete case counts, w
 
       # create a data frame with columns id and nobs, and return to
       # parent environment
-      
+
     }
+
+# Useful R functions
+
+As we provided with `pollutantmean()`, here is a list of functions that may be helpful for solving this problem.
+
+<table>
+<tr><th>Function</th><th>Where to use it</th></tr>
+<tr><td>complete.cases()</td><td>Creates a vector that is TRUE when all columns for a case are non-missing, and FALSE when at least one column has a missing value, NA. Note that the vector returned by this function has one element per row in the data frame passed as an argument to <code>complete.cases()</code></td></tr>
+<tr><td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td></tr>
+<tr><td>for()</td><td>Loop through the list of files so they can be read and complete case counts created</td></tr>
+<tr><td>lapply()</td><td>Process the list of files in a vectorized manner, allows one to write the <code>pollutantmean()</code> function without a <code>for()</code> loop</td></tr>
+<tr><td>paste()<br>paste0()</td><td>Combine <code>directory</code> argument with default directory symbols as an argument to <code>list.files()</code></td></tr>
+<tr><td>sum()</td><td>Combine <code>directory</code> used to summarize the vector created by <code>complete.cases()</code></td></tr>
+<tr><td>unlist()</td><td>Used with <code>lapply()</code> to create a vector of observation counts in a more efficient manner than using a <code>for()</code> loop</td></tr>
+</table>
