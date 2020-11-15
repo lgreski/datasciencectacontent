@@ -82,7 +82,7 @@ As we provided with `pollutantmean()`, here is a list of functions that may be h
 <tr><td>complete.cases()</td><td>Creates a vector that is TRUE when all columns for a case are non-missing, and FALSE when at least one column has a missing value, NA. Note that the vector returned by this function has one element per row in the data frame passed as an argument to <code>complete.cases()</code></td></tr>
 <tr><td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td></tr>
 <tr><td>for()</td><td>Loop through the list of files so they can be read and complete case counts created</td></tr>
-<tr><td>lapply()</td><td>Process the list of files in a vectorized manner, allows one to write the <code>pollutantmean()</code> function without a <code>for()</code> loop</td></tr>
+<tr><td>lapply()</td><td>Process the list of files in a vectorized manner, allows one to write the <code>complete()</code> function without a <code>for()</code> loop</td></tr>
 <tr><td>paste()<br>paste0()</td><td>Combine <code>directory</code> argument with default directory symbols as an argument to <code>list.files()</code></td></tr>
 <tr><td>sum()</td><td>Combine <code>directory</code> used to summarize the vector created by <code>complete.cases()</code></td></tr>
 <tr><td>unlist()</td><td>Used with <code>lapply()</code> to create a vector of observation counts in a more efficient manner than using a <code>for()</code> loop</td></tr>
