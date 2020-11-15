@@ -126,13 +126,13 @@ Once you have your outline, you can organize your coding around the outline, lik
 As students work the problem they wind up searching for the right functions to perform various parts of the work. Here is a listing o R functions that are helpful for the assignment.
 
 <table>
-<th>Function</th><th>Where to use it</th>
-<td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td>
-<td>do.call()</td><td>Used with `lapply()` to combine data files in a more efficient manner than using a `for()` loop</td>
-<td>for()</td><td>Used to loop through the list of files so they can be read and combined into a single data frame</td>
-<td>lapply()</td><td>Used to process the list of files in a vectorized manner, allows one to write the `pollutantmean()` function without a `for()` loop</td>
-<td>mean()</td><td>Calculates the mean of a vector</td>
-<td>paste()<br>paste0()</td><td>Combine `directory` argument with default directory symbols as an argument to `list.files()`</td>
+<tr><th>Function</th><th>Where to use it</th></tr>
+<tr><td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td></tr>
+<tr><td>do.call()</td><td>Used with `lapply()` to combine data files in a more efficient manner than using a `for()` loop</td></tr>
+<tr><td>for()</td><td>Used to loop through the list of files so they can be read and combined into a single data frame</td></tr>
+<tr><td>lapply()</td><td>Used to process the list of files in a vectorized manner, allows one to write the `pollutantmean()` function without a `for()` loop</td></tr>
+<tr><td>mean()</td><td>Calculates the mean of a vector</td></tr>
+<tr><td>paste()<br>paste0()</td><td>Combine `directory` argument with default directory symbols as an argument to `list.files()`</td></tr>
 </table> 
 
 # Next Steps
