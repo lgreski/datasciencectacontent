@@ -133,6 +133,7 @@ As students work the problem they wind up searching for the right functions to p
 <tr><td>lapply()</td><td>Process the list of files in a vectorized manner, allows one to write the <code>pollutantmean()</code> function without a <code>for()</code> loop</td></tr>
 <tr><td>mean()</td><td>Calculates the mean of a vector</td></tr>
 <tr><td>paste()<br>paste0()</td><td>Combine <code>directory</code> argument with default directory symbols as an argument to <code>list.files()</code></td></tr>
+<tr><td>read.csv()</td><td>Loads the contents of a comma separated values file into a data frame</td></tr>
 </table>
 
 ## A closing hint

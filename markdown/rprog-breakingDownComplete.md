@@ -84,6 +84,7 @@ As we provided with `pollutantmean()`, here is a list of functions that may be h
 <tr><td>for()</td><td>Loop through the list of files so they can be read and complete case counts created</td></tr>
 <tr><td>lapply()</td><td>Process the list of files in a vectorized manner, allows one to write the <code>complete()</code> function without a <code>for()</code> loop</td></tr>
 <tr><td>paste()<br>paste0()</td><td>Combine <code>directory</code> argument with default directory symbols as an argument to <code>list.files()</code></td></tr>
+<tr><td>read.csv()</td><td>Loads the contents of a comma separated values file into a data frame</td></tr>
 <tr><td>sum()</td><td>Combine <code>directory</code> used to summarize the vector created by <code>complete.cases()</code></td></tr>
 <tr><td>unlist()</td><td>Used with <code>lapply()</code> to create a vector of observation counts in a more efficient manner than using a <code>for()</code> loop</td></tr>
 </table>
