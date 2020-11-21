@@ -188,7 +188,7 @@ How might we, for example, retrieve the first Pokémon of each type?
 
 In our case, we won't need to resort the data. However, since the `split()` function retains the sort order from the original data frame in all output data frames, if one needs to sort the data, sort it prior to using `split()`.
 
-For a descriptions of techniques used to sort a data frame, please review [Functions to Sort Data Frames](http://bit.ly/2dxItzw).
+For a description of techniques used to sort a data frame, please review [Functions to Sort Data Frames](http://bit.ly/2dxItzw).
 
 ### Step 3: Split the Pokémon by Type
 
