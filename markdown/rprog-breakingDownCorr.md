@@ -79,7 +79,7 @@ As we provided with `pollutantmean()` and `complete()`, here is a list of functi
 <tr><td>cor()</td><td>Calculates correlations between columns in a data frame</td></tr>
 <tr><td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td></tr>
 <tr><td>for()</td><td>Loop through a set of inputs so they can be processed in a variety of ways</td></tr>
-<tr><td>lapply()</td><td>Process the list of inputs in a vectorized manner, allows one to process data without a <code>for()</code> loop. Note that this is a more advanced R function that is taught during Week 3 of the course</td></tr>
+<tr><td>lapply()</td><td>Process the list of inputs in a vectorized manner, allows one to process data without a <code>for()</code> loop. Note that this is a more advanced R function that is taught during Week 3 of the course. <br><br>Details explaining how to use this function are covered in <a href="http://bit.ly/2qK7tVX">Forms of the Extract Operator: Assignment 1 Concepts</a></td></tr>
 <tr><td>paste()<br>paste0()</td><td>Combine <code>directory</code> argument with default directory symbols as an argument to <code>list.files()</code></td></tr>
 <tr><td>read.csv()</td><td>Loads the contents of a comma separated values file into a data frame</td></tr>
 <tr><td>sum()</td><td>Sums the contents of a vector to a single number</code></td></tr>
