@@ -99,7 +99,7 @@ Students quickly learn that the help operator, `?`, is used to access R document
 
 <img src="./images/rprog-extractOperator01.png">
 
-Instead, one has to place the operator in double quotes, as in `?"["` to access help for the extract operator.
+Instead, one has to place the operator in single or double quotes, as in `?"["` to access help for the extract operator.
 
 <img src="./images/rprog-extractOperator02.png">
 
@@ -300,4 +300,6 @@ There you have it, a comprehensive overview of the extract operator, including a
 2. [SlotOp {base} R Documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/slotOp.html), retrieved 22 May 2016.
 3. [Pokémon Stats by Alberto Barradas](http://bit.ly/2ovmmxu)
 
-**last update date: 14 October 2017**
+**last update date: 21 November 2020**
+
+*Copyright (c) Len Greski 2016 - 2020, copying with attribution permitted*
