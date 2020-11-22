@@ -29,6 +29,14 @@ colnames(gamesPlayed) <- c("Week","Date","Opponent","Result","Record","HighPasse
 # observe each row of played games has 19 data elements, bye week has 3
 # elements, and unplayed games have 12 data elements 
 
+
+library(rvest)
+baseURL <- "https://www.espn.com/nfl/team/schedule/_/name/bal"
+html <- read_html(baseURL)
+## content selected with rvest SelectorGadget 
+theTable <- html_nodes(html,xpath='//*[contains(concat( " ", @class, " " ), concat( " ", "Table__TD", " " ))] | //span')
+textData <- html_text(theTable)
+
 # assign ID value based on element in vector where played games start,
 # ignoring bye week 
 rowStartIDs <- c(43,62,81,100,119,138,160,179,198)

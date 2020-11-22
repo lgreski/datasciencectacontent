@@ -70,6 +70,8 @@ The first part is very easy. We identify the URL to read, load the `rvest` packa
 
 Next, we use the xpath query from above as an argument to the `html_nodes()` function, and extract the text using `html_text()`.
 
+**NOTE:** we use the single tick version of quote to encapsulate the `xpath=' '` argument because the query returned by the Selector Gadget uses double quotes. That is, we insert the query between two single quotes so R parses the double quotes as content for the argument. 
+
     ## content selected with rvest SelectorGadget
     theTable <- html_nodes(html,xpath='//*[contains(concat( " ", @class, " " ), concat( " ", "Table__TD", " " ))] | //*[contains(concat( " ", @class, " " ), concat( " ", "Card__Content", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "items-center", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "dib", " " ))]')
 
@@ -102,6 +104,32 @@ The data frame looks like this in the RStudio data frame viewer.
 Note that this technique is dependent on the date and time when the script is run. As of 7PM EST on 22 November, week 11 will be "in the books" for the Ravens, and we can adjust the code to add `85` to `rowStartIDs`.
 
 Second, to parse a different team's page we'd need need to know its bye week, as only a small number of teams are off each week. For the 2020 season, bye weeks occur between week 5 and week 13. Since the bye weeks are based on the overall NFL calendar, different numbers of teams may be inactive. For example, week 10 has 4 teams inactive, week 11 has 6 teams inactive, and week 13 has only 2 teams inactive.
+
+Finally, the code is extremely dependent on the the `xpath` selector used to parse the HTML document. For example, a slightly simpler `xpath` query on the Baltimore Ravens schedule page results in additional data elements, a total of 18 per row. This enables us to separate some of the columns that have more than one data element (e.g. Opponent contains two variables: home / away as well as the actual opponent).  
+
+    library(rvest)
+    baseURL <- "https://www.espn.com/nfl/team/schedule/_/name/bal"
+    html <- read_html(baseURL)
+    ## content selected with rvest SelectorGadget
+    theTable <- html_nodes(html,xpath='//*[contains(concat( " ", @class, " " ), concat( " ", "Table__TD", " " ))] | //span')
+    textData <- html_text(theTable)
+
+The `xpath` selector used above results in a vector of 365 elements instead of the 157 from the other query. Some of the columns contain redundant information so we will remove them before generating the output data frame. Using the process we described above to find the entry points into each week's data, we use the following code to process the data into a data frame.
+
+    # assign ID value based on element in vector where played games start,
+    # ignoring bye week
+    rowStartIDs <- c(43,62,81,100,119,138,160,179,198)
+
+    # columns to retain include 1,3,6,8,10,11,12,14,16,18
+    gamesPlayed <- data.frame(do.call(rbind,
+                              lapply(rowStartIDs,function(x) textData[x:(x+18)])))[c(1,3,6,8,10,11,12,14,16,18)]
+    # add column names
+    colnames(gamesPlayed) <- c("Week","Date","Location","Opponent", "Outcome",
+                     "Score","Record","HighPasser","HighRusher","HighReceiver")
+
+The resulting data frame looks like this. Notice that the location content is now a separate column from the opponent column, and the win / loss column is separate from the score. These variables were combined in the first extract, based on differences in the `xpath` selector used.
+
+<img src="./images/cleaningData-htmlParsing17.png">
 
 ## Generalizing the solution
 
