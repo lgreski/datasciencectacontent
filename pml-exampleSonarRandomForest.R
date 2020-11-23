@@ -59,4 +59,32 @@ mean(fit$finalModel$err.rate[,"OOB"])
 plot(fit,main="Accuracy by Predictor Count")
 varImpPlot(fit$finalModel,
            main="Variable Importance Plot: Random Forest")
+
+#
+# Step 6: acquire in sample estimate of error, which is the model oob [out-of-bag] estimate of error 
+# rate ???, for comparison in subsequent step with out of sample estimate of error
+#
+fit$finalModel # see "OOB estimate of  error rate: ##.#%" value in output
+# look for column name for oob [out-of-bag] estimate of error rate
+mer <- fit$finalModel$err.rate; dimnames(mer)
+# compare average of $err.rate[, "OOB"] with model output oob estimate of error rate
+mean(fit$finalModel$err.rate[, "OOB"]) * 100
+# compare median of $err.rate[, "OOB"] with model output oob estimate of error rate
+median(fit$finalModel$err.rate[, "OOB"]) * 100
+# found mean of $err.rate[,"OOB"] > median of $err.rate[,"OOB"] > fit$finalModel output OOB value
+inSampleError <- median(fit$finalModel$err.rate[, "OOB"]) * 100
+
+#
+# Step 7. Calculate out of sample estimate of error rate and compare with in sample estimate of error rate
+#
+pred <- predict(fit, newdata = testing)
+confmat <- confusionMatrix(pred, testing$Class)
+confmat$table; confmat$overall[["Accuracy"]]
+predAccuracy <- confmat$overall[["Accuracy"]]
+outOfSampleError <- (1 - predAccuracy) * 100 
+outOfSampleError; inSampleError
+# Here we are looking for out of sample estimate error rate to be worse than in sample estimate of 
+# error rate in order. This is to confirm that accuracy should be better in case of training data 
+# where we knew the outcome values vs the unseen training data where we in theory don't know the 
+# outcome values.
 sessionInfo()
