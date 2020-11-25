@@ -61,7 +61,7 @@ Another potential solution builds on the `complete()` function. This solution lo
 3. Use the `id` column from the subset data frame to re-read the data files, and calculate correlations for these sensors.
 4. Return the resulting vector of correlations to the parent environment.
 
-Since the first solution is more efficient than the second one, we provide a code stub that illustrates the first solution.
+Since the second solution is more efficient than the others, we provide a code stub that illustrates the first solution.
 
     corr <- function(directory, threshold = 0) {
 
