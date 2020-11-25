@@ -47,7 +47,7 @@ As we think about the problem, we can solve it in six basic steps.
 5. calculate a correlation between `nitrate` and `sulfate`, and use `c() to combine the correlation with the output vector
 6. After the `for()` loop completes, return the output vector to the parent environment
 
-Another potential solution makes use of `lapply()` to eliminate the need to build the output vector with a `for()` loop and `c()`. 
+Another potential solution makes use of `lapply()` to eliminate the need to build the output vector with a `for()` loop and `c()`. Students interested in implementing this solution should view the Week 3 lectures to learn about `lapply()` before attempting it. 
 
 1. Read the list of sensor file filenames
 2. Create a list of data frames by using the list of filenames with `lapply()` and `read.csv()` to load the data from disk.
