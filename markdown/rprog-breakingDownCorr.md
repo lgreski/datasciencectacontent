@@ -37,10 +37,20 @@ This problem presents a slightly different challenge than `complete()` because m
 
 ## Potential solutions
 
-As we think about the problem, we can solve it in four basic steps.
+As we think about the problem, we can solve it in six basic steps.
 
 1. Read the list of sensor file filenames
-2. Create a list of data frames by using the list of filenames with `lapply()` and `read.csv()` to load the data from disk
+2. Initialize an output vector to store the correlations as NULL
+2. Use a `for()` loop that iterates over the sensor IDs provided as an argument to the `corr()` function to complete the following: 
+3. Read a sensor file, 
+4. Check whether the number of complete cases is greater than the threshold value, and if so, 
+5. calculate a correlation between `nitrate` and `sulfate`, and use `c() to combine the correlation with the output vector
+6. After the `for()` loop completes, return the output vector to the parent environment
+
+Another potential solution makes use of `lapply()` to eliminate the need to build the output vector with a `for()` loop and `c()`. 
+
+1. Read the list of sensor file filenames
+2. Create a list of data frames by using the list of filenames with `lapply()` and `read.csv()` to load the data from disk.
 3. Process each data frame by first checking to see whether the number of complete cases in the data frame exceeds the threshold value, and if so, calculate the correlation between nitrate and sulfate.
 4. Consolidate the correlations into a vector and return the vector to the parent environment.
 
