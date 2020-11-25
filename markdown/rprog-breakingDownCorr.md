@@ -54,14 +54,14 @@ Another potential solution makes use of `lapply()` to eliminate the need to buil
 3. Process each data frame by first checking to see whether the number of complete cases in the data frame exceeds the threshold value, and if so, calculate the correlation between nitrate and sulfate.
 4. Consolidate the correlations into a vector and return the vector to the parent environment.
 
-Another potential solution builds on the `complete()` function. This solution looks like:
+A third potential solution builds on the `complete()` function. This solution looks like:
 
 1. Execute `complete()` on all 332 sensor files, and save the result to a data frame.
 2. Subset the data frame to an output data frame containing all sensors with complete cases exceeding the threshold value.
 3. Use the `id` column from the subset data frame to re-read the data files, and calculate correlations for these sensors.
 4. Return the resulting vector of correlations to the parent environment.
 
-Since the second solution is more efficient than the others, we provide a code stub that illustrates the first solution.
+Since the `lapply()` based solution is more efficient than the others, we provide a code stub to illustrate it.
 
     corr <- function(directory, threshold = 0) {
 
@@ -69,7 +69,7 @@ Since the second solution is more efficient than the others, we provide a code s
 
         ## Read the sensor files into a list() of data frames
 
-        ## Process the list of sensor files by calculating
+        ## Process the list of sensor data frames by calculating
         ## number of complete cases, and if this number exceeds
         ## the threshold value passed to the function, calculate the correlation
         ## between nitrate and sulfate for the sensor
@@ -85,6 +85,7 @@ As we provided with `pollutantmean()` and `complete()`, here is a list of functi
 
 <table>
 <tr><th align="left">Function</th><th align="left">What it does</th></tr>
+<tr><td>c()</td><td>Combines the objects passed as arguments into a vector</td></tr>
 <tr><td>complete.cases()</td><td>Creates a vector that is TRUE when all columns for a case are non-missing, and FALSE when at least one column has a missing value, NA. Note that the vector returned by this function has one element per row in the data frame passed as an argument to <code>complete.cases()</code></td></tr>
 <tr><td>cor()</td><td>Calculates correlations between columns in a data frame</td></tr>
 <tr><td>dir()<br>list.files()</td><td>Obtain list of files from the specdata directory</td></tr>
