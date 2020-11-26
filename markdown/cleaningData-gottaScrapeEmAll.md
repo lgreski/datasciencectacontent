@@ -6,7 +6,7 @@ In fact, numerous articles have been written about the challenges gathering data
 
 Fortunately many websites are significantly less complicated than the ESPN website, simplifying the task of extracting data when it periodically changes.
 
-One such example is Pokémon stats. A number of years ago Alberto Barradas posted a database of Pokémon statistics on Kaggle.com called [Pokémon with stats](https://www.kaggle.com/abcsds/pokemon). At the time of its publishing the database included Pokémon through Generation 6, a total of 721 Pokémon. Since then Nintendo has released a number of new games, anime shows, and conducted in person events that introduced multiple generations of Pokémon. As of November 2020 the total number of Pokémon in the National Pokedex is 898.
+One such example is Pokémon statistics. A number of years ago Alberto Barradas posted a database of Pokémon statistics on Kaggle.com called [Pokémon with stats](https://www.kaggle.com/abcsds/pokemon). At the time of its publishing the database included Pokémon through Generation 6, a total of 721 Pokémon. Since then Nintendo has released a number of new games, anime shows, and conducted in person events that introduced multiple generations of Pokémon. As of November 2020 the total number of Pokémon in the National Pokedex is 898.
 
 Complicating matters further is the fact that when Generation 7 Pokémon were released, 26 other Pokémon received changes to their statistics. Although I had augmented Alberto Barradas' original data with Generation 7 Pokémon, by Generation 8 I wanted to see whether I could automate the updates. Fortunately, there are many websites on the internet devoted to Pokémon games, including detailed backgrounds and statistics.
 
