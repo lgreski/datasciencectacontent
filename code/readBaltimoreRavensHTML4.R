@@ -14,7 +14,7 @@ df <- data.frame(textData)
 View(df)
 
 # elements 59, 60 are BYE week
-rowStartIDs <- c(11,19,27,35,43,51,61,69,77)
+rowStartIDs <- c(11,19,27,35,43,51,61,69,77,85)
 gamesPlayed <- data.frame(do.call(rbind,
                                   lapply(rowStartIDs,function(x) textData[x:(x+7)])))
 colnames(gamesPlayed) <- c("Week","Date","Opponent","Result","Record","HighPasser",
