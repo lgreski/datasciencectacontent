@@ -1,6 +1,6 @@
 # Week 1: HTML Parsing - Gotta scrape 'em all
 
-In [Demystifying HTML Parsing: Baltimore Ravens Scores]() we document periodic changes that have occurred in the structure of the ESPN website that caused the example code from the week one HTML lecture to fail.  The 2020 update illustrates how as a large media company attempts to keep its content fresh by regularly changing the customer experience, it makes life difficult for anyone attempting to use content from the website in an automated fashion.
+In [Demystifying HTML Parsing: Baltimore Ravens Scores](http://bit.ly/2gv12SS) we document periodic changes that have occurred in the structure of the ESPN website that caused the example code from the week one HTML lecture to fail.  The 2020 update illustrates how as a large media company attempts to keep its content fresh by regularly changing the customer experience, it makes life difficult for anyone attempting to use content from the website in an automated fashion.
 
 In fact, numerous articles have been written about the challenges gathering data via HTML scraping. One such article by [Namrata Date](https://medium.com/@namrata_28907/about) is [Web Scraping in R with CSS Selectors](https://bit.ly/3986pUT). The more complicated the design of a web site's user experience, the more difficult it is to extract the data.
 
