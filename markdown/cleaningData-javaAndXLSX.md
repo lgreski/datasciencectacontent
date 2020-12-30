@@ -67,4 +67,4 @@ Note that as of July 2020, users on [Stackoverflow.com](https://stackoverflow.co
 
 To correct the problem, reinstall R with the same language used by Windows. That is, on the Chinese version of Windows, install R with Chinese langauge support. Once installed, you can change the language to English by setting `language = "en"` in the `.Rconsole` file. 
 
-*last updated 21 July 2020* 
+*last updated 30 December 2020* 
