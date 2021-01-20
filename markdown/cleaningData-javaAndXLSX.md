@@ -10,8 +10,6 @@ If a student attempts to load the xlsx package without a Java runtime envrionmen
 
 <img src="./images/cleaningData-javaError01.png">
 
-After this error message is displayed at the operating system level, RStudio will terminate.
-
 ## Solution 1: Use an Excel Reader Package that Doesn't Require Java
 
 <b>PRO TIP: </b> The easiest way to work around this problem is to use an R package that does not depend on Java, such as [openxlsx](https://cran.r-project.org/web/packages/openxlsx/openxlsx.pdf) or [readxl](https://cran.r-project.org/web/packages/readxl/readxl.pdf). 
@@ -69,4 +67,8 @@ Note that as of July 2020, users on [Stackoverflow.com](https://stackoverflow.co
 
 To correct the problem, reinstall R with the same language used by Windows. That is, on the Chinese version of Windows, install R with Chinese langauge support. Once installed, you can change the language to English by setting `language = "en"` in the `.Rconsole` file. 
 
-*last updated 21 July 2020* 
+# Overview of R Packages for Excel 
+
+There are four different packages that allow R users to load Excel spreadsheets into R. An overview of these packages may be found at [Reading Excel Files](https://bit.ly/3fqT3TB).
+
+*last updated 30 December 2020* 
