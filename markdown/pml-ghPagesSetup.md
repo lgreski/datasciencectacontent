@@ -9,8 +9,8 @@ The current process is a very simple 5 steps that publishes from the main branch
 
 1. Create a repository
 2. Clone the repository to a local computer
-3. Create an index.html file
-4. Push the html file to the remote repository
+3. Create an index.html file on the local computer
+4. Commit and push the html file to the remote repository
 5. Navigate to https://username.github.io/username/reponame to see the website
 
 Github has published a short walkthrough of this process [here](https://pages.github.com). 
