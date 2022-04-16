@@ -1,5 +1,5 @@
 # Overview
-Github Pages is a tool to create a website from a github repository. When the DSS was built back in 2014, *Practical Machine Learning* course, students frequently expressed frustration at the work required to correctly configure Github Pages.
+Github Pages is a tool to create a website from a github repository. When the Data Science Specialization was built back in 2014, students in the *Practical Machine Learning* course frequently expressed frustration at the work required to correctly configure Github Pages.
 
 Over the years Github has made it much easier to publish content via Github pages. The biggest improvement is that one can publish content directly from the *main* branch, rather than having to create a *gh-pages* branch from which a repository's content is published. 
 
