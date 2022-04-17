@@ -13,6 +13,6 @@ The current process is a very simple 5 steps that publishes from the main branch
 4. Commit and push the html file to the remote repository
 5. Navigate to https://username.github.io/username/reponame to see the website
 
-Github has published a short walkthrough of this process [here](https://pages.github.com). 
+Github has published a short walkthrough of the process to create a personal website based on a github repository that has the same name as one's github userid [here](https://pages.github.com). 
 
 **Last updated 16 April 2022** 
