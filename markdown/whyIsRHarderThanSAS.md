@@ -54,6 +54,6 @@ Without additional context, it's difficult to understand the behavior of this ma
 
 In summary, the key things that make SAS easier to learn than R are the quality of its documentation that evolved over a 40+ year period, and the concreteness of the language that makes it easy to get simple tasks done without having to learn a large volume of abstract symbols. Still, it's not $9,000 worth of "easier," especially if you're on a student's budget.  
 
-Another take on the learning curve of R relative to other packages is Robert Kabacoff's blog post on his Quick-R website, [Why R has a Steep Learning Curve](http://bit.ly/2MVJuz7l) 
+Another take on the learning curve of R relative to other packages is Robert Kabacoff's blog post on his Quick-R website, [Why R has a Steep Learning Curve](http://bit.ly/2MVJuz7) 
 
 *last updated: 9 February 2019* 
