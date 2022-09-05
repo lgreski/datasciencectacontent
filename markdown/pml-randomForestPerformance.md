@@ -206,12 +206,12 @@ Again in 2022 I ran the analysis on newer, more powerful hardware. A custom-buil
 
 <table>
 <tr><th><br>Machine</th><th><br>Model</th><th>Resampling<br> Technique</th><th><br>Result</th></tr>
-<tr><td> HP Spectre x360-15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">02.55 minutes</td></tr>
-<tr><td> Macbook Pro 15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.07 minutes</td></tr>
+<tr><td> HP Spectre x360-15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">2.55 minutes</td></tr>
+<tr><td> Macbook Pro 15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">3.07 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.22 minutes</td></tr>
 <tr><td> Custom Build Ryzen 9</td><td>Random Forest</td><td>Bootstrap</td><td align="right">3.74 minutes</td></tr>
-<tr><td> HP Spectre x360-13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">04.65 minutes</td></tr>
-<tr><td> Macbook Pro 13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">06.56 minutes</td></tr>
+<tr><td> HP Spectre x360-13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">4.65 minutes</td></tr>
+<tr><td> Macbook Pro 13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">6.56 minutes</td></tr>
 <tr><td> HP Spectre x360-15</td><td>Random Forest</td><td>Bootstrap</td><td align="right">12.99 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Bootstrap</td><td align="right">17.00 minutes</td></tr>
 <tr><td> HP Envy X2 laptop</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
