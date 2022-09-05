@@ -289,7 +289,7 @@ Hardware specifications for the computers used in the performance timings in thi
 </ul>
 </td>
 </tr>
-</tr>
+<tr>
 <td valign=top>HP Spectre X360-15 laptop</td>
 <td>
 <ul>
@@ -301,7 +301,18 @@ Hardware specifications for the computers used in the performance timings in thi
 </ul>
 </td>
 </tr>
-
+<tr>
+<td valign=top>Custom Build Desktop</td>
+<td>
+<ul>
+<li>Operating system: Microsoft Windows 11, 64bit</li>
+<li>Processor: AMD Ryzen 9 5950X 3.5Ghz, turbo up to 4.9Ghz, 16 cores</li>
+<li>Memory: 128 gigabytes</li>
+<li>Disk: 2,048 gigabytes, solid state drive</li>
+<li>Date built: September 2022</li>
+</ul>
+</td>
+</tr>
 </table>
 
 
