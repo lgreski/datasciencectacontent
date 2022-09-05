@@ -198,7 +198,9 @@ Surprisingly, the random forest algorithm for the *Practical Machine Learning* c
 
 To illustrate the impact that the resampling technique has on the runtime performance, we fit the training data for the *Practical Machine Learning* course project on the HP Omen laptop with bootstrapping as the resampling method. The bootstrapping resampling method caused a significant increase in processing time, requiring 17 minutes instead of 3.22 minutes to train the model. Since the cross-validation resampling method resulted in an accuracy of .9945, the bootstrapping resampling method had no positive impact on model accuracy.
 
-Finally, in 2020 I ran the analysis on newer, more powerful hardware. A four core, eight thread Intel i7-4870HQ CPU runs the analysis in 3.07 minutes, about the same speed as the HP Omen. A six core, twelve thread Intel i7-8750H CPU runs the analysis in under 2.6 minutes, a 21% improvement over the four core i7-4710HQ that powers the HP Omen laptop. 
+In 2020 I ran the analysis on newer, more powerful hardware. A four core, eight thread Intel i7-4870HQ CPU runs the analysis in 3.07 minutes, about the same speed as the HP Omen. A six core, twelve thread Intel i7-8750H CPU runs the analysis in under 2.6 minutes, a 21% improvement over the four core i7-4710HQ that powers the HP Omen laptop. 
+
+Again in 2022 I ran the analysis on newer, more powerful hardware. A custom-built rig with an AMD Ryzen 9 5950X with 16 cores / 32 threads trains the model with bootstrap resampling in 3.74 minutes versus the 17 minutes required on the Omen laptop. 
 
 #### Figure 2: Run time by By Machine & Resampling Technique
 
@@ -207,6 +209,7 @@ Finally, in 2020 I ran the analysis on newer, more powerful hardware. A four cor
 <tr><td> HP Spectre x360-15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">02.55 minutes</td></tr>
 <tr><td> Macbook Pro 15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.07 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>CV</td><td align="right">03.22 minutes</td></tr>
+<tr><td> Custom Build Ryzen 9</td><td>Random Forest</td><td>Bootstrap</td><td align="right">3.74 minutes</td></tr>
 <tr><td> HP Spectre x360-13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">04.65 minutes</td></tr>
 <tr><td> Macbook Pro 13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">06.56 minutes</td></tr>
 <tr><td> HP Spectre x360-15</td><td>Random Forest</td><td>Bootstrap</td><td align="right">12.99 minutes</td></tr>
@@ -350,4 +353,4 @@ sessionInfo()
 
 
 
-*Copyright 2017 - 2020, Len Greski - copying with attribution permitted* 
+*Copyright 2017 - 2022, Len Greski - copying with attribution permitted* 
