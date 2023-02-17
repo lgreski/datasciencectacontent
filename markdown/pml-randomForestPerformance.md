@@ -190,7 +190,7 @@ As illustrated in the following table, multi-threading has a significant, positi
 
 ### Test Scenario 2: Multi-threading performance by machine for *Practical Machine Learning* course project 
 
-This section of the analysis used four different laptop computers to assess the performance of `caret::train()`. CPU speed, number of processor cores, and disk speed (to a lesser extent) all impact runtime performance. All four machines have Intel-based processors with multiple cores, and each core contains two processing threads that can be assigned to execute instructions in parallel. As expected, the machine with the largest number of cores and fastest disk speed returns the fastest response time, completing the 5 k-fold cross-validation model in 3.22 minutes.
+This section of the analysis originally used four different laptop computers to assess the performance of `caret::train()`. CPU speed, number of processor cores, and disk speed (to a lesser extent) all impact runtime performance. All four machines have Intel-based processors with multiple cores, and each core contains two processing threads that can be assigned to execute instructions in parallel. As expected, the machine with the largest number of cores and fastest disk speed returns the fastest response time, completing the 5 k-fold cross-validation model in 3.22 minutes.
 
 Since most students in *Practical Machine Learning* have older (and slower) hardware than the machines I typically use to complete the work in the Data Science Specialization courses, I also ran the tests on a Windows-based tablet: the HP Envy X2.
 
@@ -364,4 +364,4 @@ sessionInfo()
 
 
 
-*Copyright 2017 - 2022, Len Greski - copying with attribution permitted* 
+*Copyright 2017 - 2023, Len Greski - copying with attribution permitted* 
