@@ -11,7 +11,7 @@ The key variables that determine processing performance (in descending order of 
 1. Coding for performance -- Efficient code / high performance R packages can run orders of magnitude faster than slower code, even on a fast machine. For an illustration of this concept, see [American Community Survey Example](http://bit.ly/2bAdLE9), which shows how `readr::read_fwf()` improves initial load performance of `base::read.fwf()` from 19 minutes to less than 9 seconds, and cuts the amount of RAM consumed by the data frame from 700Mb to 341Mb.<br><br>
 2. Amount of RAM available -- since R does all of its processing in memory, if your data frame won't fit in the available RAM, you're not going to process it in R. Get as much as you can afford: 8gb is good, 16gb is better, 32gb is still better.<br><br>
 3. Processor speed -- since most "out of the box" R packages are single threaded, the faster the CPU, the faster the work will complete. Note that faster CPUs tend to be installed on heavier laptops that also have lower battery life. It's a classic speed vs. power consumption tradeoff. <br><br>
-4. Number of processor cores -- for R packages that take advantage of multiple cores & threads, more threads are better than fewer threads. Therefore, 4 cores are better than 2 cores. Typically each core contains 2 threads, so a 4 core machine can run as many as 8 tasks in parallel in R packages that support threading. <br><br>
+4. Number of processor cores -- for R packages that take advantage of multiple cores & threads, more threads are better than fewer threads. Therefore, 4 cores are better than 2 cores. Typically each core on an Intel CPU contains 2 threads, so a 4 core machine can run as many as 8 tasks in parallel in R packages that support threading. Newer CPUs from both Intel and Apple vary in the number of threads per core, so read the specs carefully to know how many concurrent threads a specific CPU can support.<br><br>
 5. Disk speed -- only relevant for data load steps, but when you need to read data off the disk, solid state drives work much faster than mechanical drives, and 7,200RPM drives work faster than 5,400RPM drives. Some drives are rated by throughput, such as SATA II (3Gbps) and SATA 3 (6Gbps). Larger throughput numbers are better.
 
 # Observations & Conclusions
@@ -38,4 +38,4 @@ I have installed R on all of these platforms so I could benchmark its performanc
 
 Most R packages must be compiled from source on Linux. Often these packages require additional Linux libraries that must be installed on the operating system before the R packages will compile. Depending on the version of Linux being used, this requirement can lead to interesting discoveries as one determines the exact versions of Linux libraries required by the R packages. However, with some additional effort, Linux works just as well as OS X or Windows.
 
-*last update: 4 November 2017*
+*last update: 17 February 2023*
