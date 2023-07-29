@@ -2,7 +2,11 @@
 
 ## UPDATE: Last Millennium Hurricane Activity linked to Endogenous Climate Variability
 
-On July 21st, 2023 a group of researchers published a preprint article titled [Last Millennium Hurricane Activity linked to Endogenous Climate Variability](https://bit.ly/44MysmT) that essentially extends the analysis I did on this topic in 2017 back to the past millennium. The study authors make four points that support assertions made in my article, including:  
+On July 21st, 2023 a group of researchers published a preprint article titled [Last Millennium Hurricane Activity linked to Endogenous Climate Variability](https://bit.ly/44MysmT) that essentially extends the analysis I did on this topic in 2017 back to the past millennium. The study's key conclusion is: *Numerical simulations using a hurricane-permitting climate model suggest that hurricane activity over the last millennium was likely driven by endogenous climate variability and linked to anomalously warm sea surface temperatures (SSTs) over the Atlantic Main Development region as well as cold phases of Interdecadal Pacific Oscillation sea surface temperatures.*
+
+That is, hurricane activity is largely a function of endogenous (internal) climate variability, not exogenous (external) factors such as volcanoes or human activity. The study identified two exceptions, one based on volcanic forcing in the 13th century, and one attributed to greenhouse gas forcing in the current period where hurricane frequency is *abruptly declining* (emphasis added), but within the range of variability of modern hurricanes or reconstruction records (Wallace et. al., p. 10).  
+
+The study authors make four points that support assertions made in my 2017 article on this topic, including:  
 
 *	Instrument records only extend back to the mid-19th century (p. 4)
 *	Hurricane variability over the pre-industrial period (850 – 1851 AD) was similar in amplitude to modern variability (p. 5)
@@ -185,4 +189,8 @@ The following code was used to aggregate the four hurricane files and generate a
     summary(aModel)
 
 
-*Copyright (c) 2017 - 2023 Leonard M. Greski, copying permitted with attribution.* 
+## References
+
+Wallace, Elizabeth, et. al. *Last Millennium Hurricane Activity Linked to Endogenous Climate Variability*, preprint article published at [ResearchSquare](https://bit.ly/44MysmT), and retrieved on July 29, 2023.
+
+*Copyright (c) 2017 - 2023 Leonard M. Greski, copying permitted with attribution.*
