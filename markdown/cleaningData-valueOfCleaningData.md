@@ -1,5 +1,16 @@
 # Importance of Getting and Cleaning Data
 
+## UPDATE: Last Millennium Hurricane Activity linked to Endogenous Climate Variability
+
+On July 21st, 2023 a group of researchers published a preprint article titled [Last Millennium Hurricane Activity linked to Endogenous Climate Variability](https://bit.ly/44MysmT) that essentially extends the analysis I did on this topic in 2017 back to the past millennium. The study authors make four points that support assertions made in my article, including:  
+
+*	Instrument records only extend back to the mid-19th century (p. 4)
+*	Hurricane variability over the pre-industrial period (850 – 1851 AD) was similar in amplitude to modern variability (p. 5)
+*	Sedimentary reconstruction of hurricane frequency is generally in agreement with hurricane observations from the 20th century, but a noticeable discrepancy exists between the late 19th century where a peak in hurricane frequency is seen in the observations but not the sedimentary reconstructions (p. 6)
+*	Neither sediment-based nor SST-emulated hurricane reconstruction indicates that multidecadal hurricane frequency over the late 20th century is outside the range seen over the past millennium (p. 11).
+
+## Original 2017 Article Introduction
+
 Hurricane Harvey was a major weather event in the United States during late August 2017. Within 48 hours of the time Harvey made landfall on August 25th, I observed a graphic posted on Twitter by [@datavisualinfo](http://bit.ly/2izTItC) regarding the frequency of hurricanes between 1851 and 2015. The graphic  illustrates why it is so important to thoroughly understand the data one collects. [@datavisualinfo](http://bit.ly/2izTItC) published the following chart to showcase their data visualization tool.
 
 <img src="./images/cleaningData-valueOfCleaningData01.png">
@@ -172,3 +183,6 @@ The following code was used to aggregate the four hurricane files and generate a
     aggStorms <- sqldf(sqlStmt)
     aModel <- lm(total ~ year,data = aggStorms[aggStorms$year>1950,])
     summary(aModel)
+
+
+*Copyright (c) 2017 - 2023 Leonard M. Greski, copying permitted with attribution.* 
