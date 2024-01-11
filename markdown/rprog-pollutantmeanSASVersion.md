@@ -170,7 +170,6 @@ The `%ids()` macro takes two forms of input. It can generate a list of sensor id
     	%local i word;
     	%let i = 1;
     	%let word=%scan(&list,1,%str( ));
-    	&word
     	%if (&list = ) %then %do i = &start %to &end;
     		%if %length(&i) = 1 %then %do ;
     			00&i
