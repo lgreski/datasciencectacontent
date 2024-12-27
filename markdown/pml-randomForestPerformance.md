@@ -212,6 +212,7 @@ Again in 2022 I ran the analysis on newer, more powerful hardware. A custom-buil
 <tr><td> Custom Build Desktop</td><td>Random Forest</td><td>Bootstrap</td><td align="right">3.74 minutes</td></tr>
 <tr><td> HP Spectre x360-13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">4.65 minutes</td></tr>
 <tr><td> Macbook Pro 13 laptop</td><td>Random Forest</td><td>CV</td><td align="right">6.56 minutes</td></tr>
+<tr><td> Macbook Pro 16 i9</td><td>Random Forest</td><td>Bootstrap</td><td align="right">11.88 minutes</td></tr>
 <tr><td> HP Spectre x360-15</td><td>Random Forest</td><td>Bootstrap</td><td align="right">12.99 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Bootstrap</td><td align="right">17.00 minutes</td></tr>
 <tr><td> HP Envy X2 laptop</td><td>Random Forest</td><td>CV</td><td align="right">74.97 minutes</td></tr>
@@ -253,6 +254,19 @@ Hardware specifications for the computers used in the performance timings in thi
  </ul>
   </td>
  </tr>
+   <tr>
+ <td valign=top>Apple Macbook Pro 16 i9</td>
+ <td>
+ <ul>
+ <li>Operating system: OS X Sequoia 15.1.1 (19F101)</li>
+ <li>Processor: Intel i9 at 2.4Ghz, turbo up to 5.0Ghz, eight cores</li>
+ <li>Memory: 64 gigabytes</li>
+ <li>Disk: 2 terabytes, solid state drive</li>
+ <li>Date built: mid 2019</li>
+ </ul>
+  </td>
+ </tr>
+
 
  <tr>
  <td valign=top>HP Envy X2 tablet</td>
