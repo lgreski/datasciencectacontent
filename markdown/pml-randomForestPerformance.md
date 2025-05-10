@@ -27,8 +27,6 @@ Once a person works through the varied sources of documentation on the machine l
 
 For the purpose of illustrating the syntax required for parallel processing, we'll use the `Sonar` data set that is also used as the example in the [caret model training documentation](http://topepo.github.io/caret/training.html).
 
-
-
 ```r
 intervalStart <- Sys.time()
 library(mlbench)
@@ -38,7 +36,6 @@ set.seed(95014)
 ```
 
 ### create training & testing data sets
-
 
 ```r
 inTraining <- createDataPartition(Sonar$Class, p = .75, list=FALSE)
@@ -53,8 +50,6 @@ x <- training[,-61]
 
 Parallel processing in `caret` can be accomplished with the `parallel` and `doParallel` packages.  The following code loads the required libraries (note, these libraries also depend on the `iterators` and `foreach` libraries).
 
-
-
 ```r
 library(parallel)
 library(doParallel)
@@ -66,8 +61,6 @@ registerDoParallel(cluster)
 
 The most critical arguments for the trainControl function are the resampling method `method`, the `number` that specifies the quantity of folds for k-fold cross-validation, and `allowParallel` which tells caret to use the cluster that we've registered in the previous step.
 
-
-
 ```r
 fitControl <- trainControl(method = "cv",
 number = 5,
@@ -77,8 +70,6 @@ allowParallel = TRUE)
 ### Step 3: Develop training model
 
 Next, we use `caret::train()` to train the model, using the `trainControl()` object that we just created.
-
-
 
 ```r
 system.time(fit <- train(x,y, method="rf",data=Sonar,trControl = fitControl))
@@ -102,16 +93,12 @@ system.time(fit <- train(Class ~ ., method="rf",data=Sonar,trControl = fitContro
 
 After processing the data, we explicitly shut down the cluster by calling the `stopCluster()` function.
 
-
-
 ```r
 stopCluster(cluster)
 registerDoSEQ()
 ```
 
 At this point we have a trained model in the `fit` object, and can take a number of steps to evaluate the suitability of this model, including accuracy and a confusion matrix that is based on comparing the modeled data to the held out folds.
-
-
 
 ```r
 fit
@@ -168,7 +155,6 @@ confusionMatrix.train(fit)
 ##  Accuracy (average) : 0.8269
 ```
 
-
 If desired, at this point one can make a prediction on the held out `testing` data partition. Since the primary purpose of this article is to illustrate the syntax required for parallel processing and to discuss its impact on the course project for *Practical Machine Learning*, we will not fit the testing data or evaluate the model accuracy here.
 
 ## Results: Illustrating the impact of parallel processing
@@ -180,6 +166,7 @@ Returning our attention to the *Practical Machine Learning* course project data 
 As illustrated in the following table, multi-threading has a significant, positive impact on the performance of the `caret::train()` function. As expected, the difference in processing times for the linear discriminant model was negligible. However, for the random forest, the multi-threaded version finished 58% faster than the single-threaded version (as measured on the HP Omen laptop with Intel® Core™ i7-4720HQ processor).
 
 #### Figure 1: Run time by Machine Learning Algorithm and Threading Model
+
 <table>
 <tr><th>Machine</th><th>Algorithm</th><th>Threading Model </th><th>Result</th></tr>
 <tr><td> HP Omen laptop</td><td>Linear Discriminant Analysis</td><td>Multi-threaded</td><td align="right">2.38  seconds</td></tr>
@@ -188,7 +175,7 @@ As illustrated in the following table, multi-threading has a significant, positi
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>Single-threaded</td><td align="right">462.6 seconds</td></tr>
 </table>
 
-### Test Scenario 2: Multi-threading performance by machine for *Practical Machine Learning* course project 
+### Test Scenario 2: Multi-threading performance by machine for *Practical Machine Learning* course project
 
 This section of the analysis originally used four different laptop computers to assess the performance of `caret::train()`. CPU speed, number of processor cores, and disk speed (to a lesser extent) all impact runtime performance. All four machines have Intel-based processors with multiple cores, and each core contains two processing threads that can be assigned to execute instructions in parallel. As expected, the machine with the largest number of cores and fastest disk speed returns the fastest response time, completing the 5 k-fold cross-validation model in 3.22 minutes.
 
@@ -202,10 +189,14 @@ In 2020 I ran the analysis on newer, more powerful hardware. A four core, eight 
 
 Again in 2022 I ran the analysis on newer, more powerful hardware. A custom-built rig with an AMD Ryzen 9 5950X with 16 cores / 32 threads trains the model with bootstrap resampling in 3.74 minutes versus the 17 minutes required on the Omen laptop. 
 
+Finally, in May of 2025 I ran the analysis on a high end machine with Apple silicon, the 2022 era Apple Mac Studio M1 Ultra. This machine includes an Apple M1 Ultra chip including 20 cores, and it trains the model with bootstrap resampling in less than 2.5 minutes. With 5-fold cross-validation it's even faster, completing the analysis in a mere 53.4 seconds. Bottom line: it's the fastest machine tested, even faster than the custom rig with an AMD Ryzen 9 Threadripper CPU. 
+
 #### Figure 2: Run time by By Machine & Resampling Technique
 
 <table>
 <tr><th><br>Machine</th><th><br>Model</th><th>Resampling<br> Technique</th><th><br>Result</th></tr>
+<tr><td> Mac Studio M1 Ultra</td><td>Random Forest</td><td>CV</td><td align="right">25.37 seconds</td></tr>
+<tr><td> Mac Studio M1 Ultra</td><td>Random Forest</td><td>Bootstrap</td><td align="right">2.46 minutes</td></tr>
 <tr><td> HP Spectre x360-15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">2.55 minutes</td></tr>
 <tr><td> Macbook Pro 15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">3.07 minutes</td></tr>
 <tr><td> HP Omen laptop</td><td>Random Forest</td><td>CV</td><td align="right">3.22 minutes</td></tr>
@@ -223,7 +214,6 @@ Again in 2022 I ran the analysis on newer, more powerful hardware. A custom-buil
 Hardware specifications for the computers used in the performance timings in this article are listed below.
 
 ### Figure 3: Machine Hardware Specifications
-
 
 <table>
 <tr>
@@ -266,9 +256,7 @@ Hardware specifications for the computers used in the performance timings in thi
  </ul>
   </td>
  </tr>
-
-
- <tr>
+<tr>
  <td valign=top>HP Envy X2 tablet</td>
  <td>
  <ul>
@@ -327,8 +315,19 @@ Hardware specifications for the computers used in the performance timings in thi
 </ul>
 </td>
 </tr>
+<tr>
+<td valign=top>Apple Mac Studio</td>
+<td>
+<ul>
+<li>Operating system: macOS Sequoia 15.4.1, 64bit</li>
+<li>Processor: Apple M1 Ultra, 20 cores</li>
+<li>Memory: 64 gigabytes</li>
+<li>Disk: 1,024 gigabytes, solid state drive</li>
+<li>Date introduced: March 2022</li>
+</ul>
+</td>
+</tr>
 </table>
-
 
 ```r
 sessionInfo()
@@ -376,6 +375,4 @@ sessionInfo()
 ## [55] nnet_7.3-14          nlme_3.1-147         compiler_4.0.0
 ```
 
-
-
-*Copyright 2017 - 2023, Len Greski - copying with attribution permitted* 
+*Copyright 2017 - 2025, Len Greski - copying with attribution permitted* 
