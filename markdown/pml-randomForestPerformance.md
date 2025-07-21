@@ -221,7 +221,7 @@ Hardware specifications for the computers used in the performance timings in thi
 <th>Configuration</th>
 </tr>
  <tr>
- <td valign=top>Apple Macbook Pro 13</td>
+ <td valign=top>Apple Macbook Pro 13 i5</td>
  <td>
  <ul>
  <li>Operating system: OS X Yosemite 10.10.4 (14E46)</li>
@@ -233,10 +233,10 @@ Hardware specifications for the computers used in the performance timings in thi
   </td>
  </tr>
   <tr>
- <td valign=top>Apple Macbook Pro 15</td>
+ <td valign=top>Apple Macbook Pro 15 i7</td>
  <td>
  <ul>
- <li>Operating system: OS X Catalina 10.15.5 (19F101)</li>
+ <li>Operating system: OS X Monterey 12.7.4 (21H1123)</li>
  <li>Processor: Intel i7 at 2.5Ghz, turbo up to 3.7Ghz, four cores</li>
  <li>Memory: 16 gigabytes</li>
  <li>Disk: 512 gigabytes, solid state drive</li>
@@ -256,6 +256,18 @@ Hardware specifications for the computers used in the performance timings in thi
  </ul>
   </td>
  </tr>
+<tr>
+<td valign=top>Apple Mac Studio</td>
+<td>
+<ul>
+<li>Operating system: macOS Sequoia 15.4.1, 64bit</li>
+<li>Processor: Apple M1 Ultra, 20 cores</li>
+<li>Memory: 64 gigabytes</li>
+<li>Disk: 1,024 gigabytes, solid state drive</li>
+<li>Date introduced: March 2022</li>
+</ul>
+</td>
+</tr>
 <tr>
  <td valign=top>HP Envy X2 tablet</td>
  <td>
@@ -312,18 +324,6 @@ Hardware specifications for the computers used in the performance timings in thi
 <li>Memory: 128 gigabytes</li>
 <li>Disk: 2,048 gigabytes, solid state drive</li>
 <li>Date built: September 2022</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td valign=top>Apple Mac Studio</td>
-<td>
-<ul>
-<li>Operating system: macOS Sequoia 15.4.1, 64bit</li>
-<li>Processor: Apple M1 Ultra, 20 cores</li>
-<li>Memory: 64 gigabytes</li>
-<li>Disk: 1,024 gigabytes, solid state drive</li>
-<li>Date introduced: March 2022</li>
 </ul>
 </td>
 </tr>
