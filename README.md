@@ -1,4 +1,4 @@
-# Data Science Specialization Community Mentor Content Repository
+# A Community Mentor's Guide to the Johns Hopkins University Data Science Specialization
 
 Author: Len Greski
 
@@ -16,7 +16,7 @@ As a participant and Community Mentor in courses in the curriculum, there are pa
 <tr><td valign="top">README.md</td><td valign="top">File explaining the purpose and contents of the repository, listing of links to specific content by course.</td><tr>
 </table>
 
-The remainder of this document serves as a directory of the content, aligning individual documents with the course\(s\) for which the content is relevant.
+The remainder of this README serves as a directory of the content, aligning individual documents with the course\(s\) for which the content is relevant.
 
 ## Course 1: Data Scientist's Toolbox
 
@@ -181,3 +181,5 @@ The next set of articles includes general commentary about the course, R program
 
 ## Content for Community Mentors
 1. [Tips for New Community Mentors](http://bit.ly/2bZJniM) A list of tips for new mentors supporting the *Data Science Specialization*, ranging from when to direct students to paid / professional resources such as the *Coursera Learner Help Center*, to how to optimize the value of content that is posted by mentors.
+
+(c) Copyright 2015 - 2026 Leonard M. Greski, copying with attribution permitted. 
