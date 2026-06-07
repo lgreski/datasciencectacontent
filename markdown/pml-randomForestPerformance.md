@@ -189,13 +189,16 @@ In 2020 I ran the analysis on newer, more powerful hardware. A four core, eight 
 
 Again in 2022 I ran the analysis on newer, more powerful hardware. A custom-built rig with an AMD Ryzen 9 5950X with 16 cores / 32 threads trains the model with bootstrap resampling in 3.74 minutes versus the 17 minutes required on the Omen laptop. 
 
-Finally, in May of 2025 I ran the analysis on a high end machine with Apple silicon, the 2022 era Apple Mac Studio M1 Ultra. This machine includes an Apple M1 Ultra chip with 20 cores and it trains the model with bootstrap resampling in less than 2.5 minutes. With 5-fold cross-validation it's even faster, completing the analysis in a mere 52.4 seconds. Bottom line: it's the fastest machine tested, even faster than the custom rig with an AMD Ryzen 9 Threadripper CPU. 
+Next, in May of 2025 I ran the analysis on a high end machine with Apple silicon, the 2022 era Apple Mac Studio M1 Ultra. This machine includes an Apple M1 Ultra chip with 20 cores and it trains the model with bootstrap resampling in less than 2.5 minutes. With 5-fold cross-validation it's even faster, completing the analysis in a mere 52.4 seconds. Bottom line: it's the fastest machine tested, even faster than the custom rig with an AMD Ryzen 9 Threadripper CPU. 
+Most recently, in June of 2026 I ran the analysis on the newest generation of Apple silicon, the 2026 era Macbook Pro M5 Max. This machine contains an Apple M5 Max chip with 18 cores, six of which are "super cores", Apple's fastest single thread cores, plus another 12 performance cores. with 5-fold cross validation, this machine completes the analysis in 41.95 seconds, 20% faster than the M1 Ultra. With the bootstrapping resampling method, this machine completes the Random Forest in 2.00 minutes.
 
 #### Figure 2: Run time by By Machine & Resampling Technique
 
 <table>
 <tr><th><br>Machine</th><th><br>Model</th><th>Resampling<br> Technique</th><th><br>Result</th></tr>
+<tr><td> Mac Studio M5 Max</td><td>Random Forest</td><td>CV</td><td align="right">41.95 seconds</td></tr>
 <tr><td> Mac Studio M1 Ultra</td><td>Random Forest</td><td>CV</td><td align="right">52.37 seconds</td></tr>
+<tr><td> Mac Studio M5 Max</td><td>Random Forest</td><td>Bootstrap</td><td align="right">2.00 minutes</td></tr>
 <tr><td> Mac Studio M1 Ultra</td><td>Random Forest</td><td>Bootstrap</td><td align="right">2.46 minutes</td></tr>
 <tr><td> HP Spectre x360-15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">2.55 minutes</td></tr>
 <tr><td> Macbook Pro 15 laptop</td><td>Random Forest</td><td>CV</td><td align="right">3.07 minutes</td></tr>
@@ -256,6 +259,7 @@ Hardware specifications for the computers used in the performance timings in thi
  </ul>
   </td>
  </tr>
+
 <tr>
 <td valign=top>Apple Mac Studio</td>
 <td>
@@ -265,6 +269,19 @@ Hardware specifications for the computers used in the performance timings in thi
 <li>Memory: 64 gigabytes</li>
 <li>Disk: 1,024 gigabytes, solid state drive</li>
 <li>Date introduced: March 2022</li>
+</ul>
+</td>
+</tr>
+<tr>
+<tr>
+<td valign=top>Apple Macbook Pro 16 - M5 Max</td>
+<td>
+<ul>
+<li>Operating system: macOS Tahoe 26.5.1, 64bit</li>
+<li>Processor: Apple M5 Max, 18 cores</li>
+<li>Memory: 128 gigabytes</li>
+<li>Disk: 2,048 gigabytes, solid state drive</li>
+<li>Date introduced: March 2026</li>
 </ul>
 </td>
 </tr>
